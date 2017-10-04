@@ -1,0 +1,40 @@
+{
+  "request": {
+    "comment": "契約保守　メンテナンス　削除処理　リクエストデータ",
+    "html": "Setubi/Json/Apps/R_MainteContractHD2",
+    "mode": "delete",
+    "prog": "no",
+    "model": "yes",
+    "message": {
+      "status": "OK",
+      "msg": ""
+    },
+    "records": [{
+      "id": "header",
+      "before": "",
+      "after": "",
+      "multiline": "no",
+      "record": {
+        "契約ＮＯ": {
+          "value": [""]
+        },
+        "設備行番": {
+          "value": [""]
+        },
+        "作業区分": {
+          "value": [""]
+        }
+      }
+    }]
+  },
+  "response": {
+    "comment": "契約保守　メンテナンス　削除処理　レスポンスデータ",
+    "html": "Setubi/Json/Apps/R_MainteContractHD2",
+    "mode": "delete",
+    "prog": "no",
+    "message": {
+      "status": "OK",
+      "msg": "データを正常に削除しました。"
+    }
+  }
+}

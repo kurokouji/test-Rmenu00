@@ -1,0 +1,25 @@
+{
+  "comment": "業者　一覧表 validation",
+  "html": "Setubi/Json/Apps/R_TraderList",
+  "records": [{
+    "id": "header",
+    "multiline": "no",
+    "record": {
+      "ページライン数": {
+        "validation": ["required"]
+      },
+      "カレントページ": {
+        "validation": ["required"]
+      },
+      "検索業者名称": {
+        "validation": ["nonrequired"]
+      },
+      "検索郵便番号": {
+        "validation": ["nonrequired"]
+      },
+      "検索住所": {
+        "validation": ["nonrequired"]
+      }
+    }
+  }]
+}

@@ -1,0 +1,49 @@
+{
+  "comment": "サンプル（区分） dataset",
+  "html": "Setubi/Json/Apps/Sample_ClassMainte",
+  "message": {
+    "status": "OK",
+    "msg": "データを入力して、実行ボタンを押下して下さい。"
+  },
+  "records": [{
+    "id": "login",
+    "multiline": "no",
+    "defaultline": "0",
+    "record": {
+      "ユーザＩＤ": {
+        "value": [""]
+      },
+      "ユーザ名称": {
+        "value": [""]
+      }
+    }
+  },
+  {
+    "id": "detail",
+    "multiline": "yes",
+    "defaultline": "40",
+    "record": {
+      "サンプル区分ＩＤ": {
+        "value": [""]
+      },
+      "サンプル区分名称": {
+        "value": [""]
+      },
+      "サンプル区分摘要": {
+        "value": [""]
+      },
+      "サンプル区分表示順": {
+        "value": [""]
+      },
+      "更新日時": {
+        "value": [""]
+      },
+      "行追加": {
+        "value": [""]
+      },
+      "削除": {
+        "value": [""]
+      }
+    }
+  }]
+}

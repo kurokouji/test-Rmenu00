@@ -1,0 +1,113 @@
+{
+  "request": {
+    "comment": "サンプル（親一覧リスト） 検索処理　リクエストデータ",
+    "html": "Setubi/Json/Apps/Sample_ParentList",
+    "mode": "select",
+    "prog": "no",
+    "model": "yes",
+    "message": {
+      "status": "OK",
+      "msg": ""
+    },
+    "records": [{
+      "comment": "テーブルの行数",
+      "id": "header",
+      "before": "",
+      "after": "",
+      "multiline": "no",
+      "record": {
+        "ページライン数": {
+          "value": [""]
+        },
+        "カレントページ": {
+          "value": [""]
+        },
+        "検索ヘッダ項目１": {
+          "validation": ["nonrequired"]
+        },
+        "検索ヘッダ項目２": {
+          "validation": ["nonrequired"]
+        },
+        "検索サンプル項目１": {
+          "validation": ["nonrequired"]
+        }
+      }
+    }]
+  },
+  "response": {
+    "comment": "サンプル（親一覧リスト） 検索処理　レスポンスデータ",
+    "html": "Setubi/Json/Apps/Sample_ParentList",
+    "mode": "select",
+    "prog": "yes",
+    "message": {
+      "status": "OK",
+      "msg": "照会処理は正常に終了しました。"
+    },
+    "records": [{
+      "comment": "テーブルページング情報（行数・カレント行・総ページ数・総件数）getMaxPageCount：総ページ数を計算する。",
+      "id": "header",
+      "before": "",
+      "after": "getMaxPageCountOfSetubi('header')",
+      "multiline": "no",
+      "record": {
+        "ページライン数": {
+          "value": [""],
+          "fromtype": "request",
+          "fromid": "header",
+          "fromio": "",
+          "fromname": "ページライン数"
+        },
+        "カレントページ": {
+          "value": ["1"],
+          "fromtype": "request",
+          "fromid": "header",
+          "fromio": "",
+          "fromname": "カレントページ"
+        },
+        "最大ページ": {
+          "value": [""]
+        },
+        "トータル件数": {
+          "value": [""],
+          "fromtype": "sqls",
+          "fromid": "total_count",
+          "fromio": "output",
+          "fromname": "トータル件数"
+        }
+      }
+    },
+    {
+      "comment": "テーブルの明細データ",
+      "id": "detail",
+      "before": "",
+      "after": "",
+      "multiline": "yes",
+      "record": {
+        "サンプル_ヘッダＩＤ": {
+          "value": [""]
+        },
+        "表示サンプル_ヘッダＩＤ": {
+          "value": [""]
+        },
+        "サンプル_ヘッダ項目１": {
+          "value": [""]
+        },
+        "サンプル_ヘッダ項目２": {
+          "value": [""]
+        },
+        "サンプル_ヘッダ項目３": {
+          "value": [""]
+        },
+        "サンプル_ヘッダ項目４": {
+          "value": [""]
+        },
+        "サンプル_ヘッダ項目５": {
+          "value": [""]
+        },
+        "サンプル項目１": {
+          "value": [""]
+        }
+      }
+    }]
+  }
+}

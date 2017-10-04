@@ -1,0 +1,115 @@
+{
+  "request": {
+    "comment": "契約保守　メンテナンス　訂正処理　リクエストデータ",
+    "html": "Setubi/Json/Apps/R_MainteContractHD",
+    "mode": "update",
+    "prog": "no",
+    "model": "yes",
+    "message": {
+      "status": "OK",
+      "msg": ""
+    },
+    "records": [{
+      "id": "header",
+      "before": "",
+      "after": "",
+      "multiline": "no",
+      "record": {
+        "契約ＮＯ": {
+          "value": [""]
+        },
+        "顧客ＩＤ": {
+          "value": [""]
+        },
+        "摘要": {
+          "value": [""]
+        }
+      }
+    },
+    {
+      "id": "detail",
+      "before": "",
+      "after": "",
+      "multiline": "yes",
+      "record": {
+        "削除": {
+          "value": [""]
+        },
+        "設備行番": {
+          "value": [""]
+        },
+        "設備タイプ": {
+          "value": [""]
+        },
+        "設備名": {
+          "value": [""]
+        },
+        "契約単価": {
+          "value": [""]
+        },
+        "業者ＩＤ": {
+          "value": [""]
+        }
+      }
+    }]
+  },
+  "response": {
+    "comment": "契約保守　メンテナンス　訂正処理　レスポンスデータ",
+    "html": "Setubi/Json/Apps/R_MainteContractHD",
+    "mode": "update",
+    "prog": "no",
+    "message": {
+      "status": "OK",
+      "msg": "訂正処理は正常に終了しました。"
+    },
+    "records": [{
+      "id": "header",
+      "before": "",
+      "after": "",
+      "multiline": "no",
+      "record": {
+        "契約ＮＯ": {
+          "value": [""]
+        },
+        "顧客ＩＤ": {
+          "value": [""]
+        },
+        "顧客名称": {
+          "value": [""]
+        },
+        "摘要": {
+          "value": [""]
+        }
+      }
+    },
+    {
+      "id": "detail",
+      "before": "",
+      "after": "",
+      "multiline": "yes",
+      "record": {
+        "削除": {
+          "value": [""]
+        },
+        "設備行番": {
+          "value": [""]
+        },
+        "設備タイプ": {
+          "value": [""]
+        },
+        "設備名": {
+          "value": [""]
+        },
+        "契約単価": {
+          "value": [""]
+        },
+        "業者ＩＤ": {
+          "value": [""]
+        },
+        "業者名称": {
+          "value": [""]
+        }
+      }
+    }]
+  }
+}

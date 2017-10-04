@@ -1,0 +1,135 @@
+{
+  "comment": "契約保守作業明細　メンテナンス　初期処理",
+  "html": "Setubi/Json/Apps/R_MainteContractHD1",
+  "dbname": "setubi",
+  "mode": "init",
+  "prog": "no",
+  "message": {
+    "status": "OK",
+    "msg": "設備タイプ照会処理は正常に終了しました。"
+  },
+  "sqls": [{
+    "comment": "保守契約・契約設備明細　照会処理",
+    "id": "header",
+    "before": "",
+    "after": "",
+    "sql": {
+      "type": "select",
+      "freesql": "",
+      "genesql": {
+        "dist": "",
+        "from": 
+        [
+           "保守契約                         AS A"
+          ,"LEFT OUTER JOIN 契約設備明細     AS B ON (A.契約ＮＯ         = B.ref_契約ＮＯ AND  B.設備行番号 = ?)" 
+          ,"LEFT OUTER JOIN 顧客             AS C ON (A.ref_顧客ＩＤ     = C.顧客ＩＤ)" 
+          ,"LEFT OUTER JOIN 設備タイプ       AS D ON (B.ref_設備タイプ   = D.設備タイプ)" 
+          ,"LEFT OUTER JOIN 業者             AS E ON (B.ref_標準業者ＩＤ = E.業者ＩＤ)" 
+        ],
+        "where": "A.契約ＮＯ = ?",
+        "order": ""
+      }
+    },
+    "input": {
+      "multiline": "no",
+      "record": {
+        "設備行番": {
+          "value": [""]
+        },
+        "契約ＮＯ": {
+          "value": [""]
+        }
+      }
+    },
+    "output": {
+      "multiline": "no",
+      "record": {
+        "契約ＮＯ": {
+          "value": [""],
+          "field": "契約ＮＯ",
+          "table": "A"
+        },
+        "顧客名称": {
+          "value": [""],
+          "field": "名称",
+          "table": "C"
+        },
+        "契約摘要": {
+          "value": [""],
+          "field": "摘要",
+          "table": "A"
+        },
+        "設備行番": {
+          "value": [""],
+          "field": "設備行番号",
+          "table": "B"
+        },
+        "設備タイプ": {
+          "value": [""],
+          "field": "ref_設備タイプ",
+          "table": "B"
+        },
+        "設備タイプ名称": {
+          "value": [""],
+          "field": "名称",
+          "table": "D"
+        },
+        "設備名": {
+          "value": [""],
+          "field": "設備名",
+          "table": "B"
+        },
+        "契約単価": {
+          "value": [""],
+          "funct": "TO_CHAR(B.契約単価, 'FM999,999,999')"
+        },
+        "標準業者名称": {
+          "value": [""],
+          "field": "名称",
+          "table": "E"
+        }
+      }
+    }
+  },
+  {
+    "comment": "設備タイプ別作業　照会処理",
+    "id": "detail",
+    "before": "",
+    "after": "",
+    "sql": {
+      "type": "select",
+      "freesql": "",
+      "genesql": {
+        "dist": "",
+        "from": "設備タイプ別作業",
+        "where": "ref_設備タイプ = ?",
+        "order": "作業区分"
+      }
+    },
+    "input": {
+      "multiline": "yes",
+      "record": {
+        "設備タイプ": {
+          "value": [""],
+          "fromtype" : "request",
+          "fromid" : "header",
+          "fromio" : "",
+          "fromname" : "設備タイプ"
+        }
+      }
+    },
+    "output": {
+      "multiline": "yes",
+      "record": {
+        "作業区分": {
+          "value": [""],
+          "field": "作業区分"
+        },
+        "作業区分摘要": {
+          "value": [""],
+          "field": "摘要"
+        }
+      }
+    }
+  }]
+}

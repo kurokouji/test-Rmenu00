@@ -1,0 +1,136 @@
+{
+  "request": {
+    "comment": "保守サービス指示　メンテナンス　登録処理　リクエストデータ",
+    "html": "Setubi/Json/Apps/R_MainteServiceHD",
+    "mode": "insert",
+    "prog": "no",
+    "model": "yes",
+    "message": {
+      "status": "OK",
+      "msg": ""
+    },
+    "records": [{
+      "id": "header",
+      "before": "",
+      "after": "",
+      "multiline": "no",
+      "record": {
+        "業者ＩＤ": {
+          "value": [""]
+        },
+        "契約ＮＯ": {
+          "value": [""]
+        },
+        "設備行番": {
+          "value": [""]
+        },
+        "顧客ＩＤ": {
+          "value": [""]
+        },
+        "指示日": {
+          "value": [""]
+        },
+        "作業予定日": {
+          "value": [""]
+        },
+        "作業実施日": {
+          "value": [""]
+        }
+      }
+    },
+    {
+      "id": "detail",
+      "before": "",
+      "after": "",
+      "multiline": "yes",
+      "record": {
+        "作業区分": {
+          "value": [""]
+        },
+        "作業件数": {
+          "value": [""]
+        },
+        "作業単価": {
+          "value": [""]
+        }
+      }
+    }]
+  },
+  "response": {
+    "comment": "保守サービス指示　メンテナンス　登録処理　レスポンスデータ",
+    "html": "Setubi/Json/Apps/R_MainteServiceHD",
+    "mode": "insert",
+    "prog": "no",
+    "message": {
+      "status": "OK",
+      "msg": "登録処理は正常に終了しました。"
+    },
+    "records": [{
+      "id": "header",
+      "before": "",
+      "after": "",
+      "multiline": "no",
+      "record": {
+        "指示ＮＯ": {
+          "value": [""]
+        },
+        "業者ＩＤ": {
+          "value": [""]
+        },
+        "業者名称": {
+          "value": [""]
+        },
+        "契約ＮＯ": {
+          "value": [""]
+        },
+        "設備行番": {
+          "value": [""]
+        },
+        "顧客ＩＤ": {
+          "value": [""]
+        },
+        "顧客名称": {
+          "value": [""]
+        },
+        "設備タイプ名称": {
+          "value": [""]
+        },
+        "設備名称": {
+          "value": [""]
+        },
+        "指示日": {
+          "value": [""]
+        },
+        "作業予定日": {
+          "value": [""]
+        },
+        "作業実施日": {
+          "value": [""]
+        }
+      }
+    },
+    {
+      "id": "detail",
+      "before": "",
+      "after": "",
+      "multiline": "yes",
+      "record": {
+        "作業区分": {
+          "value": [""]
+        },
+        "摘要": {
+          "value": [""]
+        },
+        "標準インターバル": {
+          "value": [""]
+        },
+        "作業件数": {
+          "value": [""]
+        },
+        "作業単価": {
+          "value": [""]
+        }
+      }
+    }]
+  }
+}

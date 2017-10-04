@@ -1,0 +1,31 @@
+{
+  "comment": "保守契約　一覧表 validation",
+  "html": "Setubi/Json/Apps/R_MainteContractList",
+  "records": [{
+    "id": "header",
+    "multiline": "no",
+    "record": {
+      "ページライン数": {
+        "validation": ["required"]
+      },
+      "カレントページ": {
+        "validation": ["required"]
+      },
+      "検索顧客名称": {
+        "validation": ["nonrequired"]
+      },
+      "検索設備タイプ名称": {
+        "validation": ["nonrequired"]
+      },
+      "検索設備名称": {
+        "validation": ["nonrequired"]
+      },
+      "検索業者名称": {
+        "validation": ["nonrequired"]
+      },
+      "検索作業区分": {
+        "validation": ["nonrequired"]
+      }
+    }
+  }]
+}

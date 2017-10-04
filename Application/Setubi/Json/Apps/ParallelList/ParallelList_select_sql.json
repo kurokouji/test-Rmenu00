@@ -1,0 +1,103 @@
+{
+  "comment": "並列分散処理　一覧表　初期処理",
+  "html": "Setubi/Json/Apps/ParallelList",
+  "dbname": "setubi",
+  "mode": "select",
+  "prog": "yes",
+  "message": {
+    "status": "OK",
+    "msg": "照会処理は正常に終了しました。"
+  },
+  "sqls": [{
+    "comment": "総件数を取得する",
+    "id": "total_count",
+    "before": "",
+    "after": "",
+    "sql": {
+      "type": "select",
+      "freesql": "",
+      "genesql": {
+        "dist": "",
+        "from": "parallel_controll",
+        "where": "",
+        "order": ""
+      }
+    },
+    "output": {
+      "multiline": "no",
+      "record": {
+        "トータル件数": {
+          "value": [""],
+          "funct": "COUNT(*)"
+        }
+      }
+    }
+  },
+  {
+    "comment": "指定件数分のデータを取得する。getOffsetLine：オフセット行数を計算する。",
+    "id": "detail",
+    "before": "getOffsetLineOfSetubi('header', 'detail')",
+    "after": "",
+    "sql": {
+      "type": "select",
+      "freesql": "",
+      "genesql": {
+        "dist": "",
+        "from": "parallel_controll",
+        "where": "",
+        "order": "parallel_controll_id DESC",
+        "limit": "? OFFSET ?"
+      }
+    },
+    "input": {
+      "multiline": "no",
+      "record": {
+        "ページライン数": {
+          "value": [""],
+          "fromtype": "request",
+          "fromid": "header",
+          "fromio": "",
+          "fromname": "ページライン数"
+        },
+        "オフセットライン数": {
+          "value": [""]
+        }
+      }
+    },
+    "output": {
+      "multiline": "yes",
+      "record": {
+        "並列分散管理ＩＤ": {
+          "value": [""],
+          "field": "parallel_controll_id"
+        },
+        "処理名": {
+          "value": [""],
+          "field": "process_name"
+        },
+        "分割数": {
+          "value": [""],
+          "field": "division_number"
+        },
+        "分割処理終了数": {
+          "value": [""],
+          "field": "division_end_number"
+        },
+        "ＮＥＸＴ処理": {
+          "value": [""],
+          "field": "next_process"
+        },
+        "開始日時": {
+          "value": [""],
+          "field": "start_datetime",
+          "funct": "TO_CHAR(start_datetime, 'YYYY/MM/DD HH24:MI:SS')"
+        },
+        "終了日時": {
+          "value": [""],
+          "field": "end_datetime",
+          "funct": "TO_CHAR(end_datetime,   'YYYY/MM/DD HH24:MI:SS')"
+        }
+      }
+    }
+  }]
+}

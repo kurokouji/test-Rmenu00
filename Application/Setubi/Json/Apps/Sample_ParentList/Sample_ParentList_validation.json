@@ -1,0 +1,25 @@
+{
+  "comment": "サンプル（親一覧リスト） validation",
+  "html": "Setubi/Json/Apps/Sample_ParentList",
+  "records": [{
+    "id": "header",
+    "multiline": "no",
+    "record": {
+      "ページライン数": {
+        "validation": ["required"]
+      },
+      "カレントページ": {
+        "validation": ["required"]
+      },
+      "検索ヘッダ項目１": {
+        "validation": ["nonrequired"]
+      },
+      "検索ヘッダ項目２": {
+        "validation": ["nonrequired"]
+      },
+      "検索サンプル項目１": {
+        "validation": ["nonrequired"]
+      }
+    }
+  }]
+}

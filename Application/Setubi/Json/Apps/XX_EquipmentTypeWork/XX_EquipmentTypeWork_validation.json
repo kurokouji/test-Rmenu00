@@ -1,0 +1,40 @@
+{
+  "comment": "サンプル（区分） validation",
+  "html": "Setubi/Json/Apps/XX_EquipmentTypeWork",
+  "records": [{
+    "id": "detail",
+    "multiline": "yes",
+    "record": {
+      "サンプル区分ＩＤ": {
+        "validation": ["nonrequired",
+        "integerP"],
+        "min": "1",
+        "max": "13"
+      },
+      "サンプル区分名称": {
+        "validation": ["required",
+        "free"],
+        "min": "1",
+        "max": "20"
+      },
+      "サンプル区分摘要": {
+        "validation": ["nonrequired",
+        "free"],
+        "min": "1",
+        "max": "100"
+      },
+      "サンプル区分表示順": {
+        "validation": ["required",
+        "integerP"],
+        "min": "1",
+        "max": "3"
+      },
+      "削除": {
+        "validation": ["nonrequired",
+        "free"],
+        "min": "1",
+        "max": "2"
+      }
+    }
+  }]
+}

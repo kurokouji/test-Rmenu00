@@ -1,0 +1,141 @@
+{
+  "comment": "設備タイプ別作業　メンテナンス　実行処理",
+  "html": "Setubi/Json/Apps/R_TypeWork",
+  "dbname": "setubi",
+  "mode": "execute",
+  "prog": "yes",
+  "message": {
+    "status": "OK",
+    "msg": "設備タイプ別作業　実行処理は正常に終了しました。"
+  },
+  "sqls": [{
+    "comment": "設備タイプ別作業　削除処理",
+    "id": "delete",
+    "before": "setDeleteDataOfR_TypeWorkOfSetubi('delete')",
+    "after": "",
+    "sql": {
+      "type": "delete",
+      "freesql": "",
+      "genesql": {
+        "dist": "",
+        "from": "設備タイプ別作業",
+        "where": "ref_設備タイプ = ? AND 作業区分 = ?",
+        "order": ""
+      }
+    },
+    "input": {
+      "multiline": "yes",
+      "record": {
+        "設備タイプ": {
+          "value": [""],
+          "field": "ref_設備タイプ"
+        },
+        "作業区分": {
+          "value": [""],
+          "fieldtype": "char"
+        }
+      }
+    }
+  },
+  {
+    "comment": "設備タイプ別作業　更新処理",
+    "id": "update",
+    "before": "setUpdateDataOfR_TypeWorkOfSetubi('update')",
+    "after": "",
+    "sql": {
+      "type": "delete",
+      "freesql": "",
+      "genesql": {
+        "dist": "",
+        "from": "設備タイプ別作業",
+        "where": "ref_設備タイプ = ? AND 作業区分 = ?",
+        "order": ""
+      }
+    },
+    "input": {
+      "multiline": "yes",
+      "record": {
+        "設備タイプ": {
+          "value": [""],
+          "field": "ref_設備タイプ"
+        },
+        "作業区分": {
+          "value": [""],
+          "fieldtype": "char"
+        }
+      }
+    }
+  },
+  {
+    "comment": "設備タイプ別作業　新規処理",
+    "id": "insert",
+    "before": "setInsertDataOfR_TypeWorkOfSetubi('insert')",
+    "after": "",
+    "sql": {
+      "type": "insert",
+      "freesql": "",
+      "genesql": {
+        "dist": "",
+        "from": "設備タイプ別作業",
+        "where": "",
+        "order": ""
+      }
+    },
+    "input": {
+      "multiline": "yes",
+      "record": {
+        "設備タイプ": {
+          "value": [""],
+          "field": "ref_設備タイプ"
+        },
+        "作業区分": {
+          "value": [""],
+          "fieldtype": "char"
+        },
+        "摘要": {
+          "value": [""],
+          "fieldtype": "char"
+        }
+      }
+    }
+  },
+  {
+    "comment": "設備タイプ別作業　照会処理",
+    "id": "detail",
+    "before": "",
+    "after": "",
+    "sql": {
+      "type": "select",
+      "freesql": "",
+      "genesql": {
+        "dist": "",
+        "from": "設備タイプ別作業",
+        "where": "ref_設備タイプ = ?",
+        "order": "作業区分"
+      }
+    },
+    "input": {
+      "multiline": "no",
+      "record": {
+        "設備タイプ": {
+          "value": [""],
+          "fromtype" : "request",
+          "fromid" : "header",
+          "fromio" : "",
+          "fromname" : "設備タイプ"
+        }
+      }
+    },
+    "output": {
+      "multiline": "yes",
+      "record": {
+        "作業区分": {
+          "value": [""]
+        },
+        "摘要": {
+          "value": [""]
+        }
+      }
+    }
+  }]
+}

@@ -1,0 +1,22 @@
+{
+  "comment": "設備タイプ　メンテナンス validation",
+  "html": "Setubi/Json/Apps/R_EquipmentType",
+  "records": [{
+    "id": "detail",
+    "multiline": "yes",
+    "record": {
+      "設備タイプ": {
+        "validation": ["nonrequired",
+        "integerP"],
+        "min": "1",
+        "max": "13"
+      },
+      "名称": {
+        "validation": ["required",
+        "free"],
+        "min": "1",
+        "max": "100"
+      }
+    }
+  }]
+}

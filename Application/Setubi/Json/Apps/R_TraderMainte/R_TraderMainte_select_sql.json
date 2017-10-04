@@ -1,0 +1,57 @@
+{
+  "comment": "業者　メンテナンス　照会処理",
+  "html": "Setubi/Json/Apps/R_TraderMainte",
+  "dbname": "setubi",
+  "mode": "select",
+  "prog": "no",
+  "message": {
+    "status": "OK",
+    "msg": "照会処理は正常に終了しました。"
+  },
+  "sqls": [{
+    "comment": "業者　照会処理",
+    "id": "header",
+    "before": "",
+    "after": "",
+    "sql": {
+      "type": "select",
+      "freesql": "",
+      "genesql": {
+        "dist": "",
+        "from": 
+        [
+          "業者"
+        ],
+        "where": "業者ＩＤ = ?",
+        "order": ""
+      }
+    },
+    "input": {
+      "multiline": "no",
+      "record": {
+        "業者ＩＤ": {
+          "value": [""]
+        }
+      }
+    },
+    "output": {
+      "multiline": "no",
+      "record": {
+        "業者ＩＤ": {
+          "value": [""]
+        },
+        "業者名称": {
+          "value": [""],
+          "field": "名称"
+        },
+        "郵便番号": {
+          "value": [""]
+        },
+        "住所": {
+          "value": [""],
+          "field": "所在地"
+        }
+      }
+    }
+  }]
+}

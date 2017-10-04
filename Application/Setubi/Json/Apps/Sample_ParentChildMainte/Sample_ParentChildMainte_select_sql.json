@@ -1,0 +1,137 @@
+{
+  "comment": "サンプル親子　メンテナンス　照会処理",
+  "html": "Setubi/Json/Apps/Sample_ParentChildMainte",
+  "dbname": "setubi",
+  "mode": "select",
+  "prog": "no",
+  "message": {
+    "status": "OK",
+    "msg": "照会処理は正常に終了しました。"
+  },
+  "sqls": [{
+    "comment": "サンプル_ヘッダ　照会処理",
+    "id": "header",
+    "before": "",
+    "after": "",
+    "sql": {
+      "type": "select",
+      "freesql": "",
+      "genesql": {
+        "dist": "",
+        "from": 
+        [
+          "サンプル_ヘッダ          AS A"
+         ,"LEFT OUTER JOIN サンプル AS B ON (A.ref_サンプルＩＤ = B.サンプルＩＤ)"
+        ],
+        "where": "A.サンプル_ヘッダＩＤ = ?",
+        "order": ""
+      }
+    },
+    "input": {
+      "multiline": "no",
+      "record": {
+        "サンプル_ヘッダＩＤ": {
+          "value": [""]
+        }
+      }
+    },
+    "output": {
+      "multiline": "no",
+      "record": {
+        "サンプル_ヘッダＩＤ": {
+          "value": [""],
+          "table": "A"
+        },
+        "サンプル_ヘッダ項目１": {
+          "value": [""],
+          "table": "A"
+        },
+        "サンプル_ヘッダ項目２": {
+          "value": [""],
+          "table": "A"
+        },
+        "サンプル_ヘッダ項目３": {
+          "value": [""],
+          "table": "A"
+        },
+        "サンプル_ヘッダ項目４": {
+          "value": [""],
+          "table": "A"
+        },
+        "サンプル_ヘッダ項目５": {
+          "value": [""],
+          "table": "A"
+        },
+        "サンプルＩＤ": {
+          "value": [""],
+          "table": "B"
+        },
+        "サンプル項目１": {
+          "value": [""],
+          "table": "B"
+        }
+      }
+    }
+  },
+  {
+    "comment": "サンプル_明細　照会処理",
+    "id": "detail",
+    "before": "",
+    "after": "",
+    "sql": {
+      "type": "select",
+      "freesql": "",
+      "genesql": {
+        "dist": "",
+        "from": "サンプル_明細",
+        "where": "ref_サンプル_ヘッダＩＤ = ?",
+        "order": "サンプル_明細行番号"
+      }
+    },
+    "input": {
+      "multiline": "no",
+      "record": {
+        "サンプル_ヘッダＩＤ": {
+          "value": [""],
+          "fromtype" : "request",
+          "fromid" : "header",
+          "fromio" : "",
+          "fromname" : "サンプル_ヘッダＩＤ"
+        }
+      }
+    },
+    "output": {
+      "multiline": "yes",
+      "record": {
+        "サンプル_明細行番号": {
+          "value": [""]
+        },
+        "サンプル区分ＩＤ": {
+          "value": [""],
+          "field": "ref_サンプル区分ＩＤ"
+        },
+        "サンプル_明細項目１": {
+          "value": [""]
+        },
+        "サンプル_明細項目２": {
+          "value": [""]
+        },
+        "サンプル_明細項目３": {
+          "value": [""]
+        },
+        "サンプル_明細数量": {
+          "value": [""],
+          "funct": "TO_CHAR(サンプル_明細数量, 'FM999999999')"
+        },
+        "サンプル_明細単価": {
+          "value": [""],
+          "funct": "TO_CHAR(サンプル_明細単価, 'FM999999999')"
+        },
+        "サンプル_明細金額": {
+          "value": [""],
+          "funct": "TO_CHAR(サンプル_明細金額, 'FM999999999')"
+        }
+      }
+    }
+  }]
+}

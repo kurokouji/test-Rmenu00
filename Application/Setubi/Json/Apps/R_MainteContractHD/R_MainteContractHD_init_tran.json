@@ -1,0 +1,39 @@
+{
+  "request": {
+    "comment": "契約保守　メンテナンス　初期処理（設備タイプ照会）　リクエストデータ",
+    "html": "Setubi/Json/Apps/R_MainteContractHD",
+    "mode": "init",
+    "prog": "no",
+    "model": "yes",
+    "message": {
+      "status": "OK",
+      "msg": ""
+    },
+    "records": [{
+    }]
+  },
+  "response": {
+    "comment": "契約保守　メンテナンス　初期処理（設備タイプ照会）　レスポンスデータ",
+    "html": "Setubi/Json/Apps/R_MainteContractHD",
+    "mode": "init",
+    "prog": "no",
+    "message": {
+      "status": "OK",
+      "msg": "設備タイプ照会処理は正常に終了しました。"
+    },
+    "records": [{
+      "id": "選択設備タイプ",
+      "before": "",
+      "after": "",
+      "multiline": "yes",
+      "record": {
+        "選択設備タイプ": {
+          "value": [""]
+        },
+        "選択設備タイプ名称": {
+          "value": [""]
+        }
+      }
+    }]
+  }
+}

@@ -1,0 +1,171 @@
+{
+  "comment": "サンプル（親子一覧リスト） 検索処理",
+  "html": "Setubi/Json/Apps/Sample_ParentChildList",
+  "dbname": "setubi",
+  "mode": "select",
+  "prog": "yes",
+  "message": {
+    "status": "OK",
+    "msg": "照会処理は正常に終了しました。"
+  },
+  "sqls": [{
+    "comment": "総件数を取得する",
+    "id": "total_count",
+    "before": "setSql_Sample_ParentChildListOfSetubi('header', 'total_count', 'genesql')",
+    "after": "",
+    "sql": {
+      "type": "select",
+      "freesql": "",
+      "genesql": {
+        "dist": "",
+        "from": 
+        [
+          "サンプル_ヘッダ               AS A"
+         ,"LEFT OUTER JOIN サンプル_明細 AS B ON (A.サンプル_ヘッダＩＤ  = B.ref_サンプル_ヘッダＩＤ)"
+         ,"LEFT OUTER JOIN サンプル      AS C ON (A.ref_サンプルＩＤ     = C.サンプルＩＤ)"
+         ,"LEFT OUTER JOIN サンプル区分  AS D ON (B.ref_サンプル区分ＩＤ = D.サンプル区分ＩＤ)"
+        ],
+        "where": "true &&",
+        "order": ""
+      }
+    },
+    "input": {
+      "multiline": "no",
+      "record": {
+      }
+    },
+    "output": {
+      "multiline": "no",
+      "record": {
+        "トータル件数": {
+          "value": [""],
+          "funct": "COUNT(*)"
+        }
+      }
+    }
+  },
+  {
+    "comment": "指定件数分のデータを取得する。getOffsetLine：オフセット行数を計算する。",
+    "id": "detail",
+    "before": 
+    [
+      "setSql_Sample_ParentChildListOfSetubi('header', 'detail', 'genesql')"
+     ,"getOffsetLineOfSetubi('header', 'detail')"
+    ],
+    "after": "",
+    "sql": {
+      "type": "select",
+      "freesql": "",
+      "genesql": {
+        "dist": "",
+        "from": 
+        [
+          "サンプル_ヘッダ               AS A"
+         ,"LEFT OUTER JOIN サンプル_明細 AS B ON (A.サンプル_ヘッダＩＤ  = B.ref_サンプル_ヘッダＩＤ)"
+         ,"LEFT OUTER JOIN サンプル      AS C ON (A.ref_サンプルＩＤ     = C.サンプルＩＤ)"
+         ,"LEFT OUTER JOIN サンプル区分  AS D ON (B.ref_サンプル区分ＩＤ = D.サンプル区分ＩＤ)"
+        ],
+        "where": "true &&",
+        "order": "サンプル_ヘッダＩＤ DESC, B.サンプル_明細行番号",
+        "limit": "? OFFSET ?"
+      }
+    },
+    "input": {
+      "multiline": "no",
+      "record": {
+        "ページライン数": {
+          "value": [""],
+          "fromtype": "request",
+          "fromid": "header",
+          "fromio": "",
+          "fromname": "ページライン数"
+        },
+        "オフセットライン数": {
+          "value": [""]
+        }
+      }
+    },
+    "output": {
+      "multiline": "yes",
+      "record": {
+        "サンプル_ヘッダＩＤ": {
+          "value": [""],
+          "field": "サンプル_ヘッダＩＤ",
+          "table":"A"
+        },
+        "表示サンプル_ヘッダＩＤ": {
+          "value": [""],
+          "field": "サンプル_ヘッダＩＤ",
+          "table":"A"
+        },
+        "サンプル_ヘッダ項目１": {
+          "value": [""],
+          "field": "サンプル_ヘッダ項目１",
+          "table":"A"
+        },
+        "サンプル_ヘッダ項目２": {
+          "value": [""],
+          "field": "サンプル_ヘッダ項目２",
+          "table":"A"
+        },
+        "サンプル_ヘッダ項目３": {
+          "value": [""],
+          "field": "サンプル_ヘッダ項目３",
+          "table":"A"
+        },
+        "サンプル_ヘッダ項目４": {
+          "value": [""],
+          "field": "サンプル_ヘッダ項目４",
+          "table":"A"
+        },
+        "サンプル_ヘッダ項目５": {
+          "value": [""],
+          "field": "サンプル_ヘッダ項目５",
+          "table":"A"
+        },
+        "サンプル項目１": {
+          "value": [""],
+          "field": "サンプル項目１",
+          "table":"C"
+        },
+        "サンプル_明細行番号": {
+          "value": [""],
+          "field": "サンプル_明細行番号",
+          "table":"B"
+        },
+        "サンプル_明細項目１": {
+          "value": [""],
+          "field": "サンプル_明細項目１",
+          "table":"B"
+        },
+        "サンプル_明細項目２": {
+          "value": [""],
+          "field": "サンプル_明細項目２",
+          "table":"B"
+        },
+        "サンプル_明細項目３": {
+          "value": [""],
+          "field": "サンプル_明細項目３",
+          "table":"B"
+        },
+        "サンプル_明細数量": {
+          "value": [""],
+          "funct": "TO_CHAR(B.サンプル_明細数量, 'FM999,999,999')"
+        },
+        "サンプル_明細単価": {
+          "value": [""],
+          "funct": "TO_CHAR(B.サンプル_明細単価, 'FM999,999,999')"
+        },
+        "サンプル_明細金額": {
+          "value": [""],
+          "funct": "TO_CHAR(B.サンプル_明細金額, 'FM999,999,999')"
+        },
+        "サンプル区分名称": {
+          "value": [""],
+          "field": "サンプル区分名称",
+          "table":"D"
+        }
+      }
+    }
+  }]
+}

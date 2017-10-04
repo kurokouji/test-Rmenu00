@@ -1,0 +1,99 @@
+{
+  "comment": "業者　一覧表 検索処理",
+  "html": "Setubi/Json/Apps/R_TraderSelection",
+  "dbname": "setubi",
+  "mode": "select",
+  "prog": "yes",
+  "message": {
+    "status": "OK",
+    "msg": "照会処理は正常に終了しました。"
+  },
+  "sqls": [{
+    "comment": "総件数を取得する",
+    "id": "total_count",
+    "before": "setSql_R_TraderSelectionOfSetubi('header', 'total_count', 'genesql')",
+    "after": "",
+    "sql": {
+      "type": "select",
+      "freesql": "",
+      "genesql": {
+        "dist": "",
+        "from": 
+        [
+          "業者"
+        ],
+        "where": "true &&",
+        "order": ""
+      }
+    },
+    "input": {
+      "multiline": "no",
+      "record": {
+      }
+    },
+    "output": {
+      "multiline": "no",
+      "record": {
+        "トータル件数": {
+          "value": [""],
+          "funct": "COUNT(*)"
+        }
+      }
+    }
+  },
+  {
+    "comment": "指定件数分のデータを取得する。getOffsetLine：オフセット行数を計算する。",
+    "id": "detail",
+    "before": 
+    [
+      "setSql_R_TraderSelectionOfSetubi('header', 'detail', 'genesql')"
+     ,"getOffsetLineOfSetubi('header', 'detail')"
+    ],
+    "after": "",
+    "sql": {
+      "type": "select",
+      "freesql": "",
+      "genesql": {
+        "dist": "",
+        "from": "業者",
+        "where": "true &&",
+        "order": "業者ＩＤ",
+        "limit": "? OFFSET ?"
+      }
+    },
+    "input": {
+      "multiline": "no",
+      "record": {
+        "ページライン数": {
+          "value": [""],
+          "fromtype": "request",
+          "fromid": "header",
+          "fromio": "",
+          "fromname": "ページライン数"
+        },
+        "オフセットライン数": {
+          "value": [""]
+        }
+      }
+    },
+    "output": {
+      "multiline": "yes",
+      "record": {
+        "業者ＩＤ": {
+          "value": [""]
+        },
+        "業者名称": {
+          "value": [""],
+          "field": "名称"
+        },
+        "郵便番号": {
+          "value": [""]
+        },
+        "住所": {
+          "value": [""],
+          "field": "所在地"
+        }
+      }
+    }
+  }]
+}

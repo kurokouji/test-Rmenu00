@@ -1,0 +1,92 @@
+{
+  "request": {
+    "comment": "契約サービス指示諸掛明細　メンテナンス　登録処理　リクエストデータ",
+    "html": "Setubi/Json/Apps/R_MainteServiceHD1",
+    "mode": "insert",
+    "prog": "no",
+    "model": "yes",
+    "message": {
+      "status": "OK",
+      "msg": ""
+    },
+    "records": [{
+      "id": "header",
+      "before": "",
+      "after": "",
+      "multiline": "no",
+      "record": {
+        "指示ＮＯ": {
+          "value": [""]
+        },
+        "作業区分": {
+          "value": [""]
+        }
+      }
+    },
+    {
+      "id": "detail",
+      "before": "",
+      "after": "",
+      "multiline": "yes",
+      "record": {
+        "諸掛行番": {
+          "value": [""]
+        },
+        "単価": {
+          "value": [""]
+        },
+        "数量": {
+          "value": [""]
+        },
+        "請求額": {
+          "value": [""]
+        },
+        "諸掛明細摘要": {
+          "value": [""]
+        }
+      }
+    }]
+  },
+  "response": {
+    "comment": "契約サービス指示諸掛明細　メンテナンス　登録処理　レスポンスデータ",
+    "html": "Setubi/Json/Apps/R_MainteServiceHD1",
+    "mode": "insert",
+    "prog": "no",
+    "message": {
+      "status": "OK",
+      "msg": "登録処理は正常に終了しました。"
+    },
+    "records": [{
+      "id": "detail",
+      "before": "",
+      "after": "",
+      "multiline": "yes",
+      "record": {
+        "諸掛行番": {
+          "value": [""]
+        },
+        "標準単価": {
+          "value": [""]
+        },
+        "標準数量": {
+          "value": [""]
+        },
+        "請求フラグ": {
+          "value": [""]
+        },
+        "単価": {
+          "value": [""]
+        },
+        "数量": {
+          "value": [""]
+        },
+        "請求額": {
+          "value": [""]
+        },
+        "諸掛明細摘要": {
+          "value": [""]
+        }
+      }
+    }]
+  }
+}

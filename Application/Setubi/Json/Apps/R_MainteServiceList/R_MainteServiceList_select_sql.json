@@ -1,0 +1,199 @@
+{
+  "comment": "保守サービス指示　一覧表 検索処理",
+  "html": "Setubi/Json/Apps/R_MainteServiceList",
+  "dbname": "setubi",
+  "mode": "select",
+  "prog": "yes",
+  "message": {
+    "status": "OK",
+    "msg": "照会処理は正常に終了しました。"
+  },
+  "sqls": [{
+    "comment": "総件数を取得する",
+    "id": "total_count",
+    "before": "setSql_R_MainteServiceListOfSetubi('header', 'total_count', 'genesql')",
+    "after": "",
+    "sql": {
+      "type": "select",
+      "freesql": "",
+      "genesql": {
+        "dist": "",
+        "from": 
+        [
+          "保守サービス指示                     AS A"
+         ,"LEFT OUTER JOIN 保守サービス指示明細 AS B ON (A.サービス指示ＮＯ     = B.ref_サービス指示ＮＯ)"
+         ,"LEFT OUTER JOIN 保守サービス諸掛明細 AS C ON (B.ref_サービス指示ＮＯ = C.ref_サービス指示ＮＯ AND B.ref_作業区分 = C.ref_作業区分)"
+         ,"LEFT OUTER JOIN 業者                 AS D ON (A.ref_業者ＩＤ         = D.業者ＩＤ)"
+         ,"LEFT OUTER JOIN 保守契約             AS E ON (A.ref_契約ＮＯ         = E.契約ＮＯ)"
+         ,"LEFT OUTER JOIN 顧客                 AS F ON (E.ref_顧客ＩＤ         = F.顧客ＩＤ)"
+         ,"LEFT OUTER JOIN 契約設備明細         AS G ON (A.ref_契約ＮＯ         = G.ref_契約ＮＯ AND A.ref_設備行番号 = G.設備行番号)"
+         ,"LEFT OUTER JOIN 設備タイプ           AS H ON (G.ref_設備タイプ       = H.設備タイプ)"
+        ],
+        "where": "true &&",
+        "order": ""
+      }
+    },
+    "input": {
+      "multiline": "no",
+      "record": {
+      }
+    },
+    "output": {
+      "multiline": "no",
+      "record": {
+        "トータル件数": {
+          "value": [""],
+          "funct": "COUNT(*)"
+        }
+      }
+    }
+  },
+  {
+    "comment": "指定件数分のデータを取得する。getOffsetLine：オフセット行数を計算する。",
+    "id": "detail",
+    "before": 
+    [
+      "setSql_R_MainteServiceListOfSetubi('header', 'detail', 'genesql')"
+     ,"getOffsetLineOfSetubi('header', 'detail')"
+    ],
+    "after": "",
+    "sql": {
+      "type": "select",
+      "freesql": "",
+      "genesql": {
+        "dist": "",
+        "from": 
+        [
+          "保守サービス指示                     AS A"
+         ,"LEFT OUTER JOIN 保守サービス指示明細 AS B ON (A.サービス指示ＮＯ     = B.ref_サービス指示ＮＯ)"
+         ,"LEFT OUTER JOIN 保守サービス諸掛明細 AS C ON (B.ref_サービス指示ＮＯ = C.ref_サービス指示ＮＯ AND B.ref_作業区分 = C.ref_作業区分)"
+         ,"LEFT OUTER JOIN 業者                 AS D ON (A.ref_業者ＩＤ         = D.業者ＩＤ)"
+         ,"LEFT OUTER JOIN 保守契約             AS E ON (A.ref_契約ＮＯ         = E.契約ＮＯ)"
+         ,"LEFT OUTER JOIN 顧客                 AS F ON (E.ref_顧客ＩＤ         = F.顧客ＩＤ)"
+         ,"LEFT OUTER JOIN 契約設備明細         AS G ON (A.ref_契約ＮＯ         = G.ref_契約ＮＯ AND A.ref_設備行番号 = G.設備行番号)"
+         ,"LEFT OUTER JOIN 設備タイプ           AS H ON (G.ref_設備タイプ       = H.設備タイプ)"
+        ],
+        "where": "true &&",
+        "order": "サービス指示ＮＯ DESC, A.ref_設備行番号, B.ref_作業区分, C.ref_諸掛行番",
+        "limit": "? OFFSET ?"
+      }
+    },
+    "input": {
+      "multiline": "no",
+      "record": {
+        "ページライン数": {
+          "value": [""],
+          "fromtype": "request",
+          "fromid": "header",
+          "fromio": "",
+          "fromname": "ページライン数"
+        },
+        "オフセットライン数": {
+          "value": [""]
+        }
+      }
+    },
+    "output": {
+      "multiline": "yes",
+      "record": {
+        "指示ＮＯ": {
+          "value": [""],
+          "field": "サービス指示ＮＯ",
+          "table":"A"
+        },
+        "作業区分": {
+          "value": [""],
+          "field": "ref_作業区分",
+          "table":"B"
+        },
+        "表示用指示ＮＯ": {
+          "value": [""],
+          "field": "サービス指示ＮＯ",
+          "table":"A"
+        },
+        "業者名称": {
+          "value": [""],
+          "field": "名称",
+          "table":"D"
+        },
+        "契約ＮＯ": {
+          "value": [""],
+          "field": "ref_契約ＮＯ",
+          "table":"A"
+        },
+        "顧客名称": {
+          "value": [""],
+          "field": "名称",
+          "table":"F"
+        },
+        "設備行番": {
+          "value": [""],
+          "field": "ref_設備行番号",
+          "table":"A"
+        },
+        "設備タイプ名称": {
+          "value": [""],
+          "field": "名称",
+          "table":"H"
+        },
+        "設備名称": {
+          "value": [""],
+          "field": "設備名",
+          "table":"G"
+        },
+        "契約単価": {
+          "value": [""],
+          "funct": "TO_CHAR(G.契約単価, 'FM999,999,999')"
+        },
+        "指示日": {
+          "value": [""],
+          "funct": "TO_CHAR(A.指示日, 'YYYY/MM/DD')"
+        },
+        "作業予定日": {
+          "value": [""],
+          "funct": "TO_CHAR(A.作業予定日, 'YYYY/MM/DD')"
+        },
+        "作業実施日": {
+          "value": [""],
+          "funct": "TO_CHAR(A.作業実施日, 'YYYY/MM/DD')"
+        },
+        "表示用作業区分": {
+          "value": [""],
+          "field": "ref_作業区分",
+          "table":"B"
+        },
+        "作業件数": {
+          "value": [""],
+          "field": "件数",
+          "table":"B"
+        },
+        "作業単価": {
+          "value": [""],
+          "funct": "TO_CHAR(B.作業単価, 'FM999,999,999')"
+        },
+        "諸掛行番": {
+          "value": [""],
+          "field": "ref_諸掛行番",
+          "table":"C"
+        },
+        "単価": {
+          "value": [""],
+          "funct": "TO_CHAR(C.単価, 'FM999,999,999')"
+        },
+        "数量": {
+          "value": [""],
+          "funct": "TO_CHAR(C.数量, 'FM999,999,999')"
+        },
+        "請求額": {
+          "value": [""],
+          "funct": "TO_CHAR(C.請求額, 'FM999,999,999')"
+        },
+        "摘要": {
+          "value": [""],
+          "field": "摘要",
+          "table":"C"
+        }
+      }
+    }
+  }]
+}

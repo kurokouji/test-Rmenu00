@@ -1,0 +1,70 @@
+{
+  "request" : {
+    "comment" : "従業員　マスター　表示順再設定処理　リクエストデータ",
+    "html" : "Setubi/Json/Apps/M_Employee",
+    "mode" : "renumber",
+    "prog" : "no",
+    "model" : "yes",
+    "message" : {
+      "status" : "OK",
+      "msg" : ""
+    },
+    "records" :
+    [{
+        "id" : "detail",
+        "before" : "",
+        "after" : "",
+        "multiline" : "no",
+        "record" : {}
+      }
+    ]
+  },
+  "response" : {
+    "comment" : "従業員　マスター　表示順再設定処理　レスポンスデータ",
+    "html" : "Setubi/Json/Apps/M_Employee",
+    "mode" : "renumber",
+    "prog" : "no",
+    "message" : {
+      "status" : "OK",
+      "msg" : "表示順再設定処理は正常に終了しました。"
+    },
+    "records" :
+    [{
+        "id" : "detail",
+        "before" : "",
+        "after" : "",
+        "multiline" : "yes",
+        "record" : {
+          "従業員コード" : {
+            "value" : [""]
+          },
+          "従業員名" : {
+            "value" : [""]
+          },
+          "ログインＩＤ" : {
+            "value" : [""]
+          },
+          "パスワード" : {
+            "value" : [""]
+          },
+          "メールアドレス" : {
+            "value" : [""]
+          },
+          "メニュー名" : {
+            "value" : [""]
+          },
+          "表示順" : {
+            "value" : [""]
+          },
+          "更新日時" : {
+            "value" : [""]
+          },
+          "削除" : {
+            "value" : [""]
+          }
+        }
+      }
+
+    ]
+  }
+}

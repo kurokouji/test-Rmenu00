@@ -1,0 +1,130 @@
+{
+  "comment": "契約保守　メンテナンス　照会処理",
+  "html": "Setubi/Json/Apps/R_MainteContractHD",
+  "dbname": "setubi",
+  "mode": "select",
+  "prog": "no",
+  "message": {
+    "status": "OK",
+    "msg": "照会処理は正常に終了しました。"
+  },
+  "sqls": [{
+    "comment": "保守契約　照会処理",
+    "id": "header",
+    "before": "",
+    "after": "",
+    "sql": {
+      "type": "select",
+      "freesql": "",
+      "genesql": {
+        "dist": "",
+        "from": 
+        [
+          "保守契約             AS A"
+         ,"LEFT OUTER JOIN 顧客 AS B ON (A.ref_顧客ＩＤ = B.顧客ＩＤ)"
+        ],
+        "where": "A.契約ＮＯ = ?",
+        "order": ""
+      }
+    },
+    "input": {
+      "multiline": "no",
+      "record": {
+        "契約ＮＯ": {
+          "value": [""]
+        }
+      }
+    },
+    "output": {
+      "multiline": "no",
+      "record": {
+        "契約ＮＯ": {
+          "value": [""],
+          "field": "契約ＮＯ",
+          "table": "A"
+        },
+        "顧客ＩＤ": {
+          "value": [""],
+          "field": "ref_顧客ＩＤ",
+          "table": "A"
+        },
+        "顧客名称": {
+          "value": [""],
+          "field": "名称",
+          "table": "B"
+        },
+        "摘要": {
+          "value": [""],
+          "field": "摘要",
+          "table": "A"
+        }
+      }
+    }
+  },
+  {
+    "comment": "契約設備明細　照会処理",
+    "id": "detail",
+    "before": "",
+    "after": "",
+    "sql": {
+      "type": "select",
+      "freesql": "",
+      "genesql": {
+        "dist": "",
+        "from": 
+        [
+          "契約設備明細         AS A"
+         ,"LEFT OUTER JOIN 業者 AS B ON (A.ref_標準業者ＩＤ = B.業者ＩＤ)"
+        ],
+        "where": "A.ref_契約ＮＯ = ?",
+        "order": "A.設備行番号"
+      }
+    },
+    "input": {
+      "multiline": "no",
+      "record": {
+        "契約ＮＯ": {
+          "value": [""],
+          "fromtype" : "request",
+          "fromid" : "header",
+          "fromio" : "",
+          "fromname" : "契約ＮＯ"
+        }
+      }
+    },
+    "output": {
+      "multiline": "yes",
+      "record": {
+        "設備行番": {
+          "value": [""],
+          "field": "設備行番号",
+          "table": "A"
+        },
+        "設備タイプ": {
+          "value": [""],
+          "field": "ref_設備タイプ",
+          "table": "A"
+        },
+        "設備名": {
+          "value": [""],
+          "field": "設備名",
+          "table": "A"
+        },
+        "契約単価": {
+          "value": [""],
+          "funct": "TO_CHAR(A.契約単価, 'FM999999999')"
+        },
+        "業者ＩＤ": {
+          "value": [""],
+          "field": "ref_標準業者ＩＤ",
+          "table": "A"
+        },
+        "業者名称": {
+          "value": [""],
+          "field": "名称",
+          "table": "B"
+        }
+      }
+    }
+  }]
+}

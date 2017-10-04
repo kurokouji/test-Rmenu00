@@ -1,0 +1,43 @@
+{
+  "request": {
+    "comment": "業者　メンテナンス　訂正処理　リクエストデータ",
+    "html": "Setubi/Json/Apps/R_TraderMainte",
+    "mode": "update",
+    "prog": "no",
+    "model": "yes",
+    "message": {
+      "status": "OK",
+      "msg": ""
+    },
+    "records": [{
+      "id": "header",
+      "before": "",
+      "after": "",
+      "multiline": "no",
+      "record": {
+        "業者ＩＤ": {
+          "value": [""]
+        },
+        "業者名称": {
+          "value": [""]
+        },
+        "郵便番号": {
+          "value": [""]
+        },
+        "住所": {
+          "value": [""]
+        }
+      }
+    }]
+  },
+  "response": {
+    "comment": "業者　メンテナンス　訂正処理　レスポンスデータ",
+    "html": "Setubi/Json/Apps/R_TraderMainte",
+    "mode": "update",
+    "prog": "no",
+    "message": {
+      "status": "OK",
+      "msg": "データを正常に訂正しました。"
+    }
+  }
+}

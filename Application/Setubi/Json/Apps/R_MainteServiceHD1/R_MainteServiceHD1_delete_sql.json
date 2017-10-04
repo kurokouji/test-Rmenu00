@@ -1,0 +1,47 @@
+{
+  "comment": "契約サービス指示諸掛明細　メンテナンス　削除処理",
+  "html": "Setubi/Json/Apps/R_MainteServiceHD1",
+  "dbname": "setubi",
+  "mode": "delete",
+  "prog": "no",
+  "message": {
+    "status": "OK",
+    "msg": "削除処理は正常に終了しました。"
+  },
+  "sqls": [{
+    "comment": "保守サービス諸掛明細　削除処理",
+    "id": "detail_delete",
+    "before": "",
+    "after": "",
+    "sql": {
+      "type": "delete",
+      "freesql": "",
+      "genesql": {
+        "dist": "",
+        "from": "保守サービス諸掛明細",
+        "where": "ref_サービス指示ＮＯ = ? AND ref_作業区分 = ?",
+        "order": ""
+      }
+    },
+    "input": {
+      "multiline": "no",
+      "record": {
+        "指示ＮＯ": {
+          "value": [""],
+          "fromtype" : "request",
+          "fromid" : "header",
+          "fromio" : "",
+          "fromname" : "指示ＮＯ"
+        },
+        "作業区分": {
+          "value": [""],
+          "fieldtype": "char",
+          "fromtype" : "request",
+          "fromid" : "header",
+          "fromio" : "",
+          "fromname" : "作業区分"
+        }
+      }
+    }
+  }]
+}

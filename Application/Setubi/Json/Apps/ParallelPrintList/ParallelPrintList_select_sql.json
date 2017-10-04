@@ -1,0 +1,93 @@
+{
+  "comment": "並列帳票処理　一覧表　照会処理",
+  "html": "Setubi/Json/Apps/ParallelPrintList",
+  "dbname": "setubi",
+  "mode": "select",
+  "prog": "yes",
+  "message": {
+    "status": "OK",
+    "msg": "照会処理は正常に終了しました。"
+  },
+  "sqls": [{
+    "comment": "総件数を取得する",
+    "id": "total_count",
+    "before": "",
+    "after": "",
+    "sql": {
+      "type": "select",
+      "freesql": "",
+      "genesql": {
+        "dist": "",
+        "from": "parallel_print_controll",
+        "where": "",
+        "order": ""
+      }
+    },
+    "output": {
+      "multiline": "no",
+      "record": {
+        "トータル件数": {
+          "value": [""],
+          "funct": "COUNT(*)"
+        }
+      }
+    }
+  },
+  {
+    "comment": "指定件数分のデータを取得する。getOffsetLine：オフセット行数を計算する。",
+    "id": "detail",
+    "before": "getOffsetLineOfSetubi('header', 'detail')",
+    "after": "",
+    "sql": {
+      "type": "select",
+      "freesql": "",
+      "genesql": {
+        "dist": "",
+        "from": "parallel_print_controll",
+        "where": "",
+        "order": "parallel_controll_id DESC",
+        "limit": "? OFFSET ?"
+      }
+    },
+    "input": {
+      "multiline": "no",
+      "record": {
+        "ページライン数": {
+          "value": [""],
+          "fromtype": "request",
+          "fromid": "header",
+          "fromio": "",
+          "fromname": "ページライン数"
+        },
+        "オフセットライン数": {
+          "value": [""]
+        }
+      }
+    },
+    "output": {
+      "multiline": "yes",
+      "record": {
+        "並列分散管理ＩＤ": {
+          "value": [""],
+          "field": "parallel_controll_id"
+        },
+        "帳票名称": {
+          "value": [""],
+          "field": "print_name"
+        },
+        "ファイル名称": {
+          "value": [""],
+          "field": "print_file_name"
+        },
+        "出力回数": {
+          "value": [""],
+          "field": "output_times"
+        },
+        "最終出力日時": {
+          "value": [""],
+          "funct": "TO_CHAR(last_output_date_time,   'YYYY/MM/DD HH24:MI:SS')"
+        }
+      }
+    }
+  }]
+}

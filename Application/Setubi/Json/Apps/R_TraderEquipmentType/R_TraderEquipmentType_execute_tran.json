@@ -1,0 +1,68 @@
+{
+  "request": {
+    "comment": "業者別扱い設備タイプ　メンテナンス　更新処理　リクエストデータ",
+    "html": "Setubi/Json/Apps/R_TraderEquipmentType",
+    "mode": "execute",
+    "prog": "no",
+    "model": "yes",
+    "message": {
+      "status": "OK",
+      "msg": ""
+    },
+    "records": [{
+      "id": "header",
+      "before": "",
+      "after": "",
+      "multiline": "no",
+      "record": {
+        "業者ＩＤ": {
+          "value": [""]
+        }
+      }
+    },
+    {
+      "id": "detail",
+      "before": "",
+      "after": "",
+      "multiline": "yes",
+      "record": {
+        "設備タイプ": {
+          "value": [""]
+        },
+        "摘要": {
+          "value": [""]
+        },
+        "削除": {
+          "value": [""]
+        }
+      }
+    }]
+  },
+  "response": {
+    "comment": "業者別扱い設備タイプ　メンテナンス　実行処理　レスポンスデータ",
+    "html": "Setubi/Json/Apps/R_TraderEquipmentType",
+    "mode": "execute",
+    "prog": "no",
+    "message": {
+      "status": "OK",
+      "msg": "業者別扱い設備タイプ　データを正常に更新しました。"
+    },
+    "records": [{
+      "id": "detail",
+      "before": "",
+      "after": "",
+      "multiline": "yes",
+      "record": {
+        "設備タイプ": {
+          "value": [""]
+        },
+        "摘要": {
+          "value": [""]
+        },
+        "削除": {
+          "value": [""]
+        }
+      }
+    }]
+  }
+}

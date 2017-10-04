@@ -1,0 +1,76 @@
+{
+  "comment": "サンプル親　メンテナンス　照会処理",
+  "html": "Setubi/Json/Apps/Sample_ParentMainte",
+  "dbname": "setubi",
+  "mode": "select",
+  "prog": "no",
+  "message": {
+    "status": "OK",
+    "msg": "照会処理は正常に終了しました。"
+  },
+  "sqls": [{
+    "comment": "サンプル_ヘッダ　照会処理",
+    "id": "header",
+    "before": "",
+    "after": "",
+    "sql": {
+      "type": "select",
+      "freesql": "",
+      "genesql": {
+        "dist": "",
+        "from": 
+        [
+          "サンプル_ヘッダ          AS A"
+         ,"LEFT OUTER JOIN サンプル AS B ON (A.ref_サンプルＩＤ = B.サンプルＩＤ)"
+        ],
+        "where": "A.サンプル_ヘッダＩＤ = ?",
+        "order": ""
+      }
+    },
+    "input": {
+      "multiline": "no",
+      "record": {
+        "サンプル_ヘッダＩＤ": {
+          "value": [""]
+        }
+      }
+    },
+    "output": {
+      "multiline": "no",
+      "record": {
+        "サンプル_ヘッダＩＤ": {
+          "value": [""],
+          "table": "A"
+        },
+        "サンプル_ヘッダ項目１": {
+          "value": [""],
+          "table": "A"
+        },
+        "サンプル_ヘッダ項目２": {
+          "value": [""],
+          "table": "A"
+        },
+        "サンプル_ヘッダ項目３": {
+          "value": [""],
+          "table": "A"
+        },
+        "サンプル_ヘッダ項目４": {
+          "value": [""],
+          "table": "A"
+        },
+        "サンプル_ヘッダ項目５": {
+          "value": [""],
+          "table": "A"
+        },
+        "サンプルＩＤ": {
+          "value": [""],
+          "table": "B"
+        },
+        "サンプル項目１": {
+          "value": [""],
+          "table": "B"
+        }
+      }
+    }
+  }]
+}

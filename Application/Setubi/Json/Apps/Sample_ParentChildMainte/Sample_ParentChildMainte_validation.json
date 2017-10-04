@@ -1,0 +1,115 @@
+{
+  "comment": "サンプル親子　メンテナンス validation",
+  "html": "Setubi/Json/Apps/Sample_ParentChildMainte",
+  "records": [{
+    "id": "header",
+    "multiline": "no",
+    "record": {
+      "サンプル_ヘッダＩＤ": {
+        "validation": ["nonrequired",
+        "integerP"],
+        "min": "1",
+        "max": "13"
+      },
+      "サンプル_ヘッダ項目１": {
+        "validation": ["required",
+        "free"],
+        "min": "1",
+        "max": "200"
+      },
+      "サンプル_ヘッダ項目２": {
+        "validation": ["required",
+        "free"],
+        "min": "1",
+        "max": "200"
+      },
+      "サンプル_ヘッダ項目３": {
+        "validation": ["nonrequired",
+        "free"],
+        "min": "1",
+        "max": "200"
+      },
+      "サンプル_ヘッダ項目４": {
+        "validation": ["nonrequired",
+        "free"],
+        "min": "1",
+        "max": "200"
+      },
+      "サンプル_ヘッダ項目５": {
+        "validation": ["nonrequired",
+        "free"],
+        "min": "1",
+        "max": "200"
+      },
+      "サンプルＩＤ": {
+        "validation": ["required",
+        "integerP"],
+        "min": "1",
+        "max": "13"
+      }
+    }
+  },
+  {
+    "id": "detail",
+    "multiline": "yes",
+    "record": {
+      "削除": {
+        "validation": ["nonrequired",
+        "free"],
+        "min": "1",
+        "max": "2"
+      },
+      "サンプル_明細行番号": {
+        "validation": ["nonrequired",
+        "integerP"],
+        "min": "1",
+        "max": "2"
+      },
+      "サンプル区分ＩＤ": {
+        "validation": ["required",
+        "integerP"],
+        "min": "1",
+        "max": "13"
+      },
+      "サンプル_明細項目１": {
+        "validation": ["required",
+        "free"],
+        "min": "1",
+        "max": "100"
+      },
+      "サンプル_明細項目２": {
+        "validation": ["nonrequired",
+        "free"],
+        "min": "1",
+        "max": "100"
+      },
+      "サンプル_明細項目３": {
+        "validation": ["nonrequired",
+        "free"],
+        "min": "1",
+        "max": "100"
+      },
+      "サンプル_明細数量": {
+        "validation": ["required",
+        "integerP"],
+        "min": "1",
+        "max": "9",
+        "format": "quantity"
+      },
+      "サンプル_明細単価": {
+        "validation": ["required",
+        "integerP"],
+        "min": "1",
+        "max": "9",
+        "format": "price"
+      },
+      "サンプル_明細金額": {
+        "validation": ["nonrequired",
+        "integerP"],
+        "min": "1",
+        "max": "9",
+        "format": "money"
+      }
+    }
+  }]
+}

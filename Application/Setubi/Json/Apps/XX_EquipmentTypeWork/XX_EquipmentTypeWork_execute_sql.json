@@ -1,0 +1,169 @@
+{
+  "comment": "サンプル（区分）　実行処理　実行処理",
+  "html": "Setubi/Json/Apps/XX_EquipmentTypeWork",
+  "dbname": "setubi",
+  "mode": "execute",
+  "prog": "yes",
+  "message": {
+    "status": "OK",
+    "msg": "サンプル　実行処理は正常に終了しました。"
+  },
+  "sqls": [{
+    "comment": "サンプル区分　削除処理",
+    "id": "delete",
+    "before": "setDeleteDataOfSetubi('detail', 'delete', 'サンプル区分ＩＤ')",
+    "after": "",
+    "sql": {
+      "type": "delete",
+      "freesql": "",
+      "genesql": {
+        "dist": "",
+        "from": "サンプル区分",
+        "where": "サンプル区分ＩＤ = ?",
+        "order": ""
+      }
+    },
+    "input": {
+      "multiline": "yes",
+      "record": {
+        "サンプル区分ＩＤ": {
+          "value": [""],
+          "field": "サンプル区分ＩＤ"
+        }
+      }
+    }
+  },
+  {
+    "comment": "サンプル区分　更新処理",
+    "id": "update",
+    "before": "setUpdateDataOfSetubi('detail', 'update', 'サンプル区分ＩＤ')",
+    "after": "",
+    "sql": {
+      "type": "update",
+      "freesql": "",
+      "genesql": {
+        "dist": "",
+        "from": "サンプル区分",
+        "where": "サンプル区分ＩＤ = ?",
+        "order": ""
+      }
+    },
+    "input": {
+      "multiline": "yes",
+      "record": {
+        "サンプル区分名称": {
+          "value": [""]
+        },
+        "サンプル区分摘要": {
+          "value": [""]
+        },
+        "サンプル区分表示順": {
+          "value": [""]
+        },
+        "更新日時": {
+          "value": [""],
+          "funct": "CURRENT_TIMESTAMP"
+        },
+        "更新ユーザ": {
+          "value": [""],
+          "fromtype": "request",
+          "fromid": "login",
+          "fromio": "",
+          "fromname": "ユーザ名称"
+        },
+        "サンプル区分ＩＤ": {
+          "value": [""],
+          "field": "サンプル区分ＩＤ"
+        }
+      }
+    }
+  },
+  {
+    "comment": "サンプル区分　新規処理",
+    "id": "insert",
+    "before": "setInsertDataOfSetubi('detail', 'insert', 'サンプル区分ＩＤ')",
+    "after": "",
+    "sql": {
+      "type": "insert",
+      "freesql": "",
+      "genesql": {
+        "dist": "",
+        "from": "サンプル区分",
+        "where": "",
+        "order": ""
+      }
+    },
+    "input": {
+      "multiline": "yes",
+      "record": {
+        "サンプル区分名称": {
+          "value": [""]
+        },
+        "サンプル区分摘要": {
+          "value": [""]
+        },
+        "サンプル区分表示順": {
+          "value": [""]
+        },
+        "登録日時": {
+          "value": [""],
+          "funct": "CURRENT_TIMESTAMP"
+        },
+        "登録ユーザ": {
+          "value": [""],
+          "fromtype": "request",
+          "fromid": "login",
+          "fromio": "",
+          "fromname": "ユーザ名称"
+        },
+        "更新日時": {
+          "value": [""],
+          "funct": "CURRENT_TIMESTAMP"
+        },
+        "更新ユーザ": {
+          "value": [""],
+          "fromtype": "request",
+          "fromid": "login",
+          "fromio": "",
+          "fromname": "ユーザ名称"
+        }
+      }
+    }
+  },
+  {
+    "comment": "サンプル区分　照会処理",
+    "id": "detail",
+    "before": "",
+    "after": "",
+    "sql": {
+      "type": "select",
+      "freesql": "",
+      "genesql": {
+        "dist": "",
+        "from": "サンプル区分",
+        "where": "",
+        "order": "サンプル区分表示順"
+      }
+    },
+    "output": {
+      "multiline": "yes",
+      "record": {
+        "サンプル区分ＩＤ": {
+          "value": [""]
+        },
+        "サンプル区分名称": {
+          "value": [""]
+        },
+        "サンプル区分摘要": {
+          "value": [""]
+        },
+        "サンプル区分表示順": {
+          "value": [""]
+        },
+        "更新日時": {
+          "value": [""]
+        }
+      }
+    }
+  }]
+}

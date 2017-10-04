@@ -1,0 +1,60 @@
+{
+  "request": {
+    "comment": "業者　メンテナンス　登録処理　リクエストデータ",
+    "html": "Setubi/Json/Apps/R_TraderMainte",
+    "mode": "insert",
+    "prog": "no",
+    "model": "yes",
+    "message": {
+      "status": "OK",
+      "msg": ""
+    },
+    "records": [{
+      "id": "header",
+      "before": "",
+      "after": "",
+      "multiline": "no",
+      "record": {
+        "業者名称": {
+          "value": [""]
+        },
+        "郵便番号": {
+          "value": [""]
+        },
+        "住所": {
+          "value": [""]
+        }
+      }
+    }]
+  },
+  "response": {
+    "comment": "業者　メンテナンス　登録処理　レスポンスデータ",
+    "html": "Setubi/Json/Apps/R_TraderMainte",
+    "mode": "insert",
+    "prog": "no",
+    "message": {
+      "status": "OK",
+      "msg": "データを正常に登録しました。"
+    },
+    "records": [{
+      "id": "header",
+      "before": "",
+      "after": "",
+      "multiline": "no",
+      "record": {
+        "業者ＩＤ": {
+          "value": [""]
+        },
+        "業者名称": {
+          "value": [""]
+        },
+        "郵便番号": {
+          "value": [""]
+        },
+        "住所": {
+          "value": [""]
+        }
+      }
+    }]
+  }
+}

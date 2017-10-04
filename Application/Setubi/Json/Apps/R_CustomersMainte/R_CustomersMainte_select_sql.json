@@ -1,0 +1,57 @@
+{
+  "comment": "顧客　メンテナンス　照会処理",
+  "html": "Setubi/Json/Apps/R_CustomersMainte",
+  "dbname": "setubi",
+  "mode": "select",
+  "prog": "no",
+  "message": {
+    "status": "OK",
+    "msg": "照会処理は正常に終了しました。"
+  },
+  "sqls": [{
+    "comment": "顧客　照会処理",
+    "id": "header",
+    "before": "",
+    "after": "",
+    "sql": {
+      "type": "select",
+      "freesql": "",
+      "genesql": {
+        "dist": "",
+        "from": 
+        [
+          "顧客"
+        ],
+        "where": "顧客ＩＤ = ?",
+        "order": ""
+      }
+    },
+    "input": {
+      "multiline": "no",
+      "record": {
+        "顧客ＩＤ": {
+          "value": [""]
+        }
+      }
+    },
+    "output": {
+      "multiline": "no",
+      "record": {
+        "顧客ＩＤ": {
+          "value": [""]
+        },
+        "顧客名称": {
+          "value": [""],
+          "field": "名称"
+        },
+        "郵便番号": {
+          "value": [""]
+        },
+        "住所": {
+          "value": [""],
+          "field": "所在地"
+        }
+      }
+    }
+  }]
+}

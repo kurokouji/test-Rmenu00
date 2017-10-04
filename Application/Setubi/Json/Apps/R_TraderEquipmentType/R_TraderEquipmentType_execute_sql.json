@@ -1,0 +1,143 @@
+{
+  "comment": "業者別扱い設備タイプ　メンテナンス　実行処理",
+  "html": "Setubi/Json/Apps/R_TraderEquipmentType",
+  "dbname": "setubi",
+  "mode": "execute",
+  "prog": "yes",
+  "message": {
+    "status": "OK",
+    "msg": "業者別扱い設備タイプ　実行処理は正常に終了しました。"
+  },
+  "sqls": [{
+    "comment": "業者別扱い設備タイプ　削除処理",
+    "id": "delete",
+    "before": "setDeleteDataOfR_TraderEquipmentTypeOfSetubi('delete')",
+    "after": "",
+    "sql": {
+      "type": "delete",
+      "freesql": "",
+      "genesql": {
+        "dist": "",
+        "from": "業者別扱い設備タイプ",
+        "where": "ref_業者ＩＤ = ? AND ref_設備タイプ = ?",
+        "order": ""
+      }
+    },
+    "input": {
+      "multiline": "yes",
+      "record": {
+        "業者ＩＤ": {
+          "value": [""],
+          "field": "ref_業者ＩＤ"
+        },
+        "設備タイプ": {
+          "value": [""],
+          "field": "ref_設備タイプ"
+        }
+      }
+    }
+  },
+  {
+    "comment": "業者別扱い設備タイプ　更新処理",
+    "id": "update",
+    "before": "setUpdateDataOfR_TraderEquipmentTypeOfSetubi('update')",
+    "after": "",
+    "sql": {
+      "type": "delete",
+      "freesql": "",
+      "genesql": {
+        "dist": "",
+        "from": "業者別扱い設備タイプ",
+        "where": "ref_業者ＩＤ = ? AND ref_設備タイプ = ?",
+        "order": ""
+      }
+    },
+    "input": {
+      "multiline": "yes",
+      "record": {
+        "業者ＩＤ": {
+          "value": [""],
+          "field": "ref_業者ＩＤ"
+        },
+        "設備タイプ": {
+          "value": [""],
+          "field": "ref_設備タイプ"
+        }
+      }
+    }
+  },
+  {
+    "comment": "業者別扱い設備タイプ　新規処理",
+    "id": "insert",
+    "before": "setInsertDataOfR_TraderEquipmentTypeOfSetubi('insert')",
+    "after": "",
+    "sql": {
+      "type": "insert",
+      "freesql": "",
+      "genesql": {
+        "dist": "",
+        "from": "業者別扱い設備タイプ",
+        "where": "",
+        "order": ""
+      }
+    },
+    "input": {
+      "multiline": "yes",
+      "record": {
+        "業者ＩＤ": {
+          "value": [""],
+          "field": "ref_業者ＩＤ"
+        },
+        "設備タイプ": {
+          "value": [""],
+          "field": "ref_設備タイプ"
+        },
+        "摘要": {
+          "value": [""],
+          "fieldtype": "char"
+        }
+      }
+    }
+  },
+  {
+    "comment": "設備タイプ別作業　照会処理",
+    "id": "detail",
+    "before": "",
+    "after": "",
+    "sql": {
+      "type": "select",
+      "freesql": "",
+      "genesql": {
+        "dist": "",
+        "from": "業者別扱い設備タイプ",
+        "where": "ref_業者ＩＤ = ?",
+        "order": "ref_設備タイプ"
+      }
+    },
+    "input": {
+      "multiline": "no",
+      "record": {
+        "業者ＩＤ": {
+          "value": [""],
+          "field": "ref_業者ＩＤ",
+          "fromtype" : "request",
+          "fromid" : "header",
+          "fromio" : "",
+          "fromname" : "業者ＩＤ"
+        }
+      }
+    },
+    "output": {
+      "multiline": "yes",
+      "record": {
+        "設備タイプ": {
+          "value": [""],
+          "field": "ref_設備タイプ"
+        },
+        "摘要": {
+          "value": [""]
+        }
+      }
+    }
+  }]
+}

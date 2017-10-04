@@ -1,0 +1,67 @@
+{
+  "comment": "サンプル親　メンテナンス　削除処理",
+  "html": "Setubi/Json/Apps/Sample_ParentMainte",
+  "dbname": "setubi",
+  "mode": "delete",
+  "prog": "no",
+  "message": {
+    "status": "OK",
+    "msg": "削除処理は正常に終了しました。"
+  },
+  "sqls": [{
+    "comment" : "サンプル_明細　削除処理",
+    "id" : "detail_delete",
+    "before" : "",
+    "after" : "",
+    "sql" : {
+      "type" : "delete",
+      "freesql" : "",
+      "genesql" : {
+        "dist" : "",
+        "from" : "サンプル_明細",
+        "where": "ref_サンプル_ヘッダＩＤ = ?",
+        "order" : ""
+      }
+    },
+    "input" : {
+      "multiline" : "no",
+      "record" : {
+        "サンプル_ヘッダＩＤ": {
+          "value": [""],
+          "fromtype" : "request",
+          "fromid" : "header",
+          "fromio" : "",
+          "fromname" : "サンプル_ヘッダＩＤ"
+        }
+      }
+    }
+  },
+  {
+    "comment": "サンプル_ヘッダ　削除処理",
+    "id": "header_delete",
+    "before": "",
+    "after": "",
+    "sql": {
+      "type": "delete",
+      "freesql": "",
+      "genesql": {
+        "dist": "",
+        "from": "サンプル_ヘッダ",
+        "where": "サンプル_ヘッダＩＤ = ?",
+        "order": ""
+      }
+    },
+    "input": {
+      "multiline": "no",
+      "record": {
+        "サンプル_ヘッダＩＤ": {
+          "value": [""],
+          "fromtype" : "request",
+          "fromid" : "header",
+          "fromio" : "",
+          "fromname" : "サンプル_ヘッダＩＤ"
+        }
+      }
+    }
+  }]
+}

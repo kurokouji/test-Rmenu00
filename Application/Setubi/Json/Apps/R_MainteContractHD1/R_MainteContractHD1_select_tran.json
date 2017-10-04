@@ -1,0 +1,60 @@
+{
+  "request": {
+    "comment": "契約保守作業明細　メンテナンス　照会処理　リクエストデータ",
+    "html": "Setubi/Json/Apps/R_MainteContractHD1",
+    "mode": "select",
+    "prog": "no",
+    "model": "yes",
+    "message": {
+      "status": "OK",
+      "msg": ""
+    },
+    "records": [{
+      "id": "header",
+      "before": "",
+      "after": "",
+      "multiline": "no",
+      "record": {
+        "契約ＮＯ": {
+          "value": [""]
+        },
+        "設備行番": {
+          "value": [""]
+        },
+        "設備タイプ": {
+          "value": [""]
+        }
+      }
+    }]
+  },
+  "response": {
+    "comment": "契約保守作業明細　メンテナンス　照会処理　レスポンスデータ",
+    "html": "Setubi/Json/Apps/R_MainteContractHD1",
+    "mode": "select",
+    "prog": "yes",
+    "message": {
+      "status": "OK",
+      "msg": "照会処理は正常に終了しました。"
+    },
+    "records": [{
+      "id": "detail",
+      "before": "",
+      "after": "set契約保守作業明細データOfR_MainteContractHD1OfSetubi()",
+      "multiline": "yes",
+      "record": {
+        "作業区分": {
+          "value": [""]
+        },
+        "作業区分摘要": {
+          "value": [""]
+        },
+        "摘要": {
+          "value": [""]
+        },
+        "標準インターバル": {
+          "value": [""]
+        }
+      }
+    }]
+  }
+}

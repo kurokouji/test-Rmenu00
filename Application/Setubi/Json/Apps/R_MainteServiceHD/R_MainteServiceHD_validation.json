@@ -1,0 +1,83 @@
+{
+  "comment": "保守サービス指示　メンテナンス validation",
+  "html": "Setubi/Json/Apps/R_MainteServiceHD",
+  "records": [{
+    "id": "header",
+    "multiline": "no",
+    "record": {
+      "指示ＮＯ": {
+        "validation": ["nonrequired",
+        "integerP"],
+        "min": "1",
+        "max": "13"
+      },
+      "業者ＩＤ": {
+        "validation": ["required",
+        "integerP"],
+        "min": "1",
+        "max": "13"
+      },
+      "契約ＮＯ": {
+        "validation": ["required",
+        "integerP"],
+        "min": "1",
+        "max": "13"
+      },
+      "設備行番": {
+        "validation": ["required",
+        "integerP"],
+        "min": "1",
+        "max": "3"
+      },
+      "顧客ＩＤ": {
+        "validation": ["required",
+        "integerP"],
+        "min": "1",
+        "max": "13"
+      },
+      "指示日": {
+        "validation": ["required",
+        "free"],
+        "min": "1",
+        "max": "10"
+      },
+      "作業予定日": {
+        "validation": ["required",
+        "free"],
+        "min": "1",
+        "max": "10"
+      },
+      "作業実施日": {
+        "validation": ["required",
+        "free"],
+        "min": "1",
+        "max": "10"
+      }
+    }
+  },
+  {
+    "id": "detail",
+    "multiline": "yes",
+    "record": {
+      "作業区分": {
+        "validation": ["required",
+        "free"],
+        "min": "1",
+        "max": "100"
+      },
+      "作業件数": {
+        "validation": ["required",
+        "integerP"],
+        "min": "1",
+        "max": "5"
+      },
+      "作業単価": {
+        "validation": ["required",
+        "integerP"],
+        "min": "1",
+        "max": "9",
+        "format": "price"
+      }
+    }
+  }]
+}

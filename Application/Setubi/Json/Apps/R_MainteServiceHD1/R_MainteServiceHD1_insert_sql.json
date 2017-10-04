@@ -1,0 +1,169 @@
+{
+  "comment": "契約サービス指示諸掛明細　メンテナンス　登録処理",
+  "html": "Setubi/Json/Apps/R_MainteServiceHD1",
+  "dbname": "setubi",
+  "mode": "insert",
+  "prog": "yes",
+  "message": {
+    "status": "OK",
+    "msg": "登録処理は正常に終了しました。"
+  },
+  "sqls": [{
+    "comment": "保守サービス諸掛明細　登録処理",
+    "id": "detail_insert",
+    "before": "",
+    "after": "",
+    "sql": {
+      "type": "insert",
+      "freesql": "",
+      "genesql": {
+        "dist": "",
+        "from": "保守サービス諸掛明細",
+        "where": "",
+        "order": ""
+      }
+    },
+    "input": {
+      "multiline": "yes",
+      "record": {
+        "指示ＮＯ": {
+          "value": [""],
+          "field": "ref_サービス指示ＮＯ",
+          "fromtype" : "request",
+          "fromid" : "header",
+          "fromio" : "",
+          "fromname" : "指示ＮＯ"
+        },
+        "作業区分": {
+          "value": [""],
+          "field": "ref_作業区分",
+          "fromtype" : "request",
+          "fromid" : "header",
+          "fromio" : "",
+          "fromname" : "作業区分"
+        },
+        "諸掛行番": {
+          "value": [""],
+          "field": "ref_諸掛行番",
+          "fromtype" : "request",
+          "fromid" : "detail",
+          "fromio" : "",
+          "fromname" : "諸掛行番"
+        },
+        "単価": {
+          "value": [""],
+          "field": "単価",
+          "fromtype" : "request",
+          "fromid" : "detail",
+          "fromio" : "",
+          "fromname" : "単価"
+        },
+        "数量": {
+          "value": [""],
+          "field": "数量",
+          "fromtype" : "request",
+          "fromid" : "detail",
+          "fromio" : "",
+          "fromname" : "数量"
+        },
+        "請求額": {
+          "value": [""],
+          "field": "請求額",
+          "fromtype" : "request",
+          "fromid" : "detail",
+          "fromio" : "",
+          "fromname" : "請求額"
+        },
+        "諸掛明細摘要": {
+          "value": [""],
+          "field": "摘要",
+          "fromtype" : "request",
+          "fromid" : "detail",
+          "fromio" : "",
+          "fromname" : "諸掛明細摘要"
+        }
+      }
+    }
+  },
+  {
+    "comment": "保守サービス指示　照会処理",
+    "id": "detail",
+    "before": "",
+    "after": "",
+    "sql": {
+      "type": "select",
+      "freesql": "",
+      "genesql": {
+        "dist": "",
+        "from": 
+        [
+           "保守サービス指示                     AS A"
+          ,"LEFT OUTER JOIN 保守サービス指示明細 AS B ON (A.サービス指示ＮＯ     = B.ref_サービス指示ＮＯ AND B.ref_作業区分   = ?)"
+          ,"LEFT OUTER JOIN 契約保守諸掛明細     AS D ON (A.ref_契約ＮＯ         = D.ref_契約ＮＯ         AND A.ref_設備行番号 = D.ref_設備行番号 AND B.ref_作業区分 = D.ref_作業区分)"
+          ,"LEFT OUTER JOIN 保守サービス諸掛明細 AS C ON (B.ref_サービス指示ＮＯ = C.ref_サービス指示ＮＯ AND B.ref_作業区分   = C.ref_作業区分   AND D.諸掛行番     = C.ref_諸掛行番)"
+        ],
+        "where": "A.サービス指示ＮＯ = ?",
+        "order": "C.ref_諸掛行番"
+      }
+    },
+    "input": {
+      "multiline": "no",
+      "record": {
+        "作業区分": {
+          "value": [""],
+          "fieldtype": "char",
+          "fromtype": "request",
+          "fromid": "header",
+          "fromio": "",
+          "fromname": "作業区分"
+        },
+        "指示ＮＯ": {
+          "value": [""],
+          "fromtype": "request",
+          "fromid": "header",
+          "fromio": "",
+          "fromname": "指示ＮＯ"
+        }
+      }
+    },
+    "output": {
+      "multiline": "no",
+      "record": {
+        "諸掛行番": {
+          "value": [""],
+          "field": "諸掛行番",
+          "table": "D"
+        },
+        "標準単価": {
+          "value": [""],
+          "funct": "TO_CHAR(D.標準単価, 'FM999,999,999')"
+        },
+        "標準数量": {
+          "value": [""],
+          "funct": "TO_CHAR(D.標準数量, 'FM999,999,999')"
+        },
+        "請求フラグ": {
+          "value": [""],
+          "funct": "CASE D.請求対象フラグ WHEN '1' THEN '請求する' ELSE '請求無し' END"
+        },
+        "単価": {
+          "value": [""],
+          "funct": "TO_CHAR(C.単価, 'FM999999999')"
+        },
+        "数量": {
+          "value": [""],
+          "funct": "TO_CHAR(C.数量, 'FM999999999')"
+        },
+        "請求額": {
+          "value": [""],
+          "funct": "TO_CHAR(C.請求額, 'FM999999999')"
+        },
+        "諸掛明細摘要": {
+          "value": [""],
+          "field": "摘要",
+          "table": "C"
+        }
+      }
+    }
+  }]
+}

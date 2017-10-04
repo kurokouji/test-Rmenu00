@@ -1,0 +1,338 @@
+{
+  "comment": "保守サービス指示　メンテナンス　登録処理",
+  "html": "Setubi/Json/Apps/R_MainteServiceHD",
+  "dbname": "setubi",
+  "mode": "insert",
+  "prog": "no",
+  "message": {
+    "status": "OK",
+    "msg": "登録処理は正常に終了しました。"
+  },
+  "sqls": [{
+    "comment": "保守サービス指示　登録処理",
+    "id": "header_insert",
+    "before": "",
+    "after": "",
+    "sql": {
+      "type": "insert",
+      "freesql": "",
+      "genesql": {
+        "dist": "",
+        "from": "保守サービス指示",
+        "where": "",
+        "order": ""
+      }
+    },
+    "input": {
+      "multiline": "no",
+      "record": {
+        "業者ＩＤ": {
+          "value": [""],
+          "field": "ref_業者ＩＤ",
+          "fromtype" : "request",
+          "fromid" : "header",
+          "fromio" : "",
+          "fromname" : "業者ＩＤ"
+        },
+        "契約ＮＯ": {
+          "value": [""],
+          "field": "ref_契約ＮＯ",
+          "fromtype" : "request",
+          "fromid" : "header",
+          "fromio" : "",
+          "fromname" : "契約ＮＯ"
+        },
+        "設備行番": {
+          "value": [""],
+          "field": "ref_設備行番号",
+          "fromtype" : "request",
+          "fromid" : "header",
+          "fromio" : "",
+          "fromname" : "設備行番"
+        },
+        "顧客ＩＤ": {
+          "value": [""],
+          "field": "ref_顧客ＩＤ",
+          "fromtype" : "request",
+          "fromid" : "header",
+          "fromio" : "",
+          "fromname" : "顧客ＩＤ"
+        },
+        "指示日": {
+          "value": [""],
+          "field": "指示日",
+          "fromtype" : "request",
+          "fromid" : "header",
+          "fromio" : "",
+          "fromname" : "指示日"
+        },
+        "作業予定日": {
+          "value": [""],
+          "field": "作業予定日",
+          "fromtype" : "request",
+          "fromid" : "header",
+          "fromio" : "",
+          "fromname" : "作業予定日"
+        },
+        "作業実施日": {
+          "value": [""],
+          "field": "作業実施日",
+          "fromtype" : "request",
+          "fromid" : "header",
+          "fromio" : "",
+          "fromname" : "作業実施日"
+        }
+      }
+    }
+  },
+  {
+    "comment" : "登録した保守契約の契約ＮＯを取得する",
+    "id" : "header_key",
+    "before" : "",
+    "after" : "",
+    "sql" : {
+      "type" : "select",
+      "freesql" : "",
+      "genesql" : {
+        "dist" : "",
+        "from" : "保守サービス指示",
+        "where" : "",
+        "order" : ""
+      }
+    },
+    "output" : {
+      "multiline" : "no",
+      "record" : {
+        "指示ＮＯ" : {
+          "value" : [""],
+          "funct" : "MAX(サービス指示ＮＯ)"
+        }
+      }
+    }
+  },
+  {
+    "comment": "保守サービス指示明細　登録処理",
+    "id": "detail_insert",
+    "before": "",
+    "after": "",
+    "sql": {
+      "type": "insert",
+      "freesql": "",
+      "genesql": {
+        "dist": "",
+        "from": "保守サービス指示明細",
+        "where": "",
+        "order": ""
+      }
+    },
+    "input": {
+      "multiline": "yes",
+      "record": {
+        "指示ＮＯ": {
+          "value": [""],
+          "field": "ref_サービス指示ＮＯ",
+          "fromtype" : "sqls",
+          "fromid" : "header_key",
+          "fromio" : "output",
+          "fromname" : "指示ＮＯ"
+        },
+        "作業区分": {
+          "value": [""],
+          "field": "ref_作業区分",
+          "fromtype" : "request",
+          "fromid" : "detail",
+          "fromio" : "",
+          "fromname" : "作業区分"
+        },
+        "作業件数": {
+          "value": [""],
+          "field": "件数",
+          "fromtype" : "request",
+          "fromid" : "detail",
+          "fromio" : "",
+          "fromname" : "作業件数"
+        },
+        "作業単価": {
+          "value": [""],
+          "field": "作業単価",
+          "fromtype" : "request",
+          "fromid" : "detail",
+          "fromio" : "",
+          "fromname" : "作業単価"
+        }
+      }
+    }
+  },
+  {
+    "comment": "保守サービス指示　照会処理",
+    "id": "header",
+    "before": "",
+    "after": "",
+    "sql": {
+      "type": "select",
+      "freesql": "",
+      "genesql": {
+        "dist": "",
+        "from": 
+        [
+          "保守サービス指示             AS A"
+         ,"LEFT OUTER JOIN 業者         AS B ON (A.ref_業者ＩＤ   = B.業者ＩＤ)"
+         ,"LEFT OUTER JOIN 顧客         AS C ON (A.ref_顧客ＩＤ   = C.顧客ＩＤ)"
+         ,"LEFT OUTER JOIN 契約設備明細 AS D ON (A.ref_契約ＮＯ   = D.ref_契約ＮＯ AND A.ref_設備行番号 = D.設備行番号)"
+         ,"LEFT OUTER JOIN 設備タイプ   AS E ON (D.ref_設備タイプ = E.設備タイプ)"
+        ],
+        "where": "A.サービス指示ＮＯ = ?",
+        "order": ""
+      }
+    },
+    "input": {
+      "multiline": "no",
+      "record": {
+        "指示ＮＯ": {
+          "value": [""],
+          "fromtype" : "sqls",
+          "fromid" : "header_key",
+          "fromio" : "output",
+          "fromname" : "指示ＮＯ"
+        }
+      }
+    },
+    "output": {
+      "multiline": "no",
+      "record": {
+        "指示ＮＯ": {
+          "value": [""],
+          "field": "サービス指示ＮＯ",
+          "table": "A"
+        },
+        "業者ＩＤ": {
+          "value": [""],
+          "field": "ref_業者ＩＤ",
+          "table": "A"
+        },
+        "業者名称": {
+          "value": [""],
+          "field": "名称",
+          "table": "B"
+        },
+        "契約ＮＯ": {
+          "value": [""],
+          "field": "ref_契約ＮＯ",
+          "table": "A"
+        },
+        "設備行番": {
+          "value": [""],
+          "field": "ref_設備行番号",
+          "table": "A"
+        },
+        "顧客ＩＤ": {
+          "value": [""],
+          "field": "ref_顧客ＩＤ",
+          "table": "A"
+        },
+        "顧客名称": {
+          "value": [""],
+          "field": "名称",
+          "table": "C"
+        },
+        "設備タイプ名称": {
+          "value": [""],
+          "field": "名称",
+          "table": "E"
+        },
+        "設備名称": {
+          "value": [""],
+          "field": "設備名",
+          "table": "D"
+        },
+        "指示日": {
+          "value": [""],
+          "funct": "TO_CHAR(A.指示日, 'YYYY/MM/DD')"
+        },
+        "作業予定日": {
+          "value": [""],
+          "funct": "TO_CHAR(A.作業予定日, 'YYYY/MM/DD')"
+        },
+        "作業実施日": {
+          "value": [""],
+          "funct": "TO_CHAR(A.作業実施日, 'YYYY/MM/DD')"
+        }
+      }
+    }
+  },
+  {
+    "comment": "保守サービス指示明細　照会処理",
+    "id": "detail",
+    "before": "",
+    "after": "",
+    "sql": {
+      "type": "select",
+      "freesql": "",
+      "genesql": {
+        "dist": "",
+        "from": 
+        [
+          "保守サービス指示明細             AS A"
+         ,"LEFT OUTER JOIN 契約保守作業明細 AS B ON (B.ref_契約ＮＯ = ? AND B.ref_設備行番号 = ? AND A.ref_作業区分 = B.作業区分)"
+        ],
+        "where": "A.ref_サービス指示ＮＯ = ?",
+        "order": "A.ref_作業区分"
+      }
+    },
+    "input": {
+      "multiline": "no",
+      "record": {
+        "契約ＮＯ": {
+          "value": [""],
+          "fromtype" : "sqls",
+          "fromid" : "header",
+          "fromio" : "output",
+          "fromname" : "契約ＮＯ"
+        },
+        "設備行番": {
+          "value": [""],
+          "fromtype" : "sqls",
+          "fromid" : "header",
+          "fromio" : "output",
+          "fromname" : "設備行番"
+        },
+        "指示ＮＯ": {
+          "value": [""],
+          "fromtype" : "sqls",
+          "fromid" : "header_key",
+          "fromio" : "output",
+          "fromname" : "指示ＮＯ"
+        }
+      }
+    },
+    "output": {
+      "multiline": "yes",
+      "record": {
+        "作業区分": {
+          "value": [""],
+          "field": "ref_作業区分",
+          "table": "A"
+        },
+        "摘要": {
+          "value": [""],
+          "field": "摘要",
+          "table": "B"
+        },
+        "標準インターバル": {
+          "value": [""],
+          "field": "標準インターバル",
+          "table": "B"
+        },
+        "作業件数": {
+          "value": [""],
+          "field": "件数",
+          "table": "A"
+        },
+        "作業単価": {
+          "value": [""],
+          "funct": "TO_CHAR(A.作業単価, 'FM999999999')"
+        }
+      }
+    }
+  }]
+}

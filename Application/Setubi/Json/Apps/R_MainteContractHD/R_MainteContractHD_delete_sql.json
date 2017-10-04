@@ -1,0 +1,123 @@
+{
+  "comment": "顧客　メンテナンス　削除処理",
+  "html": "Setubi/Json/Apps/R_MainteContractHD",
+  "dbname": "setubi",
+  "mode": "delete",
+  "prog": "no",
+  "message": {
+    "status": "OK",
+    "msg": "削除処理は正常に終了しました。"
+  },
+  "sqls": [{
+    "comment": "契約保守諸掛明細　削除処理",
+    "id": "detail3_delete",
+    "before": "",
+    "after": "",
+    "sql": {
+      "type": "delete",
+      "freesql": "",
+      "genesql": {
+        "dist": "",
+        "from": "契約保守諸掛明細",
+        "where": "ref_契約ＮＯ = ?",
+        "order": ""
+      }
+    },
+    "input": {
+      "multiline": "no",
+      "record": {
+        "契約ＮＯ": {
+          "value": [""],
+          "fromtype" : "request",
+          "fromid" : "header",
+          "fromio" : "",
+          "fromname" : "契約ＮＯ"
+        }
+      }
+    }
+  },
+  {
+    "comment": "契約保守作業明細　削除処理",
+    "id": "detail2_delete",
+    "before": "",
+    "after": "",
+    "sql": {
+      "type": "delete",
+      "freesql": "",
+      "genesql": {
+        "dist": "",
+        "from": "契約保守作業明細",
+        "where": "ref_契約ＮＯ = ?",
+        "order": ""
+      }
+    },
+    "input": {
+      "multiline": "no",
+      "record": {
+        "契約ＮＯ": {
+          "value": [""],
+          "fromtype" : "request",
+          "fromid" : "header",
+          "fromio" : "",
+          "fromname" : "契約ＮＯ"
+        }
+      }
+    }
+  },
+  {
+    "comment": "契約設備明細　削除処理",
+    "id": "detail1_delete",
+    "before": "",
+    "after": "",
+    "sql": {
+      "type": "delete",
+      "freesql": "",
+      "genesql": {
+        "dist": "",
+        "from": "契約設備明細",
+        "where": "ref_契約ＮＯ = ?",
+        "order": ""
+      }
+    },
+    "input": {
+      "multiline": "no",
+      "record": {
+        "契約ＮＯ": {
+          "value": [""],
+          "fromtype" : "request",
+          "fromid" : "header",
+          "fromio" : "",
+          "fromname" : "契約ＮＯ"
+        }
+      }
+    }
+  },
+  {
+    "comment": "保守契約　削除処理",
+    "id": "header_delete",
+    "before": "",
+    "after": "",
+    "sql": {
+      "type": "delete",
+      "freesql": "",
+      "genesql": {
+        "dist": "",
+        "from": "保守契約",
+        "where": "契約ＮＯ = ?",
+        "order": ""
+      }
+    },
+    "input": {
+      "multiline": "no",
+      "record": {
+        "契約ＮＯ": {
+          "value": [""],
+          "fromtype" : "request",
+          "fromid" : "header",
+          "fromio" : "",
+          "fromname" : "契約ＮＯ"
+        }
+      }
+    }
+  }]
+}

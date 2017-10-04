@@ -1,0 +1,227 @@
+{
+  "comment": "従業員　マスター　メンテナンス　実行処理",
+  "html": "Setubi/Json/Apps/M_Employee",
+  "dbname": "setubi",
+  "mode": "execute",
+  "prog": "yes",
+  "message": {
+    "status": "OK",
+    "msg": "従業員　実行処理は正常に終了しました。"
+  },
+  "sqls": [{
+    "comment": "従業員　削除処理",
+    "id": "delete",
+    "before": "setDeleteDataOfSetubi('detail', 'delete', '従業員コード')",
+    "after": "",
+    "sql": {
+      "type": "update",
+      "freesql": "",
+      "genesql": {
+        "dist": "",
+        "from": "従業員",
+        "where": "従業員コード = ?",
+        "order": ""
+      }
+    },
+    "input": {
+      "multiline": "yes",
+      "record": {
+        "削除": {
+          "value": [""],
+          "field": "削除フラグ",
+          "funct": "'9'"
+        },
+        "更新日時": {
+          "value": [""],
+          "funct": "CURRENT_TIMESTAMP"
+        },
+        "更新ユーザ": {
+          "value": [""],
+          "fromtype": "request",
+          "fromid": "login",
+          "fromio": "",
+          "fromname": "ユーザ名称"
+        },
+        "従業員コード": {
+          "value": [""],
+          "field": "従業員コード"
+        }
+      }
+    }
+  },
+  {
+    "comment": "従業員　更新処理",
+    "id": "update",
+    "before": "setUpdateDataOfSetubi('detail', 'update', '従業員コード')",
+    "after": "",
+    "sql": {
+      "type": "update",
+      "freesql": "",
+      "genesql": {
+        "dist": "",
+        "from": "従業員",
+        "where": "従業員コード = ?",
+        "order": ""
+      }
+    },
+    "input": {
+      "multiline": "yes",
+      "record": {
+        "従業員名": {
+          "value": [""],
+          "field": "従業員氏名"
+        },
+        "ログインＩＤ": {
+          "value": [""]
+        },
+        "パスワード": {
+          "value": [""]
+        },
+        "メールアドレス": {
+          "value": [""]
+        },
+        "メニュー名": {
+          "value": [""]
+        },
+        "表示順": {
+          "value": [""],
+          "field": "従業員表示順"
+        },
+        "更新日時": {
+          "value": [""],
+          "funct": "CURRENT_TIMESTAMP"
+        },
+        "更新ユーザ": {
+          "value": [""],
+          "fromtype": "request",
+          "fromid": "login",
+          "fromio": "",
+          "fromname": "ユーザ名称"
+        },
+        "従業員コード": {
+          "value": [""],
+          "field": "従業員コード"
+        }
+      }
+    }
+  },
+  {
+    "comment": "従業員　新規処理",
+    "id": "insert",
+    "before": "setInsertDataOfSetubi('detail', 'insert', '従業員コード')",
+    "after": "",
+    "sql": {
+      "type": "insert",
+      "freesql": "",
+      "genesql": {
+        "dist": "",
+        "from": "従業員",
+        "where": "",
+        "order": ""
+      }
+    },
+    "input": {
+      "multiline": "yes",
+      "record": {
+        "従業員名": {
+          "value": [""],
+          "field": "従業員氏名"
+        },
+        "ログインＩＤ": {
+          "value": [""]
+        },
+        "パスワード": {
+          "value": [""]
+        },
+        "メールアドレス": {
+          "value": [""]
+        },
+        "メニュー名": {
+          "value": [""]
+        },
+        "表示順": {
+          "value": [""],
+          "field": "従業員表示順"
+        },
+        "登録日時": {
+          "value": [""],
+          "funct": "CURRENT_TIMESTAMP"
+        },
+        "登録ユーザ": {
+          "value": [""],
+          "fromtype": "request",
+          "fromid": "login",
+          "fromio": "",
+          "fromname": "ユーザ名称"
+        },
+        "更新日時": {
+          "value": [""],
+          "funct": "CURRENT_TIMESTAMP"
+        },
+        "更新ユーザ": {
+          "value": [""],
+          "fromtype": "request",
+          "fromid": "login",
+          "fromio": "",
+          "fromname": "ユーザ名称"
+        },
+        "削除": {
+          "value": [""],
+          "field": "削除フラグ",
+          "funct": "'0'"
+        }
+      }
+    }
+  },
+  {
+    "comment": "従業員　照会処理",
+    "id": "detail",
+    "before": "",
+    "after": "",
+    "sql": {
+      "type": "select",
+      "freesql": "",
+      "genesql": {
+        "dist": "",
+        "from": "従業員",
+        "where": "削除フラグ = '0'",
+        "order": "従業員表示順"
+      }
+    },
+    "output": {
+      "multiline": "yes",
+      "record": {
+        "従業員コード": {
+          "value": [""]
+        },
+        "従業員名": {
+          "value": [""],
+          "field": "従業員氏名"
+        },
+        "ログインＩＤ": {
+          "value": [""]
+        },
+        "パスワード": {
+          "value": [""]
+        },
+        "メールアドレス": {
+          "value": [""]
+        },
+        "メニュー名": {
+          "value": [""]
+        },
+        "表示順": {
+          "value": [""],
+          "field": "従業員表示順"
+        },
+        "更新日時": {
+          "value": [""]
+        },
+        "削除": {
+          "value": [""],
+          "field": "削除フラグ"
+        }
+      }
+    }
+  }]
+}

@@ -1,0 +1,98 @@
+{
+  "request": {
+    "comment": "サンプル親　メンテナンス　訂正処理　リクエストデータ",
+    "html": "Setubi/Json/Apps/Sample_ParentMainte",
+    "mode": "update",
+    "prog": "no",
+    "model": "yes",
+    "message": {
+      "status": "OK",
+      "msg": ""
+    },
+    "records": [{
+      "id": "login",
+      "before": "",
+      "after": "",
+      "multiline": "no",
+      "record": {
+        "ユーザＩＤ": {
+          "value": [""]
+        },
+        "ユーザ名称": {
+          "value": [""]
+        }
+      }
+    },
+    {
+      "id": "header",
+      "before": "",
+      "after": "",
+      "multiline": "no",
+      "record": {
+        "サンプル_ヘッダＩＤ": {
+          "value": [""]
+        },
+        "サンプル_ヘッダ項目１": {
+          "value": [""]
+        },
+        "サンプル_ヘッダ項目２": {
+          "value": [""]
+        },
+        "サンプル_ヘッダ項目３": {
+          "value": [""]
+        },
+        "サンプル_ヘッダ項目４": {
+          "value": [""]
+        },
+        "サンプル_ヘッダ項目５": {
+          "value": [""]
+        },
+        "サンプルＩＤ": {
+          "value": [""]
+        }
+      }
+    }]
+  },
+  "response": {
+    "comment": "サンプル親　メンテナンス　訂正処理　レスポンスデータ",
+    "html": "Setubi/Json/Apps/Sample_ParentMainte",
+    "mode": "update",
+    "prog": "no",
+    "message": {
+      "status": "OK",
+      "msg": "訂正処理は正常に終了しました。"
+    },
+    "records": [{
+      "id": "header",
+      "before": "",
+      "after": "",
+      "multiline": "no",
+      "record": {
+        "サンプル_ヘッダＩＤ": {
+          "value": [""]
+        },
+        "サンプル_ヘッダ項目１": {
+          "value": [""]
+        },
+        "サンプル_ヘッダ項目２": {
+          "value": [""]
+        },
+        "サンプル_ヘッダ項目３": {
+          "value": [""]
+        },
+        "サンプル_ヘッダ項目４": {
+          "value": [""]
+        },
+        "サンプル_ヘッダ項目５": {
+          "value": [""]
+        },
+        "サンプルＩＤ": {
+          "value": [""]
+        },
+        "サンプル項目１": {
+          "value": [""]
+        }
+      }
+    }]
+  }
+}

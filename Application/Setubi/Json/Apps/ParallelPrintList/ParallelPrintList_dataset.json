@@ -1,0 +1,57 @@
+{
+  "comment": "並列帳票処理　一覧表 dataset",
+  "html": "Setubi/Json/Apps/ParallelPrintList",
+  "message": {
+    "status": "OK",
+    "msg": ""
+  },
+  "records": [{
+    "comment": "テーブルページング情報（ページ行数・カレントページ・総ページ数・総件数）",
+    "id": "header",
+    "multiline": "no",
+    "defaultline": "0",
+    "record": {
+      "ページライン数": {
+        "value": [""]
+      },
+      "カレントページ": {
+        "value": [""]
+      },
+      "最大ページ": {
+        "value": [""]
+      },
+      "トータル件数": {
+        "value": [""]
+      },
+      "並列分散管理帳票ＩＤ": {
+        "value": [""]
+      },
+      "削除ファイル名称": {
+        "value": [""]
+      }
+    }
+  },
+  {
+    "comment": "テーブルの明細データ",
+    "id": "detail",
+    "multiline": "yes",
+    "defaultline": "25",
+    "record": {
+      "並列分散管理ＩＤ": {
+        "value": [""]
+      },
+      "帳票名称": {
+        "value": [""]
+      },
+      "ファイル名称": {
+        "value": [""]
+      },
+      "出力回数": {
+        "value": [""]
+      },
+      "最終出力日時": {
+        "value": [""]
+      }
+    }
+  }]
+}

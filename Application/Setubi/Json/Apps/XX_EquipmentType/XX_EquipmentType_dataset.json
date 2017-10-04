@@ -1,0 +1,27 @@
+{
+  "comment": "練習　設備タイプ dataset",
+  "html": "Setubi/Json/Apps/XX_EquipmentType",
+  "message": {
+    "status": "OK",
+    "msg": "データを入力して、実行ボタンを押下して下さい。"
+  },
+  "records": [{
+    "id": "detail",
+    "multiline": "yes",
+    "defaultline": "40",
+    "record": {
+      "行チェック": {
+        "value": [""]
+      },
+      "設備タイプ": {
+        "value": [""]
+      },
+      "名称": {
+        "value": [""]
+      },
+      "削除": {
+        "value": [""]
+      }
+    }
+  }]
+}

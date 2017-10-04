@@ -1,0 +1,49 @@
+{
+  "comment": "業者別扱い設備タイプ　メンテナンス dataset",
+  "html": "Setubi/Json/Apps/R_TraderEquipmentType",
+  "message": {
+    "status": "OK",
+    "msg": "データを入力して、実行ボタンを押下して下さい。"
+  },
+  "records": [{
+    "id": "header",
+    "multiline": "no",
+    "record": {
+      "業者ＩＤ": {
+        "value": [""]
+      },
+      "業者名称": {
+        "value": [""]
+      }
+    }
+  },
+  {
+    "id": "detail",
+    "multiline": "yes",
+    "defaultline": "30",
+    "record": {
+      "設備タイプ": {
+        "value": [""]
+      },
+      "摘要": {
+        "value": [""]
+      },
+      "削除": {
+        "value": [""]
+      }
+    }
+  },
+  {
+    "comment": "選択設備タイプ情報",
+    "id": "選択設備タイプ",
+    "multiline": "yes",
+    "record": {
+      "選択設備タイプ": {
+        "value": [""]
+      },
+      "選択設備タイプ名称": {
+        "value": [""]
+      }
+    }
+  }]
+}

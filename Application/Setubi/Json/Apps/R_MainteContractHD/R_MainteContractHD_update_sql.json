@@ -1,0 +1,354 @@
+{
+  "comment": "契約保守　メンテナンス　訂正処理",
+  "html": "Setubi/Json/Apps/R_MainteContractHD",
+  "dbname": "setubi",
+  "mode": "update",
+  "prog": "yes",
+  "message": {
+    "status": "OK",
+    "msg": "訂正処理は正常に終了しました。"
+  },
+  "sqls": [{
+    "comment": "保守契約　訂正処理",
+    "id": "header_update",
+    "before": "",
+    "after": "",
+    "sql": {
+      "type": "update",
+      "freesql": "",
+      "genesql": {
+        "dist": "",
+        "from": "保守契約",
+        "where": "契約ＮＯ = ?",
+        "order": ""
+      }
+    },
+    "input": {
+      "multiline": "no",
+      "record": {
+        "顧客ＩＤ": {
+          "value": [""],
+          "field": "ref_顧客ＩＤ",
+          "fromtype" : "request",
+          "fromid" : "header",
+          "fromio" : "",
+          "fromname" : "顧客ＩＤ"
+        },
+        "摘要": {
+          "value": [""],
+          "field": "摘要",
+          "fromtype" : "request",
+          "fromid" : "header",
+          "fromio" : "",
+          "fromname" : "摘要"
+        },
+        "契約ＮＯ": {
+          "value": [""],
+          "field": "契約ＮＯ",
+          "fromtype" : "request",
+          "fromid" : "header",
+          "fromio" : "",
+          "fromname" : "契約ＮＯ"
+        }
+      }
+    }
+  },
+  {
+    "comment": "契約保守諸掛明細　削除処理",
+    "id": "detail3_delete",
+    "before": "set明細削除データOfR_MainteContractHDOfSetubi('detail3_delete')",
+    "after": "",
+    "sql": {
+      "type": "delete",
+      "freesql": "",
+      "genesql": {
+        "dist": "",
+        "from": "契約保守諸掛明細",
+        "where": "ref_契約ＮＯ = ? AND ref_設備行番号 = ?",
+        "order": ""
+      }
+    },
+    "input": {
+      "multiline": "yes",
+      "record": {
+        "契約ＮＯ": {
+          "value": [""]
+        },
+        "設備行番": {
+          "value": [""]
+        }
+      }
+    }
+  },
+  {
+    "comment": "契約保守作業明細　削除処理",
+    "id": "detail2_delete",
+    "before": "set明細削除データOfR_MainteContractHDOfSetubi('detail2_delete')",
+    "after": "",
+    "sql": {
+      "type": "delete",
+      "freesql": "",
+      "genesql": {
+        "dist": "",
+        "from": "契約保守作業明細",
+        "where": "ref_契約ＮＯ = ? AND ref_設備行番号 = ?",
+        "order": ""
+      }
+    },
+    "input": {
+      "multiline": "yes",
+      "record": {
+        "契約ＮＯ": {
+          "value": [""],
+          "fromtype" : "request",
+          "fromid" : "header",
+          "fromio" : "",
+          "fromname" : "契約ＮＯ"
+        },
+        "設備行番": {
+          "value": [""],
+          "fromtype" : "request",
+          "fromid" : "detail",
+          "fromio" : "",
+          "fromname" : "設備行番"
+        }
+      }
+    }
+  },
+  {
+    "comment": "契約設備明細　削除処理",
+    "id": "detail1_delete",
+    "before": "set明細削除データOfR_MainteContractHDOfSetubi('detail1_delete')",
+    "after": "",
+    "sql": {
+      "type": "delete",
+      "freesql": "",
+      "genesql": {
+        "dist": "",
+        "from": "契約設備明細",
+        "where": "ref_契約ＮＯ = ? AND 設備行番号 = ?",
+        "order": ""
+      }
+    },
+    "input": {
+      "multiline": "yes",
+      "record": {
+        "契約ＮＯ": {
+          "value": [""]
+        },
+        "設備行番": {
+          "value": [""]
+        }
+      }
+    }
+  },
+  {
+    "comment": "契約設備明細　訂正処理",
+    "id": "detail_update",
+    "before": "set明細訂正データOfR_MainteContractHDOfSetubi('detail_update')",
+    "after": "",
+    "sql": {
+      "type": "update",
+      "freesql": "",
+      "genesql": {
+        "dist": "",
+        "from": "契約設備明細",
+        "where": "ref_契約ＮＯ = ? AND 設備行番号 = ?",
+        "order": ""
+      }
+    },
+    "input": {
+      "multiline": "yes",
+      "record": {
+        "設備タイプ": {
+          "value": [""],
+          "field": "ref_設備タイプ"
+        },
+        "設備名": {
+          "value": [""],
+          "field": "設備名"
+        },
+        "契約単価": {
+          "value": [""],
+          "field": "契約単価"
+        },
+        "業者ＩＤ": {
+          "value": [""],
+          "field": "ref_標準業者ＩＤ"
+        },
+        "契約ＮＯ": {
+          "value": [""],
+          "field": "ref_契約ＮＯ"
+        },
+        "設備行番": {
+          "value": [""],
+          "field": "設備行番号"
+        }
+      }
+    }
+  },
+  {
+    "comment": "契約設備明細　登録処理",
+    "id": "detail_insert",
+    "before": "set明細訂正登録データOfR_MainteContractHDOfSetubi('detail_insert')",
+    "after": "",
+    "sql": {
+      "type": "insert",
+      "freesql": "",
+      "genesql": {
+        "dist": "",
+        "from": "契約設備明細",
+        "where": "",
+        "order": ""
+      }
+    },
+    "input": {
+      "multiline": "yes",
+      "record": {
+        "契約ＮＯ": {
+          "value": [""],
+          "field": "ref_契約ＮＯ"
+        },
+        "設備行番": {
+          "value": [""],
+          "field": "設備行番号"
+        },
+        "設備タイプ": {
+          "value": [""],
+          "field": "ref_設備タイプ"
+        },
+        "設備名": {
+          "value": [""],
+          "field": "設備名"
+        },
+        "契約単価": {
+          "value": [""],
+          "field": "契約単価"
+        },
+        "業者ＩＤ": {
+          "value": [""],
+          "field": "ref_標準業者ＩＤ"
+        }
+      }
+    }
+  },
+  {
+    "comment": "保守契約　照会処理",
+    "id": "header",
+    "before": "",
+    "after": "",
+    "sql": {
+      "type": "select",
+      "freesql": "",
+      "genesql": {
+        "dist": "",
+        "from": 
+        [
+          "保守契約             AS A"
+         ,"LEFT OUTER JOIN 顧客 AS B ON (A.ref_顧客ＩＤ = B.顧客ＩＤ)"
+        ],
+        "where": "A.契約ＮＯ = ?",
+        "order": ""
+      }
+    },
+    "input": {
+      "multiline": "no",
+      "record": {
+        "契約ＮＯ": {
+          "value": [""]
+        }
+      }
+    },
+    "output": {
+      "multiline": "no",
+      "record": {
+        "契約ＮＯ": {
+          "value": [""],
+          "field": "契約ＮＯ",
+          "table": "A"
+        },
+        "顧客ＩＤ": {
+          "value": [""],
+          "field": "ref_顧客ＩＤ",
+          "table": "A"
+        },
+        "顧客名称": {
+          "value": [""],
+          "field": "名称",
+          "table": "B"
+        },
+        "摘要": {
+          "value": [""],
+          "field": "摘要",
+          "table": "A"
+        }
+      }
+    }
+  },
+  {
+    "comment": "契約設備明細　照会処理",
+    "id": "detail",
+    "before": "",
+    "after": "",
+    "sql": {
+      "type": "select",
+      "freesql": "",
+      "genesql": {
+        "dist": "",
+        "from": 
+        [
+          "契約設備明細         AS A"
+         ,"LEFT OUTER JOIN 業者 AS B ON (A.ref_標準業者ＩＤ = B.業者ＩＤ)"
+        ],
+        "where": "A.ref_契約ＮＯ = ?",
+        "order": "A.設備行番号"
+      }
+    },
+    "input": {
+      "multiline": "no",
+      "record": {
+        "契約ＮＯ": {
+          "value": [""],
+          "fromtype" : "request",
+          "fromid" : "header",
+          "fromio" : "",
+          "fromname" : "契約ＮＯ"
+        }
+      }
+    },
+    "output": {
+      "multiline": "yes",
+      "record": {
+        "設備行番": {
+          "value": [""],
+          "field": "設備行番号",
+          "table": "A"
+        },
+        "設備タイプ": {
+          "value": [""],
+          "field": "ref_設備タイプ",
+          "table": "A"
+        },
+        "設備名": {
+          "value": [""],
+          "field": "設備名",
+          "table": "A"
+        },
+        "契約単価": {
+          "value": [""],
+          "funct": "TO_CHAR(A.契約単価, 'FM999999999')"
+        },
+        "業者ＩＤ": {
+          "value": [""],
+          "field": "ref_標準業者ＩＤ",
+          "table": "A"
+        },
+        "業者名称": {
+          "value": [""],
+          "field": "名称",
+          "table": "B"
+        }
+      }
+    }
+  }]
+}

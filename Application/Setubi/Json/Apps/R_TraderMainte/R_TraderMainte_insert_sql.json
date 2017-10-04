@@ -1,0 +1,133 @@
+{
+  "comment": "業者　メンテナンス　登録処理",
+  "html": "Setubi/Json/Apps/R_TraderMainte",
+  "dbname": "setubi",
+  "mode": "insert",
+  "prog": "no",
+  "message": {
+    "status": "OK",
+    "msg": "訂正処理は正常に終了しました。"
+  },
+  "sqls": [{
+    "comment": "業者　訂正処理",
+    "id": "header_insert",
+    "before": "",
+    "after": "",
+    "sql": {
+      "type": "insert",
+      "freesql": "",
+      "genesql": {
+        "dist": "",
+        "from": "業者",
+        "where": "",
+        "order": ""
+      }
+    },
+    "input": {
+      "multiline": "no",
+      "record": {
+        "業者名称": {
+          "value": [""],
+          "fieldtype": "char",
+          "field": "名称",
+          "fromtype" : "request",
+          "fromid" : "header",
+          "fromio" : "",
+          "fromname" : "業者名称"
+        },
+        "郵便番号": {
+          "value": [""],
+          "fieldtype": "char",
+          "fromtype" : "request",
+          "fromid" : "header",
+          "fromio" : "",
+          "fromname" : "郵便番号"
+        },
+        "住所": {
+          "value": [""],
+          "fieldtype": "char",
+          "field": "所在地",
+          "fromtype" : "request",
+          "fromid" : "header",
+          "fromio" : "",
+          "fromname" : "住所"
+        }
+      }
+    }
+  },
+  {
+    "comment" : "登録した業者のIDを取得する",
+    "id" : "header_key",
+    "before" : "",
+    "after" : "",
+    "sql" : {
+      "type" : "select",
+      "freesql" : "",
+      "genesql" : {
+        "dist" : "",
+        "from" : "業者",
+        "where" : "",
+        "order" : ""
+      }
+    },
+    "output" : {
+      "multiline" : "no",
+      "record" : {
+        "業者ＩＤ" : {
+          "value" : [""],
+          "funct" : "MAX(業者ＩＤ)"
+        }
+      }
+    }
+  },
+  {
+    "comment": "業者　照会処理",
+    "id": "header",
+    "before": "",
+    "after": "",
+    "sql": {
+      "type": "select",
+      "freesql": "",
+      "genesql": {
+        "dist": "",
+        "from": 
+        [
+          "業者"
+        ],
+        "where": "業者ＩＤ = ?",
+        "order": ""
+      }
+    },
+    "input": {
+      "multiline": "no",
+      "record": {
+        "業者ＩＤ": {
+            "value" : [""],
+            "fromtype" : "sqls",
+            "fromid" : "header_key",
+            "fromio" : "output",
+            "fromname" : "業者ＩＤ"
+        }
+      }
+    },
+    "output": {
+      "multiline": "no",
+      "record": {
+        "業者ＩＤ": {
+          "value": [""]
+        },
+        "業者名称": {
+          "value": [""],
+          "field": "名称"
+        },
+        "郵便番号": {
+          "value": [""]
+        },
+        "住所": {
+          "value": [""],
+          "field": "所在地"
+        }
+      }
+    }
+  }]
+}

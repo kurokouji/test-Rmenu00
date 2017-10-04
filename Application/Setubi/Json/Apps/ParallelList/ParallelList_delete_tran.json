@@ -1,0 +1,35 @@
+{
+  "request": {
+    "comment": "並列分散処理　一覧表　処理削除のrequestデータ",
+    "html": "Setubi/Json/Apps/ParallelList",
+    "mode": "delete",
+    "prog": "no",
+    "model": "yes",
+    "message": {
+      "status": "OK",
+      "msg": ""
+    },
+    "records": [{
+      "comment": "並列分散管理テーブル　ＩＤ",
+      "id": "header",
+      "before": "",
+      "after": "",
+      "multiline": "no",
+      "record": {
+        "並列分散管理削除ＩＤ": {
+          "value": [""]
+        }
+      }
+    }]
+  },
+  "response": {
+    "comment": "並列分散処理　一覧表　処理削除のresponseデータ",
+    "html": "Setubi/Json/Apps/ParallelList",
+    "mode": "delete",
+    "prog": "yes",
+    "message": {
+      "status": "OK",
+      "msg": "削除処理は正常に終了しました。"
+    }
+  }
+}

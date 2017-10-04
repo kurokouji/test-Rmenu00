@@ -1,0 +1,87 @@
+{
+  "request": {
+    "comment": "契約保守作業明細　メンテナンス　初期処理　リクエストデータ",
+    "html": "Setubi/Json/Apps/R_MainteContractHD2",
+    "mode": "init",
+    "prog": "no",
+    "model": "yes",
+    "message": {
+      "status": "OK",
+      "msg": ""
+    },
+    "records": [{
+      "id": "header",
+      "before": "",
+      "after": "",
+      "multiline": "no",
+      "record": {
+        "契約ＮＯ": {
+          "value": [""]
+        },
+        "設備行番": {
+          "value": [""]
+        },
+        "作業区分": {
+          "value": [""]
+        }
+      }
+    }]
+  },
+  "response": {
+    "comment": "契約保守作業明細　メンテナンス　初期処理　レスポンスデータ",
+    "html": "Setubi/Json/Apps/R_MainteContractHD2",
+    "mode": "init",
+    "prog": "no",
+    "message": {
+      "status": "OK",
+      "msg": "設備タイプ照会処理は正常に終了しました。"
+    },
+    "records": [{
+      "id": "header",
+      "before": "",
+      "after": "",
+      "multiline": "no",
+      "record": {
+        "契約ＮＯ": {
+          "value": [""]
+        },
+        "顧客名称": {
+          "value": [""]
+        },
+        "契約摘要": {
+          "value": [""]
+        },
+        "設備行番": {
+          "value": [""]
+        },
+        "設備タイプ": {
+          "value": [""]
+        },
+        "設備タイプ名称": {
+          "value": [""]
+        },
+        "設備名": {
+          "value": [""]
+        },
+        "契約単価": {
+          "value": [""]
+        },
+        "標準業者名称": {
+          "value": [""]
+        },
+        "作業区分": {
+          "value": [""]
+        },
+        "作業区分摘要": {
+          "value": [""]
+        },
+        "作業明細摘要": {
+          "value": [""]
+        },
+        "標準インターバル": {
+          "value": [""]
+        }
+      }
+    }]
+  }
+}

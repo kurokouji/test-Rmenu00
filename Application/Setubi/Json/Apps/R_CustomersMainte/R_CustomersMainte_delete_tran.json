@@ -1,0 +1,34 @@
+{
+  "request": {
+    "comment": "顧客　メンテナンス　削除処理　リクエストデータ",
+    "html": "Setubi/Json/Apps/R_CustomersMainte",
+    "mode": "delete",
+    "prog": "no",
+    "model": "yes",
+    "message": {
+      "status": "OK",
+      "msg": ""
+    },
+    "records": [{
+      "id": "header",
+      "before": "",
+      "after": "",
+      "multiline": "no",
+      "record": {
+        "顧客ＩＤ": {
+          "value": [""]
+        }
+      }
+    }]
+  },
+  "response": {
+    "comment": "顧客　メンテナンス　削除処理　レスポンスデータ",
+    "html": "Setubi/Json/Apps/R_CustomersMainte",
+    "mode": "delete",
+    "prog": "no",
+    "message": {
+      "status": "OK",
+      "msg": "データを正常に削除しました。"
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "comment": "業者　メンテナンス validation",
+  "html": "Setubi/Json/Apps/R_TraderMainte",
+  "records": [{
+    "id": "header",
+    "multiline": "no",
+    "record": {
+      "業者ＩＤ": {
+        "validation": ["nonrequired",
+        "integerP"],
+        "min": "1",
+        "max": "11"
+      },
+      "業者名称": {
+        "validation": ["required",
+        "free"],
+        "min": "1",
+        "max": "100"
+      },
+      "郵便番号": {
+        "validation": ["required",
+        "free"],
+        "min": "1",
+        "max": "8"
+      },
+      "住所": {
+        "validation": ["required",
+        "free"],
+        "min": "1",
+        "max": "200"
+      }
+    }
+  }]
+}

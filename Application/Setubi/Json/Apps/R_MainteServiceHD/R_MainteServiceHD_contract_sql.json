@@ -1,0 +1,60 @@
+{
+  "comment": "契約保守作業明細　照会",
+  "html": "Setubi/Json/Apps/R_MainteServiceHD",
+  "dbname": "setubi",
+  "mode": "contract",
+  "prog": "no",
+  "message": {
+    "status": "OK",
+    "msg": "契約保守作業明細照会処理は正常に終了しました。"
+  },
+  "sqls": [{
+    "comment": "契約保守作業明細照会処理",
+    "id": "detail",
+    "before": "",
+    "after": "",
+    "sql": {
+      "type": "select",
+      "freesql": "",
+      "genesql": {
+        "dist": "",
+        "from": "契約保守作業明細",
+        "where": "ref_契約ＮＯ = ? AND ref_設備行番号 = ?",
+        "order": "作業区分"
+      }
+    },
+    "input": {
+      "multiline": "no",
+      "record": {
+        "契約ＮＯ": {
+          "value": [""],
+          "fromtype" : "request",
+          "fromid" : "header",
+          "fromio" : "",
+          "fromname" : "契約ＮＯ"
+        },
+        "設備行番": {
+          "value": [""],
+          "fromtype" : "request",
+          "fromid" : "header",
+          "fromio" : "",
+          "fromname" : "設備行番"
+        }
+      }
+    },
+    "output": {
+      "multiline": "yes",
+      "record": {
+        "作業区分": {
+          "value": [""]
+        },
+        "摘要": {
+          "value": [""]
+        },
+        "標準インターバル": {
+          "value": [""]
+        }
+      }
+    }
+  }]
+}

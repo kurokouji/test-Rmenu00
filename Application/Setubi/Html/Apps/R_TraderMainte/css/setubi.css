@@ -1,0 +1,8 @@
+@charset "UTF-8";
+
+/* ヘッダテーブルの表示窓 */
+#header-Table1  {
+  width: 800px;
+  max-width: calc(100vw - 80px);
+  margin: auto;
+}

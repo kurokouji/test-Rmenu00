@@ -1,0 +1,80 @@
+{
+  "request": {
+    "comment": "サンプル子　メンテナンス　初期処理（サンプルヘッダ・サンプル区分照会）　リクエストデータ",
+    "html": "Setubi/Json/Apps/Sample_ChildMainte",
+    "mode": "init",
+    "prog": "no",
+    "model": "yes",
+    "message": {
+      "status": "OK",
+      "msg": ""
+    },
+    "records": [{
+      "id": "header",
+      "before": "",
+      "after": "",
+      "multiline": "no",
+      "record": {
+        "サンプル_ヘッダＩＤ": {
+          "value": [""]
+        }
+      }
+    }]
+  },
+  "response": {
+    "comment": "サンプル子　メンテナンス　初期処理（サンプルヘッダ・サンプル区分照会）　レスポンスデータ",
+    "html": "Setubi/Json/Apps/Sample_ChildMainte",
+    "mode": "init",
+    "prog": "no",
+    "message": {
+      "status": "OK",
+      "msg": "サンプルヘッダ・サンプル区分照会照会処理は正常に終了しました。"
+    },
+    "records": [{
+      "id": "header",
+      "before": "",
+      "after": "",
+      "multiline": "no",
+      "record": {
+        "サンプル_ヘッダＩＤ": {
+          "value": [""]
+        },
+        "サンプル_ヘッダ項目１": {
+          "value": [""]
+        },
+        "サンプル_ヘッダ項目２": {
+          "value": [""]
+        },
+        "サンプル_ヘッダ項目３": {
+          "value": [""]
+        },
+        "サンプル_ヘッダ項目４": {
+          "value": [""]
+        },
+        "サンプル_ヘッダ項目５": {
+          "value": [""]
+        },
+        "サンプルＩＤ": {
+          "value": [""]
+        },
+        "サンプル項目１": {
+          "value": [""]
+        }
+      }
+    },
+    {
+      "id": "選択サンプル区分",
+      "before": "",
+      "after": "",
+      "multiline": "yes",
+      "record": {
+        "選択サンプル区分ＩＤ": {
+          "value": [""]
+        },
+        "選択サンプル区分名称": {
+          "value": [""]
+        }
+      }
+    }]
+  }
+}

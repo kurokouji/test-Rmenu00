@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<title>契約保守作業明細　メンテナンス</title> 
+<link href="../../../../../Application/Setubi/Html/css/1pxdeep-b5e2f9.css" rel="stylesheet"/>
+<link href="../../../../../Application/Setubi/Html/css/style.css"  rel="stylesheet"/>
+<link href="../../../../../Application/Setubi/Html/css/style1.css" rel="stylesheet"/>
+<link href="../../../../../Application/Setubi/Html/css/setubi.css" rel="stylesheet"/>
+<link href="../../../../../Application/Setubi/Html/Apps/R_MainteContractHD1/css/setubi.css" rel="stylesheet"/>
+
+<script type="text/javascript" src="../../../../../System/Html/js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="../../../../../System/Html/js/jquery-ui-1.12.0.custom/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../../../../../System/Html/js/jquery.ui.touch-punch/jquery.ui.touch-punch.min.js"></script>
+<script type="text/javascript" src="../../../../../System/Html/js/bootstrap-3.2.0/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../../../../../System/Html/js/template/jquery.loadTemplate-1.4.5.min.js"></script>
+<script type="text/javascript" src="../../../../../System/Html/js/bignumberjs/bignumber.min.js"></script>
+
+<script type="text/javascript" src="../../../../../System/Html/js/rmenumvc-3.1.0.js"></script>
+<script type="text/javascript" src="../../../../../System/Html/js/rmenumodel.mixin-3.1.0.js"></script>
+<script type="text/javascript" src="../../../../../System/Html/js/rmenuview.mixin-3.1.0.js"></script>
+<script type="text/javascript" src="../../../../../System/Html/js/rmenucontroller.mixin-3.1.0.js"></script>
+<script type="text/javascript" src="../../../../../System/Html/js/rmenuentertabpfkey.mixin-3.1.0.js"></script>
+<script type="text/javascript" src="../../../../../System/Html/js/rmenuvalidation.mixin-3.1.0.js"></script>
+<script type="text/javascript" src="../../../../../System/Html/js/rmenuappspec.mixin-3.1.0.js"></script>
+<script type="text/JavaScript" src="../../../../../System/Html/js/webstorage-3.1.0.js"></script>
+
+<script type="text/javascript" src="../../../../../Application/Setubi/Html/js/datamainte.view.mixin-3.1.0.js"></script>
+<script type="text/javascript" src="../../../../../Application/Setubi/Html/js/datamainte.model.mixin-3.1.0.js"></script>
+<script type="text/javascript" src="../../../../../Application/Setubi/Html/js/datamainte.controller.mixin-3.1.0.js"></script>
+
+<script type="text/javascript" src="../../../../../Application/Setubi/Html/Apps/R_MainteContractHD1/R_MainteContractHD1.appspec.js"></script>
+<script type="text/javascript" src="../../../../../Application/Setubi/Html/Apps/R_MainteContractHD1/R_MainteContractHD1.model.js"></script>
+<script type="text/javascript" src="../../../../../Application/Setubi/Html/Apps/R_MainteContractHD1/R_MainteContractHD1.view.js"></script>
+<script type="text/javascript" src="../../../../../Application/Setubi/Html/Apps/R_MainteContractHD1/R_MainteContractHD1.controller.js"></script>
+<script type="text/javascript" src="../../../../../Application/Setubi/Html/Apps/R_MainteContractHD1/R_MainteContractHD1.main.js"></script>
+</head>
+
+<!-- =================================================================== -->
+<body>                                            <!-- ▼body部 スタート -->
+<!-- =================================================================== -->
+
+<!-- =================================================================== -->
+<div class="container">                        <!-- ▼container スタート -->
+<!-- =================================================================== -->
+
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" id="ヘッダータイトル" href="#">契約保守作業明細　メンテナンス</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li>
+          <button id="戻る" name="戻る" type="button" class="btn navbar-btn color4 btn-sm">戻　る：Esc</button>
+          <button id="実行" name="実行" type="button" class="btn navbar-btn color4 btn-sm">実　行：F1</button>
+        </li>
+        <li class="divider">　　　</li>
+        <li>
+          <div>
+            <select id="モード切替" class="width100 btn navbar-btn color4 btn-sm" data-style="btn-info">
+              <option value="init">モード切替</option>
+              <option value="update">　訂　正　</option>
+              <option value="delete">　削　除　</option>
+              <option value="select">　照　会　</option>
+            </select>
+          </div>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+          <label id="ログイン和暦"></label>
+          <label>　　　　　</label>
+        </li>
+        <li>
+          <label>ログイン日時：</label>
+          <label id="ログイン日時"></label>
+          <br>
+          <label>　ユーザ氏名：　　</label>
+          <label id="ユーザ氏名"></label>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+<!-- ======================================================================== -->
+<form id="mainForm" class="form-horizontal" role="form"> <!-- ▼form スタート -->
+<!-- ======================================================================== -->
+<input type="hidden" name="更新日時"/>
+
+<div class="row">
+  <div class="col-sm-12">
+    <br>
+  </div>
+</div>
+
+<div class="row">
+    <div id="header-Table1"> <!-- テーブル　スクロール スタート -->
+      <!-- 一段目 開始 -->
+           <table class="table rmenuTable">
+             <thead>
+               <tr>
+                 <th class="rmenuTableS width200">契約ＮＯ</th>
+                 <th class="rmenuTableS width200">顧客名称</th>
+                 <th class="rmenuTableS width200">摘要</th>
+               </tr>
+             </thead>
+             
+             <tbody>
+               <tr>
+                 <td id="契約ＮＯ" class="width200 契約ＮＯ">　</td>
+                 <td id="顧客名称" class="width200 顧客名称">　</td>
+                 <td id="契約摘要" class="width200 契約摘要">　</td>
+               </tr>
+             </tbody>
+           </table>
+    </div>
+</div>
+
+<div class="row">
+  <div class="col-sm-12">
+    <br>
+  </div>
+</div>
+
+<div class="row">
+    <div id="header-Table2"> <!-- テーブル　スクロール スタート -->
+      <!-- 一段目 開始 -->
+           <table class="table rmenuTable">
+              <thead>
+                <tr>
+                  <th class="rmenuTableS width80">設備行番</th>
+                  <th class="rmenuTableS width200">設備タイプ名称</th>
+                  <th class="rmenuTableS width200">設備名</th>
+                  <th class="rmenuTableS width120">契約単価</th>
+                  <th class="rmenuTableS width200">標準業者</th>
+                </tr>
+              </thead>
+              
+              <tbody>
+                <tr>
+                  <td id="設備行番"       class="width80 設備行番">　</td>
+                  <td id="設備タイプ名称" class="width200 設備タイプ名称">　</td>
+                  <td id="設備名"         class="width200 設備名">　</td>
+                  <td id="契約単価"       class="width120 契約単価">　</td>
+                  <td id="標準業者名称"   class="width200 標準業者名称">　</td>
+                </tr>
+              </tbody>
+           </table>
+    </div>
+</div>
+
+<div class="row">
+  <div class="col-sm-12">
+    <br>
+  </div>
+</div>
+
+<div class="row">
+    <div id="scrollable-Table"> <!-- テーブル　スクロール スタート -->
+
+        <div id="scrollable-HTable"> <!-- テーブル　スクロール　見出し スタート -->
+          <table id="mainTableH" class="table table-condensed rmenuTable">
+              <thead>
+                <tr>
+                  <th class="width160">作業区分</th>
+                  <th class="width300">作業区分摘要</th>
+                  <th class="width300">摘要</th>
+                  <th class="width120"><div>標準</div><div>インターバル</div></th>
+                  <th class="width80">諸掛明細</th>
+               </tr>
+              </thead>
+          </table>
+        </div> <!-- テーブル　スクロール　見出し エンド -->
+
+        <div id="scrollable-DTable"> <!-- テーブル　スクロール　明細 スタート -->
+          <table id="mainTable" class="table table-condensed rmenuTable">
+              <tbody>
+                <tr>
+                  <td class="width160 作業区分">　</td>
+                  <td class="width300 作業区分摘要">　</td>
+                  <td class="width300">
+                    <input name="摘要" type="text" value="" class="form-control input-sm rfocusblue rmenuLeft 摘要">
+                  </td>
+                  <td class="width120">
+                    <input name="標準インターバル" type="text" value="" class="form-control input-sm rfocusblue rmenuCenter 標準インターバル">
+                  </td>
+                  <td class="width80">
+                    <button name="諸掛明細" type="button" class="btn color4 btn-sm rfocusblue 諸掛明細">諸掛明細</button>
+                  </td>
+                </tr>
+              </tbody>
+          </table>
+        </div> <!-- テーブル　スクロール　明細 エンド -->
+    </div> <!-- テーブル　スクロール エンド -->
+</div>
+
+<div class="row">
+  <div class="col-sm-12">
+    <br>
+  </div>
+</div>
+
+<!-- =================================================================== -->
+</form>                                               <!-- ▲form エンド -->
+<!-- =================================================================== -->
+
+<div id="rmenu-pagefooter">
+</div>
+
+<!-- =================================================================== -->
+</div>                                           <!-- ▲container エンド -->
+<!-- =================================================================== -->
+
+<!-- =================================================================== -->
+</body>                                             <!-- ▲body部 エンド --> 
+<!-- =================================================================== -->
+</html>

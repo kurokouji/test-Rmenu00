@@ -1,0 +1,34 @@
+{
+  "request": {
+    "comment": "保守サービス指示　メンテナンス　削除処理　リクエストデータ",
+    "html": "Setubi/Json/Apps/R_MainteServiceHD",
+    "mode": "delete",
+    "prog": "no",
+    "model": "yes",
+    "message": {
+      "status": "OK",
+      "msg": ""
+    },
+    "records": [{
+      "id": "header",
+      "before": "",
+      "after": "",
+      "multiline": "no",
+      "record": {
+        "指示ＮＯ": {
+          "value": [""]
+        }
+      }
+    }]
+  },
+  "response": {
+    "comment": "保守サービス指示　メンテナンス　削除処理　レスポンスデータ",
+    "html": "Setubi/Json/Apps/R_MainteServiceHD",
+    "mode": "delete",
+    "prog": "no",
+    "message": {
+      "status": "OK",
+      "msg": "データを正常に削除しました。"
+    }
+  }
+}

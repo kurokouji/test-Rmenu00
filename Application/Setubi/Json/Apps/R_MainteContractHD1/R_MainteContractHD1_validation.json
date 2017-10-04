@@ -1,0 +1,46 @@
+{
+  "comment": "契約保守作業明細　メンテナンス validation",
+  "html": "Setubi/Json/Apps/R_MainteContractHD1",
+  "records": [{
+    "id": "header",
+    "multiline": "no",
+    "record": {
+      "契約ＮＯ": {
+        "validation": ["nonrequired",
+        "integerP"],
+        "min": "1",
+        "max": "13"
+      },
+      "設備行番": {
+        "validation": ["required",
+        "integerP"],
+        "min": "1",
+        "max": "2"
+      }
+    }
+  },
+  {
+    "id": "detail",
+    "multiline": "yes",
+    "record": {
+      "作業区分": {
+        "validation": ["required",
+        "free"],
+        "min": "1",
+        "max": "100"
+      },
+      "摘要": {
+        "validation": ["nonrequired",
+        "free"],
+        "min": "1",
+        "max": "200"
+      },
+      "標準インターバル": {
+        "validation": ["required",
+        "integerP"],
+        "min": "1",
+        "max": "2"
+      }
+    }
+  }]
+}

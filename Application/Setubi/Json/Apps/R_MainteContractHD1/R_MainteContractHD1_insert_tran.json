@@ -1,0 +1,77 @@
+{
+  "request": {
+    "comment": "契約保守作業明細　メンテナンス　登録処理　リクエストデータ",
+    "html": "Setubi/Json/Apps/R_MainteContractHD1",
+    "mode": "insert",
+    "prog": "no",
+    "model": "yes",
+    "message": {
+      "status": "OK",
+      "msg": ""
+    },
+    "records": [{
+      "id": "header",
+      "before": "",
+      "after": "",
+      "multiline": "no",
+      "record": {
+        "契約ＮＯ": {
+          "value": [""]
+        },
+        "設備行番": {
+          "value": [""]
+        },
+        "設備タイプ": {
+          "value": [""]
+        }
+      }
+    },
+    {
+      "id": "detail",
+      "before": "",
+      "after": "",
+      "multiline": "yes",
+      "record": {
+        "作業区分": {
+          "value": [""]
+        },
+        "摘要": {
+          "value": [""]
+        },
+        "標準インターバル": {
+          "value": [""]
+        }
+      }
+    }]
+  },
+  "response": {
+    "comment": "契約保守作業明細　メンテナンス　登録処理　レスポンスデータ",
+    "html": "Setubi/Json/Apps/R_MainteContractHD1",
+    "mode": "insert",
+    "prog": "no",
+    "message": {
+      "status": "OK",
+      "msg": "登録処理は正常に終了しました。"
+    },
+    "records": [{
+      "id": "detail",
+      "before": "",
+      "after": "",
+      "multiline": "yes",
+      "record": {
+        "作業区分": {
+          "value": [""]
+        },
+        "作業区分摘要": {
+          "value": [""]
+        },
+        "摘要": {
+          "value": [""]
+        },
+        "標準インターバル": {
+          "value": [""]
+        }
+      }
+    }]
+  }
+}

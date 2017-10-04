@@ -1,0 +1,40 @@
+{
+  "comment": "保守サービス指示　一覧表 validation",
+  "html": "Setubi/Json/Apps/R_MainteServiceList",
+  "records": [{
+    "id": "header",
+    "multiline": "no",
+    "record": {
+      "ページライン数": {
+        "validation": ["required"]
+      },
+      "カレントページ": {
+        "validation": ["required"]
+      },
+      "検索指示ＮＯ": {
+        "validation": ["nonrequired"]
+      },
+      "検索業者名称": {
+        "validation": ["nonrequired"]
+      },
+      "検索契約ＮＯ": {
+        "validation": ["nonrequired"]
+      },
+      "検索顧客名称": {
+        "validation": ["nonrequired"]
+      },
+      "検索指示日": {
+        "validation": ["nonrequired"]
+      },
+      "検索作業予定日": {
+        "validation": ["nonrequired"]
+      },
+      "検索作業実施日": {
+        "validation": ["nonrequired"]
+      },
+      "検索作業完了フラグ": {
+        "validation": ["nonrequired"]
+      }
+    }
+  }]
+}

@@ -1,0 +1,122 @@
+{
+  "comment": "契約保守作業明細　メンテナンス　削除処理",
+  "html": "Setubi/Json/Apps/R_MainteContractHD1",
+  "dbname": "setubi",
+  "mode": "delete",
+  "prog": "no",
+  "message": {
+    "status": "OK",
+    "msg": "削除処理は正常に終了しました。"
+  },
+  "sqls": [{
+    "comment": "契約保守諸掛明細　削除処理",
+    "id": "detail3_delete",
+    "before": "",
+    "after": "",
+    "sql": {
+      "type": "delete",
+      "freesql": "",
+      "genesql": {
+        "dist": "",
+        "from": "契約保守諸掛明細",
+        "where": "ref_契約ＮＯ = ? AND ref_設備行番号 = ?",
+        "order": ""
+      }
+    },
+    "input": {
+      "multiline": "no",
+      "record": {
+        "契約ＮＯ": {
+          "value": [""],
+          "fromtype" : "request",
+          "fromid" : "header",
+          "fromio" : "",
+          "fromname" : "契約ＮＯ"
+        },
+        "設備行番": {
+          "value": [""],
+          "fromtype" : "request",
+          "fromid" : "header",
+          "fromio" : "",
+          "fromname" : "設備行番"
+        }
+      }
+    }
+  },
+  {
+    "comment": "契約保守作業明細　削除処理",
+    "id": "detail2_delete",
+    "before": "",
+    "after": "",
+    "sql": {
+      "type": "delete",
+      "freesql": "",
+      "genesql": {
+        "dist": "",
+        "from": "契約保守作業明細",
+        "where": "ref_契約ＮＯ = ? AND ref_設備行番号 = ?",
+        "order": ""
+      }
+    },
+    "input": {
+      "multiline": "no",
+      "record": {
+        "契約ＮＯ": {
+          "value": [""],
+          "fromtype" : "request",
+          "fromid" : "header",
+          "fromio" : "",
+          "fromname" : "契約ＮＯ"
+        },
+        "設備行番": {
+          "value": [""],
+          "fromtype" : "request",
+          "fromid" : "header",
+          "fromio" : "",
+          "fromname" : "設備行番"
+        }
+      }
+    }
+  },
+  {
+    "comment": "設備タイプ別作業　照会処理",
+    "id": "detail",
+    "before": "",
+    "after": "",
+    "sql": {
+      "type": "select",
+      "freesql": "",
+      "genesql": {
+        "dist": "",
+        "from": "設備タイプ別作業",
+        "where": "ref_設備タイプ = ?",
+        "order": "作業区分"
+      }
+    },
+    "input": {
+      "multiline": "no",
+      "record": {
+        "設備タイプ": {
+          "value": [""],
+          "fromtype" : "request",
+          "fromid" : "header",
+          "fromio" : "",
+          "fromname" : "設備タイプ"
+        }
+      }
+    },
+    "output": {
+      "multiline": "yes",
+      "record": {
+        "作業区分": {
+          "value": [""],
+          "field": "作業区分"
+        },
+        "作業区分摘要": {
+          "value": [""],
+          "field": "摘要"
+        }
+      }
+    }
+  }]
+}

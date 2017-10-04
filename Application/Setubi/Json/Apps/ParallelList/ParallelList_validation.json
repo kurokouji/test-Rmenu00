@@ -1,0 +1,18 @@
+{
+  "html": "Setubi/Json/Apps/ParallelList",
+  "records": [{
+    "id": "header",
+    "multiline": "no",
+    "record": {
+      "ページライン数": {
+        "validation": ["required"]
+      },
+      "カレントページ": {
+        "validation": ["required"]
+      },
+      "並列分散管理削除ＩＤ": {
+        "validation": ["required"]
+      }
+    }
+  }]
+}

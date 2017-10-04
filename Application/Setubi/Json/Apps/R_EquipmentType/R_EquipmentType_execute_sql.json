@@ -1,0 +1,113 @@
+{
+  "comment": "設備タイプ　メンテナンス　実行処理",
+  "html": "Setubi/Json/Apps/R_EquipmentType",
+  "dbname": "setubi",
+  "mode": "execute",
+  "prog": "yes",
+  "message": {
+    "status": "OK",
+    "msg": "設備タイプ　実行処理は正常に終了しました。"
+  },
+  "sqls": [{
+    "comment": "設備タイプ　削除処理",
+    "id": "delete",
+    "before": "setDeleteDataOfSetubi('detail', 'delete', '設備タイプ')",
+    "after": "",
+    "sql": {
+      "type": "delete",
+      "freesql": "",
+      "genesql": {
+        "dist": "",
+        "from": "設備タイプ",
+        "where": "設備タイプ = ?",
+        "order": ""
+      }
+    },
+    "input": {
+      "multiline": "yes",
+      "record": {
+        "設備タイプ": {
+          "value": [""]
+        }
+      }
+    }
+  },
+  {
+    "comment": "設備タイプ　更新処理",
+    "id": "update",
+    "before": "setUpdateDataOfSetubi('detail', 'update', '設備タイプ')",
+    "after": "",
+    "sql": {
+      "type": "update",
+      "freesql": "",
+      "genesql": {
+        "dist": "",
+        "from": "設備タイプ",
+        "where": "設備タイプ = ?",
+        "order": ""
+      }
+    },
+    "input": {
+      "multiline": "yes",
+      "record": {
+        "名称": {
+          "value": [""]
+        },
+        "設備タイプ": {
+          "value": [""]
+        }
+      }
+    }
+  },
+  {
+    "comment": "設備タイプ　新規処理",
+    "id": "insert",
+    "before": "setInsertDataOfSetubi('detail', 'insert', '設備タイプ')",
+    "after": "",
+    "sql": {
+      "type": "insert",
+      "freesql": "",
+      "genesql": {
+        "dist": "",
+        "from": "設備タイプ",
+        "where": "",
+        "order": ""
+      }
+    },
+    "input": {
+      "multiline": "yes",
+      "record": {
+        "名称": {
+          "value": [""]
+        }
+      }
+    }
+  },
+  {
+    "comment": "設備タイプ　照会処理",
+    "id": "detail",
+    "before": "",
+    "after": "",
+    "sql": {
+      "type": "select",
+      "freesql": "",
+      "genesql": {
+        "dist": "",
+        "from": "設備タイプ",
+        "where": "",
+        "order": "設備タイプ"
+      }
+    },
+    "output": {
+      "multiline": "yes",
+      "record": {
+        "設備タイプ": {
+          "value": [""]
+        },
+        "名称": {
+          "value": [""]
+        }
+      }
+    }
+  }]
+}

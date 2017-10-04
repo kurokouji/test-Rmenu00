@@ -1,0 +1,26 @@
+{
+  "comment": "業者　メンテナンス dataset",
+  "html": "Setubi/Json/Apps/R_TraderMainte",
+  "message": {
+    "status": "OK",
+    "msg": "データを入力して、実行ボタンを押下して下さい。"
+  },
+  "records": [{
+    "id": "header",
+    "multiline": "no",
+    "record": {
+      "業者ＩＤ": {
+        "value": [""]
+      },
+      "業者名称": {
+        "value": [""]
+      },
+      "郵便番号": {
+        "value": [""]
+      },
+      "住所": {
+        "value": [""]
+      }
+    }
+  }]
+}

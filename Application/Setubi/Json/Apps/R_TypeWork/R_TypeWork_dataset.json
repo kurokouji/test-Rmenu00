@@ -1,0 +1,36 @@
+{
+  "comment": "設備タイプ別作業　メンテナンス dataset",
+  "html": "Setubi/Json/Apps/R_TypeWork",
+  "message": {
+    "status": "OK",
+    "msg": "データを入力して、実行ボタンを押下して下さい。"
+  },
+  "records": [{
+    "id": "header",
+    "multiline": "no",
+    "record": {
+      "設備タイプ": {
+        "value": [""]
+      },
+      "設備名称": {
+        "value": [""]
+      }
+    }
+  },
+  {
+    "id": "detail",
+    "multiline": "yes",
+    "defaultline": "30",
+    "record": {
+      "作業区分": {
+        "value": [""]
+      },
+      "摘要": {
+        "value": [""]
+      },
+      "削除": {
+        "value": [""]
+      }
+    }
+  }]
+}

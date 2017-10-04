@@ -1,0 +1,61 @@
+{
+  "comment": "契約サービス指示諸掛明細　メンテナンス validation",
+  "html": "Setubi/Json/Apps/R_MainteServiceHD1",
+  "records": [{
+    "id": "header",
+    "multiline": "no",
+    "record": {
+      "指示ＮＯ": {
+        "validation": ["nonrequired",
+        "integerP"],
+        "min": "1",
+        "max": "13"
+      },
+      "作業区分": {
+        "validation": ["required",
+        "free"],
+        "min": "1",
+        "max": "100"
+      }
+    }
+  },
+  {
+    "id": "detail",
+    "multiline": "yes",
+    "record": {
+      "諸掛行番": {
+        "validation": ["required",
+        "integerP"],
+        "min": "1",
+        "max": "2"
+      },
+      "単価": {
+        "validation": ["nonrequired",
+        "integerP"],
+        "min": "1",
+        "max": "9",
+        "format": "price"
+      },
+      "数量": {
+        "validation": ["nonrequired",
+        "integerP"],
+        "min": "1",
+        "max": "9",
+        "format": "quantity"
+      },
+      "請求額": {
+        "validation": ["nonrequired",
+        "integerP"],
+        "min": "1",
+        "max": "9",
+        "format": "money"
+      },
+      "諸掛明細摘要": {
+        "validation": ["nonrequired",
+        "free"],
+        "min": "1",
+        "max": "200"
+      }
+    }
+  }]
+}

@@ -1,0 +1,38 @@
+{
+  "request": {
+    "comment": "並列帳票処理　一覧表　削除処理のrequestデータ",
+    "html": "Setubi/Json/Apps/ParallelPrintList",
+    "mode": "delete",
+    "prog": "no",
+    "model": "yes",
+    "message": {
+      "status": "OK",
+      "msg": ""
+    },
+    "records": [{
+      "comment": "並列分散管理テーブル　ＩＤ",
+      "id": "header",
+      "before": "",
+      "after": "",
+      "multiline": "no",
+      "record": {
+        "並列分散管理帳票ＩＤ": {
+          "value": [""]
+        },
+        "削除ファイル名称": {
+          "value": [""]
+        }
+      }
+    }]
+  },
+  "response": {
+    "comment": "並列帳票処理　一覧表　削除処理のresponseデータ",
+    "html": "Setubi/Json/Apps/ParallelPrintList",
+    "mode": "delete",
+    "prog": "no",
+    "message": {
+      "status": "OK",
+      "msg": "削除処理は正常に終了しました。"
+    }
+  }
+}

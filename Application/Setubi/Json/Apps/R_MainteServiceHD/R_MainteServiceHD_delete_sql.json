@@ -1,0 +1,95 @@
+{
+  "comment": "顧客　メンテナンス　削除処理",
+  "html": "Setubi/Json/Apps/R_MainteServiceHD",
+  "dbname": "setubi",
+  "mode": "delete",
+  "prog": "no",
+  "message": {
+    "status": "OK",
+    "msg": "削除処理は正常に終了しました。"
+  },
+  "sqls": [{
+    "comment": "保守サービス諸掛明細　削除処理",
+    "id": "detail_delete1",
+    "before": "",
+    "after": "",
+    "sql": {
+      "type": "delete",
+      "freesql": "",
+      "genesql": {
+        "dist": "",
+        "from": "保守サービス諸掛明細",
+        "where": "ref_サービス指示ＮＯ = ?",
+        "order": ""
+      }
+    },
+    "input": {
+      "multiline": "yes",
+      "record": {
+        "指示ＮＯ": {
+          "value": [""],
+          "fromtype" : "request",
+          "fromid" : "header",
+          "fromio" : "",
+          "fromname" : "指示ＮＯ"
+        }
+      }
+    }
+  },
+  {
+    "comment": "保守サービス指示明細　削除処理",
+    "id": "detail_delete2",
+    "before": "",
+    "after": "",
+    "sql": {
+      "type": "delete",
+      "freesql": "",
+      "genesql": {
+        "dist": "",
+        "from": "保守サービス指示明細",
+        "where": "ref_サービス指示ＮＯ = ?",
+        "order": ""
+      }
+    },
+    "input": {
+      "multiline": "yes",
+      "record": {
+        "指示ＮＯ": {
+          "value": [""],
+          "fromtype" : "request",
+          "fromid" : "header",
+          "fromio" : "",
+          "fromname" : "指示ＮＯ"
+        }
+      }
+    }
+  },
+  {
+    "comment": "保守サービス指示　削除処理",
+    "id": "header_delete",
+    "before": "",
+    "after": "",
+    "sql": {
+      "type": "delete",
+      "freesql": "",
+      "genesql": {
+        "dist": "",
+        "from": "保守サービス指示",
+        "where": "サービス指示ＮＯ = ?",
+        "order": ""
+      }
+    },
+    "input": {
+      "multiline": "no",
+      "record": {
+        "指示ＮＯ": {
+          "value": [""],
+          "fromtype" : "request",
+          "fromid" : "header",
+          "fromio" : "",
+          "fromname" : "指示ＮＯ"
+        }
+      }
+    }
+  }]
+}

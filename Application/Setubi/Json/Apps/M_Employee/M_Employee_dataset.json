@@ -1,0 +1,58 @@
+{
+  "comment": "従業員　マスター　メンテナンス dataset",
+  "html": "Setubi/Json/Apps/M_Employee",
+  "message": {
+    "status": "OK",
+    "msg": "データを入力して、実行ボタンを押下して下さい。"
+  },
+  "records": [{
+    "id": "login",
+    "multiline": "no",
+    "defaultline": "0",
+    "record": {
+      "ユーザＩＤ": {
+        "value": [""]
+      },
+      "ユーザ名称": {
+        "value": [""]
+      }
+    }
+  },
+  {
+    "id": "detail",
+    "multiline": "yes",
+    "defaultline": "40",
+    "record": {
+      "従業員コード": {
+        "value": [""]
+      },
+      "従業員名": {
+        "value": [""]
+      },
+      "ログインＩＤ": {
+        "value": [""]
+      },
+      "パスワード": {
+        "value": [""]
+      },
+      "メールアドレス": {
+        "value": [""]
+      },
+      "メニュー名": {
+        "value": [""]
+      },
+      "表示順": {
+        "value": [""]
+      },
+      "更新日時": {
+        "value": [""]
+      },
+      "行追加": {
+        "value": [""]
+      },
+      "削除": {
+        "value": [""]
+      }
+    }
+  }]
+}

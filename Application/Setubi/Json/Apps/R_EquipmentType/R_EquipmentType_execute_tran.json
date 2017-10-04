@@ -1,0 +1,60 @@
+{
+  "request": {
+    "comment": "設備タイプ　メンテナンス　更新処理　リクエストデータ",
+    "html": "Setubi/Json/Apps/R_EquipmentType",
+    "mode": "execute",
+    "prog": "no",
+    "model": "yes",
+    "message": {
+      "status": "OK",
+      "msg": ""
+    },
+    "records": [{
+      "id": "detail",
+      "before": "",
+      "after": "",
+      "multiline": "yes",
+      "record": {
+        "設備タイプ": {
+          "value": [""]
+        },
+        "名称": {
+          "value": [""]
+        },
+        "削除": {
+          "value": [""]
+        }
+      }
+    }]
+  },
+  "response": {
+    "comment": "設備タイプ　メンテナンス　実行処理　レスポンスデータ",
+    "html": "Setubi/Json/Apps/R_EquipmentType",
+    "mode": "execute",
+    "prog": "no",
+    "message": {
+      "status": "OK",
+      "msg": "設備タイプ　データを正常に更新しました。"
+    },
+    "records": [{
+      "id": "detail",
+      "before": "",
+      "after": "",
+      "multiline": "yes",
+      "record": {
+        "行チェック": {
+          "value": [""]
+        },
+        "設備タイプ": {
+          "value": [""]
+        },
+        "名称": {
+          "value": [""]
+        },
+        "削除": {
+          "value": [""]
+        }
+      }
+    }]
+  }
+}

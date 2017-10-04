@@ -1,0 +1,75 @@
+{
+  "comment": "契約保守諸掛明細　メンテナンス　照会処理",
+  "html": "Setubi/Json/Apps/R_MainteContractHD2",
+  "dbname": "setubi",
+  "mode": "select",
+  "prog": "no",
+  "message": {
+    "status": "OK",
+    "msg": "照会処理は正常に終了しました。"
+  },
+  "sqls": [{
+    "comment": "契約設備明細　照会処理",
+    "id": "detail",
+    "before": "",
+    "after": "",
+    "sql": {
+      "type": "select",
+      "freesql": "",
+      "genesql": {
+        "dist": "",
+        "from": "契約保守諸掛明細",
+        "where": "ref_契約ＮＯ = ? AND ref_設備行番号 = ? AND ref_作業区分 = ?",
+        "order": "諸掛行番"
+      }
+    },
+    "input": {
+      "multiline": "no",
+      "record": {
+        "契約ＮＯ": {
+          "value": [""],
+          "fromtype" : "request",
+          "fromid" : "header",
+          "fromio" : "",
+          "fromname" : "契約ＮＯ"
+        },
+        "設備行番": {
+          "value": [""],
+          "fromtype" : "request",
+          "fromid" : "header",
+          "fromio" : "",
+          "fromname" : "設備行番"
+        },
+        "作業区分": {
+          "value": [""],
+          "fromtype" : "request",
+          "fromid" : "header",
+          "fromio" : "",
+          "fromname" : "作業区分"
+        }
+      }
+    },
+    "output": {
+      "multiline": "yes",
+      "record": {
+        "諸掛行番": {
+          "value": [""]
+        },
+        "標準単価": {
+          "value": [""],
+          "funct": "TO_CHAR(標準単価, 'FM999999999')"
+        },
+        "標準数量": {
+          "value": [""],
+          "funct": "TO_CHAR(標準数量, 'FM999999999')"
+        },
+        "請求対象フラグ": {
+          "value": [""]
+        },
+        "摘要": {
+          "value": [""]
+        }
+      }
+    }
+  }]
+}

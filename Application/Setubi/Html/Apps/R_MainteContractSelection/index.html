@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<title>保守契約選択</title> 
+<link href="../../../../../Application/Setubi/Html/css/1pxdeep-b5e2f9.css" rel="stylesheet"/>
+<link href="../../../../../Application/Setubi/Html/css/style.css"  rel="stylesheet"/>
+<link href="../../../../../Application/Setubi/Html/css/style1.css" rel="stylesheet"/>
+<link href="../../../../../Application/Setubi/Html/css/setubi.css" rel="stylesheet"/>
+<link href="../../../../../Application/Setubi/Html/Apps/R_MainteContractSelection/css/setubi.css" rel="stylesheet"/>
+
+<script type="text/javascript" src="../../../../../System/Html/js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="../../../../../System/Html/js/jquery-ui-1.12.0.custom/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../../../../../System/Html/js/jquery.ui.touch-punch/jquery.ui.touch-punch.min.js"></script>
+<script type="text/javascript" src="../../../../../System/Html/js/bootstrap-3.2.0/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../../../../../System/Html/js/template/jquery.loadTemplate-1.4.5.min.js"></script>
+<script type="text/javascript" src="../../../../../System/Html/js/bignumberjs/bignumber.min.js"></script>
+
+<script type="text/javascript" src="../../../../../System/Html/js/rmenumvc-3.1.0.js"></script>
+<script type="text/javascript" src="../../../../../System/Html/js/rmenumodel.mixin-3.1.0.js"></script>
+<script type="text/javascript" src="../../../../../System/Html/js/rmenuview.mixin-3.1.0.js"></script>
+<script type="text/javascript" src="../../../../../System/Html/js/rmenucontroller.mixin-3.1.0.js"></script>
+<script type="text/javascript" src="../../../../../System/Html/js/rmenuentertabpfkey.mixin-3.1.0.js"></script>
+<script type="text/javascript" src="../../../../../System/Html/js/rmenuvalidation.mixin-3.1.0.js"></script>
+<script type="text/javascript" src="../../../../../System/Html/js/rmenuappspec.mixin-3.1.0.js"></script>
+<script type="text/JavaScript" src="../../../../../System/Html/js/webstorage-3.1.0.js"></script>
+
+<script type="text/javascript" src="../../../../../Application/Setubi/Html/js/masterselection.view.mixin-3.1.0.js"></script>
+<script type="text/javascript" src="../../../../../Application/Setubi/Html/js/masterselection.model.mixin-3.1.0.js"></script>
+<script type="text/javascript" src="../../../../../Application/Setubi/Html/js/masterselection.controller.mixin-3.1.0.js"></script>
+
+<script type="text/javascript" src="../../../../../Application/Setubi/Html/Apps/R_MainteContractSelection/R_MainteContractSelection.appspec.js"></script>
+<script type="text/javascript" src="../../../../../Application/Setubi/Html/Apps/R_MainteContractSelection/R_MainteContractSelection.model.js"></script>
+<script type="text/javascript" src="../../../../../Application/Setubi/Html/Apps/R_MainteContractSelection/R_MainteContractSelection.view.js"></script>
+<script type="text/javascript" src="../../../../../Application/Setubi/Html/Apps/R_MainteContractSelection/R_MainteContractSelection.controller.js"></script>
+<script type="text/javascript" src="../../../../../Application/Setubi/Html/Apps/R_MainteContractSelection/R_MainteContractSelection.main.js"></script>
+</head>
+
+<!-- =================================================================== -->
+<body>                                            <!-- ▼body部 スタート -->
+<!-- =================================================================== -->
+
+<!-- =================================================================== -->
+<div class="container">                        <!-- ▼container スタート -->
+<!-- =================================================================== -->
+
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">保守契約選択</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li>
+          <button id="戻る" name="戻る" type="button" class="btn navbar-btn color4 btn-sm">戻　る：Esc</button>
+          <button id="選択" name="選択" type="button" class="btn navbar-btn color4 btn-sm">選　択：F1</button>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+          <label id="ログイン和暦"></label>
+          <label>　　　　　</label>
+        </li>
+        <li>
+          <label>ログイン日時：</label>
+          <label id="ログイン日時"></label>
+          <br>
+          <label>　ユーザ氏名：　　</label>
+          <label id="ユーザ氏名"></label>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+<!-- ======================================================================== -->
+<form id="mainForm" class="form-horizontal" role="form"> <!-- ▼form スタート -->
+<!-- ======================================================================== -->
+<div class="row">
+  <div class="col-sm-12">
+    <br>
+  </div>
+</div>
+
+<div class="row">
+    <div id="searchkey-Table">  <!-- 検索キー  スタート -->
+
+           <table class="table table-condensed rmenuTable">
+              <thead>
+                <tr>
+                  <th class="rmenuTableS width60"></th>
+                  <th class="rmenuTableS width60"></th>
+                  <th class="rmenuTableS width200">顧客名称</th>
+                  <th class="rmenuTableS width200">設備タイプ名称</th>
+                  <th class="rmenuTableS width200">設備名称</th>
+                  <th class="rmenuTableS width200">業者名称</th>
+                  <th class="rmenuTableS width200">作業区分</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <td class="width60">
+                    <button id="検索"     class="btn color4 btn-sm" type="button" name="検索" >検　索</button>
+                  </td>
+                  <td class="width60">
+                    <button id="クリア"     class="btn color4 btn-sm" type="button" name="クリア" >クリア</button>
+                  </td>
+                  <td class="width200">
+                    <input type="text" id="検索顧客名称" name="検索顧客名称"  value="" class="検索顧客名称 form-control input-sm">
+                  </td>
+                  <td class="width200">
+                    <input type="text" id="検索設備タイプ名称" name="検索設備タイプ名称"  value="" class="検索設備タイプ名称 form-control input-sm">
+                  </td>
+                  <td class="width200">
+                    <input type="text" id="検索設備名称" name="検索設備名称"  value="" class="検索設備名称 form-control input-sm">
+                  </td>
+                  <td class="width200">
+                    <input type="text" id="検索業者名称" name="検索業者名称"  value="" class="検索業者名称 form-control input-sm">
+                  </td>
+                  <td class="width200">
+                    <input type="text" id="検索作業区分" name="検索作業区分"  value="" class="検索作業区分 form-control input-sm">
+                  </td>
+                </tr>
+              </tbody>
+           </table>
+
+    </div> <!-- 検索キー  エンド -->
+</div>
+
+<div class="row">
+  <div class="col-sm-12">
+    <br>
+  </div>
+</div>
+
+<div class="row">
+    <div id="scrollable-Table"> <!-- テーブル　スクロール スタート -->
+
+        <div id="scrollable-HTable"> <!-- テーブル　スクロール　見出し スタート -->
+          <table id="mainTableH" class="table table-condensed rmenuTable">
+              <thead>
+                    <tr>
+                      <th class="width70"><div>契約</div><div>ＮＯ</div></th>
+                      <th class="width180">顧客名称</th>
+                      <th class="width50"><div>設備</div><div>行番</div></th>
+                      <th class="width180">設備タイプ名称</th>
+                      <th class="width180">設備名称</th>
+                      <th class="width90">契約単価</th>
+                      <th class="width180">標準業者名称</th>
+                      <th class="width120">作業区分</th>
+                      <th class="width180">作業区分摘要</th>
+                      <th class="width100"><div>標準イン</div><div>ターバル</div></th>
+                    </tr>
+              </thead>
+          </table>
+        </div> <!-- テーブル　スクロール　見出し エンド -->
+
+        <div id="scrollable-DTable"> <!-- テーブル　スクロール　明細 スタート -->
+          <table id="mainTable" class="table table-condensed rmenuTable">
+              <tbody>
+                    <tr>
+                      <td class="width70  rmenuCenter 表示用契約ＮＯ"></td>
+                      <td class="width180 rmenuLeft 顧客名称"></td>
+                      <td class="width50  rmenuCenter 表示用設備行番"></td>
+                      <td class="width180 rmenuLeft 設備タイプ名称"></td>
+                      <td class="width180 rmenuLeft 設備名称"></td>
+                      <td class="width90  rmenuRight 契約単価"></td>
+                      <td class="width180 rmenuLeft 標準業者名称"></td>
+                      <td class="width120 rmenuLeft 表示用作業区分"></td>
+                      <td class="width180 rmenuLeft 作業区分摘要"></td>
+                      <td class="width100 rmenuCenter インターバル"></td>
+                    </tr>
+              </tbody>
+          </table>
+        </div> <!-- テーブル　スクロール　明細 エンド -->
+    </div> <!-- テーブル　スクロール エンド -->
+</div>
+
+<div class="row">
+  <div class="col-sm-12">
+    <br>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-sm-12 text-center"> <!-- センタリング  スタート -->
+
+              <div class="btn-group">
+                <button id="最初のページ" class="btn color4 btn-sm" type="button" name="最初のページ" >最初：F9</button>
+              </div>
+              <div class="btn-group">
+                <button id="前のページ"  class="btn color4 btn-sm" type="button" name="前のページ" >前へ：F10</button>
+              </div>
+              <div class="btn-group">
+                <input id="ページ情報" name="ページ情報" readonly="readonly" tabIndex=-1 class="input-sm form-control rmenuText20 rmenuCenter" type="text">
+              </div>
+              <div class="btn-group">
+                <button id="次のページ" class="btn color4 btn-sm" type="button" name="次のページ" >次へ：F11</button>
+              </div>
+              <div class="btn-group">
+                <button id="最後のページ" class="btn color4 btn-sm" type="button" name="最後のページ" >最後：F12</button>
+              </div>
+
+  </div> <!-- センタリング  エンド -->
+</div>
+
+<div class="row">
+  <div class="col-sm-12">
+    <br>
+  </div>
+</div>
+
+
+<!-- =================================================================== -->
+</form>                                               <!-- ▲form エンド -->
+<!-- =================================================================== -->
+
+<div id="rmenu-pagefooter">
+</div>
+
+<!-- =================================================================== -->
+</div>                                           <!-- ▲container エンド -->
+<!-- =================================================================== -->
+
+<!-- =================================================================== -->
+</body>                                             <!-- ▲body部 エンド --> 
+<!-- =================================================================== -->
+</html>

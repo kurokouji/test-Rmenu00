@@ -1,0 +1,66 @@
+{
+  "request": {
+    "comment": "サンプル親　メンテナンス　照会処理　リクエストデータ",
+    "html": "Setubi/Json/Apps/Sample_ParentMainte",
+    "mode": "select",
+    "prog": "no",
+    "model": "yes",
+    "message": {
+      "status": "OK",
+      "msg": ""
+    },
+    "records": [{
+      "id": "header",
+      "before": "",
+      "after": "",
+      "multiline": "no",
+      "record": {
+        "サンプル_ヘッダＩＤ": {
+          "value": [""]
+        }
+      }
+    }]
+  },
+  "response": {
+    "comment": "サンプル親　メンテナンス　照会処理　レスポンスデータ",
+    "html": "Setubi/Json/Apps/Sample_ParentMainte",
+    "mode": "select",
+    "prog": "no",
+    "message": {
+      "status": "OK",
+      "msg": "照会処理は正常に終了しました。"
+    },
+    "records": [{
+      "id": "header",
+      "before": "",
+      "after": "",
+      "multiline": "no",
+      "record": {
+        "サンプル_ヘッダＩＤ": {
+          "value": [""]
+        },
+        "サンプル_ヘッダ項目１": {
+          "value": [""]
+        },
+        "サンプル_ヘッダ項目２": {
+          "value": [""]
+        },
+        "サンプル_ヘッダ項目３": {
+          "value": [""]
+        },
+        "サンプル_ヘッダ項目４": {
+          "value": [""]
+        },
+        "サンプル_ヘッダ項目５": {
+          "value": [""]
+        },
+        "サンプルＩＤ": {
+          "value": [""]
+        },
+        "サンプル項目１": {
+          "value": [""]
+        }
+      }
+    }]
+  }
+}

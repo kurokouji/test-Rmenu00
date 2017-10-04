@@ -1,0 +1,34 @@
+{
+  "comment": "業者別扱い設備タイプ　メンテナンス validation",
+  "html": "Setubi/Json/Apps/R_TraderEquipmentType",
+  "records": [{
+    "id": "header",
+    "multiline": "no",
+    "record": {
+      "業者ＩＤ": {
+        "validation": ["required",
+        "integerP"],
+        "min": "1",
+        "max": "13"
+      }
+    }
+  },
+  {
+    "id": "detail",
+    "multiline": "yes",
+    "record": {
+      "設備タイプ": {
+        "validation": ["required",
+        "integerP"],
+        "min": "1",
+        "max": "13"
+      },
+      "摘要": {
+        "validation": ["nonrequired",
+        "free"],
+        "min": "1",
+        "max": "200"
+      }
+    }
+  }]
+}

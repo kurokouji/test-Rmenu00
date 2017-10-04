@@ -1,0 +1,196 @@
+{
+  "comment": "サンプル（データメンテ）　実行処理　実行処理",
+  "html": "Setubi/Json/Apps/Sample_BaseMainte",
+  "dbname": "setubi",
+  "mode": "execute",
+  "prog": "yes",
+  "message": {
+    "status": "OK",
+    "msg": "サンプル　実行処理は正常に終了しました。"
+  },
+  "sqls": [{
+    "comment": "サンプル　削除処理",
+    "id": "delete",
+    "before": "setDeleteDataOfSetubi('detail', 'delete', 'サンプルＩＤ')",
+    "after": "",
+    "sql": {
+      "type": "delete",
+      "freesql": "",
+      "genesql": {
+        "dist": "",
+        "from": "サンプル",
+        "where": "サンプルＩＤ = ?",
+        "order": ""
+      }
+    },
+    "input": {
+      "multiline": "yes",
+      "record": {
+        "サンプルＩＤ": {
+          "value": [""],
+          "field": "サンプルＩＤ"
+        }
+      }
+    }
+  },
+  {
+    "comment": "サンプル　更新処理",
+    "id": "update",
+    "before": "setUpdateDataOfSetubi('detail', 'update', 'サンプルＩＤ')",
+    "after": "",
+    "sql": {
+      "type": "update",
+      "freesql": "",
+      "genesql": {
+        "dist": "",
+        "from": "サンプル",
+        "where": "サンプルＩＤ = ?",
+        "order": ""
+      }
+    },
+    "input": {
+      "multiline": "yes",
+      "record": {
+        "サンプル項目１": {
+          "value": [""]
+        },
+        "サンプル項目２": {
+          "value": [""]
+        },
+        "サンプル項目３": {
+          "value": [""]
+        },
+        "サンプル項目４": {
+          "value": [""]
+        },
+        "サンプル項目５": {
+          "value": [""]
+        },
+        "サンプル表示順": {
+          "value": [""]
+        },
+        "更新日時": {
+          "value": [""],
+          "funct": "CURRENT_TIMESTAMP"
+        },
+        "更新ユーザ": {
+          "value": [""],
+          "fromtype": "request",
+          "fromid": "login",
+          "fromio": "",
+          "fromname": "ユーザ名称"
+        },
+        "サンプルＩＤ": {
+          "value": [""],
+          "field": "サンプルＩＤ"
+        }
+      }
+    }
+  },
+  {
+    "comment": "サンプル　新規処理",
+    "id": "insert",
+    "before": "setInsertDataOfSetubi('detail', 'insert', 'サンプルＩＤ')",
+    "after": "",
+    "sql": {
+      "type": "insert",
+      "freesql": "",
+      "genesql": {
+        "dist": "",
+        "from": "サンプル",
+        "where": "",
+        "order": ""
+      }
+    },
+    "input": {
+      "multiline": "yes",
+      "record": {
+        "サンプル項目１": {
+          "value": [""]
+        },
+        "サンプル項目２": {
+          "value": [""]
+        },
+        "サンプル項目３": {
+          "value": [""]
+        },
+        "サンプル項目４": {
+          "value": [""]
+        },
+        "サンプル項目５": {
+          "value": [""]
+        },
+        "サンプル表示順": {
+          "value": [""]
+        },
+        "登録日時": {
+          "value": [""],
+          "funct": "CURRENT_TIMESTAMP"
+        },
+        "登録ユーザ": {
+          "value": [""],
+          "fromtype": "request",
+          "fromid": "login",
+          "fromio": "",
+          "fromname": "ユーザ名称"
+        },
+        "更新日時": {
+          "value": [""],
+          "funct": "CURRENT_TIMESTAMP"
+        },
+        "更新ユーザ": {
+          "value": [""],
+          "fromtype": "request",
+          "fromid": "login",
+          "fromio": "",
+          "fromname": "ユーザ名称"
+        }
+      }
+    }
+  },
+  {
+    "comment": "サンプル　照会処理",
+    "id": "detail",
+    "before": "",
+    "after": "",
+    "sql": {
+      "type": "select",
+      "freesql": "",
+      "genesql": {
+        "dist": "",
+        "from": "サンプル",
+        "where": "",
+        "order": "サンプル表示順"
+      }
+    },
+    "output": {
+      "multiline": "yes",
+      "record": {
+        "サンプルＩＤ": {
+          "value": [""]
+        },
+        "サンプル項目１": {
+          "value": [""]
+        },
+        "サンプル項目２": {
+          "value": [""]
+        },
+        "サンプル項目３": {
+          "value": [""]
+        },
+        "サンプル項目４": {
+          "value": [""]
+        },
+        "サンプル項目５": {
+          "value": [""]
+        },
+        "サンプル表示順": {
+          "value": [""]
+        },
+        "更新日時": {
+          "value": [""]
+        }
+      }
+    }
+  }]
+}

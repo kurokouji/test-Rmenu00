@@ -1,0 +1,88 @@
+{
+  "comment": "業者別扱い設備タイプ　照会処理",
+  "html": "Setubi/Json/Apps/R_TraderEquipmentType",
+  "dbname": "setubi",
+  "mode": "select",
+  "prog": "no",
+  "message": {
+    "status": "OK",
+    "msg": "照会処理は正常に終了しました。"
+  },
+  "sqls": [{
+    "comment": "業者　照会処理",
+    "id": "header",
+    "before": "",
+    "after": "",
+    "sql": {
+      "type": "select",
+      "freesql": "",
+      "genesql": {
+        "dist": "",
+        "from": "業者",
+        "where": "業者ＩＤ = ?",
+        "order": ""
+      }
+    },
+    "input": {
+      "multiline": "no",
+      "record": {
+        "業者ＩＤ": {
+          "value": [""]
+        }
+      }
+    },
+    "output": {
+      "multiline": "no",
+      "record": {
+        "業者ＩＤ": {
+          "value": [""]
+        },
+        "業者名称": {
+          "value": [""],
+          "field": "名称"
+        }
+      }
+    }
+  },
+  {
+    "comment": "業者別扱い設備タイプ　照会処理",
+    "id": "detail",
+    "before": "",
+    "after": "",
+    "sql": {
+      "type": "select",
+      "freesql": "",
+      "genesql": {
+        "dist": "",
+        "from": "業者別扱い設備タイプ",
+        "where": "ref_業者ＩＤ = ?",
+        "order": "ref_設備タイプ"
+      }
+    },
+    "input": {
+      "multiline": "no",
+      "record": {
+        "業者ＩＤ": {
+          "value": [""],
+          "field": "ref_業者ＩＤ",
+          "fromtype" : "request",
+          "fromid" : "header",
+          "fromio" : "",
+          "fromname" : "業者ＩＤ"
+        }
+      }
+    },
+    "output": {
+      "multiline": "yes",
+      "record": {
+        "設備タイプ": {
+          "value": [""],
+          "field": "ref_設備タイプ"
+        },
+        "摘要": {
+          "value": [""]
+        }
+      }
+    }
+  }]
+}

@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<title>サンプル親子　メンテナンス</title> 
+<link href="../../../../../Application/Setubi/Html/css/1pxdeep-b5e2f9.css" rel="stylesheet"/>
+<link href="../../../../../Application/Setubi/Html/css/style.css"  rel="stylesheet"/>
+<link href="../../../../../Application/Setubi/Html/css/style1.css" rel="stylesheet"/>
+<link href="../../../../../Application/Setubi/Html/css/setubi.css" rel="stylesheet"/>
+<link href="../../../../../Application/Setubi/Html/Apps/Sample_ParentChildMainte/css/setubi.css" rel="stylesheet"/>
+
+<script type="text/javascript" src="../../../../../System/Html/js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="../../../../../System/Html/js/jquery-ui-1.12.0.custom/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../../../../../System/Html/js/jquery.ui.touch-punch/jquery.ui.touch-punch.min.js"></script>
+<script type="text/javascript" src="../../../../../System/Html/js/bootstrap-3.2.0/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../../../../../System/Html/js/template/jquery.loadTemplate-1.4.5.min.js"></script>
+<script type="text/javascript" src="../../../../../System/Html/js/bignumberjs/bignumber.min.js"></script>
+
+<script type="text/javascript" src="../../../../../System/Html/js/rmenumvc-3.1.0.js"></script>
+<script type="text/javascript" src="../../../../../System/Html/js/rmenumodel.mixin-3.1.0.js"></script>
+<script type="text/javascript" src="../../../../../System/Html/js/rmenuview.mixin-3.1.0.js"></script>
+<script type="text/javascript" src="../../../../../System/Html/js/rmenucontroller.mixin-3.1.0.js"></script>
+<script type="text/javascript" src="../../../../../System/Html/js/rmenuentertabpfkey.mixin-3.1.0.js"></script>
+<script type="text/javascript" src="../../../../../System/Html/js/rmenuvalidation.mixin-3.1.0.js"></script>
+<script type="text/javascript" src="../../../../../System/Html/js/rmenuappspec.mixin-3.1.0.js"></script>
+<script type="text/JavaScript" src="../../../../../System/Html/js/webstorage-3.1.0.js"></script>
+
+<script type="text/javascript" src="../../../../../Application/Setubi/Html/js/datamainte.view.mixin-3.1.0.js"></script>
+<script type="text/javascript" src="../../../../../Application/Setubi/Html/js/datamainte.model.mixin-3.1.0.js"></script>
+<script type="text/javascript" src="../../../../../Application/Setubi/Html/js/datamainte.controller.mixin-3.1.0.js"></script>
+
+<script type="text/javascript" src="../../../../../Application/Setubi/Html/Apps/Sample_ParentChildMainte/Sample_ParentChildMainte.appspec.js"></script>
+<script type="text/javascript" src="../../../../../Application/Setubi/Html/Apps/Sample_ParentChildMainte/Sample_ParentChildMainte.model.js"></script>
+<script type="text/javascript" src="../../../../../Application/Setubi/Html/Apps/Sample_ParentChildMainte/Sample_ParentChildMainte.view.js"></script>
+<script type="text/javascript" src="../../../../../Application/Setubi/Html/Apps/Sample_ParentChildMainte/Sample_ParentChildMainte.controller.js"></script>
+<script type="text/javascript" src="../../../../../Application/Setubi/Html/Apps/Sample_ParentChildMainte/Sample_ParentChildMainte.main.js"></script>
+</head>
+
+<!-- =================================================================== -->
+<body>                                            <!-- ▼body部 スタート -->
+<!-- =================================================================== -->
+
+<!-- =================================================================== -->
+<div class="container">                        <!-- ▼container スタート -->
+<!-- =================================================================== -->
+
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" id="ヘッダータイトル" href="#">サンプル親子　メンテナンス</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li>
+          <button id="戻る" name="戻る" type="button" class="btn navbar-btn color4 btn-sm">戻　る：Esc</button>
+          <button id="実行" name="実行" type="button" class="btn navbar-btn color4 btn-sm">実　行：F1</button>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+          <label id="ログイン和暦"></label>
+          <label>　　　　　</label>
+        </li>
+        <li>
+          <label>ログイン日時：</label>
+          <label id="ログイン日時"></label>
+          <br>
+          <label>　ユーザ氏名：　　</label>
+          <label id="ユーザ氏名"></label>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+<!-- ======================================================================== -->
+<form id="mainForm" class="form-horizontal" role="form"> <!-- ▼form スタート -->
+<!-- ======================================================================== -->
+<div class="row">
+  <div class="col-sm-12">
+    <br>
+  </div>
+</div>
+
+<div class="row">
+    <div id="header-Table1"> <!-- テーブル　スクロール スタート -->
+      <!-- 一段目 開始 -->
+           <table class="table table-condensed">
+             <tbody>
+               <tr>
+                 <td class="width200 rmenuCenter">
+                   ヘッダＩＤ
+                 </td>
+                 <td class="width400">
+                   <input type="text" id="サンプル_ヘッダＩＤ" name="サンプル_ヘッダＩＤ"  class="サンプル_ヘッダＩＤ input-sm  form-control" readonly="readonly" tabIndex=-1>
+                 </td>
+               </tr>
+               <tr>
+                 <td class="width200 rmenuCenter">
+                   ヘッダ項目１
+                 </td>
+                 <td class="width400">
+                   <input type="text" id="サンプル_ヘッダ項目１" name="サンプル_ヘッダ項目１"  class="サンプル_ヘッダ項目１ form-control input-sm rfocusblue">
+                 </td>
+               </tr>
+               <tr>
+                 <td class="width200 rmenuCenter">
+                   ヘッダ項目２
+                 </td>
+                 <td class="width400">
+                   <input type="text" id="サンプル_ヘッダ項目２" name="サンプル_ヘッダ項目２"  class="サンプル_ヘッダ項目２ form-control input-sm rfocusblue">
+                 </td>
+               </tr>
+               <tr>
+                 <td class="width200 rmenuCenter">
+                   ヘッダ項目３
+                 </td>
+                 <td class="width400">
+                   <input type="text" id="サンプル_ヘッダ項目３" name="サンプル_ヘッダ項目３"  class="サンプル_ヘッダ項目３ form-control input-sm rfocusblue">
+                 </td>
+               </tr>
+               <tr>
+                 <td class="width200 rmenuCenter">
+                   ヘッダ項目４
+                 </td>
+                 <td class="width400">
+                   <input type="text" id="サンプル_ヘッダ項目４" name="サンプル_ヘッダ項目４"  class="サンプル_ヘッダ項目４ form-control input-sm rfocusblue">
+                 </td>
+               </tr>
+               <tr>
+                 <td class="width200 rmenuCenter">
+                   ヘッダ項目５
+                 </td>
+                 <td class="width400">
+                   <input type="text" id="サンプル_ヘッダ項目５" name="サンプル_ヘッダ項目５"  class="サンプル_ヘッダ項目５ form-control input-sm rfocusblue">
+                 </td>
+               </tr>
+               <tr>
+                 <td class="width200 rmenuCenter">
+                   <button id="サンプル検索"     class="btn color4 btn-sm" type="button" name="サンプル検索" >サンプル検索</button>
+                 </td>
+                 <td class="width400">
+                   <input type="text" id="サンプル項目１" name="サンプル項目１" class="サンプル項目１ form-control input-sm rfocusblue" readonly="readonly" tabIndex=-1>
+                 </td>
+               </tr>
+             </tbody>
+           </table>
+    </div>
+</div>
+
+<div class="row">
+  <div class="col-sm-12">
+    <br>
+  </div>
+</div>
+
+<div class="row">
+    <div id="scrollable-Table"> <!-- テーブル　スクロール スタート -->
+
+        <div id="scrollable-HTable"> <!-- テーブル　スクロール　見出し スタート -->
+          <table id="mainTableH" class="table table-condensed rmenuTable">
+              <thead>
+                <tr>
+                  <th class="width50">削除</th>
+                  <th class="width50"><div>明細</div><div>行番号</div></th>
+                  <th class="width140">サンプル区分</th>
+                  <th class="width200">明細項目１</th>
+                  <th class="width200">明細項目２</th>
+                  <th class="width200">明細項目３</th>
+                  <th class="width100">明細数量</th>
+                  <th class="width100">明細単価</th>
+                  <th class="width100">明細金額</th>
+               </tr>
+            </thead>
+          </table>
+        </div> <!-- テーブル　スクロール　見出し エンド -->
+
+        <div id="scrollable-DTable"> <!-- テーブル　スクロール　明細 スタート -->
+          <table id="mainTable" class="table table-condensed rmenuTable">
+              <tbody>
+                <tr>
+                  <td class="width50">
+                    <input name="削除" type="checkbox" class="rfocusblue 削除">
+                  </td>
+                  <td class="width50 rmenuCenter サンプル_明細行番号">
+                  </td>
+                  <td class="width140">
+                    <select id="サンプル区分ＩＤ" name="サンプル区分ＩＤ" class="color4 form-control input-sm サンプル区分ＩＤ">
+                    </select>
+                  </td>
+                  <td class="width200">
+                    <input name="サンプル_明細項目１" type="text" value="" class="form-control input-sm rfocusblue rmenuLeft サンプル_明細項目１">
+                  </td>
+                  <td class="width200">
+                    <input name="サンプル_明細項目２" type="text" value="" class="form-control input-sm rfocusblue rmenuLeft サンプル_明細項目２">
+                  </td>
+                  <td class="width200">
+                    <input name="サンプル_明細項目３" type="text" value="" class="form-control input-sm rfocusblue rmenuLeft サンプル_明細項目３">
+                  </td>
+                  <td class="width100">
+                    <input name="サンプル_明細数量" type="text" value="" class="form-control input-sm rfocusblue rmenuRight サンプル_明細数量">
+                  </td>
+                  <td class="width100">
+                    <input name="サンプル_明細単価" type="text" value="" class="form-control input-sm rfocusblue rmenuRight サンプル_明細単価">
+                  </td>
+                  <td class="width100 rmenuRight サンプル_明細金額">
+                  </td>
+                </tr>
+              </tbody>
+          </table>
+        </div> <!-- テーブル　スクロール　明細 エンド -->
+    </div> <!-- テーブル　スクロール エンド -->
+</div>
+
+<div class="row">
+  <div class="col-sm-12">
+    <br>
+  </div>
+</div>
+
+<!-- =================================================================== -->
+</form>                                               <!-- ▲form エンド -->
+<!-- =================================================================== -->
+
+<div id="rmenu-pagefooter">
+</div>
+
+<!-- =================================================================== -->
+</div>                                           <!-- ▲container エンド -->
+<!-- =================================================================== -->
+
+<!-- =================================================================== -->
+</body>                                             <!-- ▲body部 エンド --> 
+<!-- =================================================================== -->
+</html>

@@ -1,0 +1,150 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<title>設備保守管理　ログイン</title> 
+<link href="../../../../../Application/Setubi/Html/css/1pxdeep-b5e2f9.css" rel="stylesheet"/>
+<link href="../../../../../Application/Setubi/Html/css/style.css"  rel="stylesheet"/>
+<link href="../../../../../Application/Setubi/Html/css/style1.css" rel="stylesheet"/>
+
+<script type="text/javascript" src="../../../../../System/Html/js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="../../../../../System/Html/js/bootstrap-3.2.0/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../../../../../System/Html/js/template/jquery.loadTemplate-1.4.5.min.js"></script>
+
+<script type="text/javascript" src="../../../../../System/Html/js/rmenumvc-3.1.0.js"></script>
+<script type="text/javascript" src="../../../../../System/Html/js/rmenumodel.mixin-3.1.0.js"></script>
+<script type="text/javascript" src="../../../../../System/Html/js/rmenuview.mixin-3.1.0.js"></script>
+<script type="text/javascript" src="../../../../../System/Html/js/rmenucontroller.mixin-3.1.0.js"></script>
+<script type="text/javascript" src="../../../../../System/Html/js/rmenuentertabpfkey.mixin-3.1.0.js"></script>
+<script type="text/javascript" src="../../../../../System/Html/js/rmenuvalidation.mixin-3.1.0.js"></script>
+<script type="text/javascript" src="../../../../../System/Html/js/rmenuappspec.mixin-3.1.0.js"></script>
+<script type="text/JavaScript" src="../../../../../System/Html/js/webstorage-3.1.0.js"></script>
+
+<script type="text/javascript" src="../../../../../Application/Setubi/Html/js/login.view.mixin-3.1.0.js"></script>
+<script type="text/javascript" src="../../../../../Application/Setubi/Html/js/login.model.mixin-3.1.0.js"></script>
+<script type="text/javascript" src="../../../../../Application/Setubi/Html/js/login.controller.mixin-3.1.0.js"></script>
+
+<script type="text/javascript" src="../../../../../Application/Setubi/Html/Apps/Login/login.appspec.js"></script>
+<script type="text/javascript" src="../../../../../Application/Setubi/Html/Apps/Login/login.model.js"></script>
+<script type="text/javascript" src="../../../../../Application/Setubi/Html/Apps/Login/login.view.js"></script>
+<script type="text/javascript" src="../../../../../Application/Setubi/Html/Apps/Login/login.controller.js"></script>
+<script type="text/javascript" src="../../../../../Application/Setubi/Html/Apps/Login/login.main.js"></script>
+</head>
+
+<!-- =================================================================== -->
+<body>                                            <!-- ▼body部 スタート -->
+<!-- =================================================================== -->
+
+<!-- =================================================================== -->
+<div class="container">                        <!-- ▼container スタート -->
+<!-- =================================================================== -->
+
+<!-- rmenu-navbar 開始 -->
+<div id="rmenu-navbar">
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">設備保守管理　ログイン</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li>
+          <button id="クリア"   name="クリア"   type="button" class="btn navbar-btn color4 btn-sm">クリア：Esc</button>
+        </li>
+        <li class="divider">　</li>
+        <li>
+          <button id="ログイン" name="ログイン" type="button" class="btn navbar-btn color4 btn-sm">ログイン：F1</button>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+</div>
+<!-- rmenu-navbar 終了 -->
+
+<!-- ======================================================================== -->
+<form id="mainForm" class="form-horizontal" role="form"> <!-- ▼form スタート -->
+<!-- ======================================================================== -->
+<div class="row">
+  <div class="col-sm-12">
+    <br>
+    <br>
+    <br>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-sm-6 col-sm-offset-3"> <!-- センタリング  スタート -->
+
+          <div class="width400">
+            <table class="table table-condensed">
+              <tbody>
+                <tr>
+                  <td class="width150 rmenuCenter">
+                    <label>　ログインＩＤ</label>
+                  </td>
+                  <td class="width280">
+                    <input type="text" id="ログインＩＤ" name="ログインＩＤ"  class="form-control input-sm rfocusblue" placeholder="必須入力">
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="width400">
+           <table class="table table-condensed">
+              <tbody>
+                <tr>
+                  <td class="width150 rmenuCenter">
+                    <label>　パスワード</label>
+                  </td>
+                  <td class="width280">
+                    <input type="password" id="パスワード" name="パスワード"  class="form-control input-sm rfocusblue" placeholder="必須入力">
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+  </div> <!-- センタリング  エンド -->
+</div>
+
+<div class="row">
+  <div class="col-sm-12">
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+  </div>
+</div>
+
+<!-- =================================================================== -->
+</form>                                               <!-- ▲form エンド -->
+<!-- =================================================================== -->
+
+<div id="rmenu-pagefooter">
+</div>
+
+<!-- =================================================================== -->
+</div>                                           <!-- ▲container エンド -->
+<!-- =================================================================== -->
+
+<!-- =================================================================== -->
+</body>                                             <!-- ▲body部 エンド --> 
+<!-- =================================================================== -->
+</html>

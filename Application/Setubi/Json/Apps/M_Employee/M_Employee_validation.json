@@ -1,0 +1,58 @@
+{
+  "comment": "従業員　マスター　メンテナンス validation",
+  "html": "Setubi/Json/Apps/M_Employee",
+  "records": [{
+    "id": "detail",
+    "multiline": "yes",
+    "record": {
+      "従業員コード": {
+        "validation": ["nonrequired",
+        "integerP"],
+        "min": "1",
+        "max": "13"
+      },
+      "従業員名": {
+        "validation": ["required",
+        "free"],
+        "min": "1",
+        "max": "20"
+      },
+      "ログインＩＤ": {
+        "validation": ["required",
+        "free"],
+        "min": "1",
+        "max": "20"
+      },
+      "パスワード": {
+        "validation": ["required",
+        "free"],
+        "min": "1",
+        "max": "20"
+      },
+      "メールアドレス": {
+        "validation": ["nonrequired",
+        "free"],
+        "min": "1",
+        "max": "50"
+      },
+      "メニュー名": {
+        "validation": ["required",
+        "free"],
+        "min": "1",
+        "max": "20"
+      },
+      "表示順": {
+        "validation": ["required",
+        "integerP"],
+        "min": "1",
+        "max": "3"
+      },
+      "削除": {
+        "validation": ["nonrequired",
+        "free"],
+        "min": "1",
+        "max": "1"
+      }
+    }
+  }]
+}

@@ -1,0 +1,35 @@
+{
+  "comment": "業者　メンテナンス　削除処理",
+  "html": "Setubi/Json/Apps/R_TraderMainte",
+  "dbname": "setubi",
+  "mode": "delete",
+  "prog": "no",
+  "message": {
+    "status": "OK",
+    "msg": "削除処理は正常に終了しました。"
+  },
+  "sqls": [{
+    "comment": "業者　削除処理",
+    "id": "header",
+    "before": "",
+    "after": "",
+    "sql": {
+      "type": "delete",
+      "freesql": "",
+      "genesql": {
+        "dist": "",
+        "from": "業者",
+        "where": "業者ＩＤ = ?",
+        "order": ""
+      }
+    },
+    "input": {
+      "multiline": "no",
+      "record": {
+        "業者ＩＤ": {
+          "value": [""]
+        }
+      }
+    }
+  }]
+}
