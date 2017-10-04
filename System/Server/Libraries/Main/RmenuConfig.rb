@@ -126,6 +126,20 @@ dbopts4['db_encoding']        = "utf8"
 dbopts4['db_compress']        = false
 dbopts[4]                     = dbopts4
 
+#
+# rmenutry00 DB 設定
+#
+dbopts5 = Hash.new
+dbopts5['db_dbdriver']        = "PostgreSQL"
+dbopts5['db_hostname']        = "127.0.0.1"
+dbopts5['db_portno']          = 5432
+dbopts5['db_database']        = "rmenutry00"
+dbopts5['db_username']        = "postgres"
+dbopts5['db_password']        = "password"
+dbopts5['db_encoding']        = "utf8"
+dbopts5['db_compress']        = false
+dbopts[5]                     = dbopts5
+
 
 $Rconfig['db_tool']           = "Sequel"
 $Rconfig['db_pools']          = 0
