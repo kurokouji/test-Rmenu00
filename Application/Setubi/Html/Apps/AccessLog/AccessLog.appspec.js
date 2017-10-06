@@ -36,9 +36,10 @@
     // トランザクション・リクエストチェック・レスポンス編集・エラーのコールバック関数を定義する
     // ----------------------------------------------------------------------------------------
    ,requestInfo: [
-      ["init",      "on初期処理OfCheckRequestData",  "on初期処理OfEditResponseData",  "onErrorResponseData"]
-     ,["select",    "on照会OfCheckRequestData",      "on照会OfEditResponseData",      "onErrorResponseData"]
+      ["select",    "on照会OfCheckRequestData",      "on照会OfEditResponseData",      "onErrorResponseData"]
      ,["delete",    "on削除OfCheckRequestData",      "on削除OfEditResponseData",      "onErrorResponseData"]
+     // ここから追加処理
+     ,["init",      "on初期処理OfCheckRequestData",  "on初期処理OfEditResponseData",  "onErrorResponseData"]
     ]
     // --------------------------------------------------
     // エンター・タブとPFキーのコールバック関数を定義する
