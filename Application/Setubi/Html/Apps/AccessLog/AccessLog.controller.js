@@ -118,7 +118,7 @@
     // -------------------------------------
     // チェンジ イベント処理（追加処理）
     // -------------------------------------
-   ,onChangeアクセス日付: function() {
+   ,onChangeアクセス日付: function(event) {
       $R.log("Controller onChangeアクセス日付 : start");
 
       this.model.onChangeアクセス日付();
@@ -126,7 +126,7 @@
       $R.log("Controller onChangeアクセス日付 : end");
     }
     
-   ,onChange従業員選択: function() {
+   ,onChange従業員選択: function(event) {
       $R.log("Controller onChange従業員選択 : start");
 
       var employee = this.model.onChangeSelectBox(event, this.appspec.selectbox);
