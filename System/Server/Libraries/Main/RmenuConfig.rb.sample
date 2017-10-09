@@ -12,11 +12,11 @@ osn = RbConfig::CONFIG["target_os"].downcase
 $Rconfig = Hash.new
 $Rconfig['os']                  = @@os
 if @@os == "win"
-  $Rconfig['base_url']          = "http//127.0.0.1:9292/RmenuSVN/Rmenu"
-  $Rconfig['base_systempath']   = "C:/RmenuSVN3/Rmenu/System"
-  $Rconfig['base_serverpath']   = "C:/RmenuSVN3/Rmenu/System/Server"
-  $Rconfig['base_htmlpath']     = "C:/RmenuSVN3/Rmenu/System/Html"
-  $Rconfig['base_application']  = "C:/RmenuSVN3/Rmenu/Application"
+  $Rconfig['base_url']          = "http//127.0.0.1:9292/RmenuGithub/Rmenu"
+  $Rconfig['base_systempath']   = "C:/RmenuGithub/Rmenu/System"
+  $Rconfig['base_serverpath']   = "C:/RmenuGithub/Rmenu/System/Server"
+  $Rconfig['base_htmlpath']     = "C:/RmenuGithub/Rmenu/System/Html"
+  $Rconfig['base_application']  = "C:/RmenuGithub/Rmenu/Application"
 else
   $Rconfig['base_url']          = "http://192.168.0.123/rmenu_user/"
   $Rconfig['base_systempath']   = "/home/rmenu_user/Rmenu/System"
