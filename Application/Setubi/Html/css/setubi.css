@@ -47,6 +47,17 @@ body {
 }
 
 /*--------------------------------------------------
+* .navbar #rmenu-pagefooter のマージン
+---------------------------------------------------- */
+.navbar {
+  margin-bottom: 12px;
+}
+
+#rmenu-pagefooter {
+  margin-top: 12px !important;
+}
+
+/*--------------------------------------------------
 * #mainForm高さを可変に
 ---------------------------------------------------- */
 #mainForm {
@@ -175,4 +186,34 @@ input[type="checkbox"]
 
 .rmenuTable tr:nth-child(2n+1) {
   background: #f4ffff !important;
+}
+
+/* ヘッダー部のコントロールボタン群の設定 */
+.header-btn-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.header-btn-block {
+  margin: 3px 20px;
+}
+
+.btn-group > .btn:first-child {
+  margin-top: 3px;
+}
+
+/* ページネーションのコントロールボタン群の設定 */
+.page-btn-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.page-btn-block {
+  margin: 0 5px;
+}
+
+.table {
+  margin-bottom: 0;
 }

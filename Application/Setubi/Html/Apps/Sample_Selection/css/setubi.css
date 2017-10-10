@@ -11,7 +11,7 @@
 #scrollable-Table  {
   width: 1114px;
   max-width: calc(100vw - 80px);
-  margin: auto;
+  margin: 10px auto;
   overflow-x: auto;
 }
 

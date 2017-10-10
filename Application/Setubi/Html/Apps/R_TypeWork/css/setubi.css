@@ -2,14 +2,14 @@
 
 /* #mainForm高さ調整 */
 #mainForm {
-  height: calc(100vh - 130px);
+  height: calc(100vh - 100px);
 }
 
 /* ヘッダテーブルの表示窓 */
 #header-Table1  {
   width: 500px;
   max-width: calc(100vw - 80px);
-  margin: auto;
+  margin: 10px auto;
 }
 
 /* スクロールテーブルの表示窓 */
@@ -32,7 +32,7 @@
   overflow-x: hidden;      /* 水平スクロールバー auto:自動表示 hidden:非表示 */
   overflow-y: scroll;      /* 垂直スクロールバー auto:自動表示 hidden:非表示 */
   width: calc(568px + 17px);
-  height: calc(100vh - 300px);
+  height: calc(100vh - 260px);
 }
 
 /* タブレット用のCSS定義 */

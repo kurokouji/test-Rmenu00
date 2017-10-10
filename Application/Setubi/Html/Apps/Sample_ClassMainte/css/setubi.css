@@ -2,14 +2,14 @@
 
 /* #mainForm高さ調整 */
 #mainForm {
-  height: calc(100vh - 130px);
+  height: calc(100vh - 100px);
 }
 
 /* スクロールテーブルの表示窓 */
 #scrollable-Table  {
   max-width: calc(100vw - 80px);
   width: calc(854px + 17px);
-  margin: auto;
+  margin: 10px auto;
   overflow-x: auto;
 }
 
@@ -17,15 +17,15 @@
 #scrollable-HTable  {
   width: 854px;
   height: 36px;
-  overflow:hidden;
+  overflow: hidden;
 }
 
 /* スクロールテーブルの明細 */
 #scrollable-DTable  {
-  overflow-x:hidden;      /* 水平スクロールバー auto:自動表示 hidden:非表示 */
-  overflow-y:scroll;      /* 垂直スクロールバー auto:自動表示 hidden:非表示 */
+  overflow-x: hidden;      /* 水平スクロールバー auto:自動表示 hidden:非表示 */
+  overflow-y: scroll;      /* 垂直スクロールバー auto:自動表示 hidden:非表示 */
   width: calc(854px + 17px);
-  height: calc(100vh - 270px);
+  height: calc(100vh - 230px);
 }
 
 /* タブレット用のCSS定義 */
