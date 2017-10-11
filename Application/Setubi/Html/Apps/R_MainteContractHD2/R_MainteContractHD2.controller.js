@@ -100,9 +100,6 @@
       var dataSet = this.model.on初期処理OfEditResponseData(responseData, mode);
       this.view.on初期処理OfEditResponseData(dataSet, responseData, mode);
       
-      sessionStorage.setIdName(this.appspec.sysname + "." + this.appspec.name);
-      var mode = sessionStorage.loadItem("処理モード");
-
       // 新規の時：キー無し　新規以外の時：キーが設定される
       this.ajaxExecute("select");
 

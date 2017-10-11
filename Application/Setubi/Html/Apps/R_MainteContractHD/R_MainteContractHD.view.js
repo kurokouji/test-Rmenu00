@@ -32,6 +32,8 @@
     on初期処理OfEditResponseData: function(dataSet, responseData, mode) {
       $R.log("View on初期処理OfEditResponseData : start");
 
+      // 次のselectのレスポンス編集で表示処理が実行されるため、ここでの表示処理を省略
+
       $R.log("View on初期処理OfEditResponseData : end");
     }
     
