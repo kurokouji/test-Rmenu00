@@ -24,13 +24,15 @@
 }
 
 .col-sm-offset-3 {
-  margin: 0 auto;
+  margin: 9vh auto 0;
 }
 .col-sm-6 {
   width: 100%;
   max-width: 450px;
+  font-size: 16px;
   float: none;
 }
+
 
 .width400 {
   width: 100%;
@@ -40,11 +42,12 @@
 /* タブレット用のCSS定義 */
 @media (min-width: 768px) {
   .col-sm-offset-3 {
-    margin: 0 auto;
+    margin: 9vh auto 0;
   }
   .col-sm-6 {
     width: 100%;
     max-width: 400px;
+    font-size: 18px;
     float: none;
   }
 }
