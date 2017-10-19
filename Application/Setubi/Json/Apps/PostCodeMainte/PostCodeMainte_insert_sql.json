@@ -70,8 +70,6 @@
 
         "都道府県名": {
           "value": [""],
-          "fieldtype": "char",
-          "field": "都道府県名",
           "fromtype" : "request",
           "fromid" : "header",
           "fromio" : "",
@@ -96,8 +94,6 @@
 
         "表示順": {
           "value": [""],
-          "fieldtype": "char",
-          "field": "表示順",
           "fromtype" : "request",
           "fromid" : "header",
           "fromio" : "",
