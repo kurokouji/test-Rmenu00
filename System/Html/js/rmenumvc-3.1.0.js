@@ -556,16 +556,19 @@
     // 画面をロックする
    ,lockScreen: function(id) {
       $R.log("Transaction lockScreen : start");
-      
+      var scHeight =  $(document).height();  // 2017/10/19 追 Okada
+      var scWidth  =  $(document).width();  // 2017/10/19 追 Okada
       var lockTag = $("<div />").attr("id", id);
       lockTag.css("z-index", "99999")
              .css("position", "absolute")
              .css("top", "0px")
              .css("left", "0px")
-             .css("right", "0px")
-             .css("bottom", "0px")
+//           .css("right", "0px")  // 2017/10/19 消 Okada
+//           .css("bottom", "0px")  // 2017/10/19 消 Okada
              .css("background-color", "gray")
-             .css("opacity", "0.3");
+             .css("opacity", "0.3") 
+             .css("height", scHeight + "px")  // 2017/10/19 追 Okada
+             .css("width", scWidth + "px"); // 2017/10/19 追 Okada
       $("body").append(lockTag);
 
       $R.log("Transaction lockScreen : end");
