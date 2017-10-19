@@ -18,7 +18,7 @@
       "freesql": "",
       "genesql": {
         "dist": "",
-        "from": "顧客",
+        "from": "郵便番号辞書",
         "where": "",
         "order": ""
       }
@@ -26,32 +26,50 @@
     "input": {
       "multiline": "no",
       "record": {
-        "顧客名称": {
-          "value": [""],
-          "fieldtype": "char",
-          "field": "名称",
-          "fromtype" : "request",
-          "fromid" : "header",
-          "fromio" : "",
-          "fromname" : "顧客名称"
-        },
-        "郵便番号": {
-          "value": [""],
-          "fieldtype": "char",
-          "fromtype" : "request",
-          "fromid" : "header",
-          "fromio" : "",
-          "fromname" : "郵便番号"
-        },
-        "住所": {
-          "value": [""],
-          "fieldtype": "char",
-          "field": "所在地",
-          "fromtype" : "request",
-          "fromid" : "header",
-          "fromio" : "",
-          "fromname" : "住所"
-        }
+
+
+
+      "全国地方公共団体コード": {
+        "value": [""]
+      },
+      "郵便番号": {
+        "value": [""]
+      },
+      "都道府県名カナ": {
+        "value": [""]
+      },
+      "市区町村名カナ": {
+        "value": [""]
+      },
+      "町域名カナ": {
+        "value": [""]
+      },
+      "都道府県名": {
+        "value": [""]
+      },
+      "市区町村名": {
+        "value": [""]
+      },
+      "町域名": {
+        "value": [""]
+      },
+      "表示順": {
+        "value": [""]
+      },
+      "登録日時": {
+        "value": [""]
+      },
+      "登録ユーザ": {
+        "value": [""]
+      },
+      "更新日時": {
+        "value": [""]
+      },
+      "更新ユーザ": {
+        "value": [""]
+      }
+
+
       }
     }
   },
@@ -65,7 +83,7 @@
       "freesql" : "",
       "genesql" : {
         "dist" : "",
-        "from" : "顧客",
+        "from" : "郵便番号辞書",
         "where" : "",
         "order" : ""
       }
@@ -73,15 +91,15 @@
     "output" : {
       "multiline" : "no",
       "record" : {
-        "顧客ＩＤ" : {
+        "テーブルＩＤ" : {
           "value" : [""],
-          "funct" : "MAX(顧客ＩＤ)"
+          "funct" : "MAX(テーブルＩＤ)"
         }
       }
     }
   },
   {
-    "comment": "顧客　照会処理",
+    "comment": "郵便番号辞書　照会処理",
     "id": "header",
     "before": "",
     "after": "",
@@ -92,41 +110,75 @@
         "dist": "",
         "from": 
         [
-          "顧客"
+          "郵便番号辞書"
         ],
-        "where": "顧客ＩＤ = ?",
+        "where": "テーブルＩＤ = ?",
         "order": ""
       }
     },
     "input": {
       "multiline": "no",
       "record": {
-        "顧客ＩＤ": {
+        "テーブルＩＤ": {
             "value" : [""],
             "fromtype" : "sqls",
             "fromid" : "header_key",
             "fromio" : "output",
-            "fromname" : "顧客ＩＤ"
+            "fromname" : "テーブルＩＤ"
         }
       }
     },
     "output": {
       "multiline": "no",
       "record": {
-        "顧客ＩＤ": {
+        "テーブルＩＤ": {
           "value": [""]
         },
-        "顧客名称": {
-          "value": [""],
-          "field": "名称"
-        },
-        "郵便番号": {
-          "value": [""]
-        },
-        "住所": {
-          "value": [""],
-          "field": "所在地"
-        }
+
+
+
+      "全国地方公共団体コード": {
+        "value": [""]
+      },
+      "郵便番号": {
+        "value": [""]
+      },
+      "都道府県名カナ": {
+        "value": [""]
+      },
+      "市区町村名カナ": {
+        "value": [""]
+      },
+      "町域名カナ": {
+        "value": [""]
+      },
+      "都道府県名": {
+        "value": [""]
+      },
+      "市区町村名": {
+        "value": [""]
+      },
+      "町域名": {
+        "value": [""]
+      },
+      "表示順": {
+        "value": [""]
+      },
+      "登録日時": {
+        "value": [""]
+      },
+      "登録ユーザ": {
+        "value": [""]
+      },
+      "更新日時": {
+        "value": [""]
+      },
+      "更新ユーザ": {
+        "value": [""]
+      }
+
+
+
       }
     }
   }]

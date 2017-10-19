@@ -67,7 +67,7 @@
    ,navButtonEvent: [
       ["#戻る",             "click", "on戻る"]
      ,["#登録",             "click", "on登録"]
-     //,["#転用",             "click", "on転用"]
+     ,["#転用",             "click", "on転用"]
      ,["#訂正",             "click", "on訂正"]
      ,["#削除",             "click", "on削除"]
      ,["#照会",             "click", "on照会"]

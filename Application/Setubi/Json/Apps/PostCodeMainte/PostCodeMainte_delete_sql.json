@@ -1,5 +1,5 @@
 {
-  "comment": "顧客　メンテナンス　削除処理",
+  "comment": "郵便番号辞書　メンテナンス　削除処理",
   "html": "Setubi/Json/Apps/PostCodeMainte",
   "dbname": "setubi",
   "mode": "delete",
@@ -9,7 +9,7 @@
     "msg": "削除処理は正常に終了しました。"
   },
   "sqls": [{
-    "comment": "顧客　削除処理",
+    "comment": "郵便番号辞書　削除処理",
     "id": "header",
     "before": "",
     "after": "",
@@ -18,15 +18,15 @@
       "freesql": "",
       "genesql": {
         "dist": "",
-        "from": "顧客",
-        "where": "顧客ＩＤ = ?",
+        "from": "郵便番号辞書",
+        "where": "テーブルＩＤ = ?",
         "order": ""
       }
     },
     "input": {
       "multiline": "no",
       "record": {
-        "顧客ＩＤ": {
+        "テーブルＩＤ": {
           "value": [""]
         }
       }
