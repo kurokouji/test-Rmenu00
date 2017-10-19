@@ -53,6 +53,10 @@ body {
   margin-bottom: 12px;
 }
 
+.navbar-nav {
+  margin: 0;
+}
+
 #rmenu-pagefooter {
   margin-top: 12px !important;
 }
