@@ -191,7 +191,7 @@ end
 # 変換テーブルの定義
 convertTable = {}
 convertTable["projectName"]  = ["Setubi",  "Setubi"]
-convertTable["programName"]  = ["Sample_ClassMainte",   "XX_EquipmentTypeWork"]
+convertTable["programName"]  = ["R_CustomersList",   "PostCodeList"]
 convertTable["databaseName"] = ["setubi",    "setubi"]
 
 # プログラムの起動
