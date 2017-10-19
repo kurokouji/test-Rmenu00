@@ -1,0 +1,34 @@
+{
+  "comment": "顧客　メンテナンス validation",
+  "html": "Setubi/Json/Apps/PostCodeMainte",
+  "records": [{
+    "id": "header",
+    "multiline": "no",
+    "record": {
+      "顧客ＩＤ": {
+        "validation": ["nonrequired",
+        "integerP"],
+        "min": "1",
+        "max": "11"
+      },
+      "顧客名称": {
+        "validation": ["required",
+        "free"],
+        "min": "1",
+        "max": "100"
+      },
+      "郵便番号": {
+        "validation": ["required",
+        "free"],
+        "min": "1",
+        "max": "8"
+      },
+      "住所": {
+        "validation": ["required",
+        "free"],
+        "min": "1",
+        "max": "200"
+      }
+    }
+  }]
+}

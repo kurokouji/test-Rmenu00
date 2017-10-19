@@ -1,0 +1,133 @@
+{
+  "comment": "顧客　メンテナンス　登録処理",
+  "html": "Setubi/Json/Apps/PostCodeMainte",
+  "dbname": "setubi",
+  "mode": "insert",
+  "prog": "no",
+  "message": {
+    "status": "OK",
+    "msg": "訂正処理は正常に終了しました。"
+  },
+  "sqls": [{
+    "comment": "顧客　訂正処理",
+    "id": "header_insert",
+    "before": "",
+    "after": "",
+    "sql": {
+      "type": "insert",
+      "freesql": "",
+      "genesql": {
+        "dist": "",
+        "from": "顧客",
+        "where": "",
+        "order": ""
+      }
+    },
+    "input": {
+      "multiline": "no",
+      "record": {
+        "顧客名称": {
+          "value": [""],
+          "fieldtype": "char",
+          "field": "名称",
+          "fromtype" : "request",
+          "fromid" : "header",
+          "fromio" : "",
+          "fromname" : "顧客名称"
+        },
+        "郵便番号": {
+          "value": [""],
+          "fieldtype": "char",
+          "fromtype" : "request",
+          "fromid" : "header",
+          "fromio" : "",
+          "fromname" : "郵便番号"
+        },
+        "住所": {
+          "value": [""],
+          "fieldtype": "char",
+          "field": "所在地",
+          "fromtype" : "request",
+          "fromid" : "header",
+          "fromio" : "",
+          "fromname" : "住所"
+        }
+      }
+    }
+  },
+  {
+    "comment" : "登録した顧客のIDを取得する",
+    "id" : "header_key",
+    "before" : "",
+    "after" : "",
+    "sql" : {
+      "type" : "select",
+      "freesql" : "",
+      "genesql" : {
+        "dist" : "",
+        "from" : "顧客",
+        "where" : "",
+        "order" : ""
+      }
+    },
+    "output" : {
+      "multiline" : "no",
+      "record" : {
+        "顧客ＩＤ" : {
+          "value" : [""],
+          "funct" : "MAX(顧客ＩＤ)"
+        }
+      }
+    }
+  },
+  {
+    "comment": "顧客　照会処理",
+    "id": "header",
+    "before": "",
+    "after": "",
+    "sql": {
+      "type": "select",
+      "freesql": "",
+      "genesql": {
+        "dist": "",
+        "from": 
+        [
+          "顧客"
+        ],
+        "where": "顧客ＩＤ = ?",
+        "order": ""
+      }
+    },
+    "input": {
+      "multiline": "no",
+      "record": {
+        "顧客ＩＤ": {
+            "value" : [""],
+            "fromtype" : "sqls",
+            "fromid" : "header_key",
+            "fromio" : "output",
+            "fromname" : "顧客ＩＤ"
+        }
+      }
+    },
+    "output": {
+      "multiline": "no",
+      "record": {
+        "顧客ＩＤ": {
+          "value": [""]
+        },
+        "顧客名称": {
+          "value": [""],
+          "field": "名称"
+        },
+        "郵便番号": {
+          "value": [""]
+        },
+        "住所": {
+          "value": [""],
+          "field": "所在地"
+        }
+      }
+    }
+  }]
+}

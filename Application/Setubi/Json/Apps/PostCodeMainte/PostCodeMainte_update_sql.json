@@ -1,0 +1,49 @@
+{
+  "comment": "顧客　メンテナンス　訂正処理",
+  "html": "Setubi/Json/Apps/PostCodeMainte",
+  "dbname": "setubi",
+  "mode": "update",
+  "prog": "no",
+  "message": {
+    "status": "OK",
+    "msg": "訂正処理は正常に終了しました。"
+  },
+  "sqls": [{
+    "comment": "顧客　訂正処理",
+    "id": "header",
+    "before": "",
+    "after": "",
+    "sql": {
+      "type": "update",
+      "freesql": "",
+      "genesql": {
+        "dist": "",
+        "from": "顧客",
+        "where": "顧客ＩＤ = ?",
+        "order": ""
+      }
+    },
+    "input": {
+      "multiline": "no",
+      "record": {
+        "顧客名称": {
+          "value": [""],
+          "fieldtype": "char",
+          "field": "名称"
+        },
+        "郵便番号": {
+          "value": [""],
+          "fieldtype": "char"
+        },
+        "住所": {
+          "value": [""],
+          "fieldtype": "char",
+          "field": "所在地"
+        },
+        "顧客ＩＤ": {
+          "value": [""]
+        }
+      }
+    }
+  }]
+}

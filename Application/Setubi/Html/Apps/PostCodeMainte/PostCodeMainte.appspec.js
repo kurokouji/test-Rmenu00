@@ -1,6 +1,6 @@
 (function($, $R){
   // 名前空間を設定する
-  var App = $R.Application.PostCodeList = {};
+  var App = $R.Application.PostCodeMainte = {};
 
   // インスタンスプロパティを追加する
   var AppSpec = App.AppSpec = new $R.Class($R.AppSpec);
@@ -8,8 +8,8 @@
     $R.log("AppSpec init : start");
 
     this.name       = name;
-    this.nextname   = "PostCodeMainte";
-    this.beforename = "";
+    this.nextname   = "";
+    this.beforename = "PostCodeList";
 
     $R.log("AppSpec init : end");
   }
@@ -22,8 +22,8 @@
     // プログラム・JSONファイルのURL情報を定義する（サブシステム名・種類・Apps・プログラムフォルダ名）
     // -----------------------------------------------------------------------------------------------
     urlInfo: [
-      {app:  "Setubi/Html/Apps/PostCodeList/"}
-     ,{json: "Setubi/Json/Apps/PostCodeList/"}
+      {app:  "Setubi/Html/Apps/PostCodeMainte/"}
+     ,{json: "Setubi/Json/Apps/PostCodeMainte/"}
     ]
     // --------------------------
     // JSONファイル情報を定義する
@@ -36,8 +36,11 @@
     // トランザクション・リクエストチェック・レスポンス編集・エラーのコールバック関数を定義する
     // ----------------------------------------------------------------------------------------
    ,requestInfo: [
-      ["select",    "on照会OfCheckRequestData",    "on照会OfEditResponseData",    "onErrorResponseData"]
-     // ここから追加処理
+      ["select",      "on照会OfCheckRequestData",            "on照会OfEditResponseData",           "onErrorResponseData"]
+     ,["insert",      "on登録OfCheckRequestData",            "on登録OfEditResponseData",           "onErrorResponseData"]
+     ,["update",      "on訂正OfCheckRequestData",            "on訂正OfEditResponseData",           "onErrorResponseData"]
+     ,["delete",      "on削除OfCheckRequestData",            "on削除OfEditResponseData",           "onErrorResponseData"]
+    // ここから追加処理
     ]
     // --------------------------------------------------
     // エンター・タブとPFキーのコールバック関数を定義する
@@ -45,18 +48,18 @@
    ,enterTabPFKey: {
       Enter:true
      ,Tab:true
-     ,F1:"on登録"
+     ,F1:"on実行"
      ,F2:null
-     ,F3:"on訂正"
-     ,F4:"on削除"
-     ,F5:"on照会"
+     ,F3:null
+     ,F4:null
+     ,F5:null
      ,F6:null
      ,F7:null
      ,F8:null
-     ,F9:"on最初のページ"
-     ,F10:"on前のページ"
-     ,F11:"on次のページ"
-     ,F12:"on最後のページ"
+     ,F9:null
+     ,F10:null
+     ,F11:null
+     ,F12:null
      ,ESC:"on戻る"
      ,Forms:0
     }
@@ -65,38 +68,17 @@
     // ----------------------------------------------------------------
     // NAVボタンのイベントを定義する
    ,navButtonEvent: [
-      ["#戻る",             "click", "on戻る"]
-     ,["#登録",             "click", "on登録"]
-     //,["#転用",             "click", "on転用"]
-     ,["#訂正",             "click", "on訂正"]
-     ,["#削除",             "click", "on削除"]
-     ,["#照会",             "click", "on照会"]
-     ,["#最初のページ",     "click", "on最初のページ"]
-     ,["#前のページ",       "click", "on前のページ"]
-     ,["#次のページ",       "click", "on次のページ"]
-     ,["#最後のページ",     "click", "on最後のページ"]
-     ,["#検索",             "click", "on検索"]
-     ,["#クリア",           "click", "onクリア"]
-     ,["#mainTable td",     "click", "onテーブル行クリック"]
-     // ここから追加処理
-     ]
+      ["#戻る",           "click", "on戻る"]
+     ,["#実行",           "click", "on実行"]
+    // ここから追加処理
+    ]
     // ----------------------------------------------------------------
     // 権限情報の設定（使用不可のロールを設定する）
     // ----------------------------------------------------------------
    ,roleInfo: [
-      ["#戻る",                 [""]]
-     ,["#登録",                 [""]]
-     ,["#転用",                 [""]]
-     ,["#訂正",                 [""]]
-     ,["#削除",                 [""]]
-     ,["#照会",                 [""]]
-     ,["#最初のページ",         [""]]
-     ,["#前のページ",           [""]]
-     ,["#次のページ",           [""]]
-     ,["#最後のページ",         [""]]
-     ,["#検索",                 [""]]
-     ,["#クリア",               [""]]
-     // ここから追加処理
+      ["#戻る",             [""]]
+     ,["#実行",             [""]]
+    // ここから追加処理
     ]
     // バリデーションのイベントを定義する
    ,validationEvent: [
@@ -116,13 +98,12 @@
     ]
     // 導出項目編集用カスタムイベントを定義する
    ,pubsubDeriveEvent: [
-     // ここから追加処理
-      ["deriveトータル件数", "model", "onDeriveトータル件数"]
+    // ここから追加処理
     ]
     // その他カスタムイベントを定義する
    ,pubsubOtherEvent: [
-      ["showページ情報",     "view", "showページ情報"]
-     // ここから追加処理
+      ["showヘッダータイトル",  "view", "showヘッダータイトル"]
+    // ここから追加処理
     ]
     // ----------------------------------------------------------------------------------
     // 画面ヘッダ　キー定義
@@ -130,15 +111,9 @@
     // datasetid  : datasetのidを指定する
     // dataname   : datasetの項目名を指定する
     // classname  : HTMLのクラス名を指定する
-    // typename   : datasetもしくはHTMLのTYPEを指定する
+    // typename   : HTMLのTYPEを指定する
     // ----------------------------------------------------------------------------------
    ,sessionStorageHeaderKey: [
-      {
-         datasetid: "header"
-        ,dataname:  ["検索ヘッダ項目１", "検索ヘッダ項目２", "検索サンプル項目１"]
-        ,classname: ["検索ヘッダ項目１", "検索ヘッダ項目２", "検索サンプル項目１"]
-        ,typename:  ["text",             "text",             "text"]
-      }
     ]
     // ----------------------------------------------------------------------------------
     // 画面明細　キー定義
@@ -149,11 +124,6 @@
     // typename   : datasetもしくはHTMLのTYPEを指定する
     // ----------------------------------------------------------------------------------
    ,sessionStorageDetailKey: [
-      {
-         datasetid: "detail"
-        ,dataname:  ["テーブルＩＤ"]
-        ,typename:  ["dataset"]
-      }
     ]
     // ----------------------------------------------------------------------------------
     // 画面フッター　キー定義
@@ -163,11 +133,6 @@
     // typename   : datasetもしくはHTMLのTYPEを指定する
     // ----------------------------------------------------------------------------------
    ,sessionStorageFooterKey: [
-      {
-         datasetid: "header"
-        ,dataname: ["カレントページ", "ページライン数"]
-        ,typename: ["dataset",        "dataset"]
-      }
     ]
     // ----------------------------------------------------------------------------------
     // 次画面への引き継ぎデータ定義
@@ -178,12 +143,6 @@
     // titlename  : エラーメッセージのタイトルを指定する
     // ----------------------------------------------------------------------------------
    ,nextStorageData: [
-      {
-         datasetid:   "detail"
-        ,dataname:    ["テーブルＩＤ"]
-        ,validation:  ["nonrequired"]
-        ,titlename:   ["テーブルＩＤ"]
-      }
     ]
     // ----------------------------------------------------------------------------------
     // 前画面からの引き継ぎデータ定義
@@ -193,6 +152,12 @@
     // typename   : datasetもしくはHTMLのTYPEを指定する
     // ----------------------------------------------------------------------------------
    ,beforeStorageData: [
+      {
+         datasetid: "header"
+        ,dataname:  ["テーブルＩＤ"]
+        ,classname: ["テーブルＩＤ"]
+        ,typename:  ["dataset"]
+      }
     ]
     // ----------------------------------------------------------------------------------
     // 選択画面への引き渡しデータ定義
