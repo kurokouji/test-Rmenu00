@@ -11,13 +11,13 @@
       "カレントページ": {
         "validation": ["required"]
       },
-      "検索ヘッダ項目１": {
+      "検索郵便番号": {
         "validation": ["nonrequired"]
       },
-      "検索ヘッダ項目２": {
+      "検索町域名カナ": {
         "validation": ["nonrequired"]
       },
-      "検索サンプル項目１": {
+      "検索市区町村名": {
         "validation": ["nonrequired"]
       }
     }

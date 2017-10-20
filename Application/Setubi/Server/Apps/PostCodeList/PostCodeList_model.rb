@@ -30,26 +30,26 @@ class PostCodeList_model
     requestInfo          = getJsonChunkById(@request_data, "records", idname1)
     sqlInfo              = getJsonChunkById(@sql_data, "sqls", idname2)
 
-    w_検索ヘッダ項目１   = requestInfo["record"]["検索ヘッダ項目１"]["value"][0]
-    w_検索ヘッダ項目２   = requestInfo["record"]["検索ヘッダ項目２"]["value"][0]
-    w_検索サンプル項目１ = requestInfo["record"]["検索サンプル項目１"]["value"][0]
+    w_検索郵便番号   = requestInfo["record"]["検索郵便番号"]["value"][0]
+    w_検索町域名カナ   = requestInfo["record"]["検索町域名カナ"]["value"][0]
+    w_検索市区町村名 = requestInfo["record"]["検索市区町村名"]["value"][0]
 
 
     rep = ""
 
-    # ヘッダ項目１
-    if w_検索ヘッダ項目１ != ""
-      rep = rep + " AND A.サンプル_ヘッダ項目１ LIKE '%#{w_検索ヘッダ項目１}%'"
+    # 郵便番号
+    if w_検索郵便番号 != ""
+      rep = rep + " AND 郵便番号 LIKE '%#{w_検索郵便番号}%'"
     end
 
-    # ヘッダ項目２
-    if w_検索ヘッダ項目２ != ""
-      rep = rep + " AND A.サンプル_ヘッダ項目２ LIKE '%#{w_検索ヘッダ項目２}%'"
+    # 町域名カナ
+    if w_検索町域名カナ != ""
+      rep = rep + " AND 町域名カナ LIKE '%#{w_検索町域名カナ}%'"
     end
 
-    # サンプル項目１
-    if w_検索サンプル項目１ != ""
-      rep = rep + " AND C.サンプル項目１ LIKE '%#{w_検索サンプル項目１}%'"
+    # 市区町村名
+    if w_検索市区町村名 != ""
+      rep = rep + " AND 市区町村名 LIKE '%#{w_検索市区町村名}%'"
     end
 
 
