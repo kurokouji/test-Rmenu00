@@ -46,7 +46,7 @@
       Enter:true
      ,Tab:true
      ,F1:"on登録"
-     ,F2:null
+     ,F2:"on転用"
      ,F3:"on訂正"
      ,F4:"on削除"
      ,F5:"on照会"
@@ -135,8 +135,8 @@
    ,sessionStorageHeaderKey: [
       {
          datasetid: "header"
-        ,dataname:  ["検索ヘッダ項目１", "検索ヘッダ項目２", "検索サンプル項目１"]
-        ,classname: ["検索ヘッダ項目１", "検索ヘッダ項目２", "検索サンプル項目１"]
+        ,dataname:  ["検索郵便番号", "検索町域名カナ", "検索市区町村名"]
+        ,classname: ["検索郵便番号", "検索町域名カナ", "検索市区町村名"]
         ,typename:  ["text",             "text",             "text"]
       }
     ]
