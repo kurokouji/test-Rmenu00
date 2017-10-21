@@ -1,0 +1,134 @@
+{
+  "request": {
+    "comment": "サンプル（親一覧リスト） 検索処理　リクエストデータ",
+    "html": "Setubi/Json/Apps/PostCodeList00",
+    "mode": "select",
+    "prog": "no",
+    "model": "yes",
+    "message": {
+      "status": "OK",
+      "msg": ""
+    },
+    "records": [{
+      "comment": "テーブルの行数",
+      "id": "header",
+      "before": "",
+      "after": "",
+      "multiline": "no",
+      "record": {
+        "ページライン数": {
+          "value": [""]
+        },
+        "カレントページ": {
+          "value": [""]
+        },
+        "検索郵便番号": {
+          "validation": ["nonrequired"]
+        },
+        "検索都道府県名": {
+          "validation": ["nonrequired"]
+        },
+        "検索町域名カナ": {
+          "validation": ["nonrequired"]
+        },
+        "検索市区町村名": {
+          "validation": ["nonrequired"]
+        }
+      }
+    }]
+  },
+  "response": {
+    "comment": "サンプル（親一覧リスト） 検索処理　レスポンスデータ",
+    "html": "Setubi/Json/Apps/PostCodeList00",
+    "mode": "select",
+    "prog": "yes",
+    "message": {
+      "status": "OK",
+      "msg": "照会処理は正常に終了しました。"
+    },
+    "records": [{
+      "comment": "テーブルページング情報（行数・カレント行・総ページ数・総件数）getMaxPageCount：総ページ数を計算する。",
+      "id": "header",
+      "before": "",
+      "after": "getMaxPageCountOfSetubi('header')",
+      "multiline": "no",
+      "record": {
+        "ページライン数": {
+          "value": [""],
+          "fromtype": "request",
+          "fromid": "header",
+          "fromio": "",
+          "fromname": "ページライン数"
+        },
+        "カレントページ": {
+          "value": ["1"],
+          "fromtype": "request",
+          "fromid": "header",
+          "fromio": "",
+          "fromname": "カレントページ"
+        },
+        "最大ページ": {
+          "value": [""]
+        },
+        "トータル件数": {
+          "value": [""],
+          "fromtype": "sqls",
+          "fromid": "total_count",
+          "fromio": "output",
+          "fromname": "トータル件数"
+        }
+      }
+    },
+    {
+      "comment": "テーブルの明細データ",
+      "id": "detail",
+      "before": "",
+      "after": "",
+      "multiline": "yes",
+      "record": {
+        "テーブルＩＤ": {
+          "value": [""]
+        },
+        "全国地方公共団体コード": {
+          "value": [""]
+        },
+        "郵便番号": {
+          "value": [""]
+        },
+        "都道府県名カナ": {
+          "value": [""]
+        },
+        "市区町村名カナ": {
+          "value": [""]
+        },
+        "町域名カナ": {
+          "value": [""]
+        },
+        "都道府県名": {
+          "value": [""]
+        },
+        "市区町村名": {
+          "value": [""]
+        },
+        "町域名": {
+          "value": [""]
+        },
+        "表示順": {
+          "value": [""]
+        },
+        "登録日時": {
+          "value": [""]
+        },
+        "登録ユーザ": {
+          "value": [""]
+        },
+        "更新日時": {
+          "value": [""]
+        },
+        "更新ユーザ": {
+          "value": [""]
+        }
+      }
+    }]
+  }
+}

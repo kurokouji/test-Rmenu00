@@ -1,0 +1,35 @@
+{
+  "comment": "郵便番号辞書　メンテナンス　削除処理",
+  "html": "Setubi/Json/Apps/PostCodeMainte00",
+  "dbname": "setubi",
+  "mode": "delete",
+  "prog": "no",
+  "message": {
+    "status": "OK",
+    "msg": "削除処理は正常に終了しました。"
+  },
+  "sqls": [{
+    "comment": "郵便番号辞書　削除処理",
+    "id": "header",
+    "before": "",
+    "after": "",
+    "sql": {
+      "type": "delete",
+      "freesql": "",
+      "genesql": {
+        "dist": "",
+        "from": "郵便番号辞書",
+        "where": "テーブルＩＤ = ?",
+        "order": ""
+      }
+    },
+    "input": {
+      "multiline": "no",
+      "record": {
+        "テーブルＩＤ": {
+          "value": [""]
+        }
+      }
+    }
+  }]
+}

@@ -1,0 +1,83 @@
+{
+  "comment": "郵便番号辞書　メンテナンス　訂正処理",
+  "html": "Setubi/Json/Apps/PostCodeMainte00",
+  "dbname": "setubi",
+  "mode": "update",
+  "prog": "no",
+  "message": {
+    "status": "OK",
+    "msg": "訂正処理は正常に終了しました。"
+  },
+  "sqls": [{
+    "comment": "郵便番号辞書　訂正処理",
+    "id": "header",
+    "before": "",
+    "after": "",
+    "sql": {
+      "type": "update",
+      "freesql": "",
+      "genesql": {
+        "dist": "",
+        "from": "郵便番号辞書",
+        "where": "テーブルＩＤ = ?",
+        "order": ""
+      }
+    },
+    "input": {
+      "multiline": "no",
+      "record": {
+
+
+
+      "全国地方公共団体コード": {
+        "value": [""]
+      },
+      "郵便番号": {
+        "value": [""]
+      },
+      "都道府県名カナ": {
+        "value": [""]
+      },
+      "市区町村名カナ": {
+        "value": [""]
+      },
+      "町域名カナ": {
+        "value": [""]
+      },
+      "都道府県名": {
+        "value": [""]
+      },
+      "市区町村名": {
+        "value": [""]
+      },
+      "町域名": {
+        "value": [""]
+      },
+      "表示順": {
+        "value": [""]
+      },
+      "登録日時": {
+        "value": [""]
+      },
+      "登録ユーザ": {
+        "value": [""]
+      },
+      "更新日時": {
+        "value": [""],
+        "funct": "CURRENT_TIMESTAMP"
+      },
+      "更新ユーザ": {
+          "value": [""],
+          "fromtype": "request",
+          "fromid": "login",
+          "fromio": "",
+          "fromname": "ユーザ名称"
+      },
+      "テーブルＩＤ": {
+        "value": [""]
+      }
+
+      }
+    }
+  }]
+}

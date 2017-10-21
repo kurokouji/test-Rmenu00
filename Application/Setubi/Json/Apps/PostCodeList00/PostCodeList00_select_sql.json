@@ -1,0 +1,130 @@
+{
+  "comment": "サンプル（親一覧リスト） 検索処理",
+  "html": "Setubi/Json/Apps/PostCodeList00",
+  "dbname": "setubi",
+  "mode": "select",
+  "prog": "yes",
+  "message": {
+    "status": "OK",
+    "msg": "照会処理は正常に終了しました。"
+  },
+  "sqls": [{
+    "comment": "総件数を取得する",
+    "id": "total_count",
+    "before": "setSql_PostCodeList00OfSetubi('header', 'total_count', 'genesql')",
+    "after": "",
+    "sql": {
+      "type": "select",
+      "freesql": "",
+      "genesql": {
+        "dist": "",
+        "from": 
+        [
+          "郵便番号辞書"
+        ],
+        "where": "true &&",
+        "order": ""
+      }
+    },
+    "input": {
+      "multiline": "no",
+      "record": {
+      }
+    },
+    "output": {
+      "multiline": "no",
+      "record": {
+        "トータル件数": {
+          "value": [""],
+          "funct": "COUNT(*)"
+        }
+      }
+    }
+  },
+  {
+    "comment": "指定件数分のデータを取得する。getOffsetLine：オフセット行数を計算する。",
+    "id": "detail",
+    "before": 
+    [
+      "setSql_PostCodeList00OfSetubi('header', 'detail', 'genesql')"
+     ,"getOffsetLineOfSetubi('header', 'detail')"
+    ],
+    "after": "",
+    "sql": {
+      "type": "select",
+      "freesql": "",
+      "genesql": {
+        "dist": "",
+        "from": 
+        [
+          "郵便番号辞書"
+        ],
+        "where": "true &&",
+        "order": "テーブルＩＤ DESC",
+        "limit": "? OFFSET ?"
+      }
+    },
+    "input": {
+      "multiline": "no",
+      "record": {
+        "ページライン数": {
+          "value": [""],
+          "fromtype": "request",
+          "fromid": "header",
+          "fromio": "",
+          "fromname": "ページライン数"
+        },
+        "オフセットライン数": {
+          "value": [""]
+        }
+      }
+    },
+    "output": {
+      "multiline": "yes",
+      "record": {
+        "テーブルＩＤ": {
+          "value": [""]
+        },
+        "全国地方公共団体コード": {
+          "value": [""]
+        },
+        "郵便番号": {
+          "value": [""]
+        },
+        "都道府県名カナ": {
+          "value": [""]
+        },
+        "市区町村名カナ": {
+          "value": [""]
+        },
+        "町域名カナ": {
+          "value": [""]
+        },
+        "都道府県名": {
+          "value": [""]
+        },
+        "市区町村名": {
+          "value": [""]
+        },
+        "町域名": {
+          "value": [""]
+        },
+        "表示順": {
+          "value": [""]
+        },
+        "登録日時": {
+          "value": [""]
+        },
+        "登録ユーザ": {
+          "value": [""]
+        },
+        "更新日時": {
+          "value": [""]
+        },
+        "更新ユーザ": {
+          "value": [""]
+        }
+      }
+    }
+  }]
+}
