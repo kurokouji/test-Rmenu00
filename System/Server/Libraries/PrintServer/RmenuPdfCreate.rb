@@ -7,6 +7,7 @@ end
 
 require 'prawn'
 require 'prawn/measurement_extensions'
+require 'prawn-svg'
 
 require 'RmenuLoggerMixin'
 #require 'RmenuDefCache'
