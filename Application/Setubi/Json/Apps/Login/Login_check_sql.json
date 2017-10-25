@@ -33,7 +33,8 @@
           "fromtype": "request",
           "fromid": "header",
           "fromio": "",
-          "fromname": "ログインＩＤ"
+          "fromname": "ログインＩＤ",
+          "fieldtype" : "char"
         }
       }
     },
@@ -71,14 +72,16 @@
           "fromtype": "request",
           "fromid": "header",
           "fromio": "",
-          "fromname": "ログインＩＤ"
+          "fromname": "ログインＩＤ",
+          "fieldtype" : "char"
         },
         "パスワード": {
           "value": [""],
           "fromtype": "request",
           "fromid": "header",
           "fromio": "",
-          "fromname": "パスワード"
+          "fromname": "パスワード",
+          "fieldtype" : "char"
         }
       }
     },
@@ -118,10 +121,12 @@
       "multiline": "no",
       "record": {
         "ログインＩＤ": {
-          "value": [""]
+          "value": [""],
+          "fieldtype" : "char"
         },
         "パスワード": {
-          "value": [""]
+          "value": [""],
+          "fieldtype" : "char"
         }
       }
     },
