@@ -7,7 +7,6 @@ require 'drb'                                                                   
 require 'RmenuMainController'
 require 'RmenuMainModel'
 require 'RmenuMainView'
-require 'RmenuPrintServerMainController'
 
 if __FILE__ == $0
   begin

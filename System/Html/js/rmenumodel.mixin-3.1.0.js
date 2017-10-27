@@ -643,6 +643,9 @@
           if (name == "削除") {
             continue;
           }
+          if (name == "行追加") {
+            continue;
+          }
           
           if (datasetRecord["record"][name]["value"][fromNo] != "") {
             emptySW = 1;
@@ -712,6 +715,10 @@
       for (var fromNo = 0; fromNo < maxSize; fromNo++) {
         var emptySW  = 0;
         for (var name in datasetRecord["record"]) {
+          if (name == "行追加") {
+            continue;
+          }
+
           if (name == "削除") {
             if (datasetRecord["record"][name]["value"][fromNo] == "1") {
               emptySW = 0;

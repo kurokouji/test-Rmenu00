@@ -6,8 +6,8 @@ end
 
 
 require 'prawn'
-require 'prawn/measurement_extensions'
 require 'prawn-svg'
+require 'prawn/measurement_extensions'
 
 require 'RmenuLoggerMixin'
 #require 'RmenuDefCache'
@@ -35,6 +35,17 @@ class RmenuPdfCreate
         pdfTempDir        = $Rconfig['apps_path'] + "/" + response_data["html"].gsub(/\/Json\//, '/PdfTemplate/')
         @pdfTemplate      = pdfTempDir + "/" + response_data["pdfinfo"]["template"]
       end
+      
+    # 20171017 shimoji update start
+      @svgData            = ""
+      if response_data["pdfinfo"]["svgTemplate"]
+        if response_data["pdfinfo"]["svgTemplate"] != ""
+          pdfTempDir        = $Rconfig['apps_path'] + "/" + response_data["html"].gsub(/\/Json\//, '/PdfTemplate/')
+          svgFile           = pdfTempDir + "/" + response_data["pdfinfo"]["svgTemplate"]
+          @svgData          = readHtml(svgFile)
+        end
+      end
+    # 20171017 shimoji update end
 
       @fontFile           = response_data["pdfinfo"]["fontfile"]
       @fontSize           = response_data["pdfinfo"]["fontsize"]
@@ -71,7 +82,7 @@ class RmenuPdfCreate
   #- getter メソッド ---------------
   # totalRecordCountを加算
   def addTotalRecordCount()
-	  @totalRecordCount = @totalRecordCount + 1
+    @totalRecordCount = @totalRecordCount + 1
     return @totalRecordCount
   end
 
@@ -147,6 +158,13 @@ class RmenuPdfCreate
     options = createPrawnObjectOfHash(response_data)
     $PDFC.debug("RmenuPdfCreate") {"start PrawnObjectOption : #{options}"}                          # Logファイル Debug用
     @pdf         = Prawn::Document.new(eval(options))
+    
+  # 20171017 shimoji update start
+    if @svgData != ""
+      @pdf.svg(@svgData, :at => [0, 210.mm], :width => 297.mm)
+    end
+  # 20171017 shimoji update end
+        
     @prawnInitSW = 0
 
     $PDFC.debug("RmenuPdfCreate") {"start normal end"}                                              # Logファイル Debug用
@@ -243,6 +261,13 @@ class RmenuPdfCreate
     if @prawnInitSW == 1 
       if @pdfTemplate == ""
         @pdf.start_new_page
+        
+  # 20171017 shimoji update start
+        if @svgData != ""
+          @pdf.svg(@svgData, :at => [0, 210.mm], :width => 297.mm)
+        end
+  # 20171017 shimoji update start
+    
       else
         options = setNewPage(recordArray)
         @pdf.start_new_page(eval(options))
@@ -267,6 +292,13 @@ class RmenuPdfCreate
     recordArray = getRecordOfPageOutputControl("page_header", "all_page", response_data)
     if @pdfTemplate == ""
       @pdf.start_new_page
+      
+  # 20171017 shimoji update start
+      if @svgData != ""
+        @pdf.svg(@svgData, :at => [0, 210.mm], :width => 297.mm)
+      end
+  # 20171017 shimoji update end
+    
     else
       options = setNewPage(recordArray)
       @pdf.start_new_page(eval(options))
