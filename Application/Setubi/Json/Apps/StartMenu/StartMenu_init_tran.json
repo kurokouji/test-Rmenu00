@@ -1,7 +1,7 @@
 {
   "request": {
     "comment": "ユーザログイン情報登録　リクエストデータ",
-    "html": "Setubi/Json/Apps/MenuSetubi",
+    "html": "Setubi/Json/Apps/StartMenu",
     "mode": "init",
     "prog": "no",
     "model": "yes",
@@ -71,7 +71,7 @@
   },
   "response": {
     "comment": "ユーザログイン情報登録　レスポンスデータ",
-    "html": "Setubi/Json/Apps/MenuSetubi",
+    "html": "Setubi/Json/Apps/StartMenu",
     "mode": "init",
     "prog": "no",
     "message": {

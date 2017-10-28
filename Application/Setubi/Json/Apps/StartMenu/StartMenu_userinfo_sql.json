@@ -1,22 +1,37 @@
 {
-  "request": {
-    "comment": "ユーザ情報登録　リクエストデータ",
-    "html": "Setubi/Json/Apps/MenuSetubi",
-    "mode": "userinfo",
-    "prog": "no",
-    "model": "yes",
-    "message": {
-      "status": "OK",
-      "msg": ""
+  "comment": "ユーザ情報　登録処理",
+  "html": "Setubi/Json/Apps/StartMenu",
+  "dbname": "setubi",
+  "mode": "userinfo",
+  "prog": "no",
+  "message": {
+    "status": "OK",
+    "msg": "ユーザ情報登録処理は正常に終了しました。"
+  },
+  "sqls": [{
+    "comment": "ユーザ情報登録処理",
+    "id": "header",
+    "before": "",
+    "after": "",
+    "sql": {
+      "type": "insert",
+      "freesql": "",
+      "genesql": {
+        "dist": "",
+        "from": "ログ情報",
+        "where": "",
+        "order": ""
+      }
     },
-    "records": [{
-      "id": "header",
-      "before": "",
-      "after": "",
+    "input": {
       "multiline": "no",
       "record": {
         "ユーザＩＤ": {
           "value": [""]
+        },
+        "アクセス日時": {
+          "value": [""],
+          "funct": "CURRENT_TIMESTAMP"
         },
         "画面名": {
           "value": [""]
@@ -67,16 +82,6 @@
           "value": [""]
         }
       }
-    }]
-  },
-  "response": {
-    "comment": "ユーザ情報登録　レスポンスデータ",
-    "html": "Setubi/Json/Apps/MenuSetubi",
-    "mode": "userinfo",
-    "prog": "no",
-    "message": {
-      "status": "OK",
-      "msg": "ユーザ情報登録処理は正常に終了しました。"
     }
-  }
+  }]
 }

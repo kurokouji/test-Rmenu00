@@ -1,8 +1,8 @@
 {
-  "comment": "ユーザ情報　登録処理",
-  "html": "Setubi/Json/Apps/MenuSetubi",
+  "comment": "ユーザログオフ情報　登録処理",
+  "html": "Setubi/Json/Apps/StartMenu",
   "dbname": "setubi",
-  "mode": "userinfo",
+  "mode": "term",
   "prog": "no",
   "message": {
     "status": "OK",

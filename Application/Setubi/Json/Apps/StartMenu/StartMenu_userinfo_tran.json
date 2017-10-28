@@ -1,8 +1,8 @@
 {
   "request": {
-    "comment": "ユーザログオフ情報登録　リクエストデータ",
-    "html": "Setubi/Json/Apps/MenuSetubi",
-    "mode": "term",
+    "comment": "ユーザ情報登録　リクエストデータ",
+    "html": "Setubi/Json/Apps/StartMenu",
+    "mode": "userinfo",
     "prog": "no",
     "model": "yes",
     "message": {
@@ -70,9 +70,9 @@
     }]
   },
   "response": {
-    "comment": "ユーザログオフ情報登録　レスポンスデータ",
-    "html": "Setubi/Json/Apps/MenuSetubi",
-    "mode": "term",
+    "comment": "ユーザ情報登録　レスポンスデータ",
+    "html": "Setubi/Json/Apps/StartMenu",
+    "mode": "userinfo",
     "prog": "no",
     "message": {
       "status": "OK",

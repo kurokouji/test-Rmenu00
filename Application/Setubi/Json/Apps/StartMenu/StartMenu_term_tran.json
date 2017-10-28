@@ -1,37 +1,22 @@
 {
-  "comment": "ユーザログオフ情報　登録処理",
-  "html": "Setubi/Json/Apps/MenuSetubi",
-  "dbname": "setubi",
-  "mode": "term",
-  "prog": "no",
-  "message": {
-    "status": "OK",
-    "msg": "ユーザ情報登録処理は正常に終了しました。"
-  },
-  "sqls": [{
-    "comment": "ユーザ情報登録処理",
-    "id": "header",
-    "before": "",
-    "after": "",
-    "sql": {
-      "type": "insert",
-      "freesql": "",
-      "genesql": {
-        "dist": "",
-        "from": "ログ情報",
-        "where": "",
-        "order": ""
-      }
+  "request": {
+    "comment": "ユーザログオフ情報登録　リクエストデータ",
+    "html": "Setubi/Json/Apps/StartMenu",
+    "mode": "term",
+    "prog": "no",
+    "model": "yes",
+    "message": {
+      "status": "OK",
+      "msg": ""
     },
-    "input": {
+    "records": [{
+      "id": "header",
+      "before": "",
+      "after": "",
       "multiline": "no",
       "record": {
         "ユーザＩＤ": {
           "value": [""]
-        },
-        "アクセス日時": {
-          "value": [""],
-          "funct": "CURRENT_TIMESTAMP"
         },
         "画面名": {
           "value": [""]
@@ -82,6 +67,16 @@
           "value": [""]
         }
       }
+    }]
+  },
+  "response": {
+    "comment": "ユーザログオフ情報登録　レスポンスデータ",
+    "html": "Setubi/Json/Apps/StartMenu",
+    "mode": "term",
+    "prog": "no",
+    "message": {
+      "status": "OK",
+      "msg": "ユーザ情報登録処理は正常に終了しました。"
     }
-  }]
+  }
 }

@@ -1,6 +1,6 @@
 {
   "comment": "ユーザログイン情報　登録処理",
-  "html": "Setubi/Json/Apps/MenuSetubi",
+  "html": "Setubi/Json/Apps/StartMenu",
   "dbname": "setubi",
   "mode": "init",
   "prog": "no",
