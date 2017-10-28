@@ -1,6 +1,6 @@
 (function($, $R){
   // 名前空間を設定する
-  var App = $R.Application.MenuSetubi;
+  var App = $R.Application.StartMenu;
 
   // インスタンスプロパティを追加する
   var Controller = App.Controller = new $R.Class($R.Controller);

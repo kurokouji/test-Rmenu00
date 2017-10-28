@@ -1,6 +1,6 @@
 (function($, $R){
   // 名前空間を設定する
-  var App = $R.Application.MenuSetubi = {};
+  var App = $R.Application.StartMenu = {};
 
   // インスタンスプロパティを追加する
   var AppSpec = App.AppSpec = new $R.Class($R.AppSpec);
@@ -20,8 +20,8 @@
     // プログラム・JSONファイルのURL情報を定義する（サブシステム名・種類・Apps・プログラムフォルダ名）
     // -----------------------------------------------------------------------------------------------
     urlInfo: [
-      {app:  "Setubi/Html/Apps/MenuSetubi/"}
-     ,{json: "Setubi/Json/Apps/MenuSetubi/"}
+      {app:  "Setubi/Html/Apps/StartMenu/"}
+     ,{json: "Setubi/Json/Apps/StartMenu/"}
     ]
     // --------------------------
     // JSONファイル情報を定義する

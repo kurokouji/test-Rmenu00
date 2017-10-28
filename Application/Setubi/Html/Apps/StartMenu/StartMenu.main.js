@@ -3,7 +3,7 @@
 <!-- ------------------------------------------------------------- -->
 $(document).ready(function(){
   Rmenu.log("document ready GO !!!!!!!!!!!!!!");
-  var app     = Rmenu.Application.MenuSetubi;
-  var appspec = new app.AppSpec("MenuSetubi");
+  var app     = Rmenu.Application.StartMenu;
+  var appspec = new app.AppSpec("StartMenu");
   appspec.initialSetting(app);
 });
