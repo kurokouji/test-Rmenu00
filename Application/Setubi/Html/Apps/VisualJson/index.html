@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<title>ビュジュアル　ＪＳＯＮ</title> 
+<link href="../../../../../Application/Setubi/Html/css/1pxdeep-b5e2f9.css?var=201710061400" rel="stylesheet"/>
+<link href="../../../../../Application/Setubi/Html/css/style.css?var=201710061400"  rel="stylesheet"/>
+<link href="../../../../../Application/Setubi/Html/css/style1.css?var=201710061400" rel="stylesheet"/>
+<link href="../../../../../Application/Setubi/Html/css/project.css?var=201710061400" rel="stylesheet"/>
+<link href="../../../../../Application/Setubi/Html/Apps/VisualJson/css/program.css?var=201710181644" rel="stylesheet"/>
+
+<script type="text/javascript" src="../../../../../System/Html/js/jquery-2.1.1.min.js?var=201710061400"></script>
+<script type="text/javascript" src="../../../../../System/Html/js/jquery-ui-1.12.0.custom/jquery-ui.min.js?var=201710061400"></script>
+<script type="text/javascript" src="../../../../../System/Html/js/jquery.ui.touch-punch/jquery.ui.touch-punch.min.js?var=201710061400"></script>
+<script type="text/javascript" src="../../../../../System/Html/js/bootstrap-3.2.0/js/bootstrap.min.js?var=201710061400"></script>
+<script type="text/javascript" src="../../../../../System/Html/js/template/jquery.loadTemplate-1.4.5.min.js?var=201710061400"></script>
+<script type="text/javascript" src="../../../../../System/Html/js/bignumberjs/bignumber.min.js?var=201710061400"></script>
+<script type="text/javascript" src="../../../../../System/Html/js/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js?var=201710061400"></script>
+<script type="text/javascript" src="../../../../../System/Html/js/bootstrap-datetimepicker/js/bootstrap-datetimepicker-ja.js?var=201710061400"></script>
+
+<script type="text/javascript" src="../../../../../System/Html/js/rmenumvc-3.1.0.js?var=201710061400"></script>
+<script type="text/javascript" src="../../../../../System/Html/js/rmenumodel.mixin-3.1.0.js?var=201710061400"></script>
+<script type="text/javascript" src="../../../../../System/Html/js/rmenuview.mixin-3.1.0.js?var=201710061400"></script>
+<script type="text/javascript" src="../../../../../System/Html/js/rmenucontroller.mixin-3.1.0.js?var=201710061400"></script>
+<script type="text/javascript" src="../../../../../System/Html/js/rmenuentertabpfkey.mixin-3.1.0.js?var=201710061400"></script>
+<script type="text/javascript" src="../../../../../System/Html/js/rmenuvalidation.mixin-3.1.0.js?var=201710061400"></script>
+<script type="text/javascript" src="../../../../../System/Html/js/rmenuappspec.mixin-3.1.0.js?var=201710061400"></script>
+<script type="text/JavaScript" src="../../../../../System/Html/js/webstorage-3.1.0.js?var=201710061400"></script>
+
+<script type="text/javascript" src="../../../../../Application/Setubi/Html/js/datamaintelist.view.mixin-3.1.0.js?var=201710061400"></script>
+<script type="text/javascript" src="../../../../../Application/Setubi/Html/js/datamaintelist.model.mixin-3.1.0.js?var=201710061400"></script>
+<script type="text/javascript" src="../../../../../Application/Setubi/Html/js/datamaintelist.controller.mixin-3.1.0.js?var=201710061400"></script>
+
+<script type="text/javascript" src="../../../../../Application/Setubi/Html/Apps/VisualJson/VisualJson.appspec.js?var=201710181642"></script>
+<script type="text/javascript" src="../../../../../Application/Setubi/Html/Apps/VisualJson/VisualJson.model.js?var=201710181642"></script>
+<script type="text/javascript" src="../../../../../Application/Setubi/Html/Apps/VisualJson/VisualJson.view.js?var=201710181642"></script>
+<script type="text/javascript" src="../../../../../Application/Setubi/Html/Apps/VisualJson/VisualJson.controller.js?var=201710181642"></script>
+<script type="text/javascript" src="../../../../../Application/Setubi/Html/Apps/VisualJson/VisualJson.main.js?var=201710181642"></script>
+</head>
+
+<!-- =================================================================== -->
+<body>                                            <!-- ▼body部 スタート -->
+<!-- =================================================================== -->
+
+<!-- =================================================================== -->
+<div class="container">                        <!-- ▼container スタート -->
+<!-- =================================================================== -->
+
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">ビュジュアル　ＪＳＯＮ</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li>
+         <label>　　</label>
+        </li>
+        <li>
+          <label for="プロジェクト選択"><h5>プロジェクト：</h5></label>
+          <select class="navbar-select width160" id="プロジェクト選択" name="プロジェクト選択">
+          </select>
+        </li>
+        <li>
+         <label>　　</label>
+        </li>
+        <li>
+          <label for="プログラム選択"><h5>プログラム：</h5></label>
+          <select class="navbar-select width160" id="プログラム選択" name="プログラム選択">
+          </select>
+        </li>
+        <li>
+         <label>　　</label>
+        </li>
+        <li>
+          <label for="モード選択"><h5>モード：</h5></label>
+          <select class="navbar-select width160" id="モード選択" name="モード選択">
+          </select>
+        </li>
+        <li>
+         <label>　　</label>
+        </li>
+        <li>
+          <button id="戻る" name="戻る" type="button" class="btn navbar-btn color4 btn-sm">戻　る：Esc</button>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+          <label>ログイン日時：</label>
+          <label id="ログイン日時"></label>
+          <br>
+          <label>　ユーザ氏名：　　</label>
+          <label id="ユーザ氏名"></label>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+<!-- ======================================================================== -->
+<form id="mainForm" class="form-horizontal" role="form"> <!-- ▼form スタート -->
+<!-- ======================================================================== -->
+<div class="row">
+  <br>
+</div>
+
+<div id="scrollable-Frame" class="row">
+
+  <div id="scrollable-Frame1" class="col-sm-2">
+    <div id="scrollable-Table1"> <!-- テーブル　スクロール スタート -->
+        <div id="scrollable-HTable1"> <!-- テーブル　スクロール　見出し スタート -->
+          <table id="mainTableH1" class="table table-condensed ">
+            <thead>
+              <tr>
+                <th class="rmenuCenter">データセット</th>
+              </tr>
+            </thead>
+          </table>
+        </div> <!-- テーブル　スクロール　見出し エンド -->
+
+        <div id="scrollable-DTable1"> <!-- テーブル　スクロール　明細 スタート -->
+          <table id="mainTable1" class="table table-condensed rmenuTable">
+            <tbody>
+              <tr>
+                <td class="rmenuLeft">　</td>
+              </tr>
+            </tbody>
+          </table>
+        </div> <!-- テーブル　スクロール　明細 エンド -->
+    </div> <!-- テーブル　スクロール エンド -->
+  </div>
+  
+  <div id="scrollable-Frame2" class="col-sm-2">
+    <div id="scrollable-Table2"> <!-- テーブル　スクロール スタート -->
+        <div id="scrollable-HTable2"> <!-- テーブル　スクロール　見出し スタート -->
+          <table id="mainTableH2" class="table table-condensed rmenuTable">
+            <thead>
+              <tr>
+                <th class="rmenuCenter">トランザクション</th>
+              </tr>
+            </thead>
+          </table>
+        </div> <!-- テーブル　スクロール　見出し エンド -->
+
+        <div id="scrollable-DTable2"> <!-- テーブル　スクロール　明細 スタート -->
+          <table id="mainTable2" class="table table-condensed rmenuTable">
+            <tbody>
+              <tr>
+                <td class="rmenuLeft">　</td>
+              </tr>
+            </tbody>
+          </table>
+        </div> <!-- テーブル　スクロール　明細 エンド -->
+    </div> <!-- テーブル　スクロール エンド -->
+  </div>
+  
+  <div id="scrollable-Frame3" class="col-sm-2">
+    <div id="scrollable-Table3"> <!-- テーブル　スクロール スタート -->
+        <div id="scrollable-HTable3"> <!-- テーブル　スクロール　見出し スタート -->
+          <table id="mainTableH3" class="table table-condensed rmenuTable">
+            <thead>
+              <tr>
+                <th class="rmenuCenter">ＳＱＬ</th>
+              </tr>
+            </thead>
+          </table>
+        </div> <!-- テーブル　スクロール　見出し エンド -->
+
+        <div id="scrollable-DTable3"> <!-- テーブル　スクロール　明細 スタート -->
+          <table id="mainTable3" class="table table-condensed rmenuTable">
+            <tbody>
+              <tr>
+                <td class="rmenuLeft">　</td>
+              </tr>
+            </tbody>
+          </table>
+        </div> <!-- テーブル　スクロール　明細 エンド -->
+    </div> <!-- テーブル　スクロール エンド -->
+  </div>
+  
+  <div id="scrollable-Frame4" class="col-sm-2">
+    <div id="scrollable-Table4"> <!-- テーブル　スクロール スタート -->
+        <div id="scrollable-HTable4"> <!-- テーブル　スクロール　見出し スタート -->
+          <table id="mainTableH4" class="table table-condensed rmenuTable">
+            <thead>
+              <tr>
+                <th class="rmenuCenter">バリデーション</th>
+              </tr>
+            </thead>
+          </table>
+        </div> <!-- テーブル　スクロール　見出し エンド -->
+
+        <div id="scrollable-DTable4"> <!-- テーブル　スクロール　明細 スタート -->
+          <table id="mainTable4" class="table table-condensed rmenuTable">
+            <tbody>
+              <tr>
+                <td class="rmenuLeft">　</td>
+              </tr>
+            </tbody>
+          </table>
+        </div> <!-- テーブル　スクロール　明細 エンド -->
+    </div> <!-- テーブル　スクロール エンド -->
+  </div>
+  
+  <div id="scrollable-Frame5" class="col-sm-4">
+    <div id="scrollable-Table5"> <!-- テーブル　スクロール スタート -->
+        <div id="scrollable-HTable5"> <!-- テーブル　スクロール　見出し スタート -->
+          <table id="mainTableH5" class="table table-condensed rmenuTable">
+            <thead>
+              <tr>
+                <th>
+                  <select class="width200" id="プログラム選択" name="プログラム選択">
+                    <option value="プログラム選択">　　　プログラム選択</option>
+                  </select>
+                </th>
+              </tr>
+            </thead>
+          </table>
+        </div> <!-- テーブル　スクロール　見出し エンド -->
+
+        <div id="scrollable-DTable5"> <!-- テーブル　スクロール　明細 スタート -->
+          <table id="mainTable5" class="table table-condensed rmenuTable">
+            <tbody>
+              <tr>
+                <td class="rmenuLeft">　</td>
+              </tr>
+            </tbody>
+          </table>
+        </div> <!-- テーブル　スクロール　明細 エンド -->
+    </div> <!-- テーブル　スクロール エンド -->
+    
+    <div>
+      <br>
+    </div>
+    
+    <div id="scrollable-Table6"> <!-- テーブル　スクロール スタート -->
+        <div id="scrollable-HTable6"> <!-- テーブル　スクロール　見出し スタート -->
+          <table id="mainTableH6" class="table table-condensed rmenuTable">
+            <thead>
+              <tr>
+                <th>
+                  <select class="width200" id="テーブル選択" name="テーブル選択">
+                    <option value="テーブル選択">　　　テーブル選択</option>
+                  </select>
+                </th>
+              </tr>
+            </thead>
+          </table>
+        </div> <!-- テーブル　スクロール　見出し エンド -->
+
+        <div id="scrollable-DTable6"> <!-- テーブル　スクロール　明細 スタート -->
+          <table id="mainTable6" class="table table-condensed rmenuTable">
+            <tbody>
+              <tr>
+                <td class="rmenuLeft">　</td>
+              </tr>
+            </tbody>
+          </table>
+        </div> <!-- テーブル　スクロール　明細 エンド -->
+    </div> <!-- テーブル　スクロール エンド -->
+  </div>
+  
+  
+</div>
+
+
+<div class="row">
+  <br>
+</div>
+
+<!-- =================================================================== -->
+</form>                                               <!-- ▲form エンド -->
+<!-- =================================================================== -->
+
+<div id="rmenu-pagefooter">
+</div>
+
+<!-- =================================================================== -->
+</div>                                           <!-- ▲container エンド -->
+<!-- =================================================================== -->
+
+<!-- =================================================================== -->
+</body>                                             <!-- ▲body部 エンド --> 
+<!-- =================================================================== -->
+</html>

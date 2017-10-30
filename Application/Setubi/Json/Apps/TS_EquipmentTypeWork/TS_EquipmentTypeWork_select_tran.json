@@ -1,0 +1,61 @@
+{
+  "request": {
+    "comment": "サンプル（区分）　照会処理　リクエストデータ",
+    "html": "Setubi/Json/Apps/TS_EquipmentTypeWork",
+    "mode": "select",
+    "prog": "no",
+    "model": "yes",
+    "message": {
+      "status": "OK",
+      "msg": ""
+    },
+    "records": [{
+      "id": "detail",
+      "before": "",
+      "after": "",
+      "multiline": "no",
+      "record": {
+        
+      }
+    }]
+  },
+  "response": {
+    "comment": "サンプル（区分）　レスポンスデータ",
+    "html": "Setubi/Json/Apps/TS_EquipmentTypeWork",
+    "mode": "select",
+    "prog": "no",
+    "message": {
+      "status": "OK",
+      "msg": "照会処理は正常に終了しました。"
+    },
+    "records": [{
+      "id": "detail",
+      "before": "",
+      "after": "",
+      "multiline": "yes",
+      "record": {
+        "サンプル区分ＩＤ": {
+          "value": [""]
+        },
+        "サンプル区分名称": {
+          "value": [""]
+        },
+        "サンプル区分摘要": {
+          "value": [""]
+        },
+        "サンプル区分表示順": {
+          "value": [""]
+        },
+        "更新日時": {
+          "value": [""]
+        },
+        "行追加": {
+          "value": [""]
+        },
+        "削除": {
+          "value": [""]
+        }
+      }
+    }]
+  }
+}

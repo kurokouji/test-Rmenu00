@@ -1,0 +1,106 @@
+{
+  "comment": "アクセスログ　一覧 dataset",
+  "html": "Setubi/Json/Apps/VisualClient",
+  "message": {
+    "status": "OK",
+    "msg": "データを入力して、実行ボタンを押下して下さい。"
+  },
+  "records": [{
+    "comment": "テーブルページング情報（ページ行数・カレントページ・総ページ数・総件数）",
+    "id": "header",
+    "multiline": "no",
+    "defaultline": "0",
+    "record": {
+      "ページライン数": {
+        "value": [""]
+      },
+      "カレントページ": {
+        "value": [""]
+      },
+      "最大ページ": {
+        "value": [""]
+      },
+      "トータル件数": {
+        "value": [""]
+      },
+      "アクセス日付": {
+        "value": [""]
+      },
+      "検索従業員コード": {
+        "value": [""]
+      },
+      "検索従業員名": {
+        "value": [""]
+      }
+    }
+  },
+  {
+    "comment": "ログ明細１",
+    "id": "detail1",
+    "multiline": "yes",
+    "defaultline": "100",
+    "record": {
+      "ログ明細１": {
+        "value": [""]
+      }
+    }
+  },
+  {
+    "comment": "Json明細２",
+    "id": "detail2",
+    "multiline": "yes",
+    "defaultline": "100",
+    "record": {
+      "JSON明細": {
+        "value": [""]
+      }
+    }
+  },
+  {
+    "comment": "コントローラソース",
+    "id": "detail3",
+    "multiline": "yes",
+    "defaultline": "100",
+    "record": {
+      "コントローラソース": {
+        "value": [""]
+      }
+    }
+  },
+  {
+    "comment": "モデルソース",
+    "id": "detail4",
+    "multiline": "yes",
+    "defaultline": "100",
+    "record": {
+      "モデルソース": {
+        "value": [""]
+      }
+    }
+  },
+  {
+    "comment": "ビューソース",
+    "id": "detail5",
+    "multiline": "yes",
+    "defaultline": "100",
+    "record": {
+      "ビューソース": {
+        "value": [""]
+      }
+    }
+  },
+  {
+    "comment": "選択従業員情報",
+    "id": "EmployeeInfo",
+    "multiline": "yes",
+    "defaultline": "",
+    "record": {
+      "選択従業員コード": {
+        "value": [""]
+      },
+      "選択従業員名": {
+        "value": [""]
+      }
+    }
+  }]
+}

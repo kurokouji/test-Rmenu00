@@ -1,0 +1,46 @@
+{
+  "request": {
+    "comment": "アクセスログ　一覧　初期処理　リクエストデータ",
+    "html": "Setubi/Json/Apps/VisualLogs",
+    "mode": "init",
+    "prog": "no",
+    "model": "yes",
+    "message": {
+      "status": "OK",
+      "msg": ""
+    },
+    "records": [{
+      "id": "header",
+      "before": "",
+      "after": "",
+      "multiline": "no",
+      "record": {
+        
+      }
+    }]
+  },
+  "response": {
+    "comment": "アクセスログ　一覧　初期処理　レスポンスデータ",
+    "html": "Setubi/Json/Apps/VisualLogs",
+    "mode": "init",
+    "prog": "no",
+    "message": {
+      "status": "OK",
+      "msg": "初期処理は正常に終了しました。"
+    },
+    "records": [{
+      "comment": "選択従業員情報",
+      "id": "EmployeeInfo",
+      "multiline": "yes",
+      "defaultline": "",
+      "record": {
+        "選択従業員コード": {
+          "value": [""]
+        },
+        "選択従業員名": {
+          "value": [""]
+        }
+      }
+    }]
+  }
+}
