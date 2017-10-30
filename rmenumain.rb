@@ -13,6 +13,7 @@ class RmenuMain
   def initialize()
     # controller用ログを作成する
     $Rlog               = createLogger("rack")                                  # Logファイル Debug用
+    $Tlog               = createResponseLogger("responselog")                   # Logファイル Debug用
 
     # controller用ログを作成する
     $Rlog.debug("Main Rack") {"initialize start"}                               # Logファイル Debug用
@@ -30,13 +31,23 @@ class RmenuMain
       # ブラウザからリクエストデータを受信する
       req      = Rack::Request.new(env)
       req_data = req.params["data"]
-      $Rlog.debug("Main Rack") {"request data : #{req_data}"}
 
       # json文字列をHashに変換する
       request_data = JSON.load(req_data)
+      
+      # レスポンスログの開始ログ取得
+      responseLogStart($Tlog, "Main Rack", env['REMOTE_ADDR'].to_s, request_data)
+    
+      # 開発支援プロジェクトはログを出力しない
+      $Rlog = changeLoggerMode($Rlog, request_data)
+
+      $Rlog.debug("Main Rack") {"request data : #{req_data}"}
     
       # コントローラオブジェクトのcallメソッドを実行する
       response_data = @rmenu_controller.call(request_data)
+
+      # レスポンスログの終了ログ取得
+      responseLogEnd($Tlog, "Main Rack", env['REMOTE_ADDR'].to_s, response_data)
 
       # レスポンスデータ（hashオブジェクト）をJSON文字列に変換する
       content = JSON.dump(response_data)
