@@ -81,7 +81,7 @@ module RmenuLoggerMixin
   # レスポンスログ　終了ログ取得
   def responseLogEnd(responseLog, rackName, remoteAddr, response_data)
   
-    logdata = "remote address: " + remoteAddr + " program   end: " + response_data["html"] + "mode: " + response_data["mode"]
+    logdata = "remote address: " + remoteAddr + " program   end: " + response_data["html"] + " mode: " + response_data["mode"]
     responseLog.debug("#{rackName}") {"#{logdata}"}
     
   end
