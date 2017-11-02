@@ -1,0 +1,57 @@
+{
+  "comment": "顧客　一覧表 dataset",
+  "html": "Myapp00/Json/Apps/R_CustomersSelection",
+  "message": {
+    "status": "OK",
+    "msg": "データを入力して、実行ボタンを押下して下さい。"
+  },
+  "records": [{
+    "comment": "テーブルページング情報（ページ行数・カレントページ・総ページ数・総件数）",
+    "id": "header",
+    "multiline": "no",
+    "defaultline": "0",
+    "record": {
+      "ページライン数": {
+        "value": [""]
+      },
+      "カレントページ": {
+        "value": [""]
+      },
+      "最大ページ": {
+        "value": [""]
+      },
+      "トータル件数": {
+        "value": [""]
+      },
+      "検索顧客名称": {
+        "value": [""]
+      },
+      "検索郵便番号": {
+        "value": [""]
+      },
+      "検索住所": {
+        "value": [""]
+      }
+    }
+  },
+  {
+    "comment": "テーブルの明細データ",
+    "id": "detail",
+    "multiline": "yes",
+    "defaultline": "25",
+    "record": {
+      "顧客ＩＤ": {
+        "value": [""]
+      },
+      "顧客名称": {
+        "value": [""]
+      },
+      "郵便番号": {
+        "value": [""]
+      },
+      "住所": {
+        "value": [""]
+      }
+    }
+  }]
+}

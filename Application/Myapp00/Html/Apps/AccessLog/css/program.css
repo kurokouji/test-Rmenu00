@@ -1,0 +1,60 @@
+@charset "UTF-8";
+
+/* 検索キー */
+#searchkey-Table {
+  width: 1120px;
+  max-width:calc(100vw - 80px);
+  margin: auto;
+}
+
+/* スクロールテーブルの表示窓 */
+#scrollable-Table  {
+  width: calc(1840px + 0px);
+  max-width: calc(100vw - 80px);
+  margin: 10px auto;
+}
+
+/* スクロールテーブルのヘッダ */
+#scrollable-HTable  {
+  width: calc(100vw - 80px);
+  height: 34px;
+  overflow: hidden;
+}
+
+/* スクロールテーブルの明細 */
+#scrollable-DTable  {
+  overflow-x: auto;      /* 水平スクロールバー auto:自動表示 hidden:非表示 */
+  overflow-y: auto;      /* 垂直スクロールバー auto:自動表示 hidden:非表示 */
+  width: calc(100vw - 80px);
+}
+
+#mainTableH {
+  table-layout: fixed;
+  width: 100%;
+}
+
+/* 幅のオーバ部分を折り返す指示 */
+#mainTableH {
+  word-break: break-all;
+  white-space: normal;
+}
+
+#mainTableH tr {
+  height: 32px;
+}
+
+#mainTable {
+  table-layout: fixed;
+  width: 100%;
+}
+
+/* 幅のオーバ部分を折り返す指示 */
+#mainTable {
+  word-break: break-all;
+  white-space: normal;
+}
+
+#mainTable tr {
+  height: 24px;
+}
+

@@ -1,0 +1,22 @@
+{
+  "comment": "アクセスログ　一覧 validation",
+  "html": "Myapp00/Json/Apps/AccessLog",
+  "records": [{
+    "id": "header",
+    "multiline": "no",
+    "record": {
+      "ページライン数": {
+        "validation": ["required"]
+      },
+      "カレントページ": {
+        "validation": ["required"]
+      },
+      "アクセス日付": {
+        "validation": ["nonrequired"]
+      },
+      "検索従業員コード": {
+        "validation": ["nonrequired"]
+      }
+    }
+  }]
+}

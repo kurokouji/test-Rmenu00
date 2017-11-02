@@ -1,0 +1,49 @@
+{
+  "comment": "並列帳票処理　一覧表　帳票出力",
+  "html": "Myapp00/Json/Apps/ParallelPrintList",
+  "dbname": "myapp00",
+  "mode": "print",
+  "prog": "no",
+  "message": {
+    "status": "OK",
+    "msg": "帳票出力は正常に終了しました。"
+  },
+  "sqls": [{
+    "comment": "並列分散パラメータ　テーブル　出力回数・最終出力日時　更新",
+    "id": "parallel_param",
+    "before": "",
+    "after": "",
+    "sql": {
+      "type": "update",
+      "freesql": "",
+      "genesql": {
+        "dist": "",
+        "from": "parallel_print_controll",
+        "where": "parallel_controll_id = ?",
+        "order": ""
+      }
+    },
+    "input": {
+      "multiline": "no",
+      "record": {
+        "出力回数": {
+          "value": [""],
+          "field": "output_times",
+          "funct": "output_times + 1"
+        },
+        "最終出力日時": {
+          "value": [""],
+          "field": "last_output_date_time",
+          "funct": "CURRENT_TIMESTAMP"
+        },
+        "並列分散管理ＩＤ": {
+          "value": [""],
+          "fromtype": "request",
+          "fromid": "header",
+          "fromio": "",
+          "fromname": "並列分散管理帳票ＩＤ"
+        }
+      }
+    }
+  }]
+}

@@ -1,0 +1,22 @@
+{
+  "comment": "並列帳票処理　一覧表 validation",
+  "html": "Myapp00/Json/Apps/ParallelPrintList",
+  "records": [{
+    "id": "header",
+    "multiline": "no",
+    "record": {
+      "ページライン数": {
+        "validation": ["required"]
+      },
+      "カレントページ": {
+        "validation": ["required"]
+      },
+      "並列分散管理帳票ＩＤ": {
+        "validation": ["required"]
+      },
+      "削除ファイル名称": {
+        "validation": ["required"]
+      }
+    }
+  }]
+}

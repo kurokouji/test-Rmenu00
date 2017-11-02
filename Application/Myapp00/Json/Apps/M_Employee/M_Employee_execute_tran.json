@@ -1,0 +1,107 @@
+{
+  "request": {
+    "comment": "従業員　マスター　メンテナンス　新規処理　リクエストデータ",
+    "html" : "Myapp00/Json/Apps/M_Employee",
+    "mode": "execute",
+    "prog": "no",
+    "model": "yes",
+    "message": {
+      "status": "OK",
+      "msg": ""
+    },
+    "records": [{
+      "id": "login",
+      "before": "",
+      "after": "",
+      "multiline": "no",
+      "record": {
+        "ユーザＩＤ": {
+          "value": [""]
+        },
+        "ユーザ名称": {
+          "value": [""]
+        }
+      }
+    },
+    {
+      "id": "detail",
+      "before": "",
+      "after": "",
+      "multiline": "yes",
+      "record": {
+        "従業員コード": {
+          "value": [""]
+        },
+        "従業員名": {
+          "value": [""]
+        },
+        "ログインＩＤ": {
+          "value": [""]
+        },
+        "パスワード": {
+          "value": [""]
+        },
+        "メールアドレス": {
+          "value": [""]
+        },
+        "メニュー名": {
+          "value": [""]
+        },
+        "表示順": {
+          "value": [""]
+        },
+        "更新日時": {
+          "value": [""]
+        },
+        "削除": {
+          "value": [""]
+        }
+      }
+    }]
+  },
+  "response": {
+    "comment": "従業員　マスター　メンテナンス　実行処理　レスポンスデータ",
+    "html" : "Myapp00/Json/Apps/M_Employee",
+    "mode": "execute",
+    "prog": "no",
+    "message": {
+      "status": "OK",
+      "msg": "従業員　データを正常に更新しました。"
+    },
+    "records": [{
+      "id": "detail",
+      "before": "",
+      "after": "",
+      "multiline": "yes",
+      "record": {
+        "従業員コード": {
+          "value": [""]
+        },
+        "従業員名": {
+          "value": [""]
+        },
+        "ログインＩＤ": {
+          "value": [""]
+        },
+        "パスワード": {
+          "value": [""]
+        },
+        "メールアドレス": {
+          "value": [""]
+        },
+        "メニュー名": {
+          "value": [""]
+        },
+        "表示順": {
+          "value": [""]
+        },
+        "更新日時": {
+          "value": [""]
+        },
+        "削除": {
+          "value": [""]
+        }
+      }
+    }]
+  }
+}

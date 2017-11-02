@@ -1,0 +1,63 @@
+{
+  "comment": "個人用テーマ　設定　照会処理",
+  "html": "Myapp00/Json/Apps/M_ThemePersonal",
+  "dbname": "myapp00",
+  "mode": "select",
+  "prog": "no",
+  "message": {
+    "status": "OK",
+    "msg": "照会処理は正常に終了しました。"
+  },
+  "sqls": [{
+    "comment": "テーマ　照会処理",
+    "id": "detail",
+    "before": "",
+    "after": "",
+    "sql": {
+      "type": "select",
+      "freesql": "",
+      "genesql": {
+        "dist": "",
+        "from": 
+        [
+           "テーマ                 AS A"
+          ,"LEFT OUTER JOIN 従業員 AS B ON (A.テーマコード = B.ref_テーマコード AND B.従業員コード = ?)"
+        ],
+        "where": "",
+        "order": "  A.テーマコード"
+      }
+    },
+    "input": {
+      "multiline": "no",
+      "record": {
+        "ユーザＩＤ": {
+          "value": [""],
+          "field": "従業員コード",
+          "fromtype": "request",
+          "fromid": "login",
+          "fromio": "",
+          "fromname": "ユーザＩＤ"
+        }
+      }
+    },
+    "output": {
+      "multiline": "yes",
+      "record": {
+        "テーマコード": {
+          "value": [""],
+          "field": "テーマコード",
+          "table": "A"
+        },
+        "テーマ名称": {
+          "value": [""],
+          "field": "テーマ名称",
+          "table": "A"
+        },
+        "使用": {
+          "value": [""],
+          "funct": "CASE WHEN B.ref_テーマコード <> '' THEN '1' ELSE '' END"
+        }
+      }
+    }
+  }]
+}

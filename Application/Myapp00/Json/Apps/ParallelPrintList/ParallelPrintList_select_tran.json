@@ -1,0 +1,95 @@
+{
+  "request": {
+    "comment": "並列帳票処理　一覧表　照会処理のrequestデータ",
+    "html": "Myapp00/Json/Apps/ParallelPrintList",
+    "mode": "select",
+    "prog": "no",
+    "model": "yes",
+    "message": {
+      "status": "OK",
+      "msg": ""
+    },
+    "records": [{
+      "comment": "テーブルの行数",
+      "id": "header",
+      "before": "",
+      "after": "",
+      "multiline": "no",
+      "record": {
+        "ページライン数": {
+          "value": [""]
+        },
+        "カレントページ": {
+          "value": [""]
+        }
+      }
+    }]
+  },
+  "response": {
+    "comment": "並列帳票処理　一覧表　照会処理のresponseデータ",
+    "html": "Myapp00/Json/Apps/ParallelPrintList",
+    "mode": "select",
+    "prog": "yes",
+    "message": {
+      "status": "OK",
+      "msg": "照会処理は正常に終了しました。"
+    },
+    "records": [{
+      "comment": "テーブルページング情報（行数・カレント行・総ページ数・総件数）getMaxPageCount：総ページ数を計算する。",
+      "id": "header",
+      "before": "",
+      "after": "getMaxPageCountOfMyapp00('header')",
+      "multiline": "no",
+      "record": {
+        "ページライン数": {
+          "value": [""],
+          "fromtype": "request",
+          "fromid": "header",
+          "fromio": "",
+          "fromname": "ページライン数"
+        },
+        "カレントページ": {
+          "value": ["1"],
+          "fromtype": "request",
+          "fromid": "header",
+          "fromio": "",
+          "fromname": "カレントページ"
+        },
+        "最大ページ": {
+          "value": [""]
+        },
+        "トータル件数": {
+          "value": [""],
+          "fromtype": "sqls",
+          "fromid": "total_count",
+          "fromio": "output",
+          "fromname": "トータル件数"
+        }
+      }
+    },
+    {
+      "comment": "帳票の明細データ",
+      "id": "detail",
+      "before": "",
+      "after": "",
+      "multiline": "yes",
+      "record": {
+        "並列分散管理ＩＤ": {
+          "value": [""]
+        },
+        "帳票名称": {
+          "value": [""]
+        },
+        "ファイル名称": {
+          "value": [""]
+        },
+        "出力回数": {
+          "value": [""]
+        },
+        "最終出力日時": {
+          "value": [""]
+        }
+      }
+    }]
+  }
+}

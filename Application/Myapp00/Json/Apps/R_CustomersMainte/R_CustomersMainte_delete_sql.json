@@ -1,0 +1,35 @@
+{
+  "comment": "顧客　メンテナンス　削除処理",
+  "html": "Myapp00/Json/Apps/R_CustomersMainte",
+  "dbname": "myapp00",
+  "mode": "delete",
+  "prog": "no",
+  "message": {
+    "status": "OK",
+    "msg": "削除処理は正常に終了しました。"
+  },
+  "sqls": [{
+    "comment": "顧客　削除処理",
+    "id": "header",
+    "before": "",
+    "after": "",
+    "sql": {
+      "type": "delete",
+      "freesql": "",
+      "genesql": {
+        "dist": "",
+        "from": "顧客",
+        "where": "顧客ＩＤ = ?",
+        "order": ""
+      }
+    },
+    "input": {
+      "multiline": "no",
+      "record": {
+        "顧客ＩＤ": {
+          "value": [""]
+        }
+      }
+    }
+  }]
+}

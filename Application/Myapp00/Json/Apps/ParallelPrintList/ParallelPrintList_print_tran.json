@@ -1,0 +1,35 @@
+{
+  "request": {
+    "comment": "並列帳票処理　一覧表　帳票出力のrequestデータ",
+    "html": "Myapp00/Json/Apps/ParallelPrintList",
+    "mode": "print",
+    "prog": "no",
+    "model": "yes",
+    "message": {
+      "status": "OK",
+      "msg": ""
+    },
+    "records": [{
+      "comment": "並列分散管理テーブル　ＩＤ",
+      "id": "header",
+      "before": "",
+      "after": "",
+      "multiline": "no",
+      "record": {
+        "並列分散管理帳票ＩＤ": {
+          "value": [""]
+        }
+      }
+    }]
+  },
+  "response": {
+    "comment": "並列帳票処理　一覧表　帳票出力のresponseデータ",
+    "html": "Myapp00/Json/Apps/ParallelPrintList",
+    "mode": "print",
+    "prog": "no",
+    "message": {
+      "status": "OK",
+      "msg": "帳票出力処理は正常に終了しました。"
+    }
+  }
+}

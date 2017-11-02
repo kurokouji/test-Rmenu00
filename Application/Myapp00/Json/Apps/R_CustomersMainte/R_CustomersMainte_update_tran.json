@@ -1,0 +1,43 @@
+{
+  "request": {
+    "comment": "顧客　メンテナンス　訂正処理　リクエストデータ",
+    "html": "Myapp00/Json/Apps/R_CustomersMainte",
+    "mode": "update",
+    "prog": "no",
+    "model": "yes",
+    "message": {
+      "status": "OK",
+      "msg": ""
+    },
+    "records": [{
+      "id": "header",
+      "before": "",
+      "after": "",
+      "multiline": "no",
+      "record": {
+        "顧客ＩＤ": {
+          "value": [""]
+        },
+        "顧客名称": {
+          "value": [""]
+        },
+        "郵便番号": {
+          "value": [""]
+        },
+        "住所": {
+          "value": [""]
+        }
+      }
+    }]
+  },
+  "response": {
+    "comment": "顧客　メンテナンス　訂正処理　レスポンスデータ",
+    "html": "Myapp00/Json/Apps/R_CustomersMainte",
+    "mode": "update",
+    "prog": "no",
+    "message": {
+      "status": "OK",
+      "msg": "データを正常に訂正しました。"
+    }
+  }
+}

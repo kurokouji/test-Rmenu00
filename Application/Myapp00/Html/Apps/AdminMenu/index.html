@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<title>※００※管理　メニュー（管理者）</title> 
+<link href="../../../../../Application/Myapp00/Html/css/1pxdeep-b5e2f9.css?var=201710130900" rel="stylesheet"/>
+<link href="../../../../../Application/Myapp00/Html/css/style.css?var=201710130900" rel="stylesheet"/>
+<link href="../../../../../Application/Myapp00/Html/css/style1.css?var=201710130900" rel="stylesheet"/>
+<link href="../../../../../Application/Myapp00/Html/css/tabmenu.css?var=201710130900" rel="stylesheet"/>
+
+<script type="text/javascript" src="../../../../../System/Html/js/jquery-2.1.1.min.js?var=201710130900"></script>
+<script type="text/javascript" src="../../../../../System/Html/js/bootstrap-3.2.0/js/bootstrap.min.js?var=201710130900"></script>
+<script type="text/javascript" src="../../../../../System/Html/js/template/jquery.loadTemplate-1.4.5.min.js?var=201710130900"></script>
+
+<script type="text/javascript" src="../../../../../System/Html/js/rmenumvc-3.1.0.js?var=201710130900"></script>
+<script type="text/javascript" src="../../../../../System/Html/js/rmenumodel.mixin-3.1.0.js?var=201710130900"></script>
+<script type="text/javascript" src="../../../../../System/Html/js/rmenuview.mixin-3.1.0.js?var=201710130900"></script>
+<script type="text/javascript" src="../../../../../System/Html/js/rmenucontroller.mixin-3.1.0.js?var=201710130900"></script>
+<script type="text/javascript" src="../../../../../System/Html/js/rmenuentertabpfkey.mixin-3.1.0.js?var=201710130900"></script>
+<script type="text/javascript" src="../../../../../System/Html/js/rmenuvalidation.mixin-3.1.0.js?var=201710130900"></script>
+<script type="text/javascript" src="../../../../../System/Html/js/rmenuappspec.mixin-3.1.0.js?var=201710130900"></script>
+<script type="text/JavaScript" src="../../../../../System/Html/js/webstorage-3.1.0.js?var=201710130900"></script>
+
+<script type="text/javascript" src="../../../../../Application/Myapp00/Html/js/tab.menu.view.mixin-3.1.0.js?var=201710130900"></script>
+<script type="text/javascript" src="../../../../../Application/Myapp00/Html/js/tab.menu.model.mixin-3.1.0.js?var=201710130900"></script>
+<script type="text/javascript" src="../../../../../Application/Myapp00/Html/js/tab.menu.controller.mixin-3.1.0.js?var=201710130900"></script>
+
+<script type="text/javascript" src="../../../../../Application/Myapp00/Html/Apps/AdminMenu/AdminMenu.appspec.js?var=201710130900"></script>
+<script type="text/javascript" src="../../../../../Application/Myapp00/Html/Apps/AdminMenu/AdminMenu.model.js?var=201710130900"></script>
+<script type="text/javascript" src="../../../../../Application/Myapp00/Html/Apps/AdminMenu/AdminMenu.view.js?var=201710130900"></script>
+<script type="text/javascript" src="../../../../../Application/Myapp00/Html/Apps/AdminMenu/AdminMenu.controller.js?var=201710130900"></script>
+<script type="text/javascript" src="../../../../../Application/Myapp00/Html/Apps/AdminMenu/AdminMenu.main.js?var=201710130900"></script>
+</head> 
+
+<!-- =================================================================== -->
+<body>                                            <!-- ▼body部 スタート -->
+<!-- =================================================================== -->
+
+<!-- =================================================================== -->
+<div class="container">                        <!-- ▼container スタート -->
+<!-- =================================================================== -->
+
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">※００※管理　メニュー（管理者）</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li>
+          <button id="戻る" name="戻る" type="button" class="btn navbar-btn color4 btn-sm">戻　る：Esc</button>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+          <label id="ログイン和暦"></label>
+          <label>　　　　　</label>
+        </li>
+        <li>
+          <label>ログイン日時：</label>
+          <label id="ログイン日時"></label>
+          <br>
+          <label>　ユーザ氏名：　　</label>
+          <label id="ユーザ氏名"></label>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+<!-- ======================================================================== -->
+<form id="mainForm" class="form-horizontal" role="form"> <!-- ▼form スタート -->
+<!-- ======================================================================== -->
+<div class="row">
+  <div class="col-sm-12"> <!-- センタリング  スタート -->
+
+            <ul id="メニュー情報" name="" class="nav nav-pills">
+              <li class="active"><a id="※００※"     href="#※００※メニュー" data-toggle="tab" class="メニュータブ">※００※</a></li>
+              <li><a id="マスター管理" href="#マスター管理メニュー" data-toggle="tab" class="メニュータブ">マスター管理</a></li>
+              <li><a id="分散処理管理" href="#分散処理管理メニュー" data-toggle="tab" class="メニュータブ">分散処理管理</a></li>
+              <li><a id="システム"     href="#システムメニュー" data-toggle="tab" class="メニュータブ">システム</a></li>
+           </ul>
+
+            <div class="tab-content"> <!-- tab-content  スタート -->
+
+              <div class="tab-pane active" id="※００※メニュー">
+                <ul class="nav nav-pills">
+
+                  <li>
+                    <ul class="nav nav-pills nav-stacked rmenu-nav-menu-ul rmenu-nav-menu-ul-width400">
+                      <li>
+                        <br>
+                      </li>
+                      <li>
+                        <button name="Myapp00/Html/Apps/R_CustomersList"     class="btn color4 rmenu-nav-menu-btn メニュー" type="button">顧客　一覧表</button>
+                      </li>
+                      <li>
+                        <br>
+                      </li>
+                      <li>
+                        <button name=""     class="btn color4 rmenu-nav-menu-btn メニュー" type="button">　</button>
+                      </li>
+                      <li>
+                        <br>
+                      </li>
+                      <li>
+                        <button name=""     class="btn color4 rmenu-nav-menu-btn メニュー" type="button">　</button>
+                      </li>
+                      <li>
+                        <br>
+                      </li>
+                      <li>
+                        <button name=""     class="btn color4 rmenu-nav-menu-btn メニュー" type="button">　</button>
+                      </li>
+                      <li>
+                        <br>
+                      </li>
+                      <li>
+                        <button name=""     class="btn color4 rmenu-nav-menu-btn メニュー" type="button">　</button>
+                      </li>
+                      <li>
+                        <br>
+                      </li>
+                      <li>
+                        <button name=""     class="btn color4 rmenu-nav-menu-btn メニュー" type="button">　</button>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li>
+                    <ul class="nav nav-pills nav-stacked rmenu-nav-menu-ul rmenu-nav-menu-ul-width400">
+                      <li>
+                        <br>
+                      </li>
+                      <li>
+                        <button name=""     class="btn color4 rmenu-nav-menu-btn メニュー" type="button">　</button>
+                      </li>
+                      <li>
+                        <br>
+                      </li>
+                      <li>
+                        <button name=""     class="btn color4 rmenu-nav-menu-btn メニュー" type="button">　</button>
+                      </li>
+                      <li>
+                        <br>
+                      </li>
+                      <li>
+                        <button name=""     class="btn color4 rmenu-nav-menu-btn メニュー" type="button">　</button>
+                      </li>
+                      <li>
+                        <br>
+                      </li>
+                      <li>
+                        <button name=""     class="btn color4 rmenu-nav-menu-btn メニュー" type="button">　</button>
+                      </li>
+                      <li>
+                        <br>
+                      </li>
+                      <li>
+                        <button name=""     class="btn color4 rmenu-nav-menu-btn メニュー" type="button">　</button>
+                      </li>
+                      <li>
+                        <br>
+                      </li>
+                      <li>
+                        <button name=""     class="btn color4 rmenu-nav-menu-btn メニュー" type="button">　</button>
+                      </li>
+                    </ul>
+                  </li>
+
+                </ul>
+              </div>
+
+              <div class="tab-pane" id="マスター管理メニュー">
+                <ul class="nav nav-pills">
+
+                  <li>
+                    <ul class="nav nav-pills nav-stacked rmenu-nav-menu-ul rmenu-nav-menu-ul-width400">
+                      <li>
+                        <br>
+                      </li>
+                      <li>
+                        <button name="Myapp00/Html/Apps/M_Employee"     class="btn color4 rmenu-nav-menu-btn メニュー" type="button">従業員　マスター</button>
+                      </li>
+                      <li>
+                        <br>
+                      </li>
+                      <li>
+                        <button name=""     class="btn color4 rmenu-nav-menu-btn メニュー" type="button">　</button>
+                      </li>
+                      <li>
+                        <br>
+                      </li>
+                      <li>
+                        <button name=""     class="btn color4 rmenu-nav-menu-btn メニュー" type="button">　</button>
+                      </li>
+                      <li>
+                        <br>
+                      </li>
+                      <li>
+                        <button name=""     class="btn color4 rmenu-nav-menu-btn メニュー" type="button">　</button>
+                      </li>
+                      <li>
+                        <br>
+                      </li>
+                      <li>
+                        <button name=""     class="btn color4 rmenu-nav-menu-btn メニュー" type="button">　</button>
+                      </li>
+                      <li>
+                        <br>
+                      </li>
+                      <li>
+                        <button name=""     class="btn color4 rmenu-nav-menu-btn メニュー" type="button">　</button>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li>
+                    <ul class="nav nav-pills nav-stacked rmenu-nav-menu-ul rmenu-nav-menu-ul-width400">
+                      <li>
+                        <br>
+                      </li>
+                      <li>
+                        <button name=""     class="btn color4 rmenu-nav-menu-btn メニュー" type="button">　</button>
+                      </li>
+                      <li>
+                        <br>
+                      </li>
+                      <li>
+                        <button name=""     class="btn color4 rmenu-nav-menu-btn メニュー" type="button">　</button>
+                      </li>
+                      <li>
+                        <br>
+                      </li>
+                      <li>
+                        <button name=""     class="btn color4 rmenu-nav-menu-btn メニュー" type="button">　</button>
+                      </li>
+                      <li>
+                        <br>
+                      </li>
+                      <li>
+                        <button name=""     class="btn color4 rmenu-nav-menu-btn メニュー" type="button">　</button>
+                      </li>
+                      <li>
+                        <br>
+                      </li>
+                      <li>
+                        <button name="Myapp00/Html/Apps/M_Theme"     class="btn color4 rmenu-nav-menu-btn メニュー" type="button">テーマ</button>
+                      </li>
+                      <li>
+                        <br>
+                      </li>
+                      <li>
+                        <button name="Myapp00/Html/Apps/M_ThemePersonal"     class="btn color4 rmenu-nav-menu-btn メニュー" type="button">個人用テーマ</button>
+                      </li>
+                    </ul>
+                  </li>
+
+                </ul>
+              </div>
+
+              <div class="tab-pane" id="分散処理管理メニュー">
+                <ul class="nav nav-pills">
+
+                  <li>
+                    <ul class="nav nav-pills nav-stacked rmenu-nav-menu-ul rmenu-nav-menu-ul-width400">
+                      <li>
+                        <br>
+                      </li>
+                      <li>
+                        <button name="Myapp00/Html/Apps/ParallelList"  class="btn color4 rmenu-nav-menu-btn メニュー" type="button">分散ジョブ管理</button>
+                      </li>
+                      <li>
+                        <br>
+                      </li>
+                      <li>
+                        <button name="Myapp00/Html/Apps/ParallelPrintList"  class="btn color4 rmenu-nav-menu-btn メニュー" type="button">帳票管理</button>
+                      </li>
+                      <li>
+                        <br>
+                      </li>
+                      <li>
+                        <button name=""     class="btn color4 rmenu-nav-menu-btn メニュー" type="button">　</button>
+                      </li>
+                      <li>
+                        <br>
+                      </li>
+                      <li>
+                        <button name=""     class="btn color4 rmenu-nav-menu-btn メニュー" type="button">　</button>
+                      </li>
+                      <li>
+                        <br>
+                      </li>
+                      <li>
+                        <button name=""     class="btn color4 rmenu-nav-menu-btn メニュー" type="button">　</button>
+                      </li>
+                      <li>
+                        <br>
+                      </li>
+                      <li>
+                        <button name=""     class="btn color4 rmenu-nav-menu-btn メニュー" type="button">　</button>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li>
+                    <ul class="nav nav-pills nav-stacked rmenu-nav-menu-ul rmenu-nav-menu-ul-width400">
+                      <li>
+                        <br>
+                      </li>
+                      <li>
+                        <button name=""     class="btn color4 rmenu-nav-menu-btn メニュー" type="button">　</button>
+                      </li>
+                      <li>
+                        <br>
+                      </li>
+                      <li>
+                        <button name=""     class="btn color4 rmenu-nav-menu-btn メニュー" type="button">　</button>
+                      </li>
+                      <li>
+                        <br>
+                      </li>
+                      <li>
+                        <button name=""     class="btn color4 rmenu-nav-menu-btn メニュー" type="button">　</button>
+                      </li>
+                      <li>
+                        <br>
+                      </li>
+                      <li>
+                        <button name=""     class="btn color4 rmenu-nav-menu-btn メニュー" type="button">　</button>
+                      </li>
+                      <li>
+                        <br>
+                      </li>
+                      <li>
+                        <button name=""     class="btn color4 rmenu-nav-menu-btn メニュー" type="button">　</button>
+                      </li>
+                      <li>
+                        <br>
+                      </li>
+                      <li>
+                        <button name=""     class="btn color4 rmenu-nav-menu-btn メニュー" type="button">　</button>
+                      </li>
+                    </ul>
+                  </li>
+
+                </ul>
+              </div>
+
+              <div class="tab-pane" id="システムメニュー">
+                <ul class="nav nav-pills">
+
+                  <li>
+                    <ul class="nav nav-pills nav-stacked rmenu-nav-menu-ul rmenu-nav-menu-ul-width400">
+                      <li>
+                        <br>
+                      </li>
+                      <li>
+                        <button name=""     class="btn color4 rmenu-nav-menu-btn メニュー" type="button">　</button>
+                      </li>
+                      <li>
+                        <br>
+                      </li>
+                      <li>
+                        <button name=""     class="btn color4 rmenu-nav-menu-btn メニュー" type="button">　</button>
+                      </li>
+                      <li>
+                        <br>
+                      </li>
+                      <li>
+                        <button name=""     class="btn color4 rmenu-nav-menu-btn メニュー" type="button">　</button>
+                      </li>
+                      <li>
+                        <br>
+                      </li>
+                      <li>
+                        <button name=""     class="btn color4 rmenu-nav-menu-btn メニュー" type="button">　</button>
+                      </li>
+                      <li>
+                        <br>
+                      </li>
+                      <li>
+                        <button name=""     class="btn color4 rmenu-nav-menu-btn メニュー" type="button">　</button>
+                      </li>
+                      <li>
+                        <br>
+                      </li>
+                      <li>
+                        <button name=""     class="btn color4 rmenu-nav-menu-btn メニュー" type="button">　</button>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li>
+                    <ul class="nav nav-pills nav-stacked rmenu-nav-menu-ul rmenu-nav-menu-ul-width400">
+                      <li>
+                        <br>
+                      </li>
+                      <li>
+                        <button name="Myapp00/Html/Apps/AccessLog"  class="btn color4 rmenu-nav-menu-btn メニュー" type="button">アクセスログ</button>
+                      </li>
+                      <li>
+                        <br>
+                      </li>
+                      <li>
+                        <button name=""     class="btn color4 rmenu-nav-menu-btn メニュー" type="button">　</button>
+                      </li>
+                      <li>
+                        <br>
+                      </li>
+                      <li>
+                        <button name=""     class="btn color4 rmenu-nav-menu-btn メニュー" type="button">　</button>
+                      </li>
+                      <li>
+                        <br>
+                      </li>
+                      <li>
+                        <button name=""     class="btn color4 rmenu-nav-menu-btn メニュー" type="button">　</button>
+                      </li>
+                      <li>
+                        <br>
+                      </li>
+                      <li>
+                        <button name=""     class="btn color4 rmenu-nav-menu-btn メニュー" type="button">　</button>
+                      </li>
+                      <li>
+                        <br>
+                      </li>
+                      <li>
+                        <button name=""     class="btn color4 rmenu-nav-menu-btn メニュー" type="button">　</button>
+                      </li>
+                    </ul>
+                  </li>
+
+                </ul>
+              </div>
+
+            </div> <!-- tab-content  エンド -->
+
+
+  </div> <!-- センタリング  エンド -->
+</div>
+
+<!-- =================================================================== -->
+</form>                                               <!-- ▲form エンド -->
+<!-- =================================================================== -->
+
+<div id="rmenu-pagefooter">
+</div>
+
+<!-- =================================================================== -->
+</div>                                           <!-- ▲container エンド -->
+<!-- =================================================================== -->
+
+<!-- =================================================================== -->
+</body>                                             <!-- ▲body部 エンド --> 
+<!-- =================================================================== -->
+</html>

@@ -1,0 +1,123 @@
+{
+  "comment": "並列分散処理　一覧表　処理削除",
+  "html": "Myapp00/Json/Apps/ParallelList",
+  "dbname": "myapp00",
+  "mode": "delete",
+  "prog": "yes",
+  "message": {
+    "status": "OK",
+    "msg": "削除処理は正常に終了しました。"
+  },
+  "sqls": [{
+    "comment": "並列分散パラメータ　テーブル",
+    "id": "parallel_param",
+    "before": "",
+    "after": "",
+    "sql": {
+      "type": "delete",
+      "freesql": "",
+      "genesql": {
+        "dist": "",
+        "from": "parallel_param",
+        "where": "parallel_controll_id = ?",
+        "order": ""
+      }
+    },
+    "input": {
+      "multiline": "no",
+      "record": {
+        "並列分散管理ＩＤ": {
+          "value": [""],
+          "fromtype": "request",
+          "fromid": "header",
+          "fromio": "",
+          "fromname": "並列分散管理削除ＩＤ"
+        }
+      }
+    }
+  },
+  {
+    "comment": "並列分散キー　テーブル",
+    "id": "parallel_keyvalue",
+    "before": "",
+    "after": "",
+    "sql": {
+      "type": "delete",
+      "freesql": "",
+      "genesql": {
+        "dist": "",
+        "from": "parallel_keyvalue",
+        "where": "parallel_controll_id = ?",
+        "order": ""
+      }
+    },
+    "input": {
+      "multiline": "no",
+      "record": {
+        "並列分散管理ＩＤ": {
+          "value": [""],
+          "fromtype": "request",
+          "fromid": "header",
+          "fromio": "",
+          "fromname": "並列分散管理削除ＩＤ"
+        }
+      }
+    }
+  },
+  {
+    "comment": "並列分散分割管理　テーブル",
+    "id": "parallel_division_controll",
+    "before": "",
+    "after": "",
+    "sql": {
+      "type": "delete",
+      "freesql": "",
+      "genesql": {
+        "dist": "",
+        "from": "parallel_division_controll",
+        "where": "parallel_controll_id = ?",
+        "order": ""
+      }
+    },
+    "input": {
+      "multiline": "no",
+      "record": {
+        "並列分散管理ＩＤ": {
+          "value": [""],
+          "fromtype": "request",
+          "fromid": "header",
+          "fromio": "",
+          "fromname": "並列分散管理削除ＩＤ"
+        }
+      }
+    }
+  },
+  {
+    "comment": "並列分散管理　テーブル",
+    "id": "parallel_controll",
+    "before": "",
+    "after": "",
+    "sql": {
+      "type": "delete",
+      "freesql": "",
+      "genesql": {
+        "dist": "",
+        "from": "parallel_controll",
+        "where": "parallel_controll_id = ?",
+        "order": ""
+      }
+    },
+    "input": {
+      "multiline": "no",
+      "record": {
+        "並列分散管理ＩＤ": {
+          "value": [""],
+          "fromtype": "request",
+          "fromid": "header",
+          "fromio": "",
+          "fromname": "並列分散管理削除ＩＤ"
+        }
+      }
+    }
+  }]
+}

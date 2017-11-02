@@ -1,0 +1,38 @@
+{
+  "request": {
+    "comment": "並列分散　分割処理　一覧表　再処理のrequestデータ",
+    "html": "Myapp00/Json/Apps/ParallelDivisionList",
+    "mode": "delete",
+    "prog": "no",
+    "model": "yes",
+    "message": {
+      "status": "OK",
+      "msg": ""
+    },
+    "records": [{
+      "comment": "並列分散管理テーブル　ＩＤ",
+      "id": "header",
+      "before": "",
+      "after": "",
+      "multiline": "no",
+      "record": {
+        "再処理並列分散管理ＩＤ": {
+          "value": [""]
+        },
+        "再処理並列分割管理ＩＤ": {
+          "value": [""]
+        }
+      }
+    }]
+  },
+  "response": {
+    "comment": "並列分散　分割処理　一覧表　再処理のresponseデータ",
+    "html": "Myapp00/Json/Apps/ParallelDivisionList",
+    "mode": "delete",
+    "prog": "no",
+    "message": {
+      "status": "OK",
+      "msg": "再処理は正常に終了しました。"
+    }
+  }
+}

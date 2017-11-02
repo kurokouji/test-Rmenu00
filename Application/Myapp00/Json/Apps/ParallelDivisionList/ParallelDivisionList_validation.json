@@ -1,0 +1,25 @@
+{
+  "comment": "並列分散　分割処理　一覧表 validation",
+  "html": "Myapp00/Json/Apps/ParallelList",
+  "records": [{
+    "id": "header",
+    "multiline": "no",
+    "record": {
+      "ページライン数": {
+        "validation": ["required"]
+      },
+      "カレントページ": {
+        "validation": ["required"]
+      },
+      "並列分散管理ＩＤ": {
+        "validation": ["required"]
+      },
+      "再処理並列分散管理ＩＤ": {
+        "validation": ["required"]
+      },
+      "再処理並列分割管理ＩＤ": {
+        "validation": ["required"]
+      }
+    }
+  }]
+}

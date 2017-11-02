@@ -1,0 +1,48 @@
+{
+  "comment": "並列分散　分割処理　一覧表　再処理",
+  "html": "Myapp00/Json/Apps/ParallelDivisionList",
+  "dbname": "myapp00",
+  "mode": "delete",
+  "prog": "yes",
+  "message": {
+    "status": "OK",
+    "msg": "再処理は正常に終了しました。"
+  },
+  "sqls": [{
+    "comment": "並列分散テーブルのＤＢ名を取得する",
+    "id": "header",
+    "before": "",
+    "after": "writeTupleClientOfMyapp00",
+    "sql": {
+      "type": "select",
+      "freesql": "",
+      "genesql": {
+        "dist": "",
+        "from": "parallel_controll",
+        "where": "parallel_controll_id = ?",
+        "order": ""
+      }
+    },
+    "input": {
+      "multiline": "no",
+      "record": {
+        "並列分散管理ＩＤ": {
+          "value": [""],
+          "fromtype": "request",
+          "fromid": "header",
+          "fromio": "",
+          "fromname": "再処理並列分散管理ＩＤ"
+        }
+      }
+    },
+    "output": {
+      "multiline": "no",
+      "record": {
+        "ＤＢ名": {
+          "value": [""],
+          "field": "dbname"
+        }
+      }
+    }
+  }]
+}
