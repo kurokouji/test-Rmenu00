@@ -25,6 +25,22 @@
   // また、パターン内の処理を変更するときは、オーバライドする
   // --------------------------------------------------------
   Model.include({
+    // -------------------------------------------------------
+    //  レスポンスデータ　編集処理
+    // -------------------------------------------------------
+    onＰＤＦ表示OfEditResponseData: function(responseData, mode) {
+      $R.log("Model onＰＤＦ表示OfEditResponseData : start");
+
+      var argHash  = new Object();
+      argHash["file"]   = responseData["pdfinfo"]["pdffile"];
+      argHash["download"] = responseData["pdfinfo"]["pdfname"];
+      argHash["type"]   = "pdf";
+      argHash["delete"] = "yes";
+      this.postDownloadRack(argHash);
+
+      $R.log("Model onＰＤＦ表示OfEditResponseData : end");
+    }
+
 
   });
 

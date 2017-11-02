@@ -64,7 +64,6 @@ class R_MainteContractList_model
       rep = rep + " AND C.作業区分 LIKE '%#{w_検索作業区分}%'"
     end
 
-
     # 検索条件の置き換え
     if    genesql_freesql == 'genesql'
       sqlInfo["sql"]["genesql"]["where"].sub!(/&&/,rep)

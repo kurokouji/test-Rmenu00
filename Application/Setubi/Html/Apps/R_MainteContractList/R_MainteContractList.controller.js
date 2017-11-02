@@ -65,7 +65,39 @@
 
       $R.log("Controller on保守サービス指示一覧 : end");
     }
-    
+
+    ,on契約者台帳ＰＤＦ: function(event) {
+      $R.log("Controller on契約者台帳ＰＤＦ : start");
+
+      this.ajaxExecute("MainteContractPrint");
+
+      $R.log("Controller on契約者台帳ＰＤＦ : end");
+    }
+
+    // -------------------------------------
+    //  リクエストデータ　編集・チェック処理
+    // -------------------------------------
+   ,onＰＤＦ作成OfCheckRequestData: function(requestData, mode) {
+      $R.log("Controller onＰＤＦ作成OfCheckRequestData : start");
+
+      var status = this.checkRequestData(requestData);
+
+      $R.log("Controller onＰＤＦ作成OfCheckRequestData : end");
+      return status;
+    }
+
+    // -------------------------------
+    //  レスポンスデータ　編集処理
+    // -------------------------------
+    ,onＰＤＦ作成OfEditResponseData: function(responseData, mode) {
+      $R.log("Controller onＰＤＦ作成OfEditResponseData : start");
+
+      this.model.onＰＤＦ表示OfEditResponseData(responseData, mode);
+
+      $R.log("Controller onＰＤＦ作成OfEditResponseData : end");
+    }
+
+
   });
 
 }(jQuery, Rmenu));
