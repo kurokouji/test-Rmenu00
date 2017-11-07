@@ -1,0 +1,133 @@
+{
+  "comment": "営業担当　メンテナンス　登録処理",
+  "html": "Myapp00/Json/Apps/R_SalesPersonMainte",
+  "dbname": "myapp00",
+  "mode": "insert",
+  "prog": "no",
+  "message": {
+    "status": "OK",
+    "msg": "訂正処理は正常に終了しました。"
+  },
+  "sqls": [{
+    "comment": "営業担当者　訂正処理",
+    "id": "header_insert",
+    "before": "",
+    "after": "",
+    "sql": {
+      "type": "insert",
+      "freesql": "",
+      "genesql": {
+        "dist": "",
+        "from": "Ｍ営業担当者",
+        "where": "",
+        "order": ""
+      }
+    },
+    "input": {
+      "multiline": "no",
+      "record": {
+        "営業担当者名": {
+          "value": [""],
+          "fieldtype": "char",
+          "field": "営業担当者名",
+          "fromtype" : "request",
+          "fromid" : "header",
+          "fromio" : "",
+          "fromname" : "営業担当者名"
+        },
+        "索引": {
+          "value": [""],
+          "fieldtype": "char",
+          "fromtype" : "request",
+          "fromid" : "header",
+          "fromio" : "",
+          "fromname" : "索引"
+        },
+        "摘要": {
+          "value": [""],
+          "fieldtype": "char",
+          "field": "摘要",
+          "fromtype" : "request",
+          "fromid" : "header",
+          "fromio" : "",
+          "fromname" : "摘要"
+        }
+      }
+    }
+  },
+  {
+    "comment" : "登録した営業担当者のIDを取得する",
+    "id" : "header_key",
+    "before" : "",
+    "after" : "",
+    "sql" : {
+      "type" : "select",
+      "freesql" : "",
+      "genesql" : {
+        "dist" : "",
+        "from" : "Ｍ営業担当者",
+        "where" : "",
+        "order" : ""
+      }
+    },
+    "output" : {
+      "multiline" : "no",
+      "record" : {
+        "営業担当者ＩＤ" : {
+          "value" : [""],
+          "funct" : "MAX(営業担当者ＩＤ)"
+        }
+      }
+    }
+  },
+  {
+    "comment": "営業担当者　照会処理",
+    "id": "header",
+    "before": "",
+    "after": "",
+    "sql": {
+      "type": "select",
+      "freesql": "",
+      "genesql": {
+        "dist": "",
+        "from": 
+        [
+          "Ｍ営業担当者"
+        ],
+        "where": "営業担当者ＩＤ = ?",
+        "order": ""
+      }
+    },
+    "input": {
+      "multiline": "no",
+      "record": {
+        "営業担当者ＩＤ": {
+            "value" : [""],
+            "fromtype" : "sqls",
+            "fromid" : "header_key",
+            "fromio" : "output",
+            "fromname" : "営業担当者ＩＤ"
+        }
+      }
+    },
+    "output": {
+      "multiline": "no",
+      "record": {
+        "営業担当者ＩＤ": {
+          "value": [""]
+        },
+        "営業担当者名": {
+          "value": [""],
+          "field": "営業担当者名"
+        },
+        "索引": {
+          "value": [""]
+        },
+        "摘要": {
+          "value": [""],
+          "field": "摘要"
+        }
+      }
+    }
+  }]
+}

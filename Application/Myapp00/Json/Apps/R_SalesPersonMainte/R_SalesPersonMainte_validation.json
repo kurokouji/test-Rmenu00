@@ -1,0 +1,34 @@
+{
+  "comment": "営業担当　メンテナンス validation",
+  "html": "Myapp00/Json/Apps/R_SalesPersonMainte",
+  "records": [{
+    "id": "header",
+    "multiline": "no",
+    "record": {
+      "営業担当者ＩＤ": {
+        "validation": ["nonrequired",
+        "integerP"],
+        "min": "1",
+        "max": "11"
+      },
+      "営業担当者名": {
+        "validation": ["required",
+        "free"],
+        "min": "1",
+        "max": "100"
+      },
+      "索引": {
+        "validation": ["required",
+        "free"],
+        "min": "1",
+        "max": "8"
+      },
+      "摘要": {
+        "validation": ["required",
+        "free"],
+        "min": "1",
+        "max": "200"
+      }
+    }
+  }]
+}

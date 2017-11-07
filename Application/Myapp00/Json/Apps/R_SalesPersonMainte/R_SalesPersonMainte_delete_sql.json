@@ -1,0 +1,35 @@
+{
+  "comment": "営業担当　メンテナンス　削除処理",
+  "html": "Myapp00/Json/Apps/R_SalesPersonMainte",
+  "dbname": "myapp00",
+  "mode": "delete",
+  "prog": "no",
+  "message": {
+    "status": "OK",
+    "msg": "削除処理は正常に終了しました。"
+  },
+  "sqls": [{
+    "comment": "営業担当者　削除処理",
+    "id": "header",
+    "before": "",
+    "after": "",
+    "sql": {
+      "type": "delete",
+      "freesql": "",
+      "genesql": {
+        "dist": "",
+        "from": "Ｍ営業担当者",
+        "where": "営業担当者ＩＤ = ?",
+        "order": ""
+      }
+    },
+    "input": {
+      "multiline": "no",
+      "record": {
+        "営業担当者ＩＤ": {
+          "value": [""]
+        }
+      }
+    }
+  }]
+}

@@ -1,0 +1,98 @@
+{
+  "comment": "営業担当　一覧表 検索処理",
+  "html": "Myapp00/Json/Apps/R_SalesPersonList",
+  "dbname": "myapp00",
+  "mode": "select",
+  "prog": "yes",
+  "message": {
+    "status": "OK",
+    "msg": "照会処理は正常に終了しました。"
+  },
+  "sqls": [{
+    "comment": "総件数を取得する",
+    "id": "total_count",
+    "before": "setSql_R_SalesPersonListOfMyapp00('header', 'total_count', 'genesql')",
+    "after": "",
+    "sql": {
+      "type": "select",
+      "freesql": "",
+      "genesql": {
+        "dist": "",
+        "from": 
+        [
+          "Ｍ営業担当者"
+        ],
+        "where": "true &&",
+        "order": ""
+      }
+    },
+    "input": {
+      "multiline": "no",
+      "record": {
+      }
+    },
+    "output": {
+      "multiline": "no",
+      "record": {
+        "トータル件数": {
+          "value": [""],
+          "funct": "COUNT(*)"
+        }
+      }
+    }
+  },
+  {
+    "comment": "指定件数分のデータを取得する。getOffsetLine：オフセット行数を計算する。",
+    "id": "detail",
+    "before": 
+    [
+      "setSql_R_SalesPersonListOfMyapp00('header', 'detail', 'genesql')"
+     ,"getOffsetLineOfMyapp00('header', 'detail')"
+    ],
+    "after": "",
+    "sql": {
+      "type": "select",
+      "freesql": "",
+      "genesql": {
+        "dist": "",
+        "from": "Ｍ営業担当者",
+        "where": "true &&",
+        "order": "営業担当者ＩＤ",
+        "limit": "? OFFSET ?"
+      }
+    },
+    "input": {
+      "multiline": "no",
+      "record": {
+        "ページライン数": {
+          "value": [""],
+          "fromtype": "request",
+          "fromid": "header",
+          "fromio": "",
+          "fromname": "ページライン数"
+        },
+        "オフセットライン数": {
+          "value": [""]
+        }
+      }
+    },
+    "output": {
+      "multiline": "yes",
+      "record": {
+        "営業担当者ＩＤ": {
+          "value": [""]
+        },
+        "営業担当者名": {
+          "value": [""]
+        },
+        "索引": {
+          "value": [""]
+        },
+        "摘要": {
+          "value": [""],
+          "field": "摘要"
+        }
+      }
+    }
+  }]
+}

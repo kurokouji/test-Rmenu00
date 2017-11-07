@@ -1,0 +1,25 @@
+{
+  "comment": "営業担当　一覧表 validation",
+  "html": "Myapp00/Json/Apps/R_SalesPersonList",
+  "records": [{
+    "id": "header",
+    "multiline": "no",
+    "record": {
+      "ページライン数": {
+        "validation": ["required"]
+      },
+      "カレントページ": {
+        "validation": ["required"]
+      },
+      "検索営業担当者名": {
+        "validation": ["nonrequired"]
+      },
+      "検索索引": {
+        "validation": ["nonrequired"]
+      },
+      "検索摘要": {
+        "validation": ["nonrequired"]
+      }
+    }
+  }]
+}

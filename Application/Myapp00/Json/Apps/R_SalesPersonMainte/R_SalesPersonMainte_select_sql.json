@@ -1,0 +1,57 @@
+{
+  "comment": "営業担当　メンテナンス　照会処理",
+  "html": "Myapp00/Json/Apps/R_SalesPersonMainte",
+  "dbname": "myapp00",
+  "mode": "select",
+  "prog": "no",
+  "message": {
+    "status": "OK",
+    "msg": "照会処理は正常に終了しました。"
+  },
+  "sqls": [{
+    "comment": "営業担当者　照会処理",
+    "id": "header",
+    "before": "",
+    "after": "",
+    "sql": {
+      "type": "select",
+      "freesql": "",
+      "genesql": {
+        "dist": "",
+        "from": 
+        [
+          "Ｍ営業担当者"
+        ],
+        "where": "営業担当者ＩＤ = ?",
+        "order": ""
+      }
+    },
+    "input": {
+      "multiline": "no",
+      "record": {
+        "営業担当者ＩＤ": {
+          "value": [""]
+        }
+      }
+    },
+    "output": {
+      "multiline": "no",
+      "record": {
+        "営業担当者ＩＤ": {
+          "value": [""]
+        },
+        "営業担当者名": {
+          "value": [""],
+          "field": "営業担当者名"
+        },
+        "索引": {
+          "value": [""]
+        },
+        "摘要": {
+          "value": [""],
+          "field": "摘要"
+        }
+      }
+    }
+  }]
+}

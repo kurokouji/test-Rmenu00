@@ -1,0 +1,43 @@
+{
+  "request": {
+    "comment": "営業担当　メンテナンス　訂正処理　リクエストデータ",
+    "html": "Myapp00/Json/Apps/R_SalesPersonMainte",
+    "mode": "update",
+    "prog": "no",
+    "model": "yes",
+    "message": {
+      "status": "OK",
+      "msg": ""
+    },
+    "records": [{
+      "id": "header",
+      "before": "",
+      "after": "",
+      "multiline": "no",
+      "record": {
+        "営業担当者ＩＤ": {
+          "value": [""]
+        },
+        "営業担当者名": {
+          "value": [""]
+        },
+        "索引": {
+          "value": [""]
+        },
+        "摘要": {
+          "value": [""]
+        }
+      }
+    }]
+  },
+  "response": {
+    "comment": "営業担当　メンテナンス　訂正処理　レスポンスデータ",
+    "html": "Myapp00/Json/Apps/R_SalesPersonMainte",
+    "mode": "update",
+    "prog": "no",
+    "message": {
+      "status": "OK",
+      "msg": "データを正常に訂正しました。"
+    }
+  }
+}
