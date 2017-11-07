@@ -29,7 +29,7 @@
 		"pdfinfo": {
 			"prog": "yes",
 			"template": "",
-			"backgroundImage": "MainteContractPrint.png",
+			"backgroundImage": "MainteContractPrint_ol.svg",
 			"bgImageX": "0",
 			"bgImageY": "250",
 			"bgImageWidth": "353",
