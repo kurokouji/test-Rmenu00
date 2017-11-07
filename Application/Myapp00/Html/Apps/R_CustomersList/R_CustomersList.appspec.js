@@ -138,8 +138,8 @@
    ,sessionStorageHeaderKey: [
       {
          datasetid: "header"
-        ,dataname:  ["検索顧客名称", "検索郵便番号", "検索住所"]
-        ,classname: ["検索顧客名称", "検索郵便番号", "検索住所"]
+        ,dataname:  ["検索得意先名称", "検索郵便番号", "検索住所"]
+        ,classname: ["検索得意先名称", "検索郵便番号", "検索住所"]
         ,typename:  ["text",                 "text",     "text"]
       }
     ]
@@ -154,7 +154,7 @@
    ,sessionStorageDetailKey: [
       {
          datasetid: "detail"
-        ,dataname:  ["顧客ＩＤ"]
+        ,dataname:  ["得意先ＩＤ"]
         ,typename:  ["dataset"]
       }
     ]
@@ -183,15 +183,15 @@
    ,nextStorageData: [
       {
          datasetid:   "header"
-        ,dataname:    ["検索顧客名称"]
+        ,dataname:    ["検索得意先名称"]
         ,validation:  ["nonrequired"]
-        ,titlename:   ["検索顧客名称"]
+        ,titlename:   ["検索得意先名称"]
       },
       {
          datasetid:   "detail"
-        ,dataname:    ["顧客ＩＤ"]
+        ,dataname:    ["得意先ＩＤ"]
         ,validation:  ["nonrequired"]
-        ,titlename:   ["顧客ＩＤ"]
+        ,titlename:   ["得意先ＩＤ"]
       }
     ]
     // ----------------------------------------------------------------------------------
