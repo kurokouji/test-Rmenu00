@@ -6,6 +6,7 @@ end
 
 
 require 'prawn'
+require 'prawn-svg'
 require 'prawn/measurement_extensions'
 
 require 'RmenuLoggerMixin'
@@ -36,11 +37,17 @@ class RmenuPdfCreate
       end
       
     # 20171017 shimoji update start
-      @bgImageUrl            = ""
+      @backgroundImage    = ""
+      @bgImageUrl         = ""
+      @bgImageData        = ""
       if response_data["pdfinfo"]["backgroundImage"]
         if response_data["pdfinfo"]["backgroundImage"] != ""
+          @backgroundImage = response_data["pdfinfo"]["backgroundImage"]
           pdfTempDir      = $Rconfig['apps_path'] + "/" + response_data["html"].gsub(/\/Json\//, '/PdfTemplate/')
           @bgImageUrl     = pdfTempDir + "/" + response_data["pdfinfo"]["backgroundImage"]
+          if @backgroundImage.match(/.[.]svg$/)
+            @bgImageData    = readHtml(@bgImageUrl)
+          end
         end
       end
 
@@ -216,7 +223,11 @@ class RmenuPdfCreate
       bgImageOption << "}"
       $PDFC.debug("RmenuPdfCreate") {"start #{@bgImageUrl}"}                                              # Logファイル Debug用
       $PDFC.debug("RmenuPdfCreate") {"start #{bgImageOption}"}                                              # Logファイル Debug用
-      @pdf.image(@bgImageUrl, eval(bgImageOption))
+      if @backgroundImage.match(/.[.]svg$/)
+        @pdf.svg(@bgImageData, eval(bgImageOption))
+      else
+        @pdf.image(@bgImageUrl, eval(bgImageOption))
+      end
     end
   # 20171102 okada update end
   # 20171017 shimoji update end
@@ -338,7 +349,11 @@ class RmenuPdfCreate
           bgImageOption << "}"
           $PDFC.debug("RmenuPdfCreate") {"pageHeaderFirst #{@bgImageUrl}"}                                              # Logファイル Debug用
           $PDFC.debug("RmenuPdfCreate") {"pageHeaderFirst #{bgImageOption}"}                                              # Logファイル Debug用
-          @pdf.image(@bgImageUrl, eval(bgImageOption))
+          if @backgroundImage.match(/.[.]svg$/)
+            @pdf.svg(@bgImageData, eval(bgImageOption))
+          else
+            @pdf.image(@bgImageUrl, eval(bgImageOption))
+          end
         end
   # 20171102 okada update end
   # 20171017 shimoji update start
@@ -388,7 +403,11 @@ class RmenuPdfCreate
          bgImageOption << "}"
          $PDFC.debug("RmenuPdfCreate") {"pageHeaderSecond #{@bgImageUrl}"}                                              # Logファイル Debug用
          $PDFC.debug("RmenuPdfCreate") {"pageHeaderSecond #{bgImageOption}"}                                              # Logファイル Debug用
-         @pdf.image(@bgImageUrl, eval(bgImageOption))
+         if @backgroundImage.match(/.[.]svg$/)
+           @pdf.svg(@bgImageData, eval(bgImageOption))
+         else
+           @pdf.image(@bgImageUrl, eval(bgImageOption))
+         end
       end
   # 20171102 okada update end
   # 20171017 shimoji update end
