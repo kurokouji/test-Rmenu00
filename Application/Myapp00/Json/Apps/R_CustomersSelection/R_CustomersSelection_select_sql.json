@@ -20,7 +20,7 @@
         "dist": "",
         "from": 
         [
-          "顧客"
+          "Ｍ得意先"
         ],
         "where": "true &&",
         "order": ""
@@ -55,9 +55,9 @@
       "freesql": "",
       "genesql": {
         "dist": "",
-        "from": "顧客",
+        "from": "Ｍ得意先",
         "where": "true &&",
-        "order": "顧客ＩＤ",
+        "order": "得意先ＩＤ",
         "limit": "? OFFSET ?"
       }
     },
@@ -79,12 +79,12 @@
     "output": {
       "multiline": "yes",
       "record": {
-        "顧客ＩＤ": {
+        "得意先ＩＤ": {
           "value": [""]
         },
-        "顧客名称": {
+        "得意先名称": {
           "value": [""],
-          "field": "名称"
+          "field": "得意先名称"
         },
         "郵便番号": {
           "value": [""]
