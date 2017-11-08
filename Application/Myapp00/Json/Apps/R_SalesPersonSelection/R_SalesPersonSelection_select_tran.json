@@ -1,6 +1,6 @@
 {
   "request": {
-    "comment": "顧客　一覧表 検索処理　リクエストデータ",
+    "comment": "得意先　一覧表 検索処理　リクエストデータ",
     "html": "Myapp00/Json/Apps/R_SalesPersonSelection",
     "mode": "select",
     "prog": "no",
@@ -22,7 +22,7 @@
         "カレントページ": {
           "value": [""]
         },
-        "検索顧客名称": {
+        "検索得意先名称": {
           "value": [""]
         },
         "検索郵便番号": {
@@ -35,7 +35,7 @@
     }]
   },
   "response": {
-    "comment": "顧客　一覧表　レスポンスデータ",
+    "comment": "得意先　一覧表　レスポンスデータ",
     "html": "Myapp00/Json/Apps/R_SalesPersonSelection",
     "mode": "select",
     "prog": "yes",
@@ -83,10 +83,10 @@
       "after": "",
       "multiline": "yes",
       "record": {
-        "顧客ＩＤ": {
+        "得意先ＩＤ": {
           "value": [""]
         },
-        "顧客名称": {
+        "得意先名称": {
           "value": [""]
         },
         "郵便番号": {

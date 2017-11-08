@@ -30,16 +30,16 @@ class R_SalesPersonSelection_model
     requestInfo     = getJsonChunkById(@request_data, "records", idname1)
     sqlInfo         = getJsonChunkById(@sql_data, "sqls", idname2)
 
-    w_検索顧客名称  = requestInfo["record"]["検索顧客名称"]["value"][0]
+    w_検索得意先名称  = requestInfo["record"]["検索得意先名称"]["value"][0]
     w_検索郵便番号  = requestInfo["record"]["検索郵便番号"]["value"][0]
     w_検索住所      = requestInfo["record"]["検索住所"]["value"][0]
 
 
     rep = ""
 
-    # 検索顧客名称
-    if w_検索顧客名称 != ""
-      rep = rep + " AND 名称 LIKE '%#{w_検索顧客名称}%'"
+    # 検索得意先名称
+    if w_検索得意先名称 != ""
+      rep = rep + " AND 名称 LIKE '%#{w_検索得意先名称}%'"
     end
 
     # 検索郵便番号

@@ -127,8 +127,8 @@
    ,sessionStorageHeaderKey: [
       {
          datasetid: "header"
-        ,dataname:  ["検索顧客名称", "検索郵便番号", "検索住所"]
-        ,classname: ["検索顧客名称", "検索郵便番号", "検索住所"]
+        ,dataname:  ["検索得意先名称", "検索郵便番号", "検索住所"]
+        ,classname: ["検索得意先名称", "検索郵便番号", "検索住所"]
         ,typename:  ["text",                 "text",     "text"]
       }
     ]
@@ -143,7 +143,7 @@
    ,sessionStorageDetailKey: [
       {
          datasetid: "detail"
-        ,dataname:  ["顧客ＩＤ", "顧客名称"]
+        ,dataname:  ["得意先ＩＤ", "得意先名称"]
         ,typename:  ["dataset",  "dataset"]
       }
     ]

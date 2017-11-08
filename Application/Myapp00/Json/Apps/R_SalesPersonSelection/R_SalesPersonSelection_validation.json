@@ -1,5 +1,5 @@
 {
-  "comment": "顧客　一覧表 validation",
+  "comment": "得意先　一覧表 validation",
   "html": "Myapp00/Json/Apps/R_SalesPersonSelection",
   "records": [{
     "id": "header",
@@ -11,7 +11,7 @@
       "カレントページ": {
         "validation": ["required"]
       },
-      "検索顧客名称": {
+      "検索得意先名称": {
         "validation": ["nonrequired"]
       },
       "検索郵便番号": {
