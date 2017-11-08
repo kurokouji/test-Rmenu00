@@ -1,17 +1,17 @@
 {
-  "comment": "顧客　メンテナンス validation",
+  "comment": "得意先　メンテナンス validation",
   "html": "Myapp00/Json/Apps/R_CustomersMainte",
   "records": [{
     "id": "header",
     "multiline": "no",
     "record": {
-      "顧客ＩＤ": {
+      "得意先ＩＤ": {
         "validation": ["nonrequired",
         "integerP"],
         "min": "1",
         "max": "11"
       },
-      "顧客名称": {
+      "得意先名称": {
         "validation": ["required",
         "free"],
         "min": "1",

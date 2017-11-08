@@ -1,5 +1,5 @@
 {
-  "comment": "顧客　メンテナンス　登録処理",
+  "comment": "得意先　メンテナンス　登録処理",
   "html": "Myapp00/Json/Apps/R_CustomersMainte",
   "dbname": "myapp00",
   "mode": "insert",
@@ -9,7 +9,7 @@
     "msg": "訂正処理は正常に終了しました。"
   },
   "sqls": [{
-    "comment": "顧客　訂正処理",
+    "comment": "得意先　訂正処理",
     "id": "header_insert",
     "before": "",
     "after": "",
@@ -18,7 +18,7 @@
       "freesql": "",
       "genesql": {
         "dist": "",
-        "from": "顧客",
+        "from": "Ｍ得意先",
         "where": "",
         "order": ""
       }
@@ -26,14 +26,14 @@
     "input": {
       "multiline": "no",
       "record": {
-        "顧客名称": {
+        "得意先名称": {
           "value": [""],
           "fieldtype": "char",
           "field": "名称",
           "fromtype" : "request",
           "fromid" : "header",
           "fromio" : "",
-          "fromname" : "顧客名称"
+          "fromname" : "得意先名称"
         },
         "郵便番号": {
           "value": [""],
@@ -56,7 +56,7 @@
     }
   },
   {
-    "comment" : "登録した顧客のIDを取得する",
+    "comment" : "登録した得意先のIDを取得する",
     "id" : "header_key",
     "before" : "",
     "after" : "",
@@ -65,7 +65,7 @@
       "freesql" : "",
       "genesql" : {
         "dist" : "",
-        "from" : "顧客",
+        "from" : "Ｍ得意先",
         "where" : "",
         "order" : ""
       }
@@ -73,15 +73,15 @@
     "output" : {
       "multiline" : "no",
       "record" : {
-        "顧客ＩＤ" : {
+        "得意先ＩＤ" : {
           "value" : [""],
-          "funct" : "MAX(顧客ＩＤ)"
+          "funct" : "MAX(得意先ＩＤ)"
         }
       }
     }
   },
   {
-    "comment": "顧客　照会処理",
+    "comment": "得意先　照会処理",
     "id": "header",
     "before": "",
     "after": "",
@@ -92,33 +92,33 @@
         "dist": "",
         "from": 
         [
-          "顧客"
+          "Ｍ得意先"
         ],
-        "where": "顧客ＩＤ = ?",
+        "where": "得意先ＩＤ = ?",
         "order": ""
       }
     },
     "input": {
       "multiline": "no",
       "record": {
-        "顧客ＩＤ": {
+        "得意先ＩＤ": {
             "value" : [""],
             "fromtype" : "sqls",
             "fromid" : "header_key",
             "fromio" : "output",
-            "fromname" : "顧客ＩＤ"
+            "fromname" : "得意先ＩＤ"
         }
       }
     },
     "output": {
       "multiline": "no",
       "record": {
-        "顧客ＩＤ": {
+        "得意先ＩＤ": {
           "value": [""]
         },
-        "顧客名称": {
+        "得意先名称": {
           "value": [""],
-          "field": "名称"
+          "field": "得意先名称"
         },
         "郵便番号": {
           "value": [""]

@@ -1,5 +1,5 @@
 {
-  "comment": "顧客　メンテナンス　削除処理",
+  "comment": "得意先　メンテナンス　削除処理",
   "html": "Myapp00/Json/Apps/R_CustomersMainte",
   "dbname": "myapp00",
   "mode": "delete",
@@ -9,7 +9,7 @@
     "msg": "削除処理は正常に終了しました。"
   },
   "sqls": [{
-    "comment": "顧客　削除処理",
+    "comment": "得意先　削除処理",
     "id": "header",
     "before": "",
     "after": "",
@@ -18,15 +18,15 @@
       "freesql": "",
       "genesql": {
         "dist": "",
-        "from": "顧客",
-        "where": "顧客ＩＤ = ?",
+        "from": "Ｍ得意先",
+        "where": "得意先ＩＤ = ?",
         "order": ""
       }
     },
     "input": {
       "multiline": "no",
       "record": {
-        "顧客ＩＤ": {
+        "得意先ＩＤ": {
           "value": [""]
         }
       }

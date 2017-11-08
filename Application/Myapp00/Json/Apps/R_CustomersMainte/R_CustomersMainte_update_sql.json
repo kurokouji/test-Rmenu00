@@ -1,5 +1,5 @@
 {
-  "comment": "顧客　メンテナンス　訂正処理",
+  "comment": "得意先　メンテナンス　訂正処理",
   "html": "Myapp00/Json/Apps/R_CustomersMainte",
   "dbname": "myapp00",
   "mode": "update",
@@ -9,7 +9,7 @@
     "msg": "訂正処理は正常に終了しました。"
   },
   "sqls": [{
-    "comment": "顧客　訂正処理",
+    "comment": "得意先　訂正処理",
     "id": "header",
     "before": "",
     "after": "",
@@ -18,18 +18,18 @@
       "freesql": "",
       "genesql": {
         "dist": "",
-        "from": "顧客",
-        "where": "顧客ＩＤ = ?",
+        "from": "Ｍ得意先",
+        "where": "得意先ＩＤ = ?",
         "order": ""
       }
     },
     "input": {
       "multiline": "no",
       "record": {
-        "顧客名称": {
+        "得意先名称": {
           "value": [""],
           "fieldtype": "char",
-          "field": "名称"
+          "field": "得意先名称"
         },
         "郵便番号": {
           "value": [""],
@@ -40,7 +40,7 @@
           "fieldtype": "char",
           "field": "所在地"
         },
-        "顧客ＩＤ": {
+        "得意先ＩＤ": {
           "value": [""]
         }
       }

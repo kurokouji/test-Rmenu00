@@ -1,5 +1,5 @@
 {
-  "comment": "顧客　メンテナンス dataset",
+  "comment": "得意先　メンテナンス dataset",
   "html": "Myapp00/Json/Apps/R_CustomersMainte",
   "message": {
     "status": "OK",
@@ -9,10 +9,10 @@
     "id": "header",
     "multiline": "no",
     "record": {
-      "顧客ＩＤ": {
+      "得意先ＩＤ": {
         "value": [""]
       },
-      "顧客名称": {
+      "得意先名称": {
         "value": [""]
       },
       "郵便番号": {

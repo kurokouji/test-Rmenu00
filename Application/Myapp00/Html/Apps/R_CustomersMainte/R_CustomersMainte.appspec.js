@@ -154,8 +154,8 @@
    ,beforeStorageData: [
       {
          datasetid: "header"
-        ,dataname:  ["顧客ＩＤ"]
-        ,classname: ["顧客ＩＤ"]
+        ,dataname:  ["得意先ＩＤ"]
+        ,classname: ["得意先ＩＤ"]
         ,typename:  ["dataset"]
       }
     ]
