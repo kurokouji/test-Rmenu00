@@ -1,0 +1,119 @@
+{
+  "comment": "サンプル（データメンテ）　表示順再設定処理",
+  "html": "Myapp00/Json/Apps/Sample_BaseMainte",
+  "dbname": "myapp00",
+  "mode": "renumber",
+  "prog": "no",
+  "message": {
+    "status": "OK",
+    "msg": "表示順再設定処理は正常に終了しました。"
+  },
+  "sqls": [{
+    "comment": "サンプル表示順　再設定",
+    "id": "number_select",
+    "before": "",
+    "after": "",
+    "sql": {
+      "type": "select",
+      "freesql": "SELECT ROW_NUMBER() OVER(ORDER BY サンプル表示順) * 10 AS サンプル表示順, サンプルＩＤ FROM サンプル ORDER BY サンプル表示順",
+      "genesql": {
+        "dist": "",
+        "from": "",
+        "where": "",
+        "order": ""
+      }
+    },
+    "output": {
+      "multiline": "yes",
+      "record": {
+        "サンプルＩＤ": {
+          "value": [""]
+        },
+        "サンプル表示順": {
+          "value": [""]
+        }
+      }
+    }
+  },
+  {
+    "comment": "サンプル表示順　更新",
+    "id": "number_update",
+    "before": "",
+    "after": "",
+    "sql": {
+      "type": "update",
+      "freesql": "",
+      "genesql": {
+        "dist": "",
+        "from": "サンプル",
+        "where": "サンプルＩＤ = ?",
+        "order": ""
+      }
+    },
+    "input": {
+      "multiline": "yes",
+      "record": {
+        "サンプル表示順": {
+          "value": [""],
+          "field": "サンプル表示順",
+          "fromtype": "sqls",
+          "fromid": "number_select",
+          "fromio": "output",
+          "fromname": "サンプル表示順"
+        },
+        "サンプルＩＤ": {
+          "value": [""],
+          "fromtype": "sqls",
+          "fromid": "number_select",
+          "fromio": "output",
+          "fromname": "サンプルＩＤ"
+        }
+      }
+    }
+  },
+  {
+    "comment": "サンプル　照会処理",
+    "id": "detail",
+    "before": "",
+    "after": "",
+    "sql": {
+      "type": "select",
+      "freesql": "",
+      "genesql": {
+        "dist": "",
+        "from": "サンプル",
+        "where": "",
+        "order": "サンプル表示順"
+      }
+    },
+    "output": {
+      "multiline": "yes",
+      "record": {
+        "サンプルＩＤ": {
+          "value": [""]
+        },
+        "サンプル項目１": {
+          "value": [""]
+        },
+        "サンプル項目２": {
+          "value": [""]
+        },
+        "サンプル項目３": {
+          "value": [""]
+        },
+        "サンプル項目４": {
+          "value": [""]
+        },
+        "サンプル項目５": {
+          "value": [""]
+        },
+        "サンプル表示順": {
+          "value": [""]
+        },
+        "更新日時": {
+          "value": [""]
+        }
+      }
+    }
+  }]
+}

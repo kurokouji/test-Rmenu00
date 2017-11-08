@@ -1,0 +1,192 @@
+{
+  "comment": "サンプル親　メンテナンス　登録処理",
+  "html": "Myapp00/Json/Apps/Sample_ParentMainte",
+  "dbname": "myapp00",
+  "mode": "insert",
+  "prog": "yes",
+  "message": {
+    "status": "OK",
+    "msg": "登録処理は正常に終了しました。"
+  },
+  "sqls": [{
+    "comment": "サンプル_ヘッダ　登録処理",
+    "id": "header_insert",
+    "before": "",
+    "after": "",
+    "sql": {
+      "type": "insert",
+      "freesql": "",
+      "genesql": {
+        "dist": "",
+        "from": "サンプル_ヘッダ",
+        "where": "",
+        "order": ""
+      }
+    },
+    "input": {
+      "multiline": "no",
+      "record": {
+        "サンプル_ヘッダ項目１": {
+          "value": [""],
+          "fromtype" : "request",
+          "fromid" : "header",
+          "fromio" : "",
+          "fromname" : "サンプル_ヘッダ項目１"
+        },
+        "サンプル_ヘッダ項目２": {
+          "value": [""],
+          "fromtype" : "request",
+          "fromid" : "header",
+          "fromio" : "",
+          "fromname" : "サンプル_ヘッダ項目２"
+        },
+        "サンプル_ヘッダ項目３": {
+          "value": [""],
+          "fromtype" : "request",
+          "fromid" : "header",
+          "fromio" : "",
+          "fromname" : "サンプル_ヘッダ項目３"
+        },
+        "サンプル_ヘッダ項目４": {
+          "value": [""],
+          "fromtype" : "request",
+          "fromid" : "header",
+          "fromio" : "",
+          "fromname" : "サンプル_ヘッダ項目４"
+        },
+        "サンプル_ヘッダ項目５": {
+          "value": [""],
+          "fromtype" : "request",
+          "fromid" : "header",
+          "fromio" : "",
+          "fromname" : "サンプル_ヘッダ項目５"
+        },
+        "サンプルＩＤ": {
+          "value": [""],
+          "field": "ref_サンプルＩＤ",
+          "fromtype" : "request",
+          "fromid" : "header",
+          "fromio" : "",
+          "fromname" : "サンプルＩＤ"
+        },
+        "登録日時": {
+          "value": [""],
+          "funct": "CURRENT_TIMESTAMP"
+        },
+        "登録ユーザ": {
+          "value": [""],
+          "fromtype": "request",
+          "fromid": "login",
+          "fromio": "",
+          "fromname": "ユーザ名称"
+        },
+        "更新日時": {
+          "value": [""],
+          "funct": "CURRENT_TIMESTAMP"
+        },
+        "更新ユーザ": {
+          "value": [""],
+          "fromtype": "request",
+          "fromid": "login",
+          "fromio": "",
+          "fromname": "ユーザ名称"
+        }
+      }
+    }
+  },
+  {
+    "comment" : "登録したサンプル_ヘッダのサンプル_ヘッダＩＤを取得する",
+    "id" : "header_key",
+    "before" : "",
+    "after" : "",
+    "sql" : {
+      "type" : "select",
+      "freesql" : "",
+      "genesql" : {
+        "dist" : "",
+        "from" : "サンプル_ヘッダ",
+        "where" : "",
+        "order" : ""
+      }
+    },
+    "output" : {
+      "multiline" : "no",
+      "record" : {
+        "サンプル_ヘッダＩＤ" : {
+          "value" : [""],
+          "funct" : "MAX(サンプル_ヘッダＩＤ)"
+        }
+      }
+    }
+  },
+  {
+    "comment": "サンプル_ヘッダ　照会処理",
+    "id": "header",
+    "before": "",
+    "after": "",
+    "sql": {
+      "type": "select",
+      "freesql": "",
+      "genesql": {
+        "dist": "",
+        "from": 
+        [
+          "サンプル_ヘッダ          AS A"
+         ,"LEFT OUTER JOIN サンプル AS B ON (A.ref_サンプルＩＤ = B.サンプルＩＤ)"
+        ],
+        "where": "A.サンプル_ヘッダＩＤ = ?",
+        "order": ""
+      }
+    },
+    "input": {
+      "multiline": "no",
+      "record": {
+        "サンプル_ヘッダＩＤ": {
+          "value": [""],
+          "field": "サンプル_ヘッダＩＤ",
+          "fromtype" : "sqls",
+          "fromid" : "header_key",
+          "fromio" : "output",
+          "fromname" : "サンプル_ヘッダＩＤ"
+        }
+      }
+    },
+    "output": {
+      "multiline": "no",
+      "record": {
+        "サンプル_ヘッダＩＤ": {
+          "value": [""],
+          "table": "A"
+        },
+        "サンプル_ヘッダ項目１": {
+          "value": [""],
+          "table": "A"
+        },
+        "サンプル_ヘッダ項目２": {
+          "value": [""],
+          "table": "A"
+        },
+        "サンプル_ヘッダ項目３": {
+          "value": [""],
+          "table": "A"
+        },
+        "サンプル_ヘッダ項目４": {
+          "value": [""],
+          "table": "A"
+        },
+        "サンプル_ヘッダ項目５": {
+          "value": [""],
+          "table": "A"
+        },
+        "サンプルＩＤ": {
+          "value": [""],
+          "table": "B"
+        },
+        "サンプル項目１": {
+          "value": [""],
+          "table": "B"
+        }
+      }
+    }
+  }]
+}

@@ -1,0 +1,25 @@
+{
+  "comment": "顧客　一覧表 validation",
+  "html": "Myapp00/Json/Apps/Sample_Selection",
+  "records": [{
+    "id": "header",
+    "multiline": "no",
+    "record": {
+      "ページライン数": {
+        "validation": ["required"]
+      },
+      "カレントページ": {
+        "validation": ["required"]
+      },
+      "検索サンプル項目１": {
+        "validation": ["nonrequired"]
+      },
+      "検索サンプル項目２": {
+        "validation": ["nonrequired"]
+      },
+      "検索サンプル項目３": {
+        "validation": ["nonrequired"]
+      }
+    }
+  }]
+}

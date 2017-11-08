@@ -1,0 +1,56 @@
+{
+  "comment": "サンプル（データメンテ）　照会処理",
+  "html": "Myapp00/Json/Apps/Sample_BaseMainte",
+  "dbname": "myapp00",
+  "mode": "select",
+  "prog": "no",
+  "message": {
+    "status": "OK",
+    "msg": "照会処理は正常に終了しました。"
+  },
+  "sqls": [{
+    "comment": "サンプル　照会処理",
+    "id": "detail",
+    "before": "",
+    "after": "",
+    "sql": {
+      "type": "select",
+      "freesql": "",
+      "genesql": {
+        "dist": "",
+        "from": "サンプル",
+        "where": "",
+        "order": "サンプル表示順"
+      }
+    },
+    "output": {
+      "multiline": "yes",
+      "record": {
+        "サンプルＩＤ": {
+          "value": [""]
+        },
+        "サンプル項目１": {
+          "value": [""]
+        },
+        "サンプル項目２": {
+          "value": [""]
+        },
+        "サンプル項目３": {
+          "value": [""]
+        },
+        "サンプル項目４": {
+          "value": [""]
+        },
+        "サンプル項目５": {
+          "value": [""]
+        },
+        "サンプル表示順": {
+          "value": [""]
+        },
+        "更新日時": {
+          "value": [""]
+        }
+      }
+    }
+  }]
+}

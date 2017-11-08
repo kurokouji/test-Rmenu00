@@ -1,0 +1,25 @@
+{
+  "comment": "顧客　一覧表 validation",
+  "html": "Myapp00/Json/Apps/R_SalesPersonSelection",
+  "records": [{
+    "id": "header",
+    "multiline": "no",
+    "record": {
+      "ページライン数": {
+        "validation": ["required"]
+      },
+      "カレントページ": {
+        "validation": ["required"]
+      },
+      "検索顧客名称": {
+        "validation": ["nonrequired"]
+      },
+      "検索郵便番号": {
+        "validation": ["nonrequired"]
+      },
+      "検索住所": {
+        "validation": ["nonrequired"]
+      }
+    }
+  }]
+}

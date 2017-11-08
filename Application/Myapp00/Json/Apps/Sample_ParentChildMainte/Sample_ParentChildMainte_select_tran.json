@@ -1,0 +1,101 @@
+{
+  "request": {
+    "comment": "サンプル親子　メンテナンス　照会処理　リクエストデータ",
+    "html": "Myapp00/Json/Apps/Sample_ParentChildMainte",
+    "mode": "select",
+    "prog": "no",
+    "model": "yes",
+    "message": {
+      "status": "OK",
+      "msg": ""
+    },
+    "records": [{
+      "id": "header",
+      "before": "",
+      "after": "",
+      "multiline": "no",
+      "record": {
+        "サンプル_ヘッダＩＤ": {
+          "value": [""]
+        }
+      }
+    }]
+  },
+  "response": {
+    "comment": "サンプル親子　メンテナンス　照会処理　レスポンスデータ",
+    "html": "Myapp00/Json/Apps/Sample_ParentChildMainte",
+    "mode": "select",
+    "prog": "no",
+    "message": {
+      "status": "OK",
+      "msg": "照会処理は正常に終了しました。"
+    },
+    "records": [{
+      "id": "header",
+      "before": "",
+      "after": "",
+      "multiline": "no",
+      "record": {
+        "サンプル_ヘッダＩＤ": {
+          "value": [""]
+        },
+        "サンプル_ヘッダ項目１": {
+          "value": [""]
+        },
+        "サンプル_ヘッダ項目２": {
+          "value": [""]
+        },
+        "サンプル_ヘッダ項目３": {
+          "value": [""]
+        },
+        "サンプル_ヘッダ項目４": {
+          "value": [""]
+        },
+        "サンプル_ヘッダ項目５": {
+          "value": [""]
+        },
+        "サンプルＩＤ": {
+          "value": [""]
+        },
+        "サンプル項目１": {
+          "value": [""]
+        }
+      }
+    },
+    {
+      "id": "detail",
+      "before": "",
+      "after": "",
+      "multiline": "yes",
+      "record": {
+        "削除": {
+          "value": [""]
+        },
+        "サンプル_明細行番号": {
+          "value": [""]
+        },
+        "サンプル区分ＩＤ": {
+          "value": [""]
+        },
+        "サンプル_明細項目１": {
+          "value": [""]
+        },
+        "サンプル_明細項目２": {
+          "value": [""]
+        },
+        "サンプル_明細項目３": {
+          "value": [""]
+        },
+        "サンプル_明細数量": {
+          "value": [""]
+        },
+        "サンプル_明細単価": {
+          "value": [""]
+        },
+        "サンプル_明細金額": {
+          "value": [""]
+        }
+      }
+    }]
+  }
+}

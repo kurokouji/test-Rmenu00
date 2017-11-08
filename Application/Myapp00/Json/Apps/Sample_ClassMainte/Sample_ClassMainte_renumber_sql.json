@@ -1,0 +1,110 @@
+{
+  "comment": "サンプル（区分）　表示順再設定処理",
+  "html": "Myapp00/Json/Apps/Sample_ClassMainte",
+  "dbname": "myapp00",
+  "mode": "renumber",
+  "prog": "no",
+  "message": {
+    "status": "OK",
+    "msg": "表示順再設定処理は正常に終了しました。"
+  },
+  "sqls": [{
+    "comment": "サンプル区分表示順　再設定",
+    "id": "number_select",
+    "before": "",
+    "after": "",
+    "sql": {
+      "type": "select",
+      "freesql": "SELECT ROW_NUMBER() OVER(ORDER BY サンプル区分表示順) * 10 AS サンプル区分表示順, サンプル区分ＩＤ FROM サンプル区分 ORDER BY サンプル区分表示順",
+      "genesql": {
+        "dist": "",
+        "from": "",
+        "where": "",
+        "order": ""
+      }
+    },
+    "output": {
+      "multiline": "yes",
+      "record": {
+        "サンプル区分ＩＤ": {
+          "value": [""]
+        },
+        "サンプル区分表示順": {
+          "value": [""]
+        }
+      }
+    }
+  },
+  {
+    "comment": "サンプル区分表示順　更新",
+    "id": "number_update",
+    "before": "",
+    "after": "",
+    "sql": {
+      "type": "update",
+      "freesql": "",
+      "genesql": {
+        "dist": "",
+        "from": "サンプル区分",
+        "where": "サンプル区分ＩＤ = ?",
+        "order": ""
+      }
+    },
+    "input": {
+      "multiline": "yes",
+      "record": {
+        "サンプル区分表示順": {
+          "value": [""],
+          "field": "サンプル区分表示順",
+          "fromtype": "sqls",
+          "fromid": "number_select",
+          "fromio": "output",
+          "fromname": "サンプル区分表示順"
+        },
+        "サンプル区分ＩＤ": {
+          "value": [""],
+          "fromtype": "sqls",
+          "fromid": "number_select",
+          "fromio": "output",
+          "fromname": "サンプル区分ＩＤ"
+        }
+      }
+    }
+  },
+  {
+    "comment": "サンプル区分　照会処理",
+    "id": "detail",
+    "before": "",
+    "after": "",
+    "sql": {
+      "type": "select",
+      "freesql": "",
+      "genesql": {
+        "dist": "",
+        "from": "サンプル区分",
+        "where": "",
+        "order": "サンプル区分表示順"
+      }
+    },
+    "output": {
+      "multiline": "yes",
+      "record": {
+        "サンプル区分ＩＤ": {
+          "value": [""]
+        },
+        "サンプル区分名称": {
+          "value": [""]
+        },
+        "サンプル区分摘要": {
+          "value": [""]
+        },
+        "サンプル区分表示順": {
+          "value": [""]
+        },
+        "更新日時": {
+          "value": [""]
+        }
+      }
+    }
+  }]
+}
