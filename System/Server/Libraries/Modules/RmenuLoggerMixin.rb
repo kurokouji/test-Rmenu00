@@ -54,6 +54,11 @@ module RmenuLoggerMixin
       return log
     end
   
+    if project[0] == "RmenuVisualTools3"
+      log.level = Logger::FATAL
+      return log
+    end
+  
     case $Rconfig["logger_level"]                           # ログレベルの設定
     when "FATAL"
       log.level = Logger::FATAL

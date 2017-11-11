@@ -30,66 +30,81 @@ class RmenuPdfCreate
       @app_cache          = RmenuAppCache.new("form.rb")                                            # フォームAPPのキャッシュ
       @app_cache.createCache()
 
+      pdfTempDir        = $Rconfig['apps_path'] + "/" + response_data["html"].gsub(/\/Json\//, '/PdfTemplate/')
       @pdfTemplate        = ""
       if response_data["pdfinfo"]["template"] != ""
-        pdfTempDir        = $Rconfig['apps_path'] + "/" + response_data["html"].gsub(/\/Json\//, '/PdfTemplate/')
         @pdfTemplate      = pdfTempDir + "/" + response_data["pdfinfo"]["template"]
       end
-      
-    # 20171017 shimoji update start
-      @backgroundImage    = ""
-      @bgImageUrl         = ""
-      @bgImageData        = ""
-      if response_data["pdfinfo"]["backgroundImage"]
-        if response_data["pdfinfo"]["backgroundImage"] != ""
-          @backgroundImage = response_data["pdfinfo"]["backgroundImage"]
-          pdfTempDir      = $Rconfig['apps_path'] + "/" + response_data["html"].gsub(/\/Json\//, '/PdfTemplate/')
-          @bgImageUrl     = pdfTempDir + "/" + response_data["pdfinfo"]["backgroundImage"]
-          if @backgroundImage.match(/.[.]svg$/)
-            @bgImageData    = readHtml(@bgImageUrl)
-          end
-        end
-      end
 
+      # 20171017 shimoji update start
       # 20171101 okada add start
-      @bgImageX        = ""
-      if response_data["pdfinfo"]["backgroundImage"]
-        if response_data["pdfinfo"]["bgImageX"]
-          if response_data["pdfinfo"]["bgImageX"] != ""
-            @bgImageX    = response_data["pdfinfo"]["bgImageX"]
+      @rmenuImageTemplate = ""
+      @rmenuImageTemplateUrl = ""
+      if response_data["pdfinfo"]["imageTemplate"]
+        if response_data["pdfinfo"]["imageTemplate"] != ""
+          @rmenuImageTemplate    = response_data["pdfinfo"]["imageTemplate"]
+          @rmenuImageTemplateUrl = pdfTempDir + "/" + response_data["pdfinfo"]["imageTemplate"]
+        end
+      end
+
+      @rmenuImageTemplateScale = ""
+      if @rmenuImageTemplateUrl != ""
+        if response_data["pdfinfo"]["imageTemplateDpi"]
+          if response_data["pdfinfo"]["imageTemplateDpi"] != ""
+            dpi  = response_data["pdfinfo"]["imageTemplateDpi"]
+            @rmenuImageTemplateScale = 72.to_f/dpi.to_f
           end
         end
       end
 
-      @bgImageY        = ""
-      if response_data["pdfinfo"]["backgroundImage"]
-        if response_data["pdfinfo"]["bgImageY"]
-          if response_data["pdfinfo"]["bgImageY"] != ""
-            @bgImageY    = response_data["pdfinfo"]["bgImageY"]
+      @rmenuSvgTemplate     = ""
+      @rmenuSvgTemplateUrl  = ""
+      @rmenuSvgTemplateData = ""
+      if response_data["pdfinfo"]["svgTemplate"]
+        if response_data["pdfinfo"]["svgTemplate"] != ""
+          @rmenuSvgTemplate     = response_data["pdfinfo"]["svgTemplate"]
+          @rmenuSvgTemplateUrl  = pdfTempDir + "/" + response_data["pdfinfo"]["svgTemplate"]
+          @rmenuSvgTemplateData = readHtml(@rmenuSvgTemplateUrl)
+        end
+      end
+
+      @rmenuSvgTemplateX = ""
+      if @rmenuSvgTemplateUrl != ""
+        if response_data["pdfinfo"]["svgTemplateX"]
+          if response_data["pdfinfo"]["svgTemplateX"] != ""
+            @rmenuSvgTemplateX = response_data["pdfinfo"]["svgTemplateX"]
           end
         end
       end
 
-      @bgImageWidth        = ""
-      if response_data["pdfinfo"]["backgroundImage"]
-        if response_data["pdfinfo"]["bgImageWidth"]
-          if response_data["pdfinfo"]["bgImageWidth"] != ""
-            @bgImageWidth    = response_data["pdfinfo"]["bgImageWidth"]
+      @rmenuSvgTemplateY = ""
+      if @rmenuSvgTemplateUrl != ""
+        if response_data["pdfinfo"]["svgTemplateY"]
+          if response_data["pdfinfo"]["svgTemplateY"] != ""
+            @rmenuSvgTemplateY = response_data["pdfinfo"]["svgTemplateY"]
           end
         end
       end
 
-      @bgImageHeight        = ""
-      if response_data["pdfinfo"]["backgroundImage"]
-        if response_data["pdfinfo"]["bgImageHeight"]
-          if response_data["pdfinfo"]["bgImageHeight"] != ""
-            @bgImageHeight    = response_data["pdfinfo"]["bgImageHeight"]
+      @rmenuSvgTemplateWidth = ""
+      if @rmenuSvgTemplateUrl != ""
+        if response_data["pdfinfo"]["svgTemplateWidth"]
+          if response_data["pdfinfo"]["svgTemplateWidth"] != ""
+            @rmenuSvgTemplateWidth = response_data["pdfinfo"]["svgTemplateWidth"]
+          end
+        end
+      end
+
+      @rmenuSvgTemplateHeight = ""
+      if @rmenuSvgTemplateUrl != ""
+        if response_data["pdfinfo"]["svgTemplateHeight"]
+          if response_data["pdfinfo"]["svgTemplateHeight"] != ""
+            @rmenuSvgTemplateHeight = response_data["pdfinfo"]["svgTemplateHeight"]
           end
         end
       end
       # 20171101 okada add end
-
-    # 20171017 shimoji update end
+      # 20171017 shimoji update end
 
       @fontFile           = response_data["pdfinfo"]["fontfile"]
       @fontSize           = response_data["pdfinfo"]["fontsize"]
@@ -202,36 +217,32 @@ class RmenuPdfCreate
     options = createPrawnObjectOfHash(response_data)
     $PDFC.debug("RmenuPdfCreate") {"start PrawnObjectOption : #{options}"}                          # Logファイル Debug用
     @pdf         = Prawn::Document.new(eval(options))
-    
+
   # 20171017 shimoji update start
   # 20171102 okada update start
-    if @bgImageUrl != ""
-      bgImageX  = @bgImageX.to_s + '.' + @pointUnit.to_s
-      bgImageY  = @bgImageY.to_s + '.' + @pointUnit.to_s
-      bgImageWidth  = @bgImageWidth.to_s + '.' + @pointUnit.to_s
-      bgImageHeight = @bgImageHeight.to_s + '.' + @pointUnit.to_s
-      bgImageOption = "{"
-      bgImageOption << ":at => ["
-      bgImageOption << "#{bgImageX}"
-      bgImageOption << ", "
-      bgImageOption << "#{bgImageY}"
-      bgImageOption << "]"
-      bgImageOption << ", :width => "
-      bgImageOption << "#{bgImageWidth}"
-      bgImageOption << ", :height => "
-      bgImageOption << "#{bgImageHeight}"
-      bgImageOption << "}"
-      $PDFC.debug("RmenuPdfCreate") {"start #{@bgImageUrl}"}                                              # Logファイル Debug用
-      $PDFC.debug("RmenuPdfCreate") {"start #{bgImageOption}"}                                              # Logファイル Debug用
-      if @backgroundImage.match(/.[.]svg$/)
-        @pdf.svg(@bgImageData, eval(bgImageOption))
-      else
-        @pdf.image(@bgImageUrl, eval(bgImageOption))
-      end
+    if @rmenuSvgTemplateUrl != ""
+        svgTemplateX      = @rmenuSvgTemplateX.to_s      + '.' + @pointUnit.to_s
+        svgTemplateY      = @rmenuSvgTemplateY.to_s      + '.' + @pointUnit.to_s
+        svgTemplateWidth  = @rmenuSvgTemplateWidth.to_s  + '.' + @pointUnit.to_s
+        svgTemplateHeight = @rmenuSvgTemplateHeight.to_s + '.' + @pointUnit.to_s
+        svgOptions = "{"
+        svgOptions << ":at => ["
+        svgOptions << "#{svgTemplateX}"
+        svgOptions << ", "
+        svgOptions << "#{svgTemplateY}"
+        svgOptions << "]"
+        svgOptions << ", :width => "
+        svgOptions << "#{svgTemplateWidth}"
+        svgOptions << ", :height => "
+        svgOptions << "#{svgTemplateHeight}"
+        svgOptions << "}"
+        $PDFC.debug("RmenuPdfCreate") {"start #{@rmenuSvgTemplateUrl}"}                                              # Logファイル Debug用
+        $PDFC.debug("RmenuPdfCreate") {"start #{svgOptions}"}                                              # Logファイル Debug用
+        @pdf.svg(@rmenuSvgTemplateData, eval(svgOptions))
     end
   # 20171102 okada update end
   # 20171017 shimoji update end
-        
+
     @prawnInitSW = 0
 
     $PDFC.debug("RmenuPdfCreate") {"start normal end"}                                              # Logファイル Debug用
@@ -328,36 +339,32 @@ class RmenuPdfCreate
     if @prawnInitSW == 1 
       if @pdfTemplate == ""
         @pdf.start_new_page
-        
+
   # 20171017 shimoji update start
   # 20171102 okada update start
-        if @bgImageUrl != ""
-          bgImageX  = @bgImageX.to_s + '.' + @pointUnit.to_s
-          bgImageY  = @bgImageY.to_s + '.' + @pointUnit.to_s
-          bgImageWidth  = @bgImageWidth.to_s + '.' + @pointUnit.to_s
-          bgImageHeight = @bgImageHeight.to_s + '.' + @pointUnit.to_s
-          bgImageOption = "{"
-          bgImageOption << ":at => ["
-          bgImageOption << "#{bgImageX}"
-          bgImageOption << ", "
-          bgImageOption << "#{bgImageY}"
-          bgImageOption << "]"
-          bgImageOption << ", :width => "
-          bgImageOption << "#{bgImageWidth}"
-          bgImageOption << ", :height => "
-          bgImageOption << "#{bgImageHeight}"
-          bgImageOption << "}"
-          $PDFC.debug("RmenuPdfCreate") {"pageHeaderFirst #{@bgImageUrl}"}                                              # Logファイル Debug用
-          $PDFC.debug("RmenuPdfCreate") {"pageHeaderFirst #{bgImageOption}"}                                              # Logファイル Debug用
-          if @backgroundImage.match(/.[.]svg$/)
-            @pdf.svg(@bgImageData, eval(bgImageOption))
-          else
-            @pdf.image(@bgImageUrl, eval(bgImageOption))
-          end
+        if @rmenuSvgTemplateUrl != ""
+            svgTemplateX      = @rmenuSvgTemplateX.to_s      + '.' + @pointUnit.to_s
+            svgTemplateY      = @rmenuSvgTemplateY.to_s      + '.' + @pointUnit.to_s
+            svgTemplateWidth  = @rmenuSvgTemplateWidth.to_s  + '.' + @pointUnit.to_s
+            svgTemplateHeight = @rmenuSvgTemplateHeight.to_s + '.' + @pointUnit.to_s
+            svgOptions = "{"
+            svgOptions << ":at => ["
+            svgOptions << "#{svgTemplateX}"
+            svgOptions << ", "
+            svgOptions << "#{svgTemplateY}"
+            svgOptions << "]"
+            svgOptions << ", :width => "
+            svgOptions << "#{svgTemplateWidth}"
+            svgOptions << ", :height => "
+            svgOptions << "#{svgTemplateHeight}"
+            svgOptions << "}"
+            $PDFC.debug("RmenuPdfCreate") {"pageHeaderFirst #{@rmenuSvgTemplateUrl}"}                                              # Logファイル Debug用
+            $PDFC.debug("RmenuPdfCreate") {"pageHeaderFirst #{svgOptions}"}                                              # Logファイル Debug用
+            @pdf.svg(@rmenuSvgTemplateData, eval(svgOptions))
         end
   # 20171102 okada update end
   # 20171017 shimoji update start
-    
+
       else
         options = setNewPage(recordArray)
         @pdf.start_new_page(eval(options))
@@ -383,35 +390,31 @@ class RmenuPdfCreate
     if @pdfTemplate == ""
       @pdf.start_new_page
       
-  # 20171017 shimoji update start
-  # 20171102 okada update start
-      if @bgImageUrl != ""
-         bgImageX  = @bgImageX.to_s + '.' + @pointUnit.to_s
-         bgImageY  = @bgImageY.to_s + '.' + @pointUnit.to_s
-         bgImageWidth  = @bgImageWidth.to_s + '.' + @pointUnit.to_s
-         bgImageHeight = @bgImageHeight.to_s + '.' + @pointUnit.to_s
-         bgImageOption = "{"
-         bgImageOption << ":at => ["
-         bgImageOption << "#{bgImageX}"
-         bgImageOption << ", "
-         bgImageOption << "#{bgImageY}"
-         bgImageOption << "]"
-         bgImageOption << ", :width => "
-         bgImageOption << "#{bgImageWidth}"
-         bgImageOption << ", :height => "
-         bgImageOption << "#{bgImageHeight}"
-         bgImageOption << "}"
-         $PDFC.debug("RmenuPdfCreate") {"pageHeaderSecond #{@bgImageUrl}"}                                              # Logファイル Debug用
-         $PDFC.debug("RmenuPdfCreate") {"pageHeaderSecond #{bgImageOption}"}                                              # Logファイル Debug用
-         if @backgroundImage.match(/.[.]svg$/)
-           @pdf.svg(@bgImageData, eval(bgImageOption))
-         else
-           @pdf.image(@bgImageUrl, eval(bgImageOption))
-         end
+      # 20171017 shimoji update start
+      # 20171102 okada update start
+      if @rmenuSvgTemplateUrl != ""
+          svgTemplateX      = @rmenuSvgTemplateX.to_s      + '.' + @pointUnit.to_s
+          svgTemplateY      = @rmenuSvgTemplateY.to_s      + '.' + @pointUnit.to_s
+          svgTemplateWidth  = @rmenuSvgTemplateWidth.to_s  + '.' + @pointUnit.to_s
+          svgTemplateHeight = @rmenuSvgTemplateHeight.to_s + '.' + @pointUnit.to_s
+          svgOptions = "{"
+          svgOptions << ":at => ["
+          svgOptions << "#{svgTemplateX}"
+          svgOptions << ", "
+          svgOptions << "#{svgTemplateY}"
+          svgOptions << "]"
+          svgOptions << ", :width => "
+          svgOptions << "#{svgTemplateWidth}"
+          svgOptions << ", :height => "
+          svgOptions << "#{svgTemplateHeight}"
+          svgOptions << "}"
+          $PDFC.debug("RmenuPdfCreate") {"pageHeaderSecond #{@rmenuSvgTemplateUrl}"}                                              # Logファイル Debug用
+          $PDFC.debug("RmenuPdfCreate") {"pageHeaderSecond #{svgOptions}"}                                              # Logファイル Debug用
+          @pdf.svg(@rmenuSvgTemplateData, eval(svgOptions))
       end
-  # 20171102 okada update end
-  # 20171017 shimoji update end
-    
+      # 20171102 okada update end
+      # 20171017 shimoji update end
+
     else
       options = setNewPage(recordArray)
       @pdf.start_new_page(eval(options))

@@ -39,7 +39,11 @@ class R_MainteContractListPrint_form
       requestRecord = getJsonChunkById(@request_data, "records", "printparam"  , "record")      
       responseRecord = getJsonChunkById(@response_data, "records", "page_header"  , "record")
 
-      responseRecord["処理日付"]["value"][0] = formatDateTime(Date.today.to_s,'YYYY年M月D日')      
+      header_dateTime = requestRecord["処理日時"]["value"][0]
+#     responseRecord["処理日付"]["value"][0] = formatDateTime(DateTime.now.to_s,'YYYY年M月D日')
+#     responseRecord["処理時刻"]["value"][0] = formatDateTime(DateTime.now.to_s,'H時m分s秒'   )
+      responseRecord["処理日付"]["value"][0] = formatDateTime(header_dateTime,'YYYY年M月D日')
+      responseRecord["処理時刻"]["value"][0] = formatDateTime(header_dateTime,'H時m分s秒'   )
 
       responseRecord["ページ"]["value"][0]     = @pdfcreate.getTotalPageCount()
 

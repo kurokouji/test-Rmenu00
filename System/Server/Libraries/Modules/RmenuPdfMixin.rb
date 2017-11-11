@@ -112,6 +112,15 @@ module RmenuPdfMixin
       options << ".#{@pointUnit}"
     end
 
+    # 20171108 Okada update start
+    if @rmenuImageTemplateUrl != ""
+      options << ", :background  => "
+      options << "\"#{@rmenuImageTemplateUrl}\""
+      options << ", :background_scale  => "
+      options << "#{@rmenuImageTemplateScale}"
+    end
+    # 20171108 Okada update end
+
     options << "}"
     return options
   end

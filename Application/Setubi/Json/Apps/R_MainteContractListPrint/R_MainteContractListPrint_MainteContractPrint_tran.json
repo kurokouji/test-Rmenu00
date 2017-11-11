@@ -17,6 +17,9 @@
 			"record": {
 				"契約ＮＯ": {
 					"value": [""]
+				},
+				"処理日時": {
+					"value": [""]
 				}
 			}
 		}]
@@ -29,11 +32,13 @@
 		"pdfinfo": {
 			"prog": "yes",
 			"template": "",
-			"backgroundImage": "MainteContractPrint_ol.svg",
-			"bgImageX": "0",
-			"bgImageY": "250",
-			"bgImageWidth": "353",
-			"bgImageHeight": "250",
+			"imageTemplate": "MainteContractPrint_200dpi.png",
+			"imageTemplateDpi": "200",
+			"svgTemplate": "",
+			"svgTemplateX": "0",
+			"svgTemplateY": "250",
+			"svgTemplateWidth": "353",
+			"svgTemplateHeight": "250",
 			"pdffile": "MainteContractPrint.pdf",
 			"pdfname": "契約者台帳.pdf",
 			"pagesize": "B4",
@@ -115,6 +120,27 @@
 						}
 					}
 				},
+				"処理時刻": {
+					"value": [""],
+					"pdfinfo": {
+						"type": "text_box",
+						"font": {
+							"file": "",
+							"size": "9",
+							"style": "",
+							"color": ""
+						},
+						"box": {
+							"width": "28",
+							"height": "5",
+							"align": ":right"
+						},
+						"axis": {
+							"x": ["315"],
+							"y": ["241.3"]
+						}
+					}
+				},
 				"ページタイトル": {
 					"value": ["ページ"],
 					"pdfinfo": {
@@ -132,7 +158,7 @@
 						},
 						"axis": {
 							"x": ["305"],
-							"y": ["241.3"]
+							"y": ["236.95"]
 						}
 					}
 				},
@@ -153,7 +179,7 @@
 						},
 						"axis": {
 							"x": ["315"],
-							"y": ["241.3"]
+							"y": ["236.95"]
 						}
 					}
 				},
