@@ -32,9 +32,9 @@
 		"pdfinfo": {
 			"prog": "yes",
 			"template": "",
-			"imageTemplate": "MainteContractPrint_200dpi.png",
+			"imageTemplate": "",
 			"imageTemplateDpi": "200",
-			"svgTemplate": "",
+			"svgTemplate": "MainteContractPrint_tp.svg",
 			"svgTemplateX": "0",
 			"svgTemplateY": "250",
 			"svgTemplateWidth": "353",
