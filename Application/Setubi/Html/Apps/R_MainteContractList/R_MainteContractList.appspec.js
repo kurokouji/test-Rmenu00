@@ -36,8 +36,8 @@
     // トランザクション・リクエストチェック・レスポンス編集・エラーのコールバック関数を定義する
     // ----------------------------------------------------------------------------------------
    ,requestInfo: [
-      ["select",    "on照会OfCheckRequestData",    "on照会OfEditResponseData",    "onErrorResponseData"]
-     ,["MainteContractPrint"   , "onＰＤＦ作成OfCheckRequestData" , "onＰＤＦ作成OfEditResponseData" , "onErrorResponseData"] // 保守契約一覧表ＰＤＦ
+      ["select" , "on照会OfCheckRequestData",    "on照会OfEditResponseData",    "onErrorResponseData"]
+     ,["print01", "onＰＤＦ作成OfCheckRequestData" , "onＰＤＦ作成OfEditResponseData" , "onErrorResponseData"] // 保守契約一覧表ＰＤＦ
     // ここから追加処理
     ]
     // --------------------------------------------------

@@ -78,16 +78,29 @@ module RmenuPdfMixin
     bottomMargin = response_data["pdfinfo"]["bottommargin"]
 
     options = "{"
-    if @pdfTemplate == ""
+    if pageSize.match(/^[AB][0-9]$/)
       options << ":page_size => "
+      options << "\"#{pageSize}\""
+      options << ", :page_layout => "
+      options << "#{pageLayout}"
     else
-      options << ":template => "
-      options << "\"#{@pdfTemplate}\""
-      options << ", :page_size => "
+      s = pageSize.gsub(/[\[\]\, ]/," ")
+      t=s.split(" ")
+      options << ":page_size => "
+      options << "["
+      options << "#{t[0].to_s}"
+      options << ".#{@pointUnit}"
+      options << ","
+      options << "#{t[1].to_s}"
+      options << ".#{@pointUnit}"
+      options << "]"
     end
-    options << "\"#{pageSize}\""
-    options << ", :page_layout => "
-    options << "#{pageLayout}"
+
+    if @pdfTemplate != ""
+      options << ", :template => "
+      options << "\"#{@pdfTemplate}\""
+    end
+
     options << ", :left_margin => "
     options << "#{leftMargin}"
     if @pointUnit != ""

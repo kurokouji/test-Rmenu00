@@ -64,7 +64,9 @@ class RmenuPdfCreate
         if response_data["pdfinfo"]["svgTemplate"] != ""
           @rmenuSvgTemplate     = response_data["pdfinfo"]["svgTemplate"]
           @rmenuSvgTemplateUrl  = pdfTempDir + "/" + response_data["pdfinfo"]["svgTemplate"]
-          @rmenuSvgTemplateData = readHtml(@rmenuSvgTemplateUrl)
+          if @rmenuSvgTemplate.match(/.[.]svg$/)
+            @rmenuSvgTemplateData = readHtml(@rmenuSvgTemplateUrl)
+          end
         end
       end
 
@@ -238,7 +240,11 @@ class RmenuPdfCreate
         svgOptions << "}"
         $PDFC.debug("RmenuPdfCreate") {"start #{@rmenuSvgTemplateUrl}"}                                              # Logファイル Debug用
         $PDFC.debug("RmenuPdfCreate") {"start #{svgOptions}"}                                              # Logファイル Debug用
-        @pdf.svg(@rmenuSvgTemplateData, eval(svgOptions))
+        if @rmenuSvgTemplate.match(/.[.]svg$/)
+          @pdf.svg(@rmenuSvgTemplateData, eval(svgOptions))
+        else
+          @pdf.image(@rmenuSvgTemplateUrl, eval(svgOptions))
+        end
     end
   # 20171102 okada update end
   # 20171017 shimoji update end
@@ -360,7 +366,11 @@ class RmenuPdfCreate
             svgOptions << "}"
             $PDFC.debug("RmenuPdfCreate") {"pageHeaderFirst #{@rmenuSvgTemplateUrl}"}                                              # Logファイル Debug用
             $PDFC.debug("RmenuPdfCreate") {"pageHeaderFirst #{svgOptions}"}                                              # Logファイル Debug用
-            @pdf.svg(@rmenuSvgTemplateData, eval(svgOptions))
+            if @rmenuSvgTemplate.match(/.[.]svg$/)
+              @pdf.svg(@rmenuSvgTemplateData, eval(svgOptions))
+            else
+              @pdf.image(@rmenuSvgTemplateUrl, eval(svgOptions))
+            end
         end
   # 20171102 okada update end
   # 20171017 shimoji update start
@@ -410,7 +420,11 @@ class RmenuPdfCreate
           svgOptions << "}"
           $PDFC.debug("RmenuPdfCreate") {"pageHeaderSecond #{@rmenuSvgTemplateUrl}"}                                              # Logファイル Debug用
           $PDFC.debug("RmenuPdfCreate") {"pageHeaderSecond #{svgOptions}"}                                              # Logファイル Debug用
-          @pdf.svg(@rmenuSvgTemplateData, eval(svgOptions))
+          if @rmenuSvgTemplate.match(/.[.]svg$/)
+            @pdf.svg(@rmenuSvgTemplateData, eval(svgOptions))
+          else
+            @pdf.image(@rmenuSvgTemplateUrl, eval(svgOptions))
+          end
       end
       # 20171102 okada update end
       # 20171017 shimoji update end

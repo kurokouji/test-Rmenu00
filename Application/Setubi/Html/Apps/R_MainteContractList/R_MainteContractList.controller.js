@@ -69,7 +69,7 @@
     ,on契約者台帳ＰＤＦ: function(event) {
       $R.log("Controller on契約者台帳ＰＤＦ : start");
 
-      this.ajaxExecute("MainteContractPrint");
+      this.ajaxExecute("print01");
 
       $R.log("Controller on契約者台帳ＰＤＦ : end");
     }

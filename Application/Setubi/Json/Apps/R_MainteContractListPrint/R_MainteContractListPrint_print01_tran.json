@@ -2,7 +2,7 @@
 	"request": {
 		"comment": "保守契約　一覧表　契約者台帳ＰＤＦ作成 Ｎｏ２　リクエストデータ",
 		"html": "Setubi/Json/Apps/R_MainteContractListPrint",
-		"mode": "MainteContractPrint",
+		"mode": "print01",
 		"prog": "no",
 		"model": "yes",
 		"message": {
@@ -27,14 +27,14 @@
 	"response": {
 		"comment": "用紙サイズＢ４　横：257mm X 364mm    印字サイズ：275mm X 364mm　マージン：0mm 0mm ",
 		"html": "Setubi/Json/Apps/R_MainteContractListPrint",
-		"mode": "MainteContractPrint",
+		"mode": "print01",
 		"prog": "no",
 		"pdfinfo": {
 			"prog": "yes",
 			"template": "",
-			"imageTemplate": "",
+			"imageTemplate": "MainteContractPrint_200dpi.png",
 			"imageTemplateDpi": "200",
-			"svgTemplate": "MainteContractPrint_tp.svg",
+			"svgTemplate": "",
 			"svgTemplateX": "0",
 			"svgTemplateY": "250",
 			"svgTemplateWidth": "353",
