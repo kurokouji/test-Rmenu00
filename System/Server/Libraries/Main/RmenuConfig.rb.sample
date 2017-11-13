@@ -19,12 +19,12 @@ if @@os == "win"
   $Rconfig['base_application']  = "C:/RmenuSVN3/Rmenu/Application"
   $Rconfig['ldap_url']          = "http://127.0.0.1:9292/"
 else
-  $Rconfig['base_url']          = "http://125.206.227.76/rmenu/"
-  $Rconfig['base_systempath']   = "/home/rmenu/Rmenu/System"
-  $Rconfig['base_serverpath']   = "/home/rmenu/Rmenu/System/Server"
-  $Rconfig['base_htmlpath']     = "/home/rmenu/Rmenu/System/Html"
-  $Rconfig['base_application']  = "/home/rmenu/Rmenu/Application"
-  $Rconfig['ldap_url']          = "http://125.206.227.76/rmenu/"
+  $Rconfig['base_url']          = "http://192.1686.11.251/rmenu_user/"
+  $Rconfig['base_systempath']   = "/home/rmenu_user/Rmenu/System"
+  $Rconfig['base_serverpath']   = "/home/rmenu_user/Rmenu/System/Server"
+  $Rconfig['base_htmlpath']     = "/home/rmenu_user/Rmenu/System/Html"
+  $Rconfig['base_application']  = "/home/rmenu_user/Rmenu/Application"
+  $Rconfig['ldap_url']          = "http://192.1686.11.251/rmenu_user/"
 end
 
 
@@ -38,7 +38,11 @@ $Rconfig['run_mode']          = "develop"
 # マルチユーザ環境時のユーザ名
 # シングルユーザ環境の場合は空文字列にしておく
 #
-$Rconfig['multi_user_name']   = ""
+if @@os == "win"
+  $Rconfig['multi_user_name']   = ""
+else
+  $Rconfig['multi_user_name']   = "rmenu_user"
+end
 
 #
 # ライブラリーPATH 設定
@@ -64,16 +68,16 @@ $Rconfig['upload_path']       = $Rconfig['base_htmlpath']   + "/upload"
 $Rconfig['images_path']       = $Rconfig['base_htmlpath']   + "/images"
 
 #
-# rmenu DB 設定
+# setubi DB 設定
 #
 dbopts  = Array.new
 dbopts0 = Hash.new
 dbopts0['db_dbdriver']        = "PostgreSQL"
 dbopts0['db_hostname']        = "127.0.0.1"
 dbopts0['db_portno']          = 5432
-dbopts0['db_database']        = "rmenu"
+dbopts0['db_database']        = "setubi"
 dbopts0['db_username']        = "postgres"
-dbopts0['db_password']        = "postgres"
+dbopts0['db_password']        = "password"
 dbopts0['db_encoding']        = "utf8"
 dbopts0['db_compress']        = false
 dbopts[0]                     = dbopts0
@@ -88,22 +92,22 @@ dbopts1['db_hostname']        = "127.0.0.1"
 dbopts1['db_portno']          = 5432
 dbopts1['db_database']        = "flowershop"
 dbopts1['db_username']        = "postgres"
-dbopts1['db_password']        = "postgres"
+dbopts1['db_password']        = "password"
 dbopts1['db_encoding']        = "utf8"
 dbopts1['db_compress']        = false
 dbopts[1]                     = dbopts1
 
 
 #
-# 設計リポジトリ管理ツール 設定
+# myapp00 DB 設定
 #
 dbopts2 = Hash.new
 dbopts2['db_dbdriver']        = "PostgreSQL"
 dbopts2['db_hostname']        = "127.0.0.1"
 dbopts2['db_portno']          = 5432
-dbopts2['db_database']        = "setubi"
+dbopts2['db_database']        = "myapp00"
 dbopts2['db_username']        = "postgres"
-dbopts2['db_password']        = "postgres"
+dbopts2['db_password']        = "password"
 dbopts2['db_encoding']        = "utf8"
 dbopts2['db_compress']        = false
 dbopts[2]                     = dbopts2
@@ -117,7 +121,7 @@ dbopts3['db_hostname']        = "127.0.0.1"
 dbopts3['db_portno']          = 5432
 dbopts3['db_database']        = "rmenuvisualtools"
 dbopts3['db_username']        = "postgres"
-dbopts3['db_password']        = "postgres"
+dbopts3['db_password']        = "password"
 dbopts3['db_encoding']        = "utf8"
 dbopts3['db_compress']        = false
 dbopts[3]                     = dbopts3
