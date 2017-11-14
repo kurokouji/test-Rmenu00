@@ -13,10 +13,10 @@ $Rconfig = Hash.new
 $Rconfig['os']                  = @@os
 if @@os == "win"
   $Rconfig['base_url']          = "http://127.0.0.1:9292/"
-  $Rconfig['base_systempath']   = "C:/RmenuSVN3/Rmenu/System"
-  $Rconfig['base_serverpath']   = "C:/RmenuSVN3/Rmenu/System/Server"
-  $Rconfig['base_htmlpath']     = "C:/RmenuSVN3/Rmenu/System/Html"
-  $Rconfig['base_application']  = "C:/RmenuSVN3/Rmenu/Application"
+  $Rconfig['base_systempath']   = "C:/\RmenuGithub/test-Rmenu00/System"
+  $Rconfig['base_serverpath']   = "C:/\RmenuGithub/test-Rmenu00/System/Server"
+  $Rconfig['base_htmlpath']     = "C:/\RmenuGithub/test-Rmenu00/System/Html"
+  $Rconfig['base_application']  = "C:/\RmenuGithub/test-Rmenu00/Application"
   $Rconfig['ldap_url']          = "http://127.0.0.1:9292/"
 else
   $Rconfig['base_url']          = "http://192.1686.11.251/rmenu_user/"
@@ -197,12 +197,12 @@ $LOAD_PATH.push($Rconfig['libs_path'] + "/PrintServer")
 $LOAD_PATH.push($Rconfig['libs_path'] + "/TupleParallelServer")
 $LOAD_PATH.push($Rconfig['libs_path'] + "/TupleParallelClient")
 $LOAD_PATH.push($Rconfig['libs_path'] + "/TestRun")
+$LOAD_PATH.push($Rconfig['libs_path'] + "/BatchStartup")
 
 #
 # 個別システム用ライブラリー読込みPATH 設定
 #
 $LOAD_PATH.push($Rconfig['libs_path'] + "/Validation")                         # 標準バリデーションモジュール
-$LOAD_PATH.push($Rconfig['libs_path'] + "/BatchStartup")
 
 #
 # 設定終り
