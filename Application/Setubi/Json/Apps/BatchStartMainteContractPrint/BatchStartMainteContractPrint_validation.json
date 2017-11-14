@@ -1,0 +1,10 @@
+{
+  "comment": "バッチ起動用 validation",
+  "html": "Setubi/Json/Apps/BatchStartMainteContractPrint",
+  "records": [{
+    "id": "header",
+    "multiline": "no",
+    "record": {
+    }
+  }]
+}

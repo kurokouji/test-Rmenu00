@@ -36,9 +36,10 @@
     // トランザクション・リクエストチェック・レスポンス編集・エラーのコールバック関数を定義する
     // ----------------------------------------------------------------------------------------
    ,requestInfo: [
-      ["select" , "on照会OfCheckRequestData",    "on照会OfEditResponseData",    "onErrorResponseData"]
-     ,["print01", "onＰＤＦ作成OfCheckRequestData" , "onＰＤＦ作成OfEditResponseData" , "onErrorResponseData"] // 保守契約一覧表ＰＤＦ
+      ["select" ,      "on照会OfCheckRequestData",              "on照会OfEditResponseData",    "onErrorResponseData"]
     // ここから追加処理
+     ,["print01",      "onＰＤＦ作成OfCheckRequestData" ,       "onＰＤＦ作成OfEditResponseData" , "onErrorResponseData"] // 保守契約一覧表ＰＤＦ
+     ,["batchprint",   "onＰＤＦ作成バッチOfCheckRequestData" , "onＰＤＦ作成バッチOfEditResponseData", "onErrorResponseData"]
     ]
     // --------------------------------------------------
     // エンター・タブとPFキーのコールバック関数を定義する
@@ -80,10 +81,11 @@
      ,["#クリア",           "click", "onクリア"]
      ,["#mainTable td",     "click", "onテーブル行クリック"]
      // ここから追加処理
-     ,["#契約保守作業明細照会", "click", "on契約保守作業明細照会"]
-     ,["#契約保守諸掛明細照会", "click", "on契約保守諸掛明細照会"]
-     ,["#保守サービス指示一覧", "click", "on保守サービス指示一覧"]
-     ,["#契約者台帳ＰＤＦ"    , "click", "on契約者台帳ＰＤＦ"    ]
+     ,["#契約保守作業明細照会",   "click", "on契約保守作業明細照会"]
+     ,["#契約保守諸掛明細照会",   "click", "on契約保守諸掛明細照会"]
+     ,["#保守サービス指示一覧",   "click", "on保守サービス指示一覧"]
+     ,["#契約者台帳ＰＤＦ"    ,   "click", "on契約者台帳ＰＤＦ"    ]
+     ,["#契約者台帳ＰＤＦバッチ", "click", "on契約者台帳ＰＤＦバッチ"]
      ]
     // ----------------------------------------------------------------
     // 権限情報の設定（使用不可のロールを設定する）

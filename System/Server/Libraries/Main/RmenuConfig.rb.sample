@@ -202,7 +202,7 @@ $LOAD_PATH.push($Rconfig['libs_path'] + "/TestRun")
 # 個別システム用ライブラリー読込みPATH 設定
 #
 $LOAD_PATH.push($Rconfig['libs_path'] + "/Validation")                         # 標準バリデーションモジュール
-
+$LOAD_PATH.push($Rconfig['libs_path'] + "/BatchStartup")
 
 #
 # 設定終り

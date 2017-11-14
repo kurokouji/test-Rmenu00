@@ -1,0 +1,82 @@
+{
+  "comment": "保守契約　一覧表　契約者台帳ＰＤＦ作成 バッチ処理",
+  "html": "Setubi/Json/Apps/R_MainteContractList",
+  "dbname": "setubi",
+  "mode": "batchprint",
+  "prog": "yes",
+  "message": {
+    "status": "OK",
+    "msg": "保守契約　一覧表　契約者台帳ＰＤＦ作成 バッチ処理は正常に終了しました。"
+  },
+  "sqls": [{
+    "comment": "バッチキーを設定する",
+    "id": "batchKey",
+    "before": "",
+    "after": "",
+    "sql": {
+      "type": "nosql"
+    },
+    "input": {
+      "multiline": "yes",
+      "record": {
+        "検索顧客名称": {
+          "value": [""],
+          "fromtype": "request",
+          "fromid": "header",
+          "fromio": "",
+          "fromname": "検索顧客名称",
+          "fieldtype": "char"
+        },
+        "検索設備タイプ名称": {
+          "value": [""],
+          "fromtype": "request",
+          "fromid": "header",
+          "fromio": "",
+          "fromname": "検索設備タイプ名称",
+          "fieldtype": "char"
+        },
+        "検索設備名称": {
+          "value": [""],
+          "fromtype": "request",
+          "fromid": "header",
+          "fromio": "",
+          "fromname": "検索設備名称",
+          "fieldtype": "char"
+        },
+        "検索作業区分": {
+          "value": [""],
+          "fromtype": "request",
+          "fromid": "header",
+          "fromio": "",
+          "fromname": "検索作業区分",
+          "fieldtype": "char"
+        },
+        "検索業者名称": {
+          "value": [""],
+          "fromtype": "request",
+          "fromid": "header",
+          "fromio": "",
+          "fromname": "検索業者名称",
+          "fieldtype": "char"
+        }
+      }
+    }
+  },
+  {
+    "comment": "バッチパラメータを設定する",
+    "id": "batchParam",
+    "before": "",
+    "after": "batch_startup('Setubi', 'BatchStartMainteContractPrint', 'startup', 'MainteContractPrint')",
+    "sql": {
+      "type": "nosql"
+    },
+    "input": {
+      "multiline": "no",
+      "record": {
+        "ユーザＩＤ": {
+          "value": ["111111"]
+        }
+      }
+    }
+  }]
+}

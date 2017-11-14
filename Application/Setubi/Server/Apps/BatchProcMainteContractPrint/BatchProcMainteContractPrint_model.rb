@@ -3,31 +3,31 @@
 require 'Setubi/Server/Modules/SetubiOfMasterMainteOfModelMixin'
 require 'Setubi/Server/Modules/SetubiOfBatchStartUpOfModelMixin'
 
-class R_MainteContractList_model
+class BatchProcMainteContractPrint_model
   include SetubiOfMasterMainteOfModelMixin
   include SetubiOfBatchStartUpOfModelMixin
 
   def initialize(rmenu_dbi, sql_data, request_data)
     begin
       # initialize 開始ログを出力する
-      $Mlog.debug("R_MainteContractList_model") {"initialize start"}                   # Logファイル Debug用
+      $Mlog.debug("BatchProcMainteContractPrint_model") {"initialize start"}                   # Logファイル Debug用
 
       @rmenu_db       = rmenu_dbi
       @sql_data       = sql_data
       @request_data   = request_data
 
       # initialize 終了ログを出力する
-      $Mlog.debug("R_MainteContractList_model") {"initialize normal end"}              # Logファイル Debug用
+      $Mlog.debug("BatchProcMainteContractPrint_model") {"initialize normal end"}              # Logファイル Debug用
     rescue Exception
       # エラーログを出力する
-      $Mlog.error("R_MainteContractList_model") {"initialize exception: #{$!}"}        # Logファイル Debug用
+      $Mlog.error("BatchProcMainteContractPrint_model") {"initialize exception: #{$!}"}        # Logファイル Debug用
       raise
     end
   end
 
   # SQL文の検索条件を変更する（検索データ項目名無し）
-  def setSql_R_MainteContractListOfSetubi(idname1, idname2 ,genesql_freesql)
-    $Mlog.debug("R_MainteContractList_model") {"setSql_R_MainteContractListOfSetubi start"}                  # Logファイル Debug用
+  def setSql_BatchProcMainteContractPrintOfSetubi(idname1, idname2 ,genesql_freesql)
+    $Mlog.debug("R_MainteContractList_model") {"setSql_BatchProcMainteContractPrintOfSetubi start"}                  # Logファイル Debug用
 
     requestInfo          = getJsonChunkById(@request_data, "records", idname1)
     sqlInfo              = getJsonChunkById(@sql_data, "sqls", idname2)
@@ -78,7 +78,7 @@ class R_MainteContractList_model
       end
     end
 
-    $Mlog.debug("R_MainteContractList_model") {"setSql_R_MainteContractListOfSetubi end"}                    # Logファイル Debug用
+    $Mlog.debug("R_MainteContractList_model") {"setSql_BatchProcMainteContractPrintOfSetubi end"}                    # Logファイル Debug用
     return "OK"
   end
 

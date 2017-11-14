@@ -1,0 +1,123 @@
+{
+  "comment": "保守契約　一覧表　契約者台帳ＰＤＦ作成 Ｎｏ１",
+  "html": "Setubi/Json/Apps/BatchProcMainteContractPrint",
+  "dbname": "setubi",
+  "mode": "print",
+  "prog": "yes",
+  "message": {
+    "status": "OK",
+    "msg": "設備台帳一覧表　作成処理は正常に終了しました。"
+  },
+  "sqls": [{
+    "comment": "抽出対象キーを取得する",
+    "id": "getkeyvalue",
+    "before": ["setSql_BatchProcMainteContractPrintOfSetubi('parallelKey', 'getkeyvalue', 'genesql')"],
+    "after": "",
+    "sql": {
+      "type": "select",
+      "freesql": "",
+      "genesql": {
+        "dist": "yes",
+        "from": ["保守契約                         AS A",
+        "LEFT OUTER JOIN 契約設備明細     AS B ON (A.契約ＮＯ         = B.ref_契約ＮＯ)",
+        "LEFT OUTER JOIN 契約保守作業明細 AS C ON (B.ref_契約ＮＯ     = C.ref_契約ＮＯ AND B.設備行番号     = C.ref_設備行番号)",
+        "LEFT OUTER JOIN 契約保守諸掛明細 AS D ON (C.ref_契約ＮＯ     = D.ref_契約ＮＯ AND C.ref_設備行番号 = D.ref_設備行番号 AND C.作業区分 = D.ref_作業区分)",
+        "LEFT OUTER JOIN 顧客             AS E ON (A.ref_顧客ＩＤ     = E.顧客ＩＤ)",
+        "LEFT OUTER JOIN 設備タイプ       AS F ON (B.ref_設備タイプ   = F.設備タイプ)",
+        "LEFT OUTER JOIN 業者             AS G ON (B.ref_標準業者ＩＤ = G.業者ＩＤ)"],
+        "where": "true &&",
+        "order": "契約ＮＯ",
+        "limit": ""
+      }
+    },
+    "input": {
+      "multiline": "no",
+      "record": {
+        "検索顧客名称": {
+          "value": [""],
+          "fromtype": "request",
+          "fromid": "parallelKey",
+          "fromio": "",
+          "fromname": "検索顧客名称",
+          "fieldtype": "char"
+        },
+        "検索設備タイプ名称": {
+          "value": [""],
+          "fromtype": "request",
+          "fromid": "parallelKey",
+          "fromio": "",
+          "fromname": "検索設備タイプ名称",
+          "fieldtype": "char"
+        },
+        "検索設備名称": {
+          "value": [""],
+          "fromtype": "request",
+          "fromid": "parallelKey",
+          "fromio": "",
+          "fromname": "検索設備名称",
+          "fieldtype": "char"
+        },
+        "検索作業区分": {
+          "value": [""],
+          "fromtype": "request",
+          "fromid": "parallelKey",
+          "fromio": "",
+          "fromname": "検索作業区分",
+          "fieldtype": "char"
+        },
+        "検索業者名称": {
+          "value": [""],
+          "fromtype": "request",
+          "fromid": "parallelKey",
+          "fromio": "",
+          "fromname": "検索業者名称",
+          "fieldtype": "char"
+        }
+      }
+    },
+    "output": {
+      "multiline": "yes",
+      "record": {
+        "契約ＮＯ": {
+          "value": [""],
+          "field": "契約ＮＯ",
+          "table": "A"
+        },
+        "処理日時": {
+        "value": [""],
+        "funct" : "TO_CHAR(NOW()  , 'YYYY/MM/DD HH24:MI:SS')"
+        }
+      }
+    }
+  },
+  {
+    "comment": "プリントパラメータ（KEYVALUE）を設定する",
+    "id": "printparam",
+    "html": "Setubi/Json/Apps/R_MainteContractListPrint",
+    "mode": "print01",
+    "before": "",
+    "after": "",
+    "sql": {
+      "type": "nosql"
+    },
+    "input": {
+      "multiline": "yes",
+      "record": {
+        "契約ＮＯ": {
+          "value": [""],
+          "fromtype": "sqls",
+          "fromid": "getkeyvalue",
+          "fromio": "output",
+          "fromname": "契約ＮＯ"
+        },
+        "処理日時": {
+          "value": [""],
+          "fromtype": "sqls",
+          "fromid": "getkeyvalue",
+          "fromio": "output",
+          "fromname": "処理日時"
+        }
+      }
+    }
+  }]
+}

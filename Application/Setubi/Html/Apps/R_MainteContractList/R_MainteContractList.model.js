@@ -31,14 +31,42 @@
     onＰＤＦ表示OfEditResponseData: function(responseData, mode) {
       $R.log("Model onＰＤＦ表示OfEditResponseData : start");
 
+      var date = new Date();
+      var year = date.getFullYear()
+      var mon  = date.getMonth()+1; //１を足すこと
+      var day  = date.getDate();
+      var hour = date.getHours();
+      var min  = date.getMinutes();
+      var sec  = date.getSeconds();
+
+      var pdfname = responseData["pdfinfo"]["pdfname"]
+      var tpdfname = pdfname.split(/.pdf$/)
+
       var argHash  = new Object();
       argHash["file"]   = responseData["pdfinfo"]["pdffile"];
-      argHash["download"] = responseData["pdfinfo"]["pdfname"];
+      argHash["download"] = tpdfname[0]
+          + "_"
+          + ( '0000' + year ).slice( -4 )
+          + ( '0000' + mon  ).slice( -2 )
+          + ( '0000' + day  ).slice( -2 )
+          + "_"
+          + ( '0000' + hour  ).slice( -2 )
+          + ( '0000' + min  ).slice( -2 )
+          + ( '0000' + sec  ).slice( -2 )
+          + ".pdf"
+      ;
       argHash["type"]   = "pdf";
       argHash["delete"] = "yes";
       this.postDownloadRack(argHash);
 
       $R.log("Model onＰＤＦ表示OfEditResponseData : end");
+    }
+
+   ,onＰＤＦ作成バッチOfEditResponseData: function(responseData, mode) {
+      $R.log("Model onＰＤＦ作成バッチOfEditResponseData : start");
+
+
+      $R.log("Model onＰＤＦ作成バッチOfEditResponseData : end");
     }
 
 
