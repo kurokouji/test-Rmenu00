@@ -316,14 +316,14 @@
 							"color": ""
 						},
 						"box": {
-							"width": "13.5",
+							"width": "12.05",
 							"height": "8.7",
 							"align": ":center",
 							"valign": ":center",
 							"overflow": ":shrink_to_fit"
 						},
 						"axis": {
-							"x": ["8.7"],
+							"x": ["9.20"],
 							"y": [""]
 						}
 					}
@@ -343,14 +343,14 @@
 							"color": ""
 						},
 						"box": {
-							"width": "34.8",
+							"width": "33.8",
 							"height": "8.7",
 							"align": ":left",
 							"valign": ":center",
 							"overflow": ":shrink_to_fit"
 						},
 						"axis": {
-							"x": ["21.75"],
+							"x": ["22.25"],
 							"y": [""]
 						}
 					}
@@ -370,14 +370,14 @@
 							"color": ""
 						},
 						"box": {
-							"width": "34.8",
+							"width": "33.8",
 							"height": "8.7",
 							"align": ":left",
 							"valign": ":center",
 							"overflow": ":shrink_to_fit"
 						},
 						"axis": {
-							"x": ["56.55"],
+							"x": ["57.05"],
 							"y": [""]
 						}
 					}
@@ -397,14 +397,14 @@
 							"color": ""
 						},
 						"box": {
-							"width": "21.75",
+							"width": "20.75",
 							"height": "8.7",
 							"align": ":right",
 							"valign": ":center",
 							"overflow": ":shrink_to_fit"
 						},
 						"axis": {
-							"x": ["91"],
+							"x": ["91.85"],
 							"y": [""]
 						}
 					}
@@ -424,14 +424,14 @@
 							"color": ""
 						},
 						"box": {
-							"width": "34.8",
+							"width": "33.8",
 							"height": "8.7",
 							"align": ":left",
 							"valign": ":center",
 							"overflow": ":shrink_to_fit"
 						},
 						"axis": {
-							"x": ["113.1"],
+							"x": ["113.60"],
 							"y": [""]
 						}
 					}
@@ -451,14 +451,14 @@
 							"color": ""
 						},
 						"box": {
-							"width": "21.75",
+							"width": "20.75",
 							"height": "8.7",
 							"align": ":left",
 							"valign": ":center",
 							"overflow": ":shrink_to_fit"
 						},
 						"axis": {
-							"x": ["147.9"],
+							"x": ["148.40"],
 							"y": [""]
 						}
 					}
@@ -478,14 +478,14 @@
 							"color": ""
 						},
 						"box": {
-							"width": "34.8",
+							"width": "33.8",
 							"height": "8.7",
 							"align": ":left",
 							"valign": ":center",
 							"overflow": ":shrink_to_fit"
 						},
 						"axis": {
-							"x": ["169.65"],
+							"x": ["170.15"],
 							"y": [""]
 						}
 					}
@@ -505,14 +505,14 @@
 							"color": ""
 						},
 						"box": {
-							"width": "21.75",
+							"width": "20.75",
 							"height": "8.7",
 							"align": ":center",
 							"valign": ":center",
 							"overflow": ":shrink_to_fit"
 						},
 						"axis": {
-							"x": ["204.45"],
+							"x": ["204.95"],
 							"y": [""]
 						}
 					}
@@ -532,14 +532,14 @@
 							"color": ""
 						},
 						"box": {
-							"width": "13.05",
+							"width": "12.05",
 							"height": "8.7",
 							"align": ":center",
 							"valign": ":center",
 							"overflow": ":shrink_to_fit"
 						},
 						"axis": {
-							"x": ["226.2"],
+							"x": ["226.70"],
 							"y": [""]
 						}
 					}
@@ -559,14 +559,14 @@
 							"color": ""
 						},
 						"box": {
-							"width": "21.75",
+							"width": "20.75",
 							"height": "8.7",
 							"align": ":right",
 							"valign": ":center",
 							"overflow": ":shrink_to_fit"
 						},
 						"axis": {
-							"x": ["239.25"],
+							"x": ["239.75"],
 							"y": [""]
 						}
 					}
@@ -586,14 +586,14 @@
 							"color": ""
 						},
 						"box": {
-							"width": "21.75",
+							"width": "20.75",
 							"height": "8.7",
 							"align": ":right",
 							"valign": ":center",
 							"overflow": ":shrink_to_fit"
 						},
 						"axis": {
-							"x": ["261.25"],
+							"x": ["261.50"],
 							"y": [""]
 						}
 					}
@@ -613,14 +613,14 @@
 							"color": ""
 						},
 						"box": {
-							"width": "21.75",
+							"width": "20.75",
 							"height": "8.7",
 							"align": ":center",
 							"valign": ":center",
 							"overflow": ":shrink_to_fit"
 						},
 						"axis": {
-							"x": ["282.75"],
+							"x": ["283.25"],
 							"y": [""]
 						}
 					}
@@ -640,14 +640,14 @@
 							"color": ""
 						},
 						"box": {
-							"width": "43.5",
+							"width": "42.5",
 							"height": "8.7",
 							"align": ":left",
 							"valign": ":center",
 							"overflow": ":shrink_to_fit"
 						},
 						"axis": {
-							"x": ["304.5"],
+							"x": ["305.00"],
 							"y": [""]
 						}
 					}
