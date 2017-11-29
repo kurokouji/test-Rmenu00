@@ -29,7 +29,7 @@
         "得意先名称": {
           "value": [""],
           "fieldtype": "char",
-          "field": "名称",
+          "field": "得意先名称",
           "fromtype" : "request",
           "fromid" : "header",
           "fromio" : "",
