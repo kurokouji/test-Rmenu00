@@ -1,6 +1,7 @@
 # coding: UTF-8
 
 require 'date'
+require 'json'
 
 module ValidationMixin
   # （リクエストレコードから項目を取りだし、チェックを行う）
@@ -19,7 +20,21 @@ module ValidationMixin
                if validatins["validation"][j] == ""
                  next
                end
-               str_method = "rmenu_" + validatins["validation"][j] + "(\"#{value['value'][i]}\", \"#{name}\")"
+
+               if validatins["validation"][j] != "json"
+                 str_method = "rmenu_" + validatins["validation"][j] + "(\"#{value['value'][i]}\", \"#{name}\")"
+               else
+                 res = JSON.parse("#{value['value'][i]}") rescue nil
+#                 res = JSON.parse("{") rescue nil
+               $Clog.debug("Controller") {"res : #{res}"}
+                 if res.nil?
+                   arg1 = false
+                 else
+                   arg1 = true
+                 end
+                 str_method = "rmenu_" + validatins["validation"][j] + "(#{arg1}, \"#{name}\")"
+               end
+
                $Clog.debug("Controller") {"チェックするメソッド情報 : #{str_method}"}
 
                result = eval(str_method)
@@ -106,6 +121,17 @@ module ValidationMixin
       return valid_error("#{name} :数字以外の文字が入力されています。")
     end
   end
+
+
+  # 符号付き（+：省略可）数字チェック
+  def rmenu_json(value, name)
+    if value != false
+      return "OK"
+    else
+      return valid_error("#{name} :JSON文字列ではありません。")
+    end
+  end
+
 
   # 符号付き（+：省略可）数字チェック
   def rmenu_integer(value, name)
