@@ -19,12 +19,12 @@ if @@os == "win"
   $Rconfig['base_application']  = "C:/\RmenuGithub/test-Rmenu00/Application"
   $Rconfig['ldap_url']          = "http://127.0.0.1:9292/"
 else
-  $Rconfig['base_url']          = "http://192.1686.11.251/rmenu_user/"
+  $Rconfig['base_url']          = "http://192.168.11.251/rmenu_user/"
   $Rconfig['base_systempath']   = "/home/rmenu_user/Rmenu/System"
   $Rconfig['base_serverpath']   = "/home/rmenu_user/Rmenu/System/Server"
   $Rconfig['base_htmlpath']     = "/home/rmenu_user/Rmenu/System/Html"
   $Rconfig['base_application']  = "/home/rmenu_user/Rmenu/Application"
-  $Rconfig['ldap_url']          = "http://192.1686.11.251/rmenu_user/"
+  $Rconfig['ldap_url']          = "http://192.168.11.251/rmenu_user/"
 end
 
 
@@ -176,6 +176,8 @@ $Rconfig['logger_level']      = "DEBUG"
 #       = INFO    レスポンスログの出力無し 
 #       = DEBUG   レスポンスログの出力有り
 $Rconfig['responselog_level'] = "DEBUG"
+$Rconfig['responselog_time']  = 3.0
+
 
 #
 # ライブラリー読込みPATH 設定

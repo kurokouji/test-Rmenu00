@@ -36,6 +36,7 @@ class RmenuMain
       request_data = JSON.load(req_data)
       
       # レスポンスログの開始ログ取得
+      startSecond = Time.now
       responseLogStart($Tlog, "Main Rack", env['REMOTE_ADDR'].to_s, request_data)
     
       # 開発支援プロジェクトはログを出力しない
@@ -48,6 +49,11 @@ class RmenuMain
 
       # レスポンスログの終了ログ取得
       responseLogEnd($Tlog, "Main Rack", env['REMOTE_ADDR'].to_s, response_data)
+      endSecond = Time.now
+      if (endSecond - startSecond) > $Rconfig['responselog_time']
+        responseLogTimeOver($Tlog, "Time Over", env['REMOTE_ADDR'].to_s, request_data)
+      end
+
 
       # レスポンスデータ（hashオブジェクト）をJSON文字列に変換する
       content = JSON.dump(response_data)
