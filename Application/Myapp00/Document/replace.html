@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="Shift_JIS" standalone="yes" ?>
+<package>
+<job id="WordReplace">
+<?job error="True" debug="True" ?>
+<object id="objFs" progid="Scripting.FileSystemObject" />
+<script language="JavaScript">
+<![CDATA[
+strRepl="Shift_JIS";   /* 置換対象文字列 */
+strWith="EUC-JP";      /* 置換文字列 */
+var objArg=WScript.Arguments;
+  /* ドラッグ＆ドロップされたファイルのパスを文字列配列として取得する。
+     以下のforループでは、取得したすべてのファイルパスについて、繰り返し
+     処理を行うこととする */
+for(i=0;i<objArg.length;i++){
+	strTmp=objFs.BuildPath(objFs.GetParentFolderName(WScript.ScriptFullName),objFs.GetTempName());
+  /* WScript#ScriptFullNameメソッドは現在実行中のファイルの絶対パスを、
+     FileSystemObject#GetParentFolderNameメソッドは指定されたパスの親
+     フォルダのパスを、FileSystemObject#GetTempNameメソッドはランダム
+     に生成された一時ファイル名を、それぞれ取得する。
+     FileSystemObject#BuildPathメソッドは第一引数に指定されたパスと第二
+     引数に指定されたパスとを連結し、新たなパスを生成するので、実行中の
+     ファイルが「C:\」に配置されている場合、最終的には「C:\radB940D.tmp」
+     のようなパスが生成される。 */
+	var objTs =objFs.OpenTextFile(objArg(i),1,false);
+	var objTs2=objFs.OpenTextFile(strTmp,2,true);
+ /* FileSystemObject#OpenTextFileメソッドは、指定されたファイルを開き、
+    TextStreamオブジェクトとして返す。ここでは、変数objTsにドラッグ＆
+    ドロップされたファイルが、変数objTs2には上で生成された書き込み用の
+    一時ファイルが格納される */
+	do{
+		strLne=objTs.ReadLine();
+		strLne=strLne.replace(strRepl,strWith);
+		objTs2.WriteLine(strLne);
+	}while(!objTs.AtEndOfStream);
+ /* ドラッグ＆ドロップで渡されたファイルの中身を一行ずつ読み込み、
+    文字列strReplが登場したら、文字列strWithで置き換える。
+    これをファイルの終点まで繰り返し、その結果データを一時ファイル
+    objTs2に書き込む */
+	objTs.Close();
+	objTs2.Close();
+	objFs.DeleteFile(objArg(i));
+	objFs.MoveFile(strTmp,objArg(i));
+ /* 置き換え処理が終了したら、元のファイル（objArg(i)）を削除し、
+    一時ファイルの内容を元もとのファイルがあった場所にリネームして
+    移動する */
+}
+]]>
+</script>
+</job>
+</package>
