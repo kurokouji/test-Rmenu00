@@ -135,8 +135,8 @@
    ,sessionStorageHeaderKey: [
       {
          datasetid: "header"
-        ,dataname:  ["検索ヘッダ項目１", "検索ヘッダ項目２", "検索サンプル項目１"]
-        ,classname: ["検索ヘッダ項目１", "検索ヘッダ項目２", "検索サンプル項目１"]
+        ,dataname:  ["検索ヘッダ項目１", "検索ヘッダ項目２", "検索サンプル_マスタ項目１"]
+        ,classname: ["検索ヘッダ項目１", "検索ヘッダ項目２", "検索サンプル_マスタ項目１"]
         ,typename:  ["text",             "text",             "text"]
       }
     ]

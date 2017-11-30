@@ -32,7 +32,7 @@ class Sample_ParentList_model
 
     w_検索ヘッダ項目１   = requestInfo["record"]["検索ヘッダ項目１"]["value"][0]
     w_検索ヘッダ項目２   = requestInfo["record"]["検索ヘッダ項目２"]["value"][0]
-    w_検索サンプル項目１ = requestInfo["record"]["検索サンプル項目１"]["value"][0]
+    w_検索サンプル_マスタ項目１ = requestInfo["record"]["検索サンプル_マスタ項目１"]["value"][0]
 
 
     rep = ""
@@ -47,9 +47,9 @@ class Sample_ParentList_model
       rep = rep + " AND A.サンプル_ヘッダ項目２ LIKE '%#{w_検索ヘッダ項目２}%'"
     end
 
-    # サンプル項目１
-    if w_検索サンプル項目１ != ""
-      rep = rep + " AND C.サンプル項目１ LIKE '%#{w_検索サンプル項目１}%'"
+    # サンプル_マスタ項目１
+    if w_検索サンプル_マスタ項目１ != ""
+      rep = rep + " AND C.サンプル_マスタ項目１ LIKE '%#{w_検索サンプル_マスタ項目１}%'"
     end
 
 

@@ -9,13 +9,13 @@
     "msg": "表示順再設定処理は正常に終了しました。"
   },
   "sqls": [{
-    "comment": "サンプル表示順　再設定",
+    "comment": "サンプル_マスタ表示順　再設定",
     "id": "number_select",
     "before": "",
     "after": "",
     "sql": {
       "type": "select",
-      "freesql": "SELECT ROW_NUMBER() OVER(ORDER BY サンプル表示順) * 10 AS サンプル表示順, サンプルＩＤ FROM サンプル ORDER BY サンプル表示順",
+      "freesql": "SELECT ROW_NUMBER() OVER(ORDER BY サンプル_マスタ表示順) * 10 AS サンプル_マスタ表示順, サンプル_マスタＩＤ FROM サンプル_マスタ ORDER BY サンプル_マスタ表示順",
       "genesql": {
         "dist": "",
         "from": "",
@@ -26,17 +26,17 @@
     "output": {
       "multiline": "yes",
       "record": {
-        "サンプルＩＤ": {
+        "サンプル_マスタＩＤ": {
           "value": [""]
         },
-        "サンプル表示順": {
+        "サンプル_マスタ表示順": {
           "value": [""]
         }
       }
     }
   },
   {
-    "comment": "サンプル表示順　更新",
+    "comment": "サンプル_マスタ表示順　更新",
     "id": "number_update",
     "before": "",
     "after": "",
@@ -45,28 +45,28 @@
       "freesql": "",
       "genesql": {
         "dist": "",
-        "from": "サンプル",
-        "where": "サンプルＩＤ = ?",
+        "from": "サンプル_マスタ",
+        "where": "サンプル_マスタＩＤ = ?",
         "order": ""
       }
     },
     "input": {
       "multiline": "yes",
       "record": {
-        "サンプル表示順": {
+        "サンプル_マスタ表示順": {
           "value": [""],
-          "field": "サンプル表示順",
+          "field": "サンプル_マスタ表示順",
           "fromtype": "sqls",
           "fromid": "number_select",
           "fromio": "output",
-          "fromname": "サンプル表示順"
+          "fromname": "サンプル_マスタ表示順"
         },
-        "サンプルＩＤ": {
+        "サンプル_マスタＩＤ": {
           "value": [""],
           "fromtype": "sqls",
           "fromid": "number_select",
           "fromio": "output",
-          "fromname": "サンプルＩＤ"
+          "fromname": "サンプル_マスタＩＤ"
         }
       }
     }
@@ -81,33 +81,33 @@
       "freesql": "",
       "genesql": {
         "dist": "",
-        "from": "サンプル",
+        "from": "サンプル_マスタ",
         "where": "",
-        "order": "サンプル表示順"
+        "order": "サンプル_マスタ表示順"
       }
     },
     "output": {
       "multiline": "yes",
       "record": {
-        "サンプルＩＤ": {
+        "サンプル_マスタＩＤ": {
           "value": [""]
         },
-        "サンプル項目１": {
+        "サンプル_マスタ項目１": {
           "value": [""]
         },
-        "サンプル項目２": {
+        "サンプル_マスタ項目２": {
           "value": [""]
         },
-        "サンプル項目３": {
+        "サンプル_マスタ項目３": {
           "value": [""]
         },
-        "サンプル項目４": {
+        "サンプル_マスタ項目４": {
           "value": [""]
         },
-        "サンプル項目５": {
+        "サンプル_マスタ項目５": {
           "value": [""]
         },
-        "サンプル表示順": {
+        "サンプル_マスタ表示順": {
           "value": [""]
         },
         "更新日時": {

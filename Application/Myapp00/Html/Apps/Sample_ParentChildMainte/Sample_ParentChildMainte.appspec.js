@@ -90,7 +90,7 @@
    ,selectorEvent: [
       [".削除",              "change", "onChange削除"]
     // ここから追加処理
-     ,[".サンプル区分ＩＤ",  "change", "onChangeサンプル区分ＩＤ"]
+     ,[".サンプル_区分ＩＤ",  "change", "onChangeサンプル_区分ＩＤ"]
     ]
     // ----------------------------------------------------------------------------------
     // カスタムイベント設定はイベント名・実行コンテキスト・コールバック関数の順に指定する
@@ -209,7 +209,7 @@
       {
          responsename: "Sample_ParentChildMainte"
         ,datasetid:    "header"
-        ,dataname:    ["サンプルＩＤ", "サンプル項目１"]
+        ,dataname:    ["サンプル_マスタＩＤ", "サンプル_マスタ項目１"]
         ,value:       ["",             ""]
         ,afterfunction: "onサンプル検索後処理"
       }
@@ -231,10 +231,10 @@
     // ----------------------------------------------------------------------------------
    ,selectbox: [
       {
-          selectorid: "サンプル区分ＩＤ"
-         ,selectorname: "サンプル区分ＩＤ"
-         ,init:     {initvalue: "", inithtml: "サンプル区分選択", datasetid: "選択サンプル区分", valuename: "選択サンプル区分ＩＤ", htmlname: "選択サンプル区分名称"}
-         ,change:   {datasetid: "detail", valuename: "サンプル区分ＩＤ", htmlname: ""}
+          selectorid: "サンプル_区分ＩＤ"
+         ,selectorname: "サンプル_区分ＩＤ"
+         ,init:     {initvalue: "", inithtml: "サンプル区分選択", datasetid: "選択サンプル区分", valuename: "選択サンプル_区分ＩＤ", htmlname: "選択サンプル_区分名称"}
+         ,change:   {datasetid: "detail", valuename: "サンプル_区分ＩＤ", htmlname: ""}
       }
     ]
     // ----------------------------------------------------------------------------------

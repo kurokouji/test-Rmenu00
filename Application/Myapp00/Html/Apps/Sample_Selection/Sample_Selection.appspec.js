@@ -127,8 +127,8 @@
    ,sessionStorageHeaderKey: [
       {
          datasetid: "header"
-        ,dataname:  ["検索サンプル項目１", "検索サンプル項目２", "検索サンプル項目３"]
-        ,classname: ["検索サンプル項目１", "検索サンプル項目２", "検索サンプル項目３"]
+        ,dataname:  ["検索サンプル_マスタ項目１", "検索サンプル_マスタ項目２", "検索サンプル_マスタ項目３"]
+        ,classname: ["検索サンプル_マスタ項目１", "検索サンプル_マスタ項目２", "検索サンプル_マスタ項目３"]
         ,typename:  ["text",               "text",               "text"]
       }
     ]
@@ -143,7 +143,7 @@
    ,sessionStorageDetailKey: [
       {
          datasetid: "detail"
-        ,dataname:  ["サンプルＩＤ", "サンプル項目１", "サンプル項目２", "サンプル項目３"]
+        ,dataname:  ["サンプル_マスタＩＤ", "サンプル_マスタ項目１", "サンプル_マスタ項目２", "サンプル_マスタ項目３"]
         ,typename:  ["dataset",      "dataset",        "dataset",        "dataset"]
       }
     ]

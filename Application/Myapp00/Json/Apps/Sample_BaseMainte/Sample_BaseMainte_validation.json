@@ -5,43 +5,43 @@
     "id": "detail",
     "multiline": "yes",
     "record": {
-      "サンプルＩＤ": {
+      "サンプル_マスタＩＤ": {
         "validation": ["nonrequired",
         "integerP"],
         "min": "1",
         "max": "13"
       },
-      "サンプル項目１": {
+      "サンプル_マスタ項目１": {
         "validation": ["required",
         "free"],
         "min": "1",
         "max": "20"
       },
-      "サンプル項目２": {
+      "サンプル_マスタ項目２": {
         "validation": ["nonrequired",
         "free"],
         "min": "1",
         "max": "20"
       },
-      "サンプル項目３": {
+      "サンプル_マスタ項目３": {
         "validation": ["nonrequired",
         "free"],
         "min": "1",
         "max": "20"
       },
-      "サンプル項目４": {
+      "サンプル_マスタ項目４": {
         "validation": ["nonrequired",
         "free"],
         "min": "1",
         "max": "50"
       },
-      "サンプル項目５": {
+      "サンプル_マスタ項目５": {
         "validation": ["nonrequired",
         "free"],
         "min": "1",
         "max": "20"
       },
-      "サンプル表示順": {
+      "サンプル_マスタ表示順": {
         "validation": ["required",
         "integerP"],
         "min": "1",

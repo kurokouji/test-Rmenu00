@@ -64,7 +64,7 @@ class Sample_ParentChildList_view
     responseRecord["サンプル_ヘッダ項目３"]["value"][i]   = sqlRecord["サンプル_ヘッダ項目３"]["value"][i]
     responseRecord["サンプル_ヘッダ項目４"]["value"][i]   = sqlRecord["サンプル_ヘッダ項目４"]["value"][i]
     responseRecord["サンプル_ヘッダ項目５"]["value"][i]   = sqlRecord["サンプル_ヘッダ項目５"]["value"][i]
-    responseRecord["サンプル項目１"]["value"][i]          = sqlRecord["サンプル項目１"]["value"][i]
+    responseRecord["サンプル_マスタ項目１"]["value"][i]          = sqlRecord["サンプル_マスタ項目１"]["value"][i]
     responseRecord["サンプル_明細行番号"]["value"][i]     = sqlRecord["サンプル_明細行番号"]["value"][i]
     responseRecord["サンプル_明細項目１"]["value"][i]     = sqlRecord["サンプル_明細項目１"]["value"][i]
     responseRecord["サンプル_明細項目２"]["value"][i]     = sqlRecord["サンプル_明細項目２"]["value"][i]
@@ -72,7 +72,7 @@ class Sample_ParentChildList_view
     responseRecord["サンプル_明細数量"]["value"][i]       = sqlRecord["サンプル_明細数量"]["value"][i]
     responseRecord["サンプル_明細単価"]["value"][i]       = sqlRecord["サンプル_明細単価"]["value"][i]
     responseRecord["サンプル_明細金額"]["value"][i]       = sqlRecord["サンプル_明細金額"]["value"][i]
-    responseRecord["サンプル区分名称"]["value"][i]        = sqlRecord["サンプル区分名称"]["value"][i]
+    responseRecord["サンプル_区分名称"]["value"][i]        = sqlRecord["サンプル_区分名称"]["value"][i]
 
     $Mlog.debug("Sample_ParentChildList_view") {"editサンプル親子一覧リスト_親子 end"}
     return "OK"
@@ -90,7 +90,7 @@ class Sample_ParentChildList_view
     responseRecord["サンプル_ヘッダ項目３"]["value"][i]   = ""
     responseRecord["サンプル_ヘッダ項目４"]["value"][i]   = ""
     responseRecord["サンプル_ヘッダ項目５"]["value"][i]   = ""
-    responseRecord["サンプル項目１"]["value"][i]          = ""
+    responseRecord["サンプル_マスタ項目１"]["value"][i]          = ""
     responseRecord["サンプル_明細行番号"]["value"][i]     = sqlRecord["サンプル_明細行番号"]["value"][i]
     responseRecord["サンプル_明細項目１"]["value"][i]     = sqlRecord["サンプル_明細項目１"]["value"][i]
     responseRecord["サンプル_明細項目２"]["value"][i]     = sqlRecord["サンプル_明細項目２"]["value"][i]
@@ -98,7 +98,7 @@ class Sample_ParentChildList_view
     responseRecord["サンプル_明細数量"]["value"][i]       = sqlRecord["サンプル_明細数量"]["value"][i]
     responseRecord["サンプル_明細単価"]["value"][i]       = sqlRecord["サンプル_明細単価"]["value"][i]
     responseRecord["サンプル_明細金額"]["value"][i]       = sqlRecord["サンプル_明細金額"]["value"][i]
-    responseRecord["サンプル区分名称"]["value"][i]        = sqlRecord["サンプル区分名称"]["value"][i]
+    responseRecord["サンプル_区分名称"]["value"][i]        = sqlRecord["サンプル_区分名称"]["value"][i]
 
     $Mlog.debug("Sample_ParentChildList_view") {"editサンプル親子一覧リスト_子 end"}
     return "OK"

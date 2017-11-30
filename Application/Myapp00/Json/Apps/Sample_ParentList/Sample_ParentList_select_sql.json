@@ -21,7 +21,7 @@
         "from": 
         [
           "サンプル_ヘッダ               AS A"
-         ,"LEFT OUTER JOIN サンプル      AS B ON (A.ref_サンプルＩＤ     = B.サンプルＩＤ)"
+         ,"LEFT OUTER JOIN サンプル_マスタ      AS B ON (A.ref_サンプル_マスタＩＤ     = B.サンプル_マスタＩＤ)"
         ],
         "where": "true &&",
         "order": ""
@@ -59,7 +59,7 @@
         "from": 
         [
           "サンプル_ヘッダ               AS A"
-         ,"LEFT OUTER JOIN サンプル      AS B ON (A.ref_サンプルＩＤ     = B.サンプルＩＤ)"
+         ,"LEFT OUTER JOIN サンプル_マスタ      AS B ON (A.ref_サンプル_マスタＩＤ     = B.サンプル_マスタＩＤ)"
         ],
         "where": "true &&",
         "order": "サンプル_ヘッダＩＤ DESC",
@@ -119,9 +119,9 @@
           "field": "サンプル_ヘッダ項目５",
           "table":"A"
         },
-        "サンプル項目１": {
+        "サンプル_マスタ項目１": {
           "value": [""],
-          "field": "サンプル項目１",
+          "field": "サンプル_マスタ項目１",
           "table":"B"
         }
       }

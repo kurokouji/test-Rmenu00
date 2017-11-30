@@ -207,7 +207,7 @@
       {
          responsename: "Sample_ParentMainte"
         ,datasetid:    "header"
-        ,dataname:    ["サンプルＩＤ", "サンプル項目１"]
+        ,dataname:    ["サンプル_マスタＩＤ", "サンプル_マスタ項目１"]
         ,value:       ["",             ""]
         ,afterfunction: ""
       }

@@ -61,13 +61,13 @@
           "fromio" : "",
           "fromname" : "サンプル_ヘッダ項目５"
         },
-        "サンプルＩＤ": {
+        "サンプル_マスタＩＤ": {
           "value": [""],
-          "field": "ref_サンプルＩＤ",
+          "field": "ref_サンプル_マスタＩＤ",
           "fromtype" : "request",
           "fromid" : "header",
           "fromio" : "",
-          "fromname" : "サンプルＩＤ"
+          "fromname" : "サンプル_マスタＩＤ"
         },
         "更新日時": {
           "value": [""],
@@ -189,13 +189,13 @@
           "fromio" : "",
           "fromname" : "サンプル_明細金額"
         },
-        "サンプル区分ＩＤ": {
+        "サンプル_区分ＩＤ": {
           "value": [""],
-          "field": "ref_サンプル区分ＩＤ",
+          "field": "ref_サンプル_区分ＩＤ",
           "fromtype" : "request",
           "fromid" : "detail",
           "fromio" : "",
-          "fromname" : "サンプル区分ＩＤ"
+          "fromname" : "サンプル_区分ＩＤ"
         },
         "登録日時": {
           "value": [""],
@@ -235,7 +235,7 @@
         "from": 
         [
           "サンプル_ヘッダ          AS A"
-         ,"LEFT OUTER JOIN サンプル AS B ON (A.ref_サンプルＩＤ = B.サンプルＩＤ)"
+         ,"LEFT OUTER JOIN サンプル_マスタ AS B ON (A.ref_サンプル_マスタＩＤ = B.サンプル_マスタＩＤ)"
         ],
         "where": "A.サンプル_ヘッダＩＤ = ?",
         "order": ""
@@ -280,11 +280,11 @@
           "value": [""],
           "table": "A"
         },
-        "サンプルＩＤ": {
+        "サンプル_マスタＩＤ": {
           "value": [""],
           "table": "B"
         },
-        "サンプル項目１": {
+        "サンプル_マスタ項目１": {
           "value": [""],
           "table": "B"
         }
@@ -324,9 +324,9 @@
         "サンプル_明細行番号": {
           "value": [""]
         },
-        "サンプル区分ＩＤ": {
+        "サンプル_区分ＩＤ": {
           "value": [""],
-          "field": "ref_サンプル区分ＩＤ"
+          "field": "ref_サンプル_区分ＩＤ"
         },
         "サンプル_明細項目１": {
           "value": [""]

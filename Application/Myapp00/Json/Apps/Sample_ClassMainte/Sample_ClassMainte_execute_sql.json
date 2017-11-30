@@ -11,24 +11,24 @@
   "sqls": [{
     "comment": "サンプル区分　削除処理",
     "id": "delete",
-    "before": "setDeleteDataOfMyapp00('detail', 'delete', 'サンプル区分ＩＤ')",
+    "before": "setDeleteDataOfMyapp00('detail', 'delete', 'サンプル_区分ＩＤ')",
     "after": "",
     "sql": {
       "type": "delete",
       "freesql": "",
       "genesql": {
         "dist": "",
-        "from": "サンプル区分",
-        "where": "サンプル区分ＩＤ = ?",
+        "from": "サンプル_区分",
+        "where": "サンプル_区分ＩＤ = ?",
         "order": ""
       }
     },
     "input": {
       "multiline": "yes",
       "record": {
-        "サンプル区分ＩＤ": {
+        "サンプル_区分ＩＤ": {
           "value": [""],
-          "field": "サンプル区分ＩＤ"
+          "field": "サンプル_区分ＩＤ"
         }
       }
     }
@@ -36,28 +36,28 @@
   {
     "comment": "サンプル区分　更新処理",
     "id": "update",
-    "before": "setUpdateDataOfMyapp00('detail', 'update', 'サンプル区分ＩＤ')",
+    "before": "setUpdateDataOfMyapp00('detail', 'update', 'サンプル_区分ＩＤ')",
     "after": "",
     "sql": {
       "type": "update",
       "freesql": "",
       "genesql": {
         "dist": "",
-        "from": "サンプル区分",
-        "where": "サンプル区分ＩＤ = ?",
+        "from": "サンプル_区分",
+        "where": "サンプル_区分ＩＤ = ?",
         "order": ""
       }
     },
     "input": {
       "multiline": "yes",
       "record": {
-        "サンプル区分名称": {
+        "サンプル_区分名称": {
           "value": [""]
         },
-        "サンプル区分摘要": {
+        "サンプル_区分摘要": {
           "value": [""]
         },
-        "サンプル区分表示順": {
+        "サンプル_区分表示順": {
           "value": [""]
         },
         "更新日時": {
@@ -71,9 +71,9 @@
           "fromio": "",
           "fromname": "ユーザ名称"
         },
-        "サンプル区分ＩＤ": {
+        "サンプル_区分ＩＤ": {
           "value": [""],
-          "field": "サンプル区分ＩＤ"
+          "field": "サンプル_区分ＩＤ"
         }
       }
     }
@@ -81,14 +81,14 @@
   {
     "comment": "サンプル区分　新規処理",
     "id": "insert",
-    "before": "setInsertDataOfMyapp00('detail', 'insert', 'サンプル区分ＩＤ')",
+    "before": "setInsertDataOfMyapp00('detail', 'insert', 'サンプル_区分ＩＤ')",
     "after": "",
     "sql": {
       "type": "insert",
       "freesql": "",
       "genesql": {
         "dist": "",
-        "from": "サンプル区分",
+        "from": "サンプル_区分",
         "where": "",
         "order": ""
       }
@@ -96,13 +96,13 @@
     "input": {
       "multiline": "yes",
       "record": {
-        "サンプル区分名称": {
+        "サンプル_区分名称": {
           "value": [""]
         },
-        "サンプル区分摘要": {
+        "サンプル_区分摘要": {
           "value": [""]
         },
-        "サンプル区分表示順": {
+        "サンプル_区分表示順": {
           "value": [""]
         },
         "登録日時": {
@@ -140,24 +140,24 @@
       "freesql": "",
       "genesql": {
         "dist": "",
-        "from": "サンプル区分",
+        "from": "サンプル_区分",
         "where": "",
-        "order": "サンプル区分表示順"
+        "order": "サンプル_区分表示順"
       }
     },
     "output": {
       "multiline": "yes",
       "record": {
-        "サンプル区分ＩＤ": {
+        "サンプル_区分ＩＤ": {
           "value": [""]
         },
-        "サンプル区分名称": {
+        "サンプル_区分名称": {
           "value": [""]
         },
-        "サンプル区分摘要": {
+        "サンプル_区分摘要": {
           "value": [""]
         },
-        "サンプル区分表示順": {
+        "サンプル_区分表示順": {
           "value": [""]
         },
         "更新日時": {

@@ -17,7 +17,7 @@
       "検索ヘッダ項目２": {
         "validation": ["nonrequired"]
       },
-      "検索サンプル項目１": {
+      "検索サンプル_マスタ項目１": {
         "validation": ["nonrequired"]
       }
     }

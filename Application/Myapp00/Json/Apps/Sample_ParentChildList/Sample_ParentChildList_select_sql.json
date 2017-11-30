@@ -22,8 +22,8 @@
         [
           "サンプル_ヘッダ               AS A"
          ,"LEFT OUTER JOIN サンプル_明細 AS B ON (A.サンプル_ヘッダＩＤ  = B.ref_サンプル_ヘッダＩＤ)"
-         ,"LEFT OUTER JOIN サンプル      AS C ON (A.ref_サンプルＩＤ     = C.サンプルＩＤ)"
-         ,"LEFT OUTER JOIN サンプル区分  AS D ON (B.ref_サンプル区分ＩＤ = D.サンプル区分ＩＤ)"
+         ,"LEFT OUTER JOIN サンプル_マスタ      AS C ON (A.ref_サンプル_マスタＩＤ     = C.サンプル_マスタＩＤ)"
+         ,"LEFT OUTER JOIN サンプル_区分  AS D ON (B.ref_サンプル_区分ＩＤ = D.サンプル_区分ＩＤ)"
         ],
         "where": "true &&",
         "order": ""
@@ -62,8 +62,8 @@
         [
           "サンプル_ヘッダ               AS A"
          ,"LEFT OUTER JOIN サンプル_明細 AS B ON (A.サンプル_ヘッダＩＤ  = B.ref_サンプル_ヘッダＩＤ)"
-         ,"LEFT OUTER JOIN サンプル      AS C ON (A.ref_サンプルＩＤ     = C.サンプルＩＤ)"
-         ,"LEFT OUTER JOIN サンプル区分  AS D ON (B.ref_サンプル区分ＩＤ = D.サンプル区分ＩＤ)"
+         ,"LEFT OUTER JOIN サンプル_マスタ      AS C ON (A.ref_サンプル_マスタＩＤ     = C.サンプル_マスタＩＤ)"
+         ,"LEFT OUTER JOIN サンプル_区分  AS D ON (B.ref_サンプル_区分ＩＤ = D.サンプル_区分ＩＤ)"
         ],
         "where": "true &&",
         "order": "サンプル_ヘッダＩＤ DESC, B.サンプル_明細行番号",
@@ -123,9 +123,9 @@
           "field": "サンプル_ヘッダ項目５",
           "table":"A"
         },
-        "サンプル項目１": {
+        "サンプル_マスタ項目１": {
           "value": [""],
-          "field": "サンプル項目１",
+          "field": "サンプル_マスタ項目１",
           "table":"C"
         },
         "サンプル_明細行番号": {
@@ -160,9 +160,9 @@
           "value": [""],
           "funct": "TO_CHAR(B.サンプル_明細金額, 'FM999,999,999')"
         },
-        "サンプル区分名称": {
+        "サンプル_区分名称": {
           "value": [""],
-          "field": "サンプル区分名称",
+          "field": "サンプル_区分名称",
           "table":"D"
         }
       }

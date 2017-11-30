@@ -41,7 +41,7 @@
         "min": "1",
         "max": "200"
       },
-      "サンプルＩＤ": {
+      "サンプル_マスタＩＤ": {
         "validation": ["required",
         "integerP"],
         "min": "1",

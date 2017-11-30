@@ -11,24 +11,24 @@
   "sqls": [{
     "comment": "サンプル　削除処理",
     "id": "delete",
-    "before": "setDeleteDataOfMyapp00('detail', 'delete', 'サンプルＩＤ')",
+    "before": "setDeleteDataOfMyapp00('detail', 'delete', 'サンプル_マスタＩＤ')",
     "after": "",
     "sql": {
       "type": "delete",
       "freesql": "",
       "genesql": {
         "dist": "",
-        "from": "サンプル",
-        "where": "サンプルＩＤ = ?",
+        "from": "サンプル_マスタ",
+        "where": "サンプル_マスタＩＤ = ?",
         "order": ""
       }
     },
     "input": {
       "multiline": "yes",
       "record": {
-        "サンプルＩＤ": {
+        "サンプル_マスタＩＤ": {
           "value": [""],
-          "field": "サンプルＩＤ"
+          "field": "サンプル_マスタＩＤ"
         }
       }
     }
@@ -36,37 +36,37 @@
   {
     "comment": "サンプル　更新処理",
     "id": "update",
-    "before": "setUpdateDataOfMyapp00('detail', 'update', 'サンプルＩＤ')",
+    "before": "setUpdateDataOfMyapp00('detail', 'update', 'サンプル_マスタＩＤ')",
     "after": "",
     "sql": {
       "type": "update",
       "freesql": "",
       "genesql": {
         "dist": "",
-        "from": "サンプル",
-        "where": "サンプルＩＤ = ?",
+        "from": "サンプル_マスタ",
+        "where": "サンプル_マスタＩＤ = ?",
         "order": ""
       }
     },
     "input": {
       "multiline": "yes",
       "record": {
-        "サンプル項目１": {
+        "サンプル_マスタ項目１": {
           "value": [""]
         },
-        "サンプル項目２": {
+        "サンプル_マスタ項目２": {
           "value": [""]
         },
-        "サンプル項目３": {
+        "サンプル_マスタ項目３": {
           "value": [""]
         },
-        "サンプル項目４": {
+        "サンプル_マスタ項目４": {
           "value": [""]
         },
-        "サンプル項目５": {
+        "サンプル_マスタ項目５": {
           "value": [""]
         },
-        "サンプル表示順": {
+        "サンプル_マスタ表示順": {
           "value": [""]
         },
         "更新日時": {
@@ -80,9 +80,9 @@
           "fromio": "",
           "fromname": "ユーザ名称"
         },
-        "サンプルＩＤ": {
+        "サンプル_マスタＩＤ": {
           "value": [""],
-          "field": "サンプルＩＤ"
+          "field": "サンプル_マスタＩＤ"
         }
       }
     }
@@ -90,14 +90,14 @@
   {
     "comment": "サンプル　新規処理",
     "id": "insert",
-    "before": "setInsertDataOfMyapp00('detail', 'insert', 'サンプルＩＤ')",
+    "before": "setInsertDataOfMyapp00('detail', 'insert', 'サンプル_マスタＩＤ')",
     "after": "",
     "sql": {
       "type": "insert",
       "freesql": "",
       "genesql": {
         "dist": "",
-        "from": "サンプル",
+        "from": "サンプル_マスタ",
         "where": "",
         "order": ""
       }
@@ -105,22 +105,22 @@
     "input": {
       "multiline": "yes",
       "record": {
-        "サンプル項目１": {
+        "サンプル_マスタ項目１": {
           "value": [""]
         },
-        "サンプル項目２": {
+        "サンプル_マスタ項目２": {
           "value": [""]
         },
-        "サンプル項目３": {
+        "サンプル_マスタ項目３": {
           "value": [""]
         },
-        "サンプル項目４": {
+        "サンプル_マスタ項目４": {
           "value": [""]
         },
-        "サンプル項目５": {
+        "サンプル_マスタ項目５": {
           "value": [""]
         },
-        "サンプル表示順": {
+        "サンプル_マスタ表示順": {
           "value": [""]
         },
         "登録日時": {
@@ -158,33 +158,33 @@
       "freesql": "",
       "genesql": {
         "dist": "",
-        "from": "サンプル",
+        "from": "サンプル_マスタ",
         "where": "",
-        "order": "サンプル表示順"
+        "order": "サンプル_マスタ表示順"
       }
     },
     "output": {
       "multiline": "yes",
       "record": {
-        "サンプルＩＤ": {
+        "サンプル_マスタＩＤ": {
           "value": [""]
         },
-        "サンプル項目１": {
+        "サンプル_マスタ項目１": {
           "value": [""]
         },
-        "サンプル項目２": {
+        "サンプル_マスタ項目２": {
           "value": [""]
         },
-        "サンプル項目３": {
+        "サンプル_マスタ項目３": {
           "value": [""]
         },
-        "サンプル項目４": {
+        "サンプル_マスタ項目４": {
           "value": [""]
         },
-        "サンプル項目５": {
+        "サンプル_マスタ項目５": {
           "value": [""]
         },
-        "サンプル表示順": {
+        "サンプル_マスタ表示順": {
           "value": [""]
         },
         "更新日時": {
