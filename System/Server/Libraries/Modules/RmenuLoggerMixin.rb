@@ -91,6 +91,14 @@ module RmenuLoggerMixin
     
   end
   
+  # レスポンスログ　終了ログ取得
+  def responseLogTimeOver(responseLog, rackName, remoteAddr, request_data)
+  
+    logdata = "remote address: " + remoteAddr + " request  data: " + JSON.dump(request_data)
+    responseLog.debug("#{rackName}") {"#{logdata}"}
+    
+  end
+  
   
   # ファイル名（パス情報含む）を使用してHtmlファイルを取得
   def readHtml(fileName)
