@@ -78,7 +78,7 @@
         "from": 
         [
           "ログ情報                AS A"
-         ,"LEFT OUTER JOIN 従業員  AS B ON (A.ユーザＩＤ = B.従業員コード)"
+         ,"LEFT OUTER JOIN ログインユーザ  AS B ON (A.ユーザＩＤ = B.ログインユーザコード)"
         ],
         "where": "true &&",
         "order": "A.アクセス日時",
@@ -107,9 +107,9 @@
           "value": [""],
           "funct": "TO_CHAR(A.アクセス日時, 'YYYY/MM/DD HH24:MI:SS')"
         },
-        "従業員名": {
+        "ログインユーザ名": {
           "value": [""],
-          "field": "従業員氏名",
+          "field": "ログインユーザ氏名",
           "table": "B"
         },
         "画面名": {

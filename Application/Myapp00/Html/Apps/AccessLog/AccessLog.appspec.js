@@ -86,7 +86,7 @@
     ]
     // その他セレクターイベントを定義する
    ,selectorEvent: [
-      ["#従業員選択",  "change", "onChange従業員選択"]
+      ["#ログインユーザ選択",  "change", "onChangeログインユーザ選択"]
     ]
     // ----------------------------------------------------------------------------------
     // カスタムイベント設定はイベント名・実行コンテキスト・コールバック関数の順に指定する
@@ -189,10 +189,10 @@
     // ----------------------------------------------------------------------------------
    ,selectbox: [
       {
-          selectorid: "従業員選択"
+          selectorid: "ログインユーザ選択"
          ,selectorname: ""
-         ,init:     {initvalue: "", inithtml: "従業員選択", datasetid: "EmployeeInfo", valuename: "選択従業員コード", htmlname: "選択従業員名"}
-         ,change:   {datasetid: "header", valuename: "検索従業員コード", htmlname: "検索従業員名"}
+         ,init:     {initvalue: "", inithtml: "ログインユーザ選択", datasetid: "EmployeeInfo", valuename: "選択ログインユーザコード", htmlname: "選択ログインユーザ名"}
+         ,change:   {datasetid: "header", valuename: "検索ログインユーザコード", htmlname: "検索ログインユーザ名"}
       }
     ]
     

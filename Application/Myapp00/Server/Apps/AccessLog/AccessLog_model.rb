@@ -30,15 +30,15 @@ class AccessLog_model
     requestInfo        = getJsonChunkById(@request_data, "records", idname1)
     sqlInfo            = getJsonChunkById(@sql_data,     "sqls",    idname2)
 
-    w_検索従業員コード = requestInfo["record"]["検索従業員コード"]["value"][0]
+    w_検索ログインユーザコード = requestInfo["record"]["検索ログインユーザコード"]["value"][0]
     w_アクセス日付     = requestInfo["record"]["アクセス日付"]["value"][0]
 
 
     rep = ""
 
-    # 検索従業員コード
-    if w_検索従業員コード != ""
-      rep = rep + " AND A.ユーザＩＤ = #{w_検索従業員コード}"
+    # 検索ログインユーザコード
+    if w_検索ログインユーザコード != ""
+      rep = rep + " AND A.ユーザＩＤ = #{w_検索ログインユーザコード}"
     end
 
     # アクセス日付

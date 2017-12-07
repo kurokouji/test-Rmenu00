@@ -1,6 +1,6 @@
 {
   "request" : {
-    "comment" : "従業員　マスター　照会処理　リクエストデータ",
+    "comment" : "ログインユーザ　マスター　照会処理　リクエストデータ",
     "html" : "Myapp00/Json/Apps/M_Employee",
     "mode" : "select",
     "prog" : "no",
@@ -20,7 +20,7 @@
     ]
   },
   "response" : {
-    "comment" : "従業員　照会処理　レスポンスデータ",
+    "comment" : "ログインユーザ　照会処理　レスポンスデータ",
     "html" : "Myapp00/Json/Apps/M_Employee",
     "mode" : "select",
     "prog" : "no",
@@ -35,10 +35,10 @@
         "after" : "",
         "multiline" : "yes",
         "record" : {
-          "従業員コード" : {
+          "ログインユーザコード" : {
             "value" : [""]
           },
-          "従業員名" : {
+          "ログインユーザ名" : {
             "value" : [""]
           },
           "ログインＩＤ" : {

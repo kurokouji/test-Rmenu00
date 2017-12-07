@@ -1,5 +1,5 @@
 {
-  "comment": "従業員　マスター　表示順再設定処理",
+  "comment": "ログインユーザ　マスター　表示順再設定処理",
   "html": "Myapp00/Json/Apps/M_Employee",
   "dbname": "myapp00",
   "mode": "renumber",
@@ -9,13 +9,13 @@
     "msg": "表示順再設定処理は正常に終了しました。"
   },
   "sqls": [{
-    "comment": "従業員表示順　再設定",
+    "comment": "ログインユーザ表示順　再設定",
     "id": "number_select",
     "before": "",
     "after": "",
     "sql": {
       "type": "select",
-      "freesql": "SELECT ROW_NUMBER() OVER(ORDER BY 従業員表示順) * 10 AS 表示順, 従業員コード FROM 従業員 WHERE 削除フラグ = '0' ORDER BY 表示順",
+      "freesql": "SELECT ROW_NUMBER() OVER(ORDER BY ログインユーザ表示順) * 10 AS 表示順, ログインユーザコード FROM ログインユーザ WHERE 削除フラグ = '0' ORDER BY 表示順",
       "genesql": {
         "dist": "",
         "from": "",
@@ -26,7 +26,7 @@
     "output": {
       "multiline": "yes",
       "record": {
-        "従業員コード": {
+        "ログインユーザコード": {
           "value": [""]
         },
         "表示順": {
@@ -36,7 +36,7 @@
     }
   },
   {
-    "comment": "従業員表示順　更新",
+    "comment": "ログインユーザ表示順　更新",
     "id": "number_update",
     "before": "",
     "after": "",
@@ -45,8 +45,8 @@
       "freesql": "",
       "genesql": {
         "dist": "",
-        "from": "従業員",
-        "where": "従業員コード = ?",
+        "from": "ログインユーザ",
+        "where": "ログインユーザコード = ?",
         "order": ""
       }
     },
@@ -55,24 +55,24 @@
       "record": {
         "表示順": {
           "value": [""],
-          "field": "従業員表示順",
+          "field": "ログインユーザ表示順",
           "fromtype": "sqls",
           "fromid": "number_select",
           "fromio": "output",
           "fromname": "表示順"
         },
-        "従業員コード": {
+        "ログインユーザコード": {
           "value": [""],
           "fromtype": "sqls",
           "fromid": "number_select",
           "fromio": "output",
-          "fromname": "従業員コード"
+          "fromname": "ログインユーザコード"
         }
       }
     }
   },
   {
-    "comment": "従業員　照会処理",
+    "comment": "ログインユーザ　照会処理",
     "id": "detail",
     "before": "",
     "after": "",
@@ -81,20 +81,20 @@
       "freesql": "",
       "genesql": {
         "dist": "",
-        "from": "従業員",
+        "from": "ログインユーザ",
         "where": "削除フラグ = '0'",
-        "order": "従業員表示順"
+        "order": "ログインユーザ表示順"
       }
     },
     "output": {
       "multiline": "yes",
       "record": {
-        "従業員コード": {
+        "ログインユーザコード": {
           "value": [""]
         },
-        "従業員名": {
+        "ログインユーザ名": {
           "value": [""],
-          "field": "従業員氏名"
+          "field": "ログインユーザ氏名"
         },
         "ログインＩＤ": {
           "value": [""]
@@ -110,7 +110,7 @@
         },
         "表示順": {
           "value": [""],
-          "field": "従業員表示順"
+          "field": "ログインユーザ表示順"
         },
         "更新日時": {
           "value": [""]

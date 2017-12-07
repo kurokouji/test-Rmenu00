@@ -1,5 +1,5 @@
 {
-  "comment": "従業員　マスター　メンテナンス dataset",
+  "comment": "ログインユーザ　マスター　メンテナンス dataset",
   "html": "Myapp00/Json/Apps/M_Employee",
   "message": {
     "status": "OK",
@@ -23,10 +23,10 @@
     "multiline": "yes",
     "defaultline": "40",
     "record": {
-      "従業員コード": {
+      "ログインユーザコード": {
         "value": [""]
       },
-      "従業員名": {
+      "ログインユーザ名": {
         "value": [""]
       },
       "ログインＩＤ": {

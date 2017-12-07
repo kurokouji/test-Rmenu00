@@ -1,5 +1,5 @@
 {
-  "comment": "従業員　マスター　照会処理",
+  "comment": "ログインユーザ　マスター　照会処理",
   "html": "Myapp00/Json/Apps/M_Employee",
   "dbname": "myapp00",
   "mode": "select",
@@ -9,7 +9,7 @@
     "msg": "照会処理は正常に終了しました。"
   },
   "sqls": [{
-    "comment": "従業員　照会処理",
+    "comment": "ログインユーザ　照会処理",
     "id": "detail",
     "before": "",
     "after": "",
@@ -18,20 +18,20 @@
       "freesql": "",
       "genesql": {
         "dist": "",
-        "from": "従業員",
+        "from": "ログインユーザ",
         "where": "削除フラグ = '0'",
-        "order": "従業員表示順"
+        "order": "ログインユーザ表示順"
       }
     },
     "output": {
       "multiline": "yes",
       "record": {
-        "従業員コード": {
+        "ログインユーザコード": {
           "value": [""]
         },
-        "従業員名": {
+        "ログインユーザ名": {
           "value": [""],
-          "field": "従業員氏名"
+          "field": "ログインユーザ氏名"
         },
         "ログインＩＤ": {
           "value": [""]
@@ -47,7 +47,7 @@
         },
         "表示順": {
           "value": [""],
-          "field": "従業員表示順"
+          "field": "ログインユーザ表示順"
         },
         "更新日時": {
           "value": [""]

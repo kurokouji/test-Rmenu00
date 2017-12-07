@@ -1,6 +1,6 @@
 {
   "request" : {
-    "comment" : "従業員　マスター　表示順再設定処理　リクエストデータ",
+    "comment" : "ログインユーザ　マスター　表示順再設定処理　リクエストデータ",
     "html" : "Myapp00/Json/Apps/M_Employee",
     "mode" : "renumber",
     "prog" : "no",
@@ -20,7 +20,7 @@
     ]
   },
   "response" : {
-    "comment" : "従業員　マスター　表示順再設定処理　レスポンスデータ",
+    "comment" : "ログインユーザ　マスター　表示順再設定処理　レスポンスデータ",
     "html" : "Myapp00/Json/Apps/M_Employee",
     "mode" : "renumber",
     "prog" : "no",
@@ -35,10 +35,10 @@
         "after" : "",
         "multiline" : "yes",
         "record" : {
-          "従業員コード" : {
+          "ログインユーザコード" : {
             "value" : [""]
           },
-          "従業員名" : {
+          "ログインユーザ名" : {
             "value" : [""]
           },
           "ログインＩＤ" : {

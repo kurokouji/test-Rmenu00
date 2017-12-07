@@ -29,15 +29,15 @@
       "msg": "初期処理は正常に終了しました。"
     },
     "records": [{
-      "comment": "選択従業員情報",
+      "comment": "選択ログインユーザ情報",
       "id": "EmployeeInfo",
       "multiline": "yes",
       "defaultline": "",
       "record": {
-        "選択従業員コード": {
+        "選択ログインユーザコード": {
           "value": [""]
         },
-        "選択従業員名": {
+        "選択ログインユーザ名": {
           "value": [""]
         }
       }

@@ -1,6 +1,6 @@
 {
   "request": {
-    "comment": "従業員　マスター　メンテナンス　新規処理　リクエストデータ",
+    "comment": "ログインユーザ　マスター　メンテナンス　新規処理　リクエストデータ",
     "html" : "Myapp00/Json/Apps/M_Employee",
     "mode": "execute",
     "prog": "no",
@@ -29,10 +29,10 @@
       "after": "",
       "multiline": "yes",
       "record": {
-        "従業員コード": {
+        "ログインユーザコード": {
           "value": [""]
         },
-        "従業員名": {
+        "ログインユーザ名": {
           "value": [""]
         },
         "ログインＩＤ": {
@@ -60,13 +60,13 @@
     }]
   },
   "response": {
-    "comment": "従業員　マスター　メンテナンス　実行処理　レスポンスデータ",
+    "comment": "ログインユーザ　マスター　メンテナンス　実行処理　レスポンスデータ",
     "html" : "Myapp00/Json/Apps/M_Employee",
     "mode": "execute",
     "prog": "no",
     "message": {
       "status": "OK",
-      "msg": "従業員　データを正常に更新しました。"
+      "msg": "ログインユーザ　データを正常に更新しました。"
     },
     "records": [{
       "id": "detail",
@@ -74,10 +74,10 @@
       "after": "",
       "multiline": "yes",
       "record": {
-        "従業員コード": {
+        "ログインユーザコード": {
           "value": [""]
         },
-        "従業員名": {
+        "ログインユーザ名": {
           "value": [""]
         },
         "ログインＩＤ": {

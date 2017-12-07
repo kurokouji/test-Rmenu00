@@ -126,12 +126,12 @@
       $R.log("Controller onChangeアクセス日付 : end");
     }
     
-   ,onChange従業員選択: function(event) {
-      $R.log("Controller onChange従業員選択 : start");
+   ,onChangeログインユーザ選択: function(event) {
+      $R.log("Controller onChangeログインユーザ選択 : start");
 
       var employee = this.model.onChangeSelectBox(event, this.appspec.selectbox);
 
-      $R.log("Controller onChange従業員選択 : end");
+      $R.log("Controller onChangeログインユーザ選択 : end");
     }
 
     // -------------------------------------

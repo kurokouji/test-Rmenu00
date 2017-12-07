@@ -14,7 +14,7 @@
       "アクセス日付": {
         "validation": ["nonrequired"]
       },
-      "検索従業員コード": {
+      "検索ログインユーザコード": {
         "validation": ["nonrequired"]
       }
     }
