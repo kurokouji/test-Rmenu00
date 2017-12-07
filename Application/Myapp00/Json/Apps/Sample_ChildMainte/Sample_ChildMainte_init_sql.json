@@ -21,7 +21,7 @@
         "from": 
         [
           "サンプル_ヘッダ          AS A"
-         ,"LEFT OUTER JOIN サンプル AS B ON (A.ref_サンプル_マスタＩＤ = B.サンプル_マスタＩＤ)"
+         ,"LEFT OUTER JOIN サンプル_マスタ AS B ON (A.ref_サンプル_マスタＩＤ = B.サンプル_マスタＩＤ)"
         ],
         "where": "A.サンプル_ヘッダＩＤ = ?",
         "order": ""

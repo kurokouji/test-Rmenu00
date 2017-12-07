@@ -15,7 +15,7 @@
 
 /* スクロールテーブルの表示窓 */
 #scrollable-Table  {
-  width: calc(1150px + 0px);
+  width: calc(1792px + 0px);
   max-width: calc(100vw - 80px);
   margin: auto;
   overflow-x: auto;
@@ -23,7 +23,7 @@
 
 /* スクロールテーブルのヘッダ */
 #scrollable-HTable  {
-  width: 1150px;
+  width: 1792px;
   height: 36px;
   overflow:hidden;
 }
@@ -32,7 +32,7 @@
 #scrollable-DTable  {
   overflow-x: hidden;      /* 水平スクロールバー auto:自動表示 hidden:非表示 */
   overflow-y: hidden;      /* 垂直スクロールバー auto:自動表示 hidden:非表示 */
-  width: 1150px;
+  width: 1792px;
 }
 
 #mainTableH {
