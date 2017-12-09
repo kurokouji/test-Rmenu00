@@ -1,0 +1,98 @@
+{
+  "request": {
+    "comment": "サンプル親　メンテナンス　訂正処理　リクエストデータ",
+    "html": "Myapp00/Json/Apps/T_Sample_ParentMainte",
+    "mode": "update",
+    "prog": "no",
+    "model": "yes",
+    "message": {
+      "status": "OK",
+      "msg": ""
+    },
+    "records": [{
+      "id": "login",
+      "before": "",
+      "after": "",
+      "multiline": "no",
+      "record": {
+        "ユーザＩＤ": {
+          "value": [""]
+        },
+        "ユーザ名称": {
+          "value": [""]
+        }
+      }
+    },
+    {
+      "id": "header",
+      "before": "",
+      "after": "",
+      "multiline": "no",
+      "record": {
+        "Ｔサンプル_ヘッダＩＤ": {
+          "value": [""]
+        },
+        "Ｔサンプル_ヘッダ項目０１": {
+          "value": [""]
+        },
+        "Ｔサンプル_ヘッダ項目０２": {
+          "value": [""]
+        },
+        "Ｔサンプル_ヘッダ項目０３": {
+          "value": [""]
+        },
+        "Ｔサンプル_ヘッダ項目０４": {
+          "value": [""]
+        },
+        "Ｔサンプル_ヘッダ項目０５": {
+          "value": [""]
+        },
+        "Ｔサンプル_マスタＩＤ": {
+          "value": [""]
+        }
+      }
+    }]
+  },
+  "response": {
+    "comment": "サンプル親　メンテナンス　訂正処理　レスポンスデータ",
+    "html": "Myapp00/Json/Apps/T_Sample_ParentMainte",
+    "mode": "update",
+    "prog": "no",
+    "message": {
+      "status": "OK",
+      "msg": "訂正処理は正常に終了しました。"
+    },
+    "records": [{
+      "id": "header",
+      "before": "",
+      "after": "",
+      "multiline": "no",
+      "record": {
+        "Ｔサンプル_ヘッダＩＤ": {
+          "value": [""]
+        },
+        "Ｔサンプル_ヘッダ項目０１": {
+          "value": [""]
+        },
+        "Ｔサンプル_ヘッダ項目０２": {
+          "value": [""]
+        },
+        "Ｔサンプル_ヘッダ項目０３": {
+          "value": [""]
+        },
+        "Ｔサンプル_ヘッダ項目０４": {
+          "value": [""]
+        },
+        "Ｔサンプル_ヘッダ項目０５": {
+          "value": [""]
+        },
+        "Ｔサンプル_マスタＩＤ": {
+          "value": [""]
+        },
+        "Ｔサンプル_マスタ項目０１": {
+          "value": [""]
+        }
+      }
+    }]
+  }
+}

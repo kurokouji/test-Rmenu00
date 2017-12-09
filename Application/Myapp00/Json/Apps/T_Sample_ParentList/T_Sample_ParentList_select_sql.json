@@ -1,0 +1,130 @@
+{
+  "comment": "サンプル（親一覧リスト） 検索処理",
+  "html": "Myapp00/Json/Apps/T_Sample_ParentList",
+  "dbname": "myapp00",
+  "mode": "select",
+  "prog": "yes",
+  "message": {
+    "status": "OK",
+    "msg": "照会処理は正常に終了しました。"
+  },
+  "sqls": [{
+    "comment": "総件数を取得する",
+    "id": "total_count",
+    "before": "setSql_T_Sample_ParentListOfMyapp00('header', 'total_count', 'genesql')",
+    "after": "",
+    "sql": {
+      "type": "select",
+      "freesql": "",
+      "genesql": {
+        "dist": "",
+        "from": 
+        [
+          "Ｔサンプル_ヘッダ               AS A"
+         ,"LEFT OUTER JOIN Ｔサンプル_マスタ      AS B ON (A.ref_Ｔサンプル_マスタＩＤ     = B.Ｔサンプル_マスタＩＤ)"
+        ],
+        "where": "true &&",
+        "order": ""
+      }
+    },
+    "input": {
+      "multiline": "no",
+      "record": {
+      }
+    },
+    "output": {
+      "multiline": "no",
+      "record": {
+        "トータル件数": {
+          "value": [""],
+          "funct": "COUNT(*)"
+        }
+      }
+    }
+  },
+  {
+    "comment": "指定件数分のデータを取得する。getOffsetLine：オフセット行数を計算する。",
+    "id": "detail",
+    "before": 
+    [
+      "setSql_T_Sample_ParentListOfMyapp00('header', 'detail', 'genesql')"
+     ,"getOffsetLineOfMyapp00('header', 'detail')"
+    ],
+    "after": "",
+    "sql": {
+      "type": "select",
+      "freesql": "",
+      "genesql": {
+        "dist": "",
+        "from": 
+        [
+          "Ｔサンプル_ヘッダ               AS A"
+         ,"LEFT OUTER JOIN Ｔサンプル_マスタ      AS B ON (A.ref_Ｔサンプル_マスタＩＤ     = B.Ｔサンプル_マスタＩＤ)"
+        ],
+        "where": "true &&",
+        "order": "Ｔサンプル_ヘッダＩＤ DESC",
+        "limit": "? OFFSET ?"
+      }
+    },
+    "input": {
+      "multiline": "no",
+      "record": {
+        "ページライン数": {
+          "value": [""],
+          "fromtype": "request",
+          "fromid": "header",
+          "fromio": "",
+          "fromname": "ページライン数"
+        },
+        "オフセットライン数": {
+          "value": [""]
+        }
+      }
+    },
+    "output": {
+      "multiline": "yes",
+      "record": {
+        "Ｔサンプル_ヘッダＩＤ": {
+          "value": [""],
+          "field": "Ｔサンプル_ヘッダＩＤ",
+          "table":"A"
+        },
+        "表示Ｔサンプル_ヘッダＩＤ": {
+          "value": [""],
+          "field": "Ｔサンプル_ヘッダＩＤ",
+          "table":"A"
+        },
+        "Ｔサンプル_ヘッダ項目０１": {
+          "value": [""],
+          "field": "Ｔサンプル_ヘッダ項目０１",
+          "table":"A"
+        },
+        "Ｔサンプル_ヘッダ項目０２": {
+          "value": [""],
+          "field": "Ｔサンプル_ヘッダ項目０２",
+          "table":"A"
+        },
+        "Ｔサンプル_ヘッダ項目０３": {
+          "value": [""],
+          "field": "Ｔサンプル_ヘッダ項目０３",
+          "table":"A"
+        },
+        "Ｔサンプル_ヘッダ項目０４": {
+          "value": [""],
+          "field": "Ｔサンプル_ヘッダ項目０４",
+          "table":"A"
+        },
+        "Ｔサンプル_ヘッダ項目０５": {
+          "value": [""],
+          "field": "Ｔサンプル_ヘッダ項目０５",
+          "table":"A"
+        },
+        "Ｔサンプル_マスタ項目０１": {
+          "value": [""],
+          "field": "Ｔサンプル_マスタ項目０１",
+          "table":"B"
+        }
+      }
+    }
+  }]
+}

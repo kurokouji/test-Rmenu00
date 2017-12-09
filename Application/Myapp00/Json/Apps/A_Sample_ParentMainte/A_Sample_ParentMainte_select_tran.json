@@ -1,0 +1,66 @@
+{
+  "request": {
+    "comment": "サンプル親　メンテナンス　照会処理　リクエストデータ",
+    "html": "Myapp00/Json/Apps/A_Sample_ParentMainte",
+    "mode": "select",
+    "prog": "no",
+    "model": "yes",
+    "message": {
+      "status": "OK",
+      "msg": ""
+    },
+    "records": [{
+      "id": "header",
+      "before": "",
+      "after": "",
+      "multiline": "no",
+      "record": {
+        "Ａサンプル_ヘッダＩＤ": {
+          "value": [""]
+        }
+      }
+    }]
+  },
+  "response": {
+    "comment": "サンプル親　メンテナンス　照会処理　レスポンスデータ",
+    "html": "Myapp00/Json/Apps/A_Sample_ParentMainte",
+    "mode": "select",
+    "prog": "no",
+    "message": {
+      "status": "OK",
+      "msg": "照会処理は正常に終了しました。"
+    },
+    "records": [{
+      "id": "header",
+      "before": "",
+      "after": "",
+      "multiline": "no",
+      "record": {
+        "Ａサンプル_ヘッダＩＤ": {
+          "value": [""]
+        },
+        "Ａサンプル_ヘッダ項目１": {
+          "value": [""]
+        },
+        "Ａサンプル_ヘッダ項目２": {
+          "value": [""]
+        },
+        "Ａサンプル_ヘッダ項目３": {
+          "value": [""]
+        },
+        "Ａサンプル_ヘッダ項目４": {
+          "value": [""]
+        },
+        "Ａサンプル_ヘッダ項目５": {
+          "value": [""]
+        },
+        "Ａサンプル_マスタＩＤ": {
+          "value": [""]
+        },
+        "Ａサンプル_マスタ項目１": {
+          "value": [""]
+        }
+      }
+    }]
+  }
+}

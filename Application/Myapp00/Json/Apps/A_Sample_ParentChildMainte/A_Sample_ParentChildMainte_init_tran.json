@@ -1,0 +1,39 @@
+{
+  "request": {
+    "comment": "サンプル親子　メンテナンス　初期処理（サンプル区分照会）　リクエストデータ",
+    "html": "Myapp00/Json/Apps/A_Sample_ParentChildMainte",
+    "mode": "init",
+    "prog": "no",
+    "model": "yes",
+    "message": {
+      "status": "OK",
+      "msg": ""
+    },
+    "records": [{
+    }]
+  },
+  "response": {
+    "comment": "サンプル親子　メンテナンス　初期処理（サンプル区分照会）　レスポンスデータ",
+    "html": "Myapp00/Json/Apps/A_Sample_ParentChildMainte",
+    "mode": "init",
+    "prog": "no",
+    "message": {
+      "status": "OK",
+      "msg": "サンプル区分照会処理は正常に終了しました。"
+    },
+    "records": [{
+      "id": "選択サンプル区分",
+      "before": "",
+      "after": "",
+      "multiline": "yes",
+      "record": {
+        "選択Ａサンプル_区分ＩＤ": {
+          "value": [""]
+        },
+        "選択Ａサンプル_区分名称": {
+          "value": [""]
+        }
+      }
+    }]
+  }
+}

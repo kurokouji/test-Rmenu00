@@ -1,0 +1,322 @@
+{
+  "comment": "サンプル親子　メンテナンス　訂正処理",
+  "html": "Myapp00/Json/Apps/T_Sample_ParentChildMainte",
+  "dbname": "myapp00",
+  "mode": "update",
+  "prog": "yes",
+  "message": {
+    "status": "OK",
+    "msg": "訂正処理は正常に終了しました。"
+  },
+  "sqls": [{
+    "comment": "Ｔサンプル_ヘッダ　訂正処理",
+    "id": "header_update",
+    "before": "",
+    "after": "",
+    "sql": {
+      "type": "update",
+      "freesql": "",
+      "genesql": {
+        "dist": "",
+        "from": "Ｔサンプル_ヘッダ",
+        "where": "Ｔサンプル_ヘッダＩＤ = ?",
+        "order": ""
+      }
+    },
+    "input": {
+      "multiline": "no",
+      "record": {
+        "Ｔサンプル_ヘッダ項目０１": {
+          "value": [""],
+          "fromtype" : "request",
+          "fromid" : "header",
+          "fromio" : "",
+          "fromname" : "Ｔサンプル_ヘッダ項目０１"
+        },
+        "Ｔサンプル_ヘッダ項目０２": {
+          "value": [""],
+          "fromtype" : "request",
+          "fromid" : "header",
+          "fromio" : "",
+          "fromname" : "Ｔサンプル_ヘッダ項目０２"
+        },
+        "Ｔサンプル_ヘッダ項目０３": {
+          "value": [""],
+          "fromtype" : "request",
+          "fromid" : "header",
+          "fromio" : "",
+          "fromname" : "Ｔサンプル_ヘッダ項目０３"
+        },
+        "Ｔサンプル_ヘッダ項目０４": {
+          "value": [""],
+          "fromtype" : "request",
+          "fromid" : "header",
+          "fromio" : "",
+          "fromname" : "Ｔサンプル_ヘッダ項目０４"
+        },
+        "Ｔサンプル_ヘッダ項目０５": {
+          "value": [""],
+          "fromtype" : "request",
+          "fromid" : "header",
+          "fromio" : "",
+          "fromname" : "Ｔサンプル_ヘッダ項目０５"
+        },
+        "Ｔサンプル_マスタＩＤ": {
+          "value": [""],
+          "field": "ref_Ｔサンプル_マスタＩＤ",
+          "fromtype" : "request",
+          "fromid" : "header",
+          "fromio" : "",
+          "fromname" : "Ｔサンプル_マスタＩＤ"
+        },
+        "更新日時": {
+          "value": [""],
+          "funct": "CURRENT_TIMESTAMP"
+        },
+        "更新ユーザ": {
+          "value": [""],
+          "fromtype": "request",
+          "fromid": "login",
+          "fromio": "",
+          "fromname": "ユーザ名称"
+        },
+        "Ｔサンプル_ヘッダＩＤ": {
+          "value": [""],
+          "fromtype" : "request",
+          "fromid" : "header",
+          "fromio" : "",
+          "fromname" : "Ｔサンプル_ヘッダＩＤ"
+        }
+      }
+    }
+  },
+  {
+    "comment" : "Ｔサンプル_明細　削除処理",
+    "id" : "detail_delete",
+    "before" : "",
+    "after" : "",
+    "sql" : {
+      "type" : "delete",
+      "freesql" : "",
+      "genesql" : {
+        "dist" : "",
+        "from" : "Ｔサンプル_明細",
+        "where": "ref_Ｔサンプル_ヘッダＩＤ = ?",
+        "order" : ""
+      }
+    },
+    "input" : {
+      "multiline" : "no",
+      "record" : {
+        "Ｔサンプル_ヘッダＩＤ": {
+          "value": [""],
+          "fromtype" : "request",
+          "fromid" : "header",
+          "fromio" : "",
+          "fromname" : "Ｔサンプル_ヘッダＩＤ"
+        }
+      }
+    }
+  },
+  {
+    "comment": "Ｔサンプル_明細　登録処理",
+    "id": "detail_insert",
+    "before": "set明細行番号OfT_Sample_ParentChildMainteOfMyapp00()",
+    "after": "",
+    "sql": {
+      "type": "insert",
+      "freesql": "",
+      "genesql": {
+        "dist": "",
+        "from": "Ｔサンプル_明細",
+        "where": "",
+        "order": ""
+      }
+    },
+    "input": {
+      "multiline": "yes",
+      "record": {
+        "Ｔサンプル_ヘッダＩＤ": {
+          "value": [""],
+          "field": "ref_Ｔサンプル_ヘッダＩＤ",
+          "fromtype" : "request",
+          "fromid" : "header",
+          "fromio" : "",
+          "fromname" : "Ｔサンプル_ヘッダＩＤ"
+        },
+        "Ｔサンプル_明細行番号": {
+          "value": [""]
+        },
+        "Ｔサンプル_明細項目０１": {
+          "value": [""],
+          "fromtype" : "request",
+          "fromid" : "detail",
+          "fromio" : "",
+          "fromname" : "Ｔサンプル_明細項目０１"
+        },
+        "Ｔサンプル_明細項目０２": {
+          "value": [""],
+          "fromtype" : "request",
+          "fromid" : "detail",
+          "fromio" : "",
+          "fromname" : "Ｔサンプル_明細項目０２"
+        },
+        "Ｔサンプル_明細項目０３": {
+          "value": [""],
+          "fromtype" : "request",
+          "fromid" : "detail",
+          "fromio" : "",
+          "fromname" : "Ｔサンプル_明細項目０３"
+        },
+        "Ｔサンプル_区分ＩＤ": {
+          "value": [""],
+          "field": "ref_Ｔサンプル_区分ＩＤ",
+          "fromtype" : "request",
+          "fromid" : "detail",
+          "fromio" : "",
+          "fromname" : "Ｔサンプル_区分ＩＤ"
+        },
+        "登録日時": {
+          "value": [""],
+          "funct": "CURRENT_TIMESTAMP"
+        },
+        "登録ユーザ": {
+          "value": [""],
+          "fromtype": "request",
+          "fromid": "login",
+          "fromio": "",
+          "fromname": "ユーザ名称"
+        },
+        "更新日時": {
+          "value": [""],
+          "funct": "CURRENT_TIMESTAMP"
+        },
+        "更新ユーザ": {
+          "value": [""],
+          "fromtype": "request",
+          "fromid": "login",
+          "fromio": "",
+          "fromname": "ユーザ名称"
+        }
+      }
+    }
+  },
+  {
+    "comment": "Ｔサンプル_ヘッダ　照会処理",
+    "id": "header",
+    "before": "",
+    "after": "",
+    "sql": {
+      "type": "select",
+      "freesql": "",
+      "genesql": {
+        "dist": "",
+        "from": 
+        [
+          "Ｔサンプル_ヘッダ          AS A"
+         ,"LEFT OUTER JOIN Ｔサンプル_マスタ AS B ON (A.ref_Ｔサンプル_マスタＩＤ = B.Ｔサンプル_マスタＩＤ)"
+        ],
+        "where": "A.Ｔサンプル_ヘッダＩＤ = ?",
+        "order": ""
+      }
+    },
+    "input": {
+      "multiline": "no",
+      "record": {
+        "Ｔサンプル_ヘッダＩＤ": {
+          "value": [""],
+          "fromtype" : "request",
+          "fromid" : "header",
+          "fromio" : "",
+          "fromname" : "Ｔサンプル_ヘッダＩＤ"
+        }
+      }
+    },
+    "output": {
+      "multiline": "no",
+      "record": {
+        "Ｔサンプル_ヘッダＩＤ": {
+          "value": [""],
+          "table": "A"
+        },
+        "Ｔサンプル_ヘッダ項目０１": {
+          "value": [""],
+          "table": "A"
+        },
+        "Ｔサンプル_ヘッダ項目０２": {
+          "value": [""],
+          "table": "A"
+        },
+        "Ｔサンプル_ヘッダ項目０３": {
+          "value": [""],
+          "table": "A"
+        },
+        "Ｔサンプル_ヘッダ項目０４": {
+          "value": [""],
+          "table": "A"
+        },
+        "Ｔサンプル_ヘッダ項目０５": {
+          "value": [""],
+          "table": "A"
+        },
+        "Ｔサンプル_マスタＩＤ": {
+          "value": [""],
+          "table": "B"
+        },
+        "Ｔサンプル_マスタ項目０１": {
+          "value": [""],
+          "table": "B"
+        }
+      }
+    }
+  },
+  {
+    "comment": "Ｔサンプル_明細　照会処理",
+    "id": "detail",
+    "before": "",
+    "after": "",
+    "sql": {
+      "type": "select",
+      "freesql": "",
+      "genesql": {
+        "dist": "",
+        "from": "Ｔサンプル_明細",
+        "where": "ref_Ｔサンプル_ヘッダＩＤ = ?",
+        "order": "Ｔサンプル_明細行番号"
+      }
+    },
+    "input": {
+      "multiline": "no",
+      "record": {
+        "Ｔサンプル_ヘッダＩＤ": {
+          "value": [""],
+          "fromtype" : "request",
+          "fromid" : "header",
+          "fromio" : "",
+          "fromname" : "Ｔサンプル_ヘッダＩＤ"
+        }
+      }
+    },
+    "output": {
+      "multiline": "yes",
+      "record": {
+        "Ｔサンプル_明細行番号": {
+          "value": [""]
+        },
+        "Ｔサンプル_区分ＩＤ": {
+          "value": [""],
+          "field": "ref_Ｔサンプル_区分ＩＤ"
+        },
+        "Ｔサンプル_明細項目０１": {
+          "value": [""]
+        },
+        "Ｔサンプル_明細項目０２": {
+          "value": [""]
+        },
+        "Ｔサンプル_明細項目０３": {
+          "value": [""]
+        }
+      }
+    }
+  }]
+}

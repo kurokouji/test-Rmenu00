@@ -1,0 +1,58 @@
+{
+  "comment": "サンプル（データメンテ） dataset",
+  "html": "Myapp00/Json/Apps/A_Sample_BaseMainte",
+  "message": {
+    "status": "OK",
+    "msg": "データを入力して、実行ボタンを押下して下さい。"
+  },
+  "records": [{
+    "id": "login",
+    "multiline": "no",
+    "defaultline": "0",
+    "record": {
+      "ユーザＩＤ": {
+        "value": [""]
+      },
+      "ユーザ名称": {
+        "value": [""]
+      }
+    }
+  },
+  {
+    "id": "detail",
+    "multiline": "yes",
+    "defaultline": "40",
+    "record": {
+      "Ａサンプル_マスタＩＤ": {
+        "value": [""]
+      },
+      "Ａサンプル_マスタ項目１": {
+        "value": [""]
+      },
+      "Ａサンプル_マスタ項目２": {
+        "value": [""]
+      },
+      "Ａサンプル_マスタ項目３": {
+        "value": [""]
+      },
+      "Ａサンプル_マスタ項目４": {
+        "value": [""]
+      },
+      "Ａサンプル_マスタ項目５": {
+        "value": [""]
+      },
+      "Ａサンプル_マスタ表示順": {
+        "value": [""]
+      },
+      "更新日時": {
+        "value": [""]
+      },
+      "行追加": {
+        "value": [""]
+      },
+      "削除": {
+        "value": [""]
+      }
+    }
+  }]
+}

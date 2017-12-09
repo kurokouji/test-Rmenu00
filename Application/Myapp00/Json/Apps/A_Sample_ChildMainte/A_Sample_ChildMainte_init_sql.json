@@ -1,0 +1,105 @@
+{
+  "comment": "サンプル子　メンテナンス　初期処理（サンプルヘッダ・サンプル区分照会）",
+  "html": "Myapp00/Json/Apps/A_Sample_ChildMainte",
+  "dbname": "myapp00",
+  "mode": "init",
+  "prog": "no",
+  "message": {
+    "status": "OK",
+    "msg": "サンプル区分照会処理は正常に終了しました。"
+  },
+  "sqls": [{
+    "comment": "Ａサンプル_ヘッダ　照会処理",
+    "id": "header",
+    "before": "",
+    "after": "",
+    "sql": {
+      "type": "select",
+      "freesql": "",
+      "genesql": {
+        "dist": "",
+        "from": 
+        [
+          "Ａサンプル_ヘッダ          AS A"
+         ,"LEFT OUTER JOIN Ａサンプル_マスタ AS B ON (A.ref_Ａサンプル_マスタＩＤ = B.Ａサンプル_マスタＩＤ)"
+        ],
+        "where": "A.Ａサンプル_ヘッダＩＤ = ?",
+        "order": ""
+      }
+    },
+    "input": {
+      "multiline": "no",
+      "record": {
+        "Ａサンプル_ヘッダＩＤ": {
+          "value": [""]
+        }
+      }
+    },
+    "output": {
+      "multiline": "no",
+      "record": {
+        "Ａサンプル_ヘッダＩＤ": {
+          "value": [""],
+          "table": "A"
+        },
+        "Ａサンプル_ヘッダ項目１": {
+          "value": [""],
+          "table": "A"
+        },
+        "Ａサンプル_ヘッダ項目２": {
+          "value": [""],
+          "table": "A"
+        },
+        "Ａサンプル_ヘッダ項目３": {
+          "value": [""],
+          "table": "A"
+        },
+        "Ａサンプル_ヘッダ項目４": {
+          "value": [""],
+          "table": "A"
+        },
+        "Ａサンプル_ヘッダ項目５": {
+          "value": [""],
+          "table": "A"
+        },
+        "Ａサンプル_マスタＩＤ": {
+          "value": [""],
+          "table": "B"
+        },
+        "Ａサンプル_マスタ項目１": {
+          "value": [""],
+          "table": "B"
+        }
+      }
+    }
+  },
+  {
+    "comment": "サンプル区分照会処理",
+    "id": "選択サンプル区分",
+    "before": "",
+    "after": "",
+    "sql": {
+      "type": "select",
+      "freesql": "",
+      "genesql": {
+        "dist": "",
+        "from": "Ａサンプル_区分",
+        "where": "",
+        "order": "Ａサンプル_区分表示順"
+      }
+    },
+    "output": {
+      "multiline": "yes",
+      "record": {
+        "選択Ａサンプル_区分ＩＤ": {
+          "value": [""],
+          "field": "Ａサンプル_区分ＩＤ"
+        },
+        "選択Ａサンプル_区分名称": {
+          "value": [""],
+          "field": "Ａサンプル_区分名称"
+        }
+      }
+    }
+  }]
+}

@@ -1,0 +1,56 @@
+{
+  "comment": "サンプル（データメンテ）　照会処理",
+  "html": "Myapp00/Json/Apps/A_Sample_BaseMainte",
+  "dbname": "myapp00",
+  "mode": "select",
+  "prog": "no",
+  "message": {
+    "status": "OK",
+    "msg": "照会処理は正常に終了しました。"
+  },
+  "sqls": [{
+    "comment": "サンプル　照会処理",
+    "id": "detail",
+    "before": "",
+    "after": "",
+    "sql": {
+      "type": "select",
+      "freesql": "",
+      "genesql": {
+        "dist": "",
+        "from": "Ａサンプル_マスタ",
+        "where": "",
+        "order": "Ａサンプル_マスタ表示順"
+      }
+    },
+    "output": {
+      "multiline": "yes",
+      "record": {
+        "Ａサンプル_マスタＩＤ": {
+          "value": [""]
+        },
+        "Ａサンプル_マスタ項目１": {
+          "value": [""]
+        },
+        "Ａサンプル_マスタ項目２": {
+          "value": [""]
+        },
+        "Ａサンプル_マスタ項目３": {
+          "value": [""]
+        },
+        "Ａサンプル_マスタ項目４": {
+          "value": [""]
+        },
+        "Ａサンプル_マスタ項目５": {
+          "value": [""]
+        },
+        "Ａサンプル_マスタ表示順": {
+          "value": [""]
+        },
+        "更新日時": {
+          "value": [""]
+        }
+      }
+    }
+  }]
+}

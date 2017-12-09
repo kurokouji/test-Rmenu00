@@ -1,0 +1,76 @@
+{
+  "comment": "サンプル親　メンテナンス　照会処理",
+  "html": "Myapp00/Json/Apps/T_Sample_ParentMainte",
+  "dbname": "myapp00",
+  "mode": "select",
+  "prog": "no",
+  "message": {
+    "status": "OK",
+    "msg": "照会処理は正常に終了しました。"
+  },
+  "sqls": [{
+    "comment": "Ｔサンプル_ヘッダ　照会処理",
+    "id": "header",
+    "before": "",
+    "after": "",
+    "sql": {
+      "type": "select",
+      "freesql": "",
+      "genesql": {
+        "dist": "",
+        "from": 
+        [
+          "Ｔサンプル_ヘッダ          AS A"
+         ,"LEFT OUTER JOIN Ｔサンプル_マスタ AS B ON (A.ref_Ｔサンプル_マスタＩＤ = B.Ｔサンプル_マスタＩＤ)"
+        ],
+        "where": "A.Ｔサンプル_ヘッダＩＤ = ?",
+        "order": ""
+      }
+    },
+    "input": {
+      "multiline": "no",
+      "record": {
+        "Ｔサンプル_ヘッダＩＤ": {
+          "value": [""]
+        }
+      }
+    },
+    "output": {
+      "multiline": "no",
+      "record": {
+        "Ｔサンプル_ヘッダＩＤ": {
+          "value": [""],
+          "table": "A"
+        },
+        "Ｔサンプル_ヘッダ項目０１": {
+          "value": [""],
+          "table": "A"
+        },
+        "Ｔサンプル_ヘッダ項目０２": {
+          "value": [""],
+          "table": "A"
+        },
+        "Ｔサンプル_ヘッダ項目０３": {
+          "value": [""],
+          "table": "A"
+        },
+        "Ｔサンプル_ヘッダ項目０４": {
+          "value": [""],
+          "table": "A"
+        },
+        "Ｔサンプル_ヘッダ項目０５": {
+          "value": [""],
+          "table": "A"
+        },
+        "Ｔサンプル_マスタＩＤ": {
+          "value": [""],
+          "table": "B"
+        },
+        "Ｔサンプル_マスタ項目０１": {
+          "value": [""],
+          "table": "B"
+        }
+      }
+    }
+  }]
+}

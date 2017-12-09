@@ -1,0 +1,115 @@
+{
+  "request": {
+    "comment": "サンプル子　メンテナンス　登録処理　リクエストデータ",
+    "html": "Myapp00/Json/Apps/A_Sample_ChildMainte",
+    "mode": "insert",
+    "prog": "no",
+    "model": "yes",
+    "message": {
+      "status": "OK",
+      "msg": ""
+    },
+    "records": [{
+      "id": "login",
+      "before": "",
+      "after": "",
+      "multiline": "no",
+      "record": {
+        "ユーザＩＤ": {
+          "value": [""]
+        },
+        "ユーザ名称": {
+          "value": [""]
+        }
+      }
+    },
+    {
+      "id": "header",
+      "before": "",
+      "after": "",
+      "multiline": "no",
+      "record": {
+        "Ａサンプル_ヘッダＩＤ": {
+          "value": [""]
+        }
+      }
+    },
+    {
+      "id": "detail",
+      "before": "",
+      "after": "",
+      "multiline": "yes",
+      "record": {
+        "Ａサンプル_明細行番号": {
+          "value": [""]
+        },
+        "Ａサンプル_区分ＩＤ": {
+          "value": [""]
+        },
+        "Ａサンプル_明細項目１": {
+          "value": [""]
+        },
+        "Ａサンプル_明細項目２": {
+          "value": [""]
+        },
+        "Ａサンプル_明細項目３": {
+          "value": [""]
+        },
+        "Ａサンプル_明細数量": {
+          "value": [""]
+        },
+        "Ａサンプル_明細単価": {
+          "value": [""]
+        },
+        "Ａサンプル_明細金額": {
+          "value": [""]
+        }
+      }
+    }]
+  },
+  "response": {
+    "comment": "サンプル子　メンテナンス　登録処理　レスポンスデータ",
+    "html": "Myapp00/Json/Apps/A_Sample_ChildMainte",
+    "mode": "insert",
+    "prog": "no",
+    "message": {
+      "status": "OK",
+      "msg": "登録処理は正常に終了しました。"
+    },
+    "records": [{
+      "id": "detail",
+      "before": "",
+      "after": "",
+      "multiline": "yes",
+      "record": {
+        "削除": {
+          "value": [""]
+        },
+        "Ａサンプル_明細行番号": {
+          "value": [""]
+        },
+        "Ａサンプル_区分ＩＤ": {
+          "value": [""]
+        },
+        "Ａサンプル_明細項目１": {
+          "value": [""]
+        },
+        "Ａサンプル_明細項目２": {
+          "value": [""]
+        },
+        "Ａサンプル_明細項目３": {
+          "value": [""]
+        },
+        "Ａサンプル_明細数量": {
+          "value": [""]
+        },
+        "Ａサンプル_明細単価": {
+          "value": [""]
+        },
+        "Ａサンプル_明細金額": {
+          "value": [""]
+        }
+      }
+    }]
+  }
+}

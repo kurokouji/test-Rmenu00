@@ -1,0 +1,128 @@
+{
+  "request": {
+    "comment": "サンプル（親子一覧リスト） 検索処理　リクエストデータ",
+    "html": "Myapp00/Json/Apps/A_Sample_ParentChildList",
+    "mode": "select",
+    "prog": "no",
+    "model": "yes",
+    "message": {
+      "status": "OK",
+      "msg": ""
+    },
+    "records": [{
+      "comment": "テーブルの行数",
+      "id": "header",
+      "before": "",
+      "after": "",
+      "multiline": "no",
+      "record": {
+        "ページライン数": {
+          "value": [""]
+        },
+        "カレントページ": {
+          "value": [""]
+        },
+        "検索ヘッダ項目１": {
+          "validation": ["nonrequired"]
+        },
+        "検索ヘッダ項目２": {
+          "validation": ["nonrequired"]
+        },
+        "検索Ａサンプル_マスタ項目１": {
+          "validation": ["nonrequired"]
+        }
+      }
+    }]
+  },
+  "response": {
+    "comment": "サンプル（親子一覧リスト） 検索処理　レスポンスデータ",
+    "html": "Myapp00/Json/Apps/A_Sample_ParentChildList",
+    "mode": "select",
+    "prog": "yes",
+    "message": {
+      "status": "OK",
+      "msg": "照会処理は正常に終了しました。"
+    },
+    "records": [{
+      "comment": "テーブルページング情報（行数・カレント行・総ページ数・総件数）getMaxPageCount：総ページ数を計算する。",
+      "id": "header",
+      "before": "",
+      "after": "getMaxPageCountOfMyapp00('header')",
+      "multiline": "no",
+      "record": {
+        "ページライン数": {
+          "value": [""],
+          "fromtype": "request",
+          "fromid": "header",
+          "fromio": "",
+          "fromname": "ページライン数"
+        },
+        "カレントページ": {
+          "value": ["1"],
+          "fromtype": "request",
+          "fromid": "header",
+          "fromio": "",
+          "fromname": "カレントページ"
+        },
+        "最大ページ": {
+          "value": [""]
+        },
+        "トータル件数": {
+          "value": [""],
+          "fromtype": "sqls",
+          "fromid": "total_count",
+          "fromio": "output",
+          "fromname": "トータル件数"
+        }
+      }
+    },
+    {
+      "comment": "テーブルの明細データ",
+      "id": "detail",
+      "before": "",
+      "after": "editサンプル親子一覧リストOfA_Sample_ParentChildListOfMyapp00()",
+      "multiline": "yes",
+      "record": {
+        "Ａサンプル_ヘッダＩＤ": {
+          "value": [""]
+        },
+        "表示Ａサンプル_ヘッダＩＤ": {
+          "value": [""]
+        },
+        "Ａサンプル_ヘッダ項目１": {
+          "value": [""]
+        },
+        "Ａサンプル_ヘッダ項目２": {
+          "value": [""]
+        },
+        "Ａサンプル_ヘッダ項目３": {
+          "value": [""]
+        },
+        "Ａサンプル_ヘッダ項目４": {
+          "value": [""]
+        },
+        "Ａサンプル_ヘッダ項目５": {
+          "value": [""]
+        },
+        "Ａサンプル_マスタ項目１": {
+          "value": [""]
+        },
+        "Ａサンプル_明細行番号": {
+          "value": [""]
+        },
+        "Ａサンプル_明細項目１": {
+          "value": [""]
+        },
+        "Ａサンプル_明細項目２": {
+          "value": [""]
+        },
+        "Ａサンプル_明細項目３": {
+          "value": [""]
+        },
+        "Ａサンプル_区分名称": {
+          "value": [""]
+        }
+      }
+    }]
+  }
+}

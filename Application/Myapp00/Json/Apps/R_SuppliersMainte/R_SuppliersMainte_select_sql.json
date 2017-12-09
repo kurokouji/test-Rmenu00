@@ -1,0 +1,57 @@
+{
+  "comment": "得意先　メンテナンス　照会処理",
+  "html": "Myapp00/Json/Apps/R_SuppliersMainte",
+  "dbname": "myapp00",
+  "mode": "select",
+  "prog": "no",
+  "message": {
+    "status": "OK",
+    "msg": "照会処理は正常に終了しました。"
+  },
+  "sqls": [{
+    "comment": "得意先　照会処理",
+    "id": "header",
+    "before": "",
+    "after": "",
+    "sql": {
+      "type": "select",
+      "freesql": "",
+      "genesql": {
+        "dist": "",
+        "from": 
+        [
+          "Ｍ得意先"
+        ],
+        "where": "得意先ＩＤ = ?",
+        "order": ""
+      }
+    },
+    "input": {
+      "multiline": "no",
+      "record": {
+        "得意先ＩＤ": {
+          "value": [""]
+        }
+      }
+    },
+    "output": {
+      "multiline": "no",
+      "record": {
+        "得意先ＩＤ": {
+          "value": [""]
+        },
+        "得意先名称": {
+          "value": [""],
+          "field": "得意先名称"
+        },
+        "郵便番号": {
+          "value": [""]
+        },
+        "住所": {
+          "value": [""],
+          "field": "所在地"
+        }
+      }
+    }
+  }]
+}

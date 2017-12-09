@@ -1,0 +1,40 @@
+{
+  "comment": "サンプル親子　メンテナンス　初期処理（サンプル区分照会）",
+  "html": "Myapp00/Json/Apps/A_Sample_ParentChildMainte",
+  "dbname": "myapp00",
+  "mode": "init",
+  "prog": "no",
+  "message": {
+    "status": "OK",
+    "msg": "サンプル区分照会処理は正常に終了しました。"
+  },
+  "sqls": [{
+    "comment": "サンプル区分照会処理",
+    "id": "選択サンプル区分",
+    "before": "",
+    "after": "",
+    "sql": {
+      "type": "select",
+      "freesql": "",
+      "genesql": {
+        "dist": "",
+        "from": "Ａサンプル_区分",
+        "where": "",
+        "order": "Ａサンプル_区分表示順"
+      }
+    },
+    "output": {
+      "multiline": "yes",
+      "record": {
+        "選択Ａサンプル_区分ＩＤ": {
+          "value": [""],
+          "field": "Ａサンプル_区分ＩＤ"
+        },
+        "選択Ａサンプル_区分名称": {
+          "value": [""],
+          "field": "Ａサンプル_区分名称"
+        }
+      }
+    }
+  }]
+}

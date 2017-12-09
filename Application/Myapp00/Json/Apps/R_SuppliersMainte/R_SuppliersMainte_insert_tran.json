@@ -1,0 +1,60 @@
+{
+  "request": {
+    "comment": "得意先　メンテナンス　登録処理　リクエストデータ",
+    "html": "Myapp00/Json/Apps/R_SuppliersMainte",
+    "mode": "insert",
+    "prog": "no",
+    "model": "yes",
+    "message": {
+      "status": "OK",
+      "msg": ""
+    },
+    "records": [{
+      "id": "header",
+      "before": "",
+      "after": "",
+      "multiline": "no",
+      "record": {
+        "得意先名称": {
+          "value": [""]
+        },
+        "郵便番号": {
+          "value": [""]
+        },
+        "住所": {
+          "value": [""]
+        }
+      }
+    }]
+  },
+  "response": {
+    "comment": "得意先　メンテナンス　登録処理　レスポンスデータ",
+    "html": "Myapp00/Json/Apps/R_SuppliersMainte",
+    "mode": "insert",
+    "prog": "no",
+    "message": {
+      "status": "OK",
+      "msg": "データを正常に登録しました。"
+    },
+    "records": [{
+      "id": "header",
+      "before": "",
+      "after": "",
+      "multiline": "no",
+      "record": {
+        "得意先ＩＤ": {
+          "value": [""]
+        },
+        "得意先名称": {
+          "value": [""]
+        },
+        "郵便番号": {
+          "value": [""]
+        },
+        "住所": {
+          "value": [""]
+        }
+      }
+    }]
+  }
+}

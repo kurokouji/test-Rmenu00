@@ -1,0 +1,47 @@
+{
+  "comment": "サンプル（区分）　照会処理",
+  "html": "Myapp00/Json/Apps/A_Sample_ClassMainte",
+  "dbname": "myapp00",
+  "mode": "select",
+  "prog": "no",
+  "message": {
+    "status": "OK",
+    "msg": "照会処理は正常に終了しました。"
+  },
+  "sqls": [{
+    "comment": "サンプル区分　照会処理",
+    "id": "detail",
+    "before": "",
+    "after": "",
+    "sql": {
+      "type": "select",
+      "freesql": "",
+      "genesql": {
+        "dist": "",
+        "from": "Ａサンプル_区分",
+        "where": "",
+        "order": "Ａサンプル_区分表示順"
+      }
+    },
+    "output": {
+      "multiline": "yes",
+      "record": {
+        "Ａサンプル_区分ＩＤ": {
+          "value": [""]
+        },
+        "Ａサンプル_区分名称": {
+          "value": [""]
+        },
+        "Ａサンプル_区分摘要": {
+          "value": [""]
+        },
+        "Ａサンプル_区分表示順": {
+          "value": [""]
+        },
+        "更新日時": {
+          "value": [""]
+        }
+      }
+    }
+  }]
+}

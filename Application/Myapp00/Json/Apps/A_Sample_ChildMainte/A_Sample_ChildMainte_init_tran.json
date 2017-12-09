@@ -1,0 +1,80 @@
+{
+  "request": {
+    "comment": "サンプル子　メンテナンス　初期処理（サンプルヘッダ・サンプル区分照会）　リクエストデータ",
+    "html": "Myapp00/Json/Apps/A_Sample_ChildMainte",
+    "mode": "init",
+    "prog": "no",
+    "model": "yes",
+    "message": {
+      "status": "OK",
+      "msg": ""
+    },
+    "records": [{
+      "id": "header",
+      "before": "",
+      "after": "",
+      "multiline": "no",
+      "record": {
+        "Ａサンプル_ヘッダＩＤ": {
+          "value": [""]
+        }
+      }
+    }]
+  },
+  "response": {
+    "comment": "サンプル子　メンテナンス　初期処理（サンプルヘッダ・サンプル区分照会）　レスポンスデータ",
+    "html": "Myapp00/Json/Apps/A_Sample_ChildMainte",
+    "mode": "init",
+    "prog": "no",
+    "message": {
+      "status": "OK",
+      "msg": "サンプルヘッダ・サンプル区分照会照会処理は正常に終了しました。"
+    },
+    "records": [{
+      "id": "header",
+      "before": "",
+      "after": "",
+      "multiline": "no",
+      "record": {
+        "Ａサンプル_ヘッダＩＤ": {
+          "value": [""]
+        },
+        "Ａサンプル_ヘッダ項目１": {
+          "value": [""]
+        },
+        "Ａサンプル_ヘッダ項目２": {
+          "value": [""]
+        },
+        "Ａサンプル_ヘッダ項目３": {
+          "value": [""]
+        },
+        "Ａサンプル_ヘッダ項目４": {
+          "value": [""]
+        },
+        "Ａサンプル_ヘッダ項目５": {
+          "value": [""]
+        },
+        "Ａサンプル_マスタＩＤ": {
+          "value": [""]
+        },
+        "Ａサンプル_マスタ項目１": {
+          "value": [""]
+        }
+      }
+    },
+    {
+      "id": "選択サンプル区分",
+      "before": "",
+      "after": "",
+      "multiline": "yes",
+      "record": {
+        "選択Ａサンプル_区分ＩＤ": {
+          "value": [""]
+        },
+        "選択Ａサンプル_区分名称": {
+          "value": [""]
+        }
+      }
+    }]
+  }
+}

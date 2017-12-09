@@ -1,0 +1,89 @@
+{
+  "request": {
+    "comment": "サンプル（区分）　実行処理　リクエストデータ",
+    "html": "Myapp00/Json/Apps/A_Sample_ClassMainte",
+    "mode": "execute",
+    "prog": "no",
+    "model": "yes",
+    "message": {
+      "status": "OK",
+      "msg": ""
+    },
+    "records": [{
+      "id": "login",
+      "before": "",
+      "after": "",
+      "multiline": "no",
+      "record": {
+        "ユーザＩＤ": {
+          "value": [""]
+        },
+        "ユーザ名称": {
+          "value": [""]
+        }
+      }
+    },
+    {
+      "id": "detail",
+      "before": "",
+      "after": "",
+      "multiline": "yes",
+      "record": {
+        "Ａサンプル_区分ＩＤ": {
+          "value": [""]
+        },
+        "Ａサンプル_区分名称": {
+          "value": [""]
+        },
+        "Ａサンプル_区分摘要": {
+          "value": [""]
+        },
+        "Ａサンプル_区分表示順": {
+          "value": [""]
+        },
+        "削除": {
+          "value": [""]
+        }
+      }
+    }]
+  },
+  "response": {
+    "comment": "サンプル（データメンテ）　実行処理　レスポンスデータ",
+    "html": "Myapp00/Json/Apps/A_Sample_ClassMainte",
+    "mode": "execute",
+    "prog": "no",
+    "message": {
+      "status": "OK",
+      "msg": "サンプルを正常に更新しました。"
+    },
+    "records": [{
+      "id": "detail",
+      "before": "",
+      "after": "",
+      "multiline": "yes",
+      "record": {
+        "Ａサンプル_区分ＩＤ": {
+          "value": [""]
+        },
+        "Ａサンプル_区分名称": {
+          "value": [""]
+        },
+        "Ａサンプル_区分摘要": {
+          "value": [""]
+        },
+        "Ａサンプル_区分表示順": {
+          "value": [""]
+        },
+        "更新日時": {
+          "value": [""]
+        },
+        "行追加": {
+          "value": [""]
+        },
+        "削除": {
+          "value": [""]
+        }
+      }
+    }]
+  }
+}

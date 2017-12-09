@@ -1,0 +1,58 @@
+{
+  "comment": "サンプル（データメンテ） validation",
+  "html": "Myapp00/Json/Apps/T_Sample_BaseMainte",
+  "records": [{
+    "id": "detail",
+    "multiline": "yes",
+    "record": {
+      "Ｔサンプル_マスタＩＤ": {
+        "validation": ["nonrequired",
+        "integerP"],
+        "min": "1",
+        "max": "13"
+      },
+      "Ｔサンプル_マスタ項目０１": {
+        "validation": ["required",
+        "free"],
+        "min": "1",
+        "max": "20"
+      },
+      "Ｔサンプル_マスタ項目０２": {
+        "validation": ["nonrequired",
+        "free"],
+        "min": "1",
+        "max": "20"
+      },
+      "Ｔサンプル_マスタ項目０３": {
+        "validation": ["nonrequired",
+        "free"],
+        "min": "1",
+        "max": "20"
+      },
+      "Ｔサンプル_マスタ項目０４": {
+        "validation": ["nonrequired",
+        "free"],
+        "min": "1",
+        "max": "50"
+      },
+      "Ｔサンプル_マスタ項目０５": {
+        "validation": ["nonrequired",
+        "free"],
+        "min": "1",
+        "max": "20"
+      },
+      "Ｔサンプル_マスタ表示順": {
+        "validation": ["required",
+        "integerP"],
+        "min": "1",
+        "max": "3"
+      },
+      "削除": {
+        "validation": ["nonrequired",
+        "free"],
+        "min": "1",
+        "max": "2"
+      }
+    }
+  }]
+}

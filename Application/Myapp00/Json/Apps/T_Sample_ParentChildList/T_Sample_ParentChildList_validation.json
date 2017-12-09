@@ -1,0 +1,25 @@
+{
+  "comment": "サンプル（親子一覧リスト） validation",
+  "html": "Myapp00/Json/Apps/T_Sample_ParentChildList",
+  "records": [{
+    "id": "header",
+    "multiline": "no",
+    "record": {
+      "ページライン数": {
+        "validation": ["required"]
+      },
+      "カレントページ": {
+        "validation": ["required"]
+      },
+      "検索ヘッダ項目１": {
+        "validation": ["nonrequired"]
+      },
+      "検索ヘッダ項目２": {
+        "validation": ["nonrequired"]
+      },
+      "検索Ｔサンプル_マスタ項目０１": {
+        "validation": ["nonrequired"]
+      }
+    }
+  }]
+}

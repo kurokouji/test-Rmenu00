@@ -1,0 +1,143 @@
+{
+  "comment": "サンプル子　メンテナンス　登録処理",
+  "html": "Myapp00/Json/Apps/A_Sample_ChildMainte",
+  "dbname": "myapp00",
+  "mode": "insert",
+  "prog": "yes",
+  "message": {
+    "status": "OK",
+    "msg": "登録処理は正常に終了しました。"
+  },
+  "sqls": [{
+    "comment": "Ａサンプル_明細　登録処理",
+    "id": "detail_insert",
+    "before": "set明細行番号OfA_Sample_ChildMainteOfMyapp00()",
+    "after": "",
+    "sql": {
+      "type": "insert",
+      "freesql": "",
+      "genesql": {
+        "dist": "",
+        "from": "Ａサンプル_明細",
+        "where": "",
+        "order": ""
+      }
+    },
+    "input": {
+      "multiline": "yes",
+      "record": {
+        "Ａサンプル_ヘッダＩＤ": {
+          "value": [""],
+          "field": "ref_Ａサンプル_ヘッダＩＤ",
+          "fromtype" : "request",
+          "fromid" : "header",
+          "fromio" : "",
+          "fromname" : "Ａサンプル_ヘッダＩＤ"
+        },
+        "Ａサンプル_明細行番号": {
+          "value": [""]
+        },
+        "Ａサンプル_明細項目１": {
+          "value": [""],
+          "fromtype" : "request",
+          "fromid" : "detail",
+          "fromio" : "",
+          "fromname" : "Ａサンプル_明細項目１"
+        },
+        "Ａサンプル_明細項目２": {
+          "value": [""],
+          "fromtype" : "request",
+          "fromid" : "detail",
+          "fromio" : "",
+          "fromname" : "Ａサンプル_明細項目２"
+        },
+        "Ａサンプル_明細項目３": {
+          "value": [""],
+          "fromtype" : "request",
+          "fromid" : "detail",
+          "fromio" : "",
+          "fromname" : "Ａサンプル_明細項目３"
+        },
+        "Ａサンプル_区分ＩＤ": {
+          "value": [""],
+          "field": "ref_Ａサンプル_区分ＩＤ",
+          "fromtype" : "request",
+          "fromid" : "detail",
+          "fromio" : "",
+          "fromname" : "Ａサンプル_区分ＩＤ"
+        },
+        "登録日時": {
+          "value": [""],
+          "funct": "CURRENT_TIMESTAMP"
+        },
+        "登録ユーザ": {
+          "value": [""],
+          "fromtype": "request",
+          "fromid": "login",
+          "fromio": "",
+          "fromname": "ユーザ名称"
+        },
+        "更新日時": {
+          "value": [""],
+          "funct": "CURRENT_TIMESTAMP"
+        },
+        "更新ユーザ": {
+          "value": [""],
+          "fromtype": "request",
+          "fromid": "login",
+          "fromio": "",
+          "fromname": "ユーザ名称"
+        }
+      }
+    }
+  },
+  {
+    "comment": "Ａサンプル_明細　照会処理",
+    "id": "detail",
+    "before": "",
+    "after": "",
+    "sql": {
+      "type": "select",
+      "freesql": "",
+      "genesql": {
+        "dist": "",
+        "from": "Ａサンプル_明細",
+        "where": "ref_Ａサンプル_ヘッダＩＤ = ?",
+        "order": "Ａサンプル_明細行番号"
+      }
+    },
+    "input": {
+      "multiline": "no",
+      "record": {
+        "Ａサンプル_ヘッダＩＤ": {
+          "value": [""],
+          "fromtype" : "request",
+          "fromid" : "header",
+          "fromio" : "",
+          "fromname" : "Ａサンプル_ヘッダＩＤ"
+        }
+      }
+    },
+    "output": {
+      "multiline": "yes",
+      "record": {
+        "Ａサンプル_明細行番号": {
+          "value": [""]
+        },
+        "Ａサンプル_区分ＩＤ": {
+          "value": [""],
+          "field": "ref_Ａサンプル_区分ＩＤ"
+        },
+        "Ａサンプル_明細項目１": {
+          "value": [""]
+        },
+        "Ａサンプル_明細項目２": {
+          "value": [""]
+        },
+        "Ａサンプル_明細項目３": {
+          "value": [""]
+        }
+      }
+    }
+  }]
+}

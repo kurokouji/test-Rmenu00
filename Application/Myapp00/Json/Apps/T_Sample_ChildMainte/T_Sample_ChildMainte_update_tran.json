@@ -1,0 +1,97 @@
+{
+  "request": {
+    "comment": "サンプル子　メンテナンス　訂正処理　リクエストデータ",
+    "html": "Myapp00/Json/Apps/T_Sample_ChildMainte",
+    "mode": "update",
+    "prog": "no",
+    "model": "yes",
+    "message": {
+      "status": "OK",
+      "msg": ""
+    },
+    "records": [{
+      "id": "login",
+      "before": "",
+      "after": "",
+      "multiline": "no",
+      "record": {
+        "ユーザＩＤ": {
+          "value": [""]
+        },
+        "ユーザ名称": {
+          "value": [""]
+        }
+      }
+    },
+    {
+      "id": "header",
+      "before": "",
+      "after": "",
+      "multiline": "no",
+      "record": {
+        "Ｔサンプル_ヘッダＩＤ": {
+          "value": [""]
+        }
+      }
+    },
+    {
+      "id": "detail",
+      "before": "",
+      "after": "",
+      "multiline": "yes",
+      "record": {
+        "Ｔサンプル_明細行番号": {
+          "value": [""]
+        },
+        "Ｔサンプル_区分ＩＤ": {
+          "value": [""]
+        },
+        "Ｔサンプル_明細項目０１": {
+          "value": [""]
+        },
+        "Ｔサンプル_明細項目０２": {
+          "value": [""]
+        },
+        "Ｔサンプル_明細項目０３": {
+          "value": [""]
+        }
+      }
+    }]
+  },
+  "response": {
+    "comment": "サンプル子　メンテナンス　訂正処理　レスポンスデータ",
+    "html": "Myapp00/Json/Apps/T_Sample_ChildMainte",
+    "mode": "update",
+    "prog": "no",
+    "message": {
+      "status": "OK",
+      "msg": "訂正処理は正常に終了しました。"
+    },
+    "records": [{
+      "id": "detail",
+      "before": "",
+      "after": "",
+      "multiline": "yes",
+      "record": {
+        "削除": {
+          "value": [""]
+        },
+        "Ｔサンプル_明細行番号": {
+          "value": [""]
+        },
+        "Ｔサンプル_区分ＩＤ": {
+          "value": [""]
+        },
+        "Ｔサンプル_明細項目０１": {
+          "value": [""]
+        },
+        "Ｔサンプル_明細項目０２": {
+          "value": [""]
+        },
+        "Ｔサンプル_明細項目０３": {
+          "value": [""]
+        }
+      }
+    }]
+  }
+}

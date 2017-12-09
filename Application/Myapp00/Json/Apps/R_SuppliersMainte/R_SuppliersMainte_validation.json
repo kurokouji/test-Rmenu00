@@ -1,0 +1,34 @@
+{
+  "comment": "得意先　メンテナンス validation",
+  "html": "Myapp00/Json/Apps/R_SuppliersMainte",
+  "records": [{
+    "id": "header",
+    "multiline": "no",
+    "record": {
+      "得意先ＩＤ": {
+        "validation": ["nonrequired",
+        "integerP"],
+        "min": "1",
+        "max": "11"
+      },
+      "得意先名称": {
+        "validation": ["required",
+        "free"],
+        "min": "1",
+        "max": "100"
+      },
+      "郵便番号": {
+        "validation": ["required",
+        "free"],
+        "min": "1",
+        "max": "8"
+      },
+      "住所": {
+        "validation": ["required",
+        "free"],
+        "min": "1",
+        "max": "200"
+      }
+    }
+  }]
+}

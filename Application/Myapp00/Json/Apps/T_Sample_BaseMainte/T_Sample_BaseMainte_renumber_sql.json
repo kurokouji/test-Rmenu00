@@ -1,0 +1,119 @@
+{
+  "comment": "サンプル（データメンテ）　表示順再設定処理",
+  "html": "Myapp00/Json/Apps/T_Sample_BaseMainte",
+  "dbname": "myapp00",
+  "mode": "renumber",
+  "prog": "no",
+  "message": {
+    "status": "OK",
+    "msg": "表示順再設定処理は正常に終了しました。"
+  },
+  "sqls": [{
+    "comment": "Ｔサンプル_マスタ表示順　再設定",
+    "id": "number_select",
+    "before": "",
+    "after": "",
+    "sql": {
+      "type": "select",
+      "freesql": "SELECT ROW_NUMBER() OVER(ORDER BY Ｔサンプル_マスタ表示順) * 10 AS Ｔサンプル_マスタ表示順, Ｔサンプル_マスタＩＤ FROM Ｔサンプル_マスタ ORDER BY Ｔサンプル_マスタ表示順",
+      "genesql": {
+        "dist": "",
+        "from": "",
+        "where": "",
+        "order": ""
+      }
+    },
+    "output": {
+      "multiline": "yes",
+      "record": {
+        "Ｔサンプル_マスタＩＤ": {
+          "value": [""]
+        },
+        "Ｔサンプル_マスタ表示順": {
+          "value": [""]
+        }
+      }
+    }
+  },
+  {
+    "comment": "Ｔサンプル_マスタ表示順　更新",
+    "id": "number_update",
+    "before": "",
+    "after": "",
+    "sql": {
+      "type": "update",
+      "freesql": "",
+      "genesql": {
+        "dist": "",
+        "from": "Ｔサンプル_マスタ",
+        "where": "Ｔサンプル_マスタＩＤ = ?",
+        "order": ""
+      }
+    },
+    "input": {
+      "multiline": "yes",
+      "record": {
+        "Ｔサンプル_マスタ表示順": {
+          "value": [""],
+          "field": "Ｔサンプル_マスタ表示順",
+          "fromtype": "sqls",
+          "fromid": "number_select",
+          "fromio": "output",
+          "fromname": "Ｔサンプル_マスタ表示順"
+        },
+        "Ｔサンプル_マスタＩＤ": {
+          "value": [""],
+          "fromtype": "sqls",
+          "fromid": "number_select",
+          "fromio": "output",
+          "fromname": "Ｔサンプル_マスタＩＤ"
+        }
+      }
+    }
+  },
+  {
+    "comment": "サンプル　照会処理",
+    "id": "detail",
+    "before": "",
+    "after": "",
+    "sql": {
+      "type": "select",
+      "freesql": "",
+      "genesql": {
+        "dist": "",
+        "from": "Ｔサンプル_マスタ",
+        "where": "",
+        "order": "Ｔサンプル_マスタ表示順"
+      }
+    },
+    "output": {
+      "multiline": "yes",
+      "record": {
+        "Ｔサンプル_マスタＩＤ": {
+          "value": [""]
+        },
+        "Ｔサンプル_マスタ項目０１": {
+          "value": [""]
+        },
+        "Ｔサンプル_マスタ項目０２": {
+          "value": [""]
+        },
+        "Ｔサンプル_マスタ項目０３": {
+          "value": [""]
+        },
+        "Ｔサンプル_マスタ項目０４": {
+          "value": [""]
+        },
+        "Ｔサンプル_マスタ項目０５": {
+          "value": [""]
+        },
+        "Ｔサンプル_マスタ表示順": {
+          "value": [""]
+        },
+        "更新日時": {
+          "value": [""]
+        }
+      }
+    }
+  }]
+}

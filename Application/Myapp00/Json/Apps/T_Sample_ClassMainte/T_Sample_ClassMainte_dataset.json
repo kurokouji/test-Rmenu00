@@ -1,0 +1,49 @@
+{
+  "comment": "サンプル（区分） dataset",
+  "html": "Myapp00/Json/Apps/T_Sample_ClassMainte",
+  "message": {
+    "status": "OK",
+    "msg": "データを入力して、実行ボタンを押下して下さい。"
+  },
+  "records": [{
+    "id": "login",
+    "multiline": "no",
+    "defaultline": "0",
+    "record": {
+      "ユーザＩＤ": {
+        "value": [""]
+      },
+      "ユーザ名称": {
+        "value": [""]
+      }
+    }
+  },
+  {
+    "id": "detail",
+    "multiline": "yes",
+    "defaultline": "40",
+    "record": {
+      "Ｔサンプル_区分ＩＤ": {
+        "value": [""]
+      },
+      "Ｔサンプル_区分名称": {
+        "value": [""]
+      },
+      "Ｔサンプル_区分摘要": {
+        "value": [""]
+      },
+      "Ｔサンプル_区分表示順": {
+        "value": [""]
+      },
+      "更新日時": {
+        "value": [""]
+      },
+      "行追加": {
+        "value": [""]
+      },
+      "削除": {
+        "value": [""]
+      }
+    }
+  }]
+}

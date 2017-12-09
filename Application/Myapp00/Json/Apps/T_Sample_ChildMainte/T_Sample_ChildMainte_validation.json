@@ -1,0 +1,58 @@
+{
+  "comment": "サンプル子　メンテナンス validation",
+  "html": "Myapp00/Json/Apps/T_Sample_ChildMainte",
+  "records": [{
+    "id": "header",
+    "multiline": "no",
+    "record": {
+      "Ｔサンプル_ヘッダＩＤ": {
+        "validation": ["required",
+        "integerP"],
+        "min": "1",
+        "max": "13"
+      }
+    }
+  },
+  {
+    "id": "detail",
+    "multiline": "yes",
+    "record": {
+      "削除": {
+        "validation": ["nonrequired",
+        "free"],
+        "min": "1",
+        "max": "2"
+      },
+      "Ｔサンプル_明細行番号": {
+        "validation": ["nonrequired",
+        "integerP"],
+        "min": "1",
+        "max": "2"
+      },
+      "Ｔサンプル_区分ＩＤ": {
+        "validation": ["nonrequired",
+        "integerP"],
+        "min": "1",
+        "max": "13"
+      },
+      "Ｔサンプル_明細項目０１": {
+        "validation": ["required",
+        "free"],
+        "min": "1",
+        "max": "100"
+      },
+      "Ｔサンプル_明細項目０２": {
+        "validation": ["nonrequired",
+        "free"],
+        "min": "1",
+        "max": "100"
+      },
+      "Ｔサンプル_明細項目０３": {
+        "validation": ["nonrequired",
+        "free"],
+        "min": "1",
+        "max": "100"
+      }
+    }
+  }]
+}

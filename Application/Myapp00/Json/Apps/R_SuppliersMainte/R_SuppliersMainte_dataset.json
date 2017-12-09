@@ -1,0 +1,26 @@
+{
+  "comment": "得意先　メンテナンス dataset",
+  "html": "Myapp00/Json/Apps/R_SuppliersMainte",
+  "message": {
+    "status": "OK",
+    "msg": "データを入力して、実行ボタンを押下して下さい。"
+  },
+  "records": [{
+    "id": "header",
+    "multiline": "no",
+    "record": {
+      "得意先ＩＤ": {
+        "value": [""]
+      },
+      "得意先名称": {
+        "value": [""]
+      },
+      "郵便番号": {
+        "value": [""]
+      },
+      "住所": {
+        "value": [""]
+      }
+    }
+  }]
+}

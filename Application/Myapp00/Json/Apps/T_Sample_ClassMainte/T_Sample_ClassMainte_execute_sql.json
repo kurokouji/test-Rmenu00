@@ -1,0 +1,169 @@
+{
+  "comment": "サンプル（区分）　実行処理　実行処理",
+  "html": "Myapp00/Json/Apps/T_Sample_ClassMainte",
+  "dbname": "myapp00",
+  "mode": "execute",
+  "prog": "yes",
+  "message": {
+    "status": "OK",
+    "msg": "サンプル　実行処理は正常に終了しました。"
+  },
+  "sqls": [{
+    "comment": "サンプル区分　削除処理",
+    "id": "delete",
+    "before": "setDeleteDataOfMyapp00('detail', 'delete', 'Ｔサンプル_区分ＩＤ')",
+    "after": "",
+    "sql": {
+      "type": "delete",
+      "freesql": "",
+      "genesql": {
+        "dist": "",
+        "from": "Ｔサンプル_区分",
+        "where": "Ｔサンプル_区分ＩＤ = ?",
+        "order": ""
+      }
+    },
+    "input": {
+      "multiline": "yes",
+      "record": {
+        "Ｔサンプル_区分ＩＤ": {
+          "value": [""],
+          "field": "Ｔサンプル_区分ＩＤ"
+        }
+      }
+    }
+  },
+  {
+    "comment": "サンプル区分　更新処理",
+    "id": "update",
+    "before": "setUpdateDataOfMyapp00('detail', 'update', 'Ｔサンプル_区分ＩＤ')",
+    "after": "",
+    "sql": {
+      "type": "update",
+      "freesql": "",
+      "genesql": {
+        "dist": "",
+        "from": "Ｔサンプル_区分",
+        "where": "Ｔサンプル_区分ＩＤ = ?",
+        "order": ""
+      }
+    },
+    "input": {
+      "multiline": "yes",
+      "record": {
+        "Ｔサンプル_区分名称": {
+          "value": [""]
+        },
+        "Ｔサンプル_区分摘要": {
+          "value": [""]
+        },
+        "Ｔサンプル_区分表示順": {
+          "value": [""]
+        },
+        "更新日時": {
+          "value": [""],
+          "funct": "CURRENT_TIMESTAMP"
+        },
+        "更新ユーザ": {
+          "value": [""],
+          "fromtype": "request",
+          "fromid": "login",
+          "fromio": "",
+          "fromname": "ユーザ名称"
+        },
+        "Ｔサンプル_区分ＩＤ": {
+          "value": [""],
+          "field": "Ｔサンプル_区分ＩＤ"
+        }
+      }
+    }
+  },
+  {
+    "comment": "サンプル区分　新規処理",
+    "id": "insert",
+    "before": "setInsertDataOfMyapp00('detail', 'insert', 'Ｔサンプル_区分ＩＤ')",
+    "after": "",
+    "sql": {
+      "type": "insert",
+      "freesql": "",
+      "genesql": {
+        "dist": "",
+        "from": "Ｔサンプル_区分",
+        "where": "",
+        "order": ""
+      }
+    },
+    "input": {
+      "multiline": "yes",
+      "record": {
+        "Ｔサンプル_区分名称": {
+          "value": [""]
+        },
+        "Ｔサンプル_区分摘要": {
+          "value": [""]
+        },
+        "Ｔサンプル_区分表示順": {
+          "value": [""]
+        },
+        "登録日時": {
+          "value": [""],
+          "funct": "CURRENT_TIMESTAMP"
+        },
+        "登録ユーザ": {
+          "value": [""],
+          "fromtype": "request",
+          "fromid": "login",
+          "fromio": "",
+          "fromname": "ユーザ名称"
+        },
+        "更新日時": {
+          "value": [""],
+          "funct": "CURRENT_TIMESTAMP"
+        },
+        "更新ユーザ": {
+          "value": [""],
+          "fromtype": "request",
+          "fromid": "login",
+          "fromio": "",
+          "fromname": "ユーザ名称"
+        }
+      }
+    }
+  },
+  {
+    "comment": "サンプル区分　照会処理",
+    "id": "detail",
+    "before": "",
+    "after": "",
+    "sql": {
+      "type": "select",
+      "freesql": "",
+      "genesql": {
+        "dist": "",
+        "from": "Ｔサンプル_区分",
+        "where": "",
+        "order": "Ｔサンプル_区分表示順"
+      }
+    },
+    "output": {
+      "multiline": "yes",
+      "record": {
+        "Ｔサンプル_区分ＩＤ": {
+          "value": [""]
+        },
+        "Ｔサンプル_区分名称": {
+          "value": [""]
+        },
+        "Ｔサンプル_区分摘要": {
+          "value": [""]
+        },
+        "Ｔサンプル_区分表示順": {
+          "value": [""]
+        },
+        "更新日時": {
+          "value": [""]
+        }
+      }
+    }
+  }]
+}

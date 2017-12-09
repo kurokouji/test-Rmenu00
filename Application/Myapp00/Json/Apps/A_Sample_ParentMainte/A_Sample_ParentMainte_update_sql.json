@@ -1,0 +1,162 @@
+{
+  "comment": "サンプル親　メンテナンス　訂正処理",
+  "html": "Myapp00/Json/Apps/A_Sample_ParentMainte",
+  "dbname": "myapp00",
+  "mode": "update",
+  "prog": "yes",
+  "message": {
+    "status": "OK",
+    "msg": "訂正処理は正常に終了しました。"
+  },
+  "sqls": [{
+    "comment": "Ａサンプル_ヘッダ　訂正処理",
+    "id": "header_update",
+    "before": "",
+    "after": "",
+    "sql": {
+      "type": "update",
+      "freesql": "",
+      "genesql": {
+        "dist": "",
+        "from": "Ａサンプル_ヘッダ",
+        "where": "Ａサンプル_ヘッダＩＤ = ?",
+        "order": ""
+      }
+    },
+    "input": {
+      "multiline": "no",
+      "record": {
+        "Ａサンプル_ヘッダ項目１": {
+          "value": [""],
+          "fromtype" : "request",
+          "fromid" : "header",
+          "fromio" : "",
+          "fromname" : "Ａサンプル_ヘッダ項目１"
+        },
+        "Ａサンプル_ヘッダ項目２": {
+          "value": [""],
+          "fromtype" : "request",
+          "fromid" : "header",
+          "fromio" : "",
+          "fromname" : "Ａサンプル_ヘッダ項目２"
+        },
+        "Ａサンプル_ヘッダ項目３": {
+          "value": [""],
+          "fromtype" : "request",
+          "fromid" : "header",
+          "fromio" : "",
+          "fromname" : "Ａサンプル_ヘッダ項目３"
+        },
+        "Ａサンプル_ヘッダ項目４": {
+          "value": [""],
+          "fromtype" : "request",
+          "fromid" : "header",
+          "fromio" : "",
+          "fromname" : "Ａサンプル_ヘッダ項目４"
+        },
+        "Ａサンプル_ヘッダ項目５": {
+          "value": [""],
+          "fromtype" : "request",
+          "fromid" : "header",
+          "fromio" : "",
+          "fromname" : "Ａサンプル_ヘッダ項目５"
+        },
+        "Ａサンプル_マスタＩＤ": {
+          "value": [""],
+          "field": "ref_Ａサンプル_マスタＩＤ",
+          "fromtype" : "request",
+          "fromid" : "header",
+          "fromio" : "",
+          "fromname" : "Ａサンプル_マスタＩＤ"
+        },
+        "更新日時": {
+          "value": [""],
+          "funct": "CURRENT_TIMESTAMP"
+        },
+        "更新ユーザ": {
+          "value": [""],
+          "fromtype": "request",
+          "fromid": "login",
+          "fromio": "",
+          "fromname": "ユーザ名称"
+        },
+        "Ａサンプル_ヘッダＩＤ": {
+          "value": [""],
+          "fromtype" : "request",
+          "fromid" : "header",
+          "fromio" : "",
+          "fromname" : "Ａサンプル_ヘッダＩＤ"
+        }
+      }
+    }
+  },
+  {
+    "comment": "Ａサンプル_ヘッダ　照会処理",
+    "id": "header",
+    "before": "",
+    "after": "",
+    "sql": {
+      "type": "select",
+      "freesql": "",
+      "genesql": {
+        "dist": "",
+        "from": 
+        [
+          "Ａサンプル_ヘッダ          AS A"
+         ,"LEFT OUTER JOIN Ａサンプル_マスタ AS B ON (A.ref_Ａサンプル_マスタＩＤ = B.Ａサンプル_マスタＩＤ)"
+        ],
+        "where": "A.Ａサンプル_ヘッダＩＤ = ?",
+        "order": ""
+      }
+    },
+    "input": {
+      "multiline": "no",
+      "record": {
+        "Ａサンプル_ヘッダＩＤ": {
+          "value": [""],
+          "fromtype" : "request",
+          "fromid" : "header",
+          "fromio" : "",
+          "fromname" : "Ａサンプル_ヘッダＩＤ"
+        }
+      }
+    },
+    "output": {
+      "multiline": "no",
+      "record": {
+        "Ａサンプル_ヘッダＩＤ": {
+          "value": [""],
+          "table": "A"
+        },
+        "Ａサンプル_ヘッダ項目１": {
+          "value": [""],
+          "table": "A"
+        },
+        "Ａサンプル_ヘッダ項目２": {
+          "value": [""],
+          "table": "A"
+        },
+        "Ａサンプル_ヘッダ項目３": {
+          "value": [""],
+          "table": "A"
+        },
+        "Ａサンプル_ヘッダ項目４": {
+          "value": [""],
+          "table": "A"
+        },
+        "Ａサンプル_ヘッダ項目５": {
+          "value": [""],
+          "table": "A"
+        },
+        "Ａサンプル_マスタＩＤ": {
+          "value": [""],
+          "table": "B"
+        },
+        "Ａサンプル_マスタ項目１": {
+          "value": [""],
+          "table": "B"
+        }
+      }
+    }
+  }]
+}

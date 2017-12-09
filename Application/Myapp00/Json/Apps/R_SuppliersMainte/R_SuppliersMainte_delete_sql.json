@@ -1,0 +1,35 @@
+{
+  "comment": "得意先　メンテナンス　削除処理",
+  "html": "Myapp00/Json/Apps/R_SuppliersMainte",
+  "dbname": "myapp00",
+  "mode": "delete",
+  "prog": "no",
+  "message": {
+    "status": "OK",
+    "msg": "削除処理は正常に終了しました。"
+  },
+  "sqls": [{
+    "comment": "得意先　削除処理",
+    "id": "header",
+    "before": "",
+    "after": "",
+    "sql": {
+      "type": "delete",
+      "freesql": "",
+      "genesql": {
+        "dist": "",
+        "from": "Ｍ得意先",
+        "where": "得意先ＩＤ = ?",
+        "order": ""
+      }
+    },
+    "input": {
+      "multiline": "no",
+      "record": {
+        "得意先ＩＤ": {
+          "value": [""]
+        }
+      }
+    }
+  }]
+}

@@ -1,0 +1,58 @@
+{
+  "comment": "サンプル子　メンテナンス validation",
+  "html": "Myapp00/Json/Apps/A_Sample_ChildMainte",
+  "records": [{
+    "id": "header",
+    "multiline": "no",
+    "record": {
+      "Ａサンプル_ヘッダＩＤ": {
+        "validation": ["required",
+        "integerP"],
+        "min": "1",
+        "max": "13"
+      }
+    }
+  },
+  {
+    "id": "detail",
+    "multiline": "yes",
+    "record": {
+      "削除": {
+        "validation": ["nonrequired",
+        "free"],
+        "min": "1",
+        "max": "2"
+      },
+      "Ａサンプル_明細行番号": {
+        "validation": ["nonrequired",
+        "integerP"],
+        "min": "1",
+        "max": "2"
+      },
+      "Ａサンプル_区分ＩＤ": {
+        "validation": ["nonrequired",
+        "integerP"],
+        "min": "1",
+        "max": "13"
+      },
+      "Ａサンプル_明細項目１": {
+        "validation": ["required",
+        "free"],
+        "min": "1",
+        "max": "100"
+      },
+      "Ａサンプル_明細項目２": {
+        "validation": ["nonrequired",
+        "free"],
+        "min": "1",
+        "max": "100"
+      },
+      "Ａサンプル_明細項目３": {
+        "validation": ["nonrequired",
+        "free"],
+        "min": "1",
+        "max": "100"
+      }
+    }
+  }]
+}

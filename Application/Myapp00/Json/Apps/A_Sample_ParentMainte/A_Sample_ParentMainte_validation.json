@@ -1,0 +1,52 @@
+{
+  "comment": "サンプル親　メンテナンス validation",
+  "html": "Myapp00/Json/Apps/A_Sample_ParentMainte",
+  "records": [{
+    "id": "header",
+    "multiline": "no",
+    "record": {
+      "Ａサンプル_ヘッダＩＤ": {
+        "validation": ["nonrequired",
+        "integerP"],
+        "min": "1",
+        "max": "13"
+      },
+      "Ａサンプル_ヘッダ項目１": {
+        "validation": ["required",
+        "free"],
+        "min": "1",
+        "max": "200"
+      },
+      "Ａサンプル_ヘッダ項目２": {
+        "validation": ["required",
+        "free"],
+        "min": "1",
+        "max": "200"
+      },
+      "Ａサンプル_ヘッダ項目３": {
+        "validation": ["nonrequired",
+        "free"],
+        "min": "1",
+        "max": "200"
+      },
+      "Ａサンプル_ヘッダ項目４": {
+        "validation": ["nonrequired",
+        "free"],
+        "min": "1",
+        "max": "200"
+      },
+      "Ａサンプル_ヘッダ項目５": {
+        "validation": ["nonrequired",
+        "free"],
+        "min": "1",
+        "max": "200"
+      },
+      "Ａサンプル_マスタＩＤ": {
+        "validation": ["required",
+        "integerP"],
+        "min": "1",
+        "max": "13"
+      }
+    }
+  }]
+}

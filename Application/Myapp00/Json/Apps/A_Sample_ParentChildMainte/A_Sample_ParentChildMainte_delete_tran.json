@@ -1,0 +1,34 @@
+{
+  "request": {
+    "comment": "サンプル親子　メンテナンス　削除処理　リクエストデータ",
+    "html": "Myapp00/Json/Apps/A_Sample_ParentChildMainte",
+    "mode": "delete",
+    "prog": "no",
+    "model": "yes",
+    "message": {
+      "status": "OK",
+      "msg": ""
+    },
+    "records": [{
+      "id": "header",
+      "before": "",
+      "after": "",
+      "multiline": "no",
+      "record": {
+        "Ａサンプル_ヘッダＩＤ": {
+          "value": [""]
+        }
+      }
+    }]
+  },
+  "response": {
+    "comment": "サンプル親子　メンテナンス　削除処理　レスポンスデータ",
+    "html": "Myapp00/Json/Apps/A_Sample_ParentChildMainte",
+    "mode": "delete",
+    "prog": "no",
+    "message": {
+      "status": "OK",
+      "msg": "データを正常に削除しました。"
+    }
+  }
+}

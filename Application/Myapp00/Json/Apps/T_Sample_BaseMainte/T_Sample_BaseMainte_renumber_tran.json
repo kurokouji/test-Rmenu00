@@ -1,0 +1,70 @@
+{
+  "request": {
+    "comment": "サンプル（データメンテ）　表示順再設定処理　リクエストデータ",
+    "html": "Myapp00/Json/Apps/T_Sample_BaseMainte",
+    "mode": "renumber",
+    "prog": "no",
+    "model": "yes",
+    "message": {
+      "status": "OK",
+      "msg": ""
+    },
+    "records": [{
+      "id": "detail",
+      "before": "",
+      "after": "",
+      "multiline": "no",
+      "record": {
+        
+      }
+    }]
+  },
+  "response": {
+    "comment": "サンプル（データメンテ）　表示順再設定処理　レスポンスデータ",
+    "html": "Myapp00/Json/Apps/T_Sample_BaseMainte",
+    "mode": "renumber",
+    "prog": "no",
+    "message": {
+      "status": "OK",
+      "msg": "表示順再設定処理は正常に終了しました。"
+    },
+    "records": [{
+      "id": "detail",
+      "before": "",
+      "after": "",
+      "multiline": "yes",
+      "record": {
+        "Ｔサンプル_マスタＩＤ": {
+          "value": [""]
+        },
+        "Ｔサンプル_マスタ項目０１": {
+          "value": [""]
+        },
+        "Ｔサンプル_マスタ項目０２": {
+          "value": [""]
+        },
+        "Ｔサンプル_マスタ項目０３": {
+          "value": [""]
+        },
+        "Ｔサンプル_マスタ項目０４": {
+          "value": [""]
+        },
+        "Ｔサンプル_マスタ項目０５": {
+          "value": [""]
+        },
+        "Ｔサンプル_マスタ表示順": {
+          "value": [""]
+        },
+        "更新日時": {
+          "value": [""]
+        },
+        "行追加": {
+          "value": [""]
+        },
+        "削除": {
+          "value": [""]
+        }
+      }
+    }]
+  }
+}
