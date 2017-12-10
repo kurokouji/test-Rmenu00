@@ -1,0 +1,25 @@
+{
+  "comment": "顧客　一覧表 validation",
+  "html": "Myapp00/Json/Apps/T_Sample_MasterSelection",
+  "records": [{
+    "id": "header",
+    "multiline": "no",
+    "record": {
+      "ページライン数": {
+        "validation": ["required"]
+      },
+      "カレントページ": {
+        "validation": ["required"]
+      },
+      "検索Ｔサンプル_マスタ項目０１": {
+        "validation": ["nonrequired"]
+      },
+      "検索Ｔサンプル_マスタ項目０２": {
+        "validation": ["nonrequired"]
+      },
+      "検索Ｔサンプル_マスタ項目０３": {
+        "validation": ["nonrequired"]
+      }
+    }
+  }]
+}

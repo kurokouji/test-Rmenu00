@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<title>サンプル　メンテナンス</title> 
+<link href="../../../../../Application/Myapp00/Html/css/1pxdeep-b5e2f9.css?var=201710041453" rel="stylesheet"/>
+<link href="../../../../../Application/Myapp00/Html/css/style.css?var=201710041453"  rel="stylesheet"/>
+<link href="../../../../../Application/Myapp00/Html/css/style1.css?var=201710041453" rel="stylesheet"/>
+<link href="../../../../../Application/Myapp00/Html/css/project.css?var=201710041453" rel="stylesheet"/>
+<link href="../../../../../Application/Myapp00/Html/Apps/T_Sample_MasterMainte/css/program.css?var=201710041453" rel="stylesheet"/>
+
+<script type="text/javascript" src="../../../../../System/Html/js/jquery-2.1.1.min.js?var=201710041453"></script>
+<script type="text/javascript" src="../../../../../System/Html/js/jquery-ui-1.12.0.custom/jquery-ui.min.js?var=201710041453"></script>
+<script type="text/javascript" src="../../../../../System/Html/js/jquery.ui.touch-punch/jquery.ui.touch-punch.min.js?var=201710041453"></script>
+<script type="text/javascript" src="../../../../../System/Html/js/bootstrap-3.2.0/js/bootstrap.min.js?var=201710041453"></script>
+<script type="text/javascript" src="../../../../../System/Html/js/template/jquery.loadTemplate-1.4.5.min.js?var=201710041453"></script>
+<script type="text/javascript" src="../../../../../System/Html/js/bignumberjs/bignumber.min.js?var=201710041453"></script>
+
+<script type="text/javascript" src="../../../../../System/Html/js/rmenumvc-3.1.0.js?var=201710041453"></script>
+<script type="text/javascript" src="../../../../../System/Html/js/rmenumodel.mixin-3.1.0.js?var=201710041453"></script>
+<script type="text/javascript" src="../../../../../System/Html/js/rmenuview.mixin-3.1.0.js?var=201710041453"></script>
+<script type="text/javascript" src="../../../../../System/Html/js/rmenucontroller.mixin-3.1.0.js?var=201710041453"></script>
+<script type="text/javascript" src="../../../../../System/Html/js/rmenuentertabpfkey.mixin-3.1.0.js?var=201710041453"></script>
+<script type="text/javascript" src="../../../../../System/Html/js/rmenuvalidation.mixin-3.1.0.js?var=201710041453"></script>
+<script type="text/javascript" src="../../../../../System/Html/js/rmenuappspec.mixin-3.1.0.js?var=201710041453"></script>
+<script type="text/JavaScript" src="../../../../../System/Html/js/webstorage-3.1.0.js?var=201710041453"></script>
+
+<script type="text/javascript" src="../../../../../Application/Myapp00/Html/js/datamainte.view.mixin-3.1.0.js?var=201710041453"></script>
+<script type="text/javascript" src="../../../../../Application/Myapp00/Html/js/datamainte.model.mixin-3.1.0.js?var=201710041453"></script>
+<script type="text/javascript" src="../../../../../Application/Myapp00/Html/js/datamainte.controller.mixin-3.1.0.js?var=201710041453"></script>
+
+<script type="text/javascript" src="../../../../../Application/Myapp00/Html/Apps/T_Sample_MasterMainte/T_Sample_MasterMainte.appspec.js?var=201710041453"></script>
+<script type="text/javascript" src="../../../../../Application/Myapp00/Html/Apps/T_Sample_MasterMainte/T_Sample_MasterMainte.model.js?var=201710041453"></script>
+<script type="text/javascript" src="../../../../../Application/Myapp00/Html/Apps/T_Sample_MasterMainte/T_Sample_MasterMainte.view.js?var=201710041453"></script>
+<script type="text/javascript" src="../../../../../Application/Myapp00/Html/Apps/T_Sample_MasterMainte/T_Sample_MasterMainte.controller.js?var=201710041453"></script>
+<script type="text/javascript" src="../../../../../Application/Myapp00/Html/Apps/T_Sample_MasterMainte/T_Sample_MasterMainte.main.js?var=201710041453"></script>
+</head>
+
+<!-- =================================================================== -->
+<body>                                            <!-- ▼body部 スタート -->
+<!-- =================================================================== -->
+
+<!-- =================================================================== -->
+<div class="container">                        <!-- ▼container スタート -->
+<!-- =================================================================== -->
+
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" id="ヘッダータイトル" href="#">サンプル　メンテナンス</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li>
+          <button id="戻る" name="戻る" type="button" class="btn navbar-btn color4 btn-sm">戻　る：Esc</button>
+          <button id="実行" name="実行" type="button" class="btn navbar-btn color4 btn-sm">実　行：F1</button>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+          <label id="ログイン和暦"></label>
+          <label>　　　　　</label>
+        </li>
+        <li>
+          <label>ログイン日時：</label>
+          <label id="ログイン日時"></label>
+          <br>
+          <label>　ユーザ氏名：　　</label>
+          <label id="ユーザ氏名"></label>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+<!-- ======================================================================== -->
+<form id="mainForm" class="form-horizontal" role="form"> <!-- ▼form スタート -->
+<!-- ======================================================================== -->
+<input type="hidden" name="更新日時"/>
+
+<div class="row">
+  <div class="col-sm-12">
+    <br>
+    <br>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-sm-12">
+    <div id="header-Table1"> <!-- テーブル　スクロール スタート -->
+
+      <!-- 一段目 開始 -->
+              <table class="table table-condensed">
+                <tbody>
+                  <tr>
+                    <td class="width200 rmenuCenter">
+                      Ｔサンプル_マスタＩＤ
+                    </td>
+                    <td class="width600">
+                      <input type="text" id="Ｔサンプル_マスタＩＤ" name="Ｔサンプル_マスタＩＤ"  class="input-sm  form-control" readonly="readonly" tabIndex=-1>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="width200 rmenuCenter">
+                      Ｔサンプル_マスタ項目０１
+                    </td>
+                    <td class="width600">
+                      <input type="text" id="Ｔサンプル_マスタ項目０１" name="Ｔサンプル_マスタ項目０１" class="form-control input-sm rfocusblue">
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="width200 rmenuCenter">
+                      Ｔサンプル_マスタ項目０２
+                    </td>
+                    <td class="width600">
+                      <input type="text" id="Ｔサンプル_マスタ項目０２" name="Ｔサンプル_マスタ項目０２"  class="form-control input-sm rfocusblue">
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="width200 rmenuCenter">
+                      Ｔサンプル_マスタ項目０３
+                    </td>
+                    <td class="width600">
+                      <input type="text" id="Ｔサンプル_マスタ項目０３" name="Ｔサンプル_マスタ項目０３"  class="form-control input-sm rfocusblue">
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="width200 rmenuCenter">
+                      Ｔサンプル_マスタ項目０４
+                    </td>
+                    <td class="width600">
+                      <input type="text" id="Ｔサンプル_マスタ項目０４" name="Ｔサンプル_マスタ項目０４"  class="form-control input-sm rfocusblue">
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="width200 rmenuCenter">
+                      Ｔサンプル_マスタ項目０５
+                    </td>
+                    <td class="width600">
+                      <input type="text" id="Ｔサンプル_マスタ項目０５" name="Ｔサンプル_マスタ項目０５"  class="form-control input-sm rfocusblue">
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="width200 rmenuCenter">
+                      Ｔサンプル_マスタ項目０６
+                    </td>
+                    <td class="width600">
+                      <input type="text" id="Ｔサンプル_マスタ項目０６" name="Ｔサンプル_マスタ項目０６"  class="form-control input-sm rfocusblue">
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="width200 rmenuCenter">
+                      Ｔサンプル_マスタ項目０７
+                    </td>
+                    <td class="width600">
+                      <input type="text" id="Ｔサンプル_マスタ項目０７" name="Ｔサンプル_マスタ項目０７"  class="form-control input-sm rfocusblue">
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="width200 rmenuCenter">
+                      Ｔサンプル_マスタ項目０８
+                    </td>
+                    <td class="width600">
+                      <input type="text" id="Ｔサンプル_マスタ項目０８" name="Ｔサンプル_マスタ項目０８"  class="form-control input-sm rfocusblue">
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="width200 rmenuCenter">
+                      Ｔサンプル_マスタ項目０９
+                    </td>
+                    <td class="width600">
+                      <input type="text" id="Ｔサンプル_マスタ項目０９" name="Ｔサンプル_マスタ項目０９"  class="form-control input-sm rfocusblue">
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="width200 rmenuCenter">
+                      Ｔサンプル_マスタ項目１０
+                    </td>
+                    <td class="width600">
+                      <input type="text" id="Ｔサンプル_マスタ項目１０" name="Ｔサンプル_マスタ項目１０"  class="form-control input-sm rfocusblue">
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="width200 rmenuCenter">
+                      Ｔサンプル_マスタ表示順
+                    </td>
+                    <td class="width600">
+                      <input type="text" id="Ｔサンプル_マスタ表示順" name="Ｔサンプル_マスタ表示順"  class="form-control input-sm rfocusblue">
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-sm-12">
+    <br>
+  </div>
+</div>
+
+<!-- =================================================================== -->
+</form>                                               <!-- ▲form エンド -->
+<!-- =================================================================== -->
+
+<div id="rmenu-pagefooter">
+</div>
+
+<!-- =================================================================== -->
+</div>                                           <!-- ▲container エンド -->
+<!-- =================================================================== -->
+
+<!-- =================================================================== -->
+</body>                                             <!-- ▲body部 エンド --> 
+<!-- =================================================================== -->
+</html>

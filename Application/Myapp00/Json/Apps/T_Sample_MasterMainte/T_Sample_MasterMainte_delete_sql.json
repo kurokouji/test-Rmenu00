@@ -1,0 +1,35 @@
+{
+  "comment": "得意先　メンテナンス　削除処理",
+  "html": "Myapp00/Json/Apps/T_Sample_MasterMainte",
+  "dbname": "myapp00",
+  "mode": "delete",
+  "prog": "no",
+  "message": {
+    "status": "OK",
+    "msg": "削除処理は正常に終了しました。"
+  },
+  "sqls": [{
+    "comment": "得意先　削除処理",
+    "id": "header",
+    "before": "",
+    "after": "",
+    "sql": {
+      "type": "delete",
+      "freesql": "",
+      "genesql": {
+        "dist": "",
+        "from": "Ｔサンプル_マスタ",
+        "where": "Ｔサンプル_マスタＩＤ = ?",
+        "order": ""
+      }
+    },
+    "input": {
+      "multiline": "no",
+      "record": {
+        "Ｔサンプル_マスタＩＤ": {
+          "value": [""]
+        }
+      }
+    }
+  }]
+}

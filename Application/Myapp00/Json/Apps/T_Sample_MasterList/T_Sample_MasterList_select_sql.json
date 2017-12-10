@@ -1,0 +1,105 @@
+{
+  "comment": "顧客　一覧表 検索処理",
+  "html": "Myapp00/Json/Apps/T_Sample_MasterList",
+  "dbname": "myapp00",
+  "mode": "select",
+  "prog": "yes",
+  "message": {
+    "status": "OK",
+    "msg": "照会処理は正常に終了しました。"
+  },
+  "sqls": [{
+    "comment": "総件数を取得する",
+    "id": "total_count",
+    "before": "setSql_T_Sample_MasterListOfMyapp00('header', 'total_count', 'genesql')",
+    "after": "",
+    "sql": {
+      "type": "select",
+      "freesql": "",
+      "genesql": {
+        "dist": "",
+        "from": 
+        [
+          "Ｔサンプル_マスタ"
+        ],
+        "where": "true &&",
+        "order": ""
+      }
+    },
+    "input": {
+      "multiline": "no",
+      "record": {
+      }
+    },
+    "output": {
+      "multiline": "no",
+      "record": {
+        "トータル件数": {
+          "value": [""],
+          "funct": "COUNT(*)"
+        }
+      }
+    }
+  },
+  {
+    "comment": "指定件数分のデータを取得する。getOffsetLine：オフセット行数を計算する。",
+    "id": "detail",
+    "before": 
+    [
+      "setSql_T_Sample_MasterListOfMyapp00('header', 'detail', 'genesql')"
+     ,"getOffsetLineOfMyapp00('header', 'detail')"
+    ],
+    "after": "",
+    "sql": {
+      "type": "select",
+      "freesql": "",
+      "genesql": {
+        "dist": "",
+        "from": "Ｔサンプル_マスタ",
+        "where": "true &&",
+        "order": "Ｔサンプル_マスタＩＤ",
+        "limit": "? OFFSET ?"
+      }
+    },
+    "input": {
+      "multiline": "no",
+      "record": {
+        "ページライン数": {
+          "value": [""],
+          "fromtype": "request",
+          "fromid": "header",
+          "fromio": "",
+          "fromname": "ページライン数"
+        },
+        "オフセットライン数": {
+          "value": [""]
+        }
+      }
+    },
+    "output": {
+      "multiline": "yes",
+      "record": {
+        "Ｔサンプル_マスタＩＤ": {
+          "value": [""],
+          "field": "Ｔサンプル_マスタＩＤ"
+        },
+        "Ｔサンプル_マスタ項目０１": {
+          "value": [""],
+          "field": "Ｔサンプル_マスタ項目０１"
+        },
+        "Ｔサンプル_マスタ項目０２": {
+          "value": [""],
+          "field": "Ｔサンプル_マスタ項目０２"
+        },
+        "Ｔサンプル_マスタ項目０３": {
+          "value": [""],
+          "field": "Ｔサンプル_マスタ項目０３"
+        },
+        "Ｔサンプル_マスタ表示順": {
+          "value": [""],
+          "field": "Ｔサンプル_マスタ表示順"
+        }
+      }
+    }
+  }]
+}
