@@ -1,0 +1,658 @@
+{
+	"request": {
+		"comment": "保守契約　一覧表　契約者台帳ＰＤＦ作成 Ｎｏ２　リクエストデータ",
+		"html": "Myapp00/Json/Apps/R_MainteContractListPrint",
+		"mode": "print01",
+		"prog": "no",
+		"model": "yes",
+		"message": {
+			"status": "OK",
+			"msg": ""
+		},
+		"records": [{
+			"id": "printparam",
+			"before": "",
+			"after": "",
+			"multiline": "no",
+			"record": {
+				"契約ＮＯ": {
+					"value": [""]
+				},
+				"処理日時": {
+					"value": [""]
+				}
+			}
+		}]
+	},
+	"response": {
+		"comment": "用紙サイズＢ４　横：257mm X 364mm    印字サイズ：275mm X 364mm　マージン：0mm 0mm ",
+		"html": "Myapp00/Json/Apps/R_MainteContractListPrint",
+		"mode": "print01",
+		"prog": "no",
+		"pdfinfo": {
+			"prog": "yes",
+			"template": "",
+			"imageTemplate": "MainteContractPrint_200dpi.png",
+			"imageTemplateDpi": "200",
+			"svgTemplate": "",
+			"svgTemplateX": "0",
+			"svgTemplateY": "250",
+			"svgTemplateWidth": "353",
+			"svgTemplateHeight": "250",
+			"pdffile": "MainteContractPrint.pdf",
+			"pdfname": "契約者台帳.pdf",
+			"pagesize": "B4",
+			"pagelayout": ":landscape",
+			"leftmargin": "0",
+			"rightmargin": "0",
+			"topmargin": "0",
+			"bottommargin": "0",
+			"fontfile": "ipagp.ttf",
+			"fontsize": "11",
+			"fontstyle": ":normal",
+			"fontcolor": "",
+			"pointunit": "mm"
+		},
+		"message": {
+			"status": "OK",
+			"msg": "プリント処理は正常に終了しました。"
+		},
+		"records": [{
+			"comment": "ページヘッダ",
+			"id": "page_header",
+			"before": "",
+			"after": "",
+			"multiline": "no",
+			"pdfinfo": {
+				"before":
+				[
+				  "page_header"
+				],
+				"after": "",
+				"pagecontrol": "page_header",
+				"outputcontrol": "all_page",
+				"templatepage": "1",
+				"fontfile": "",
+				"fontsize": "14",
+				"fontstyle": "",
+				"fontcolor": ""
+			},
+			"record": {
+				"処理日付タイトル": {
+					"value": ["日付"],
+					"pdfinfo": {
+						"type": "text_box",
+						"font": {
+							"file": "",
+							"size": "9",
+							"style": "",
+							"color": ""
+						},
+						"box": {
+							"width": "10",
+							"height": "5",
+							"align": ":left"
+						},
+						"axis": {
+							"x": ["305"],
+							"y": ["245.65"]
+						}
+					}
+				},
+				"処理日付": {
+					"value": [""],
+					"pdfinfo": {
+						"type": "text_box",
+						"font": {
+							"file": "",
+							"size": "9",
+							"style": "",
+							"color": ""
+						},
+						"box": {
+							"width": "28",
+							"height": "5",
+							"align": ":right"
+						},
+						"axis": {
+							"x": ["315"],
+							"y": ["245.65"]
+						}
+					}
+				},
+				"処理時刻": {
+					"value": [""],
+					"pdfinfo": {
+						"type": "text_box",
+						"font": {
+							"file": "",
+							"size": "9",
+							"style": "",
+							"color": ""
+						},
+						"box": {
+							"width": "28",
+							"height": "5",
+							"align": ":right"
+						},
+						"axis": {
+							"x": ["315"],
+							"y": ["241.3"]
+						}
+					}
+				},
+				"ページタイトル": {
+					"value": ["ページ"],
+					"pdfinfo": {
+						"type": "text_box",
+						"font": {
+							"file": "",
+							"size": "9",
+							"style": "",
+							"color": ""
+						},
+						"box": {
+							"width": "10",
+							"height": "5",
+							"align": ":left"
+						},
+						"axis": {
+							"x": ["305"],
+							"y": ["236.95"]
+						}
+					}
+				},
+				"ページ": {
+					"value": [""],
+					"pdfinfo": {
+						"type": "text_box",
+						"font": {
+							"file": "",
+							"size": "9",
+							"style": "",
+							"color": ""
+						},
+						"box": {
+							"width": "28",
+							"height": "5",
+							"align": ":right"
+						},
+						"axis": {
+							"x": ["315"],
+							"y": ["236.95"]
+						}
+					}
+				},
+				"契約ＮＯタイトル": {
+					"value": ["契約№："],
+					"pdfinfo": {
+						"type": "text_box",
+						"font": {
+							"file": "",
+							"size": "10",
+							"style": "",
+							"color": ""
+						},
+						"box": {
+							"width": "13.05",
+							"height": "6",
+							"align": ":right",
+							"valign": ":center"
+						},
+						"axis": {
+							"x": ["8.7"],
+							"y": ["228.25"]
+						}
+					}
+				},
+				"契約ＮＯ": {
+					"value": [""],
+					"fromtype": "sqls",
+					"fromid": "header",
+					"fromio": "output",
+					"fromname": "契約ＮＯ",
+					"pdfinfo": {
+						"type": "text_box",
+						"font": {
+							"file": "",
+							"size": "12",
+							"style": "",
+							"color": ""
+						},
+						"box": {
+							"width": "21.75",
+							"height": "6",
+							"align": ":center",
+							"valign": ":center"
+						},
+						"axis": {
+							"x": ["23.75"],
+							"y": ["228.25"]
+						}
+					}
+				},
+				"顧客名称タイトル": {
+					"value": ["顧客名称："],
+					"pdfinfo": {
+						"type": "text_box",
+						"font": {
+							"file": "",
+							"size": "10",
+							"style": "",
+							"color": ""
+						},
+						"box": {
+							"width": "17.4",
+							"height": "6",
+							"align": ":right",
+							"valign": ":center"
+						},
+						"axis": {
+							"x": ["48.5"],
+							"y": ["228.25"]
+						}
+					}
+				},
+				"顧客名称": {
+					"value": [""],
+					"fromtype": "sqls",
+					"fromid": "header",
+					"fromio": "output",
+					"fromname": "顧客名称",
+					"pdfinfo": {
+						"type": "text_box",
+						"font": {
+							"file": "",
+							"size": "12",
+							"style": "",
+							"color": ""
+						},
+						"box": {
+							"width": "100",
+							"height": "6",
+							"align": ":left",
+							"valign": ":center",
+							"overflow": ":shrink_to_fit"
+						},
+						"axis": {
+							"x": ["67.9"],
+							"y": ["228.25"]
+						}
+					}
+				}
+			}
+		},
+		{
+			"comment": "明細一行目①",
+			"id": "detail1_1",
+			"before": "",
+			"after": "",
+			"multiline": "yes",
+			"pdfinfo": {
+				"pagecontrol": "detail",
+				"outputcontrol": "all_page",
+				"templatepage": "1",
+				"fontfile": "ipagp.ttf",
+				"fontsize": "10",
+				"fontstyle": "",
+				"fontcolor": "",
+				"pagelines": "24",
+				"yposition": "212.59",
+				"movedown": "8.7"
+			},
+			"record": {
+				"表示用設備行番": {
+					"value": [""],
+					"fromtype": "sqls",
+					"fromid": "detail",
+					"fromio": "output",
+					"fromname": "表示用設備行番",
+					"pdfinfo": {
+						"type": "text_box",
+						"font": {
+							"file": "",
+							"size": "",
+							"style": "",
+							"color": ""
+						},
+						"box": {
+							"width": "12.05",
+							"height": "8.7",
+							"align": ":center",
+							"valign": ":center",
+							"overflow": ":shrink_to_fit"
+						},
+						"axis": {
+							"x": ["9.20"],
+							"y": [""]
+						}
+					}
+				},
+				"設備タイプ名称": {
+					"value": [""],
+					"fromtype": "sqls",
+					"fromid": "detail",
+					"fromio": "output",
+					"fromname": "設備タイプ名称",
+					"pdfinfo": {
+						"type": "text_box",
+						"font": {
+							"file": "",
+							"size": "",
+							"style": "",
+							"color": ""
+						},
+						"box": {
+							"width": "33.8",
+							"height": "8.7",
+							"align": ":left",
+							"valign": ":center",
+							"overflow": ":shrink_to_fit"
+						},
+						"axis": {
+							"x": ["22.25"],
+							"y": [""]
+						}
+					}
+				},
+				"設備名称": {
+					"value": [""],
+					"fromtype": "sqls",
+					"fromid": "detail",
+					"fromio": "output",
+					"fromname": "設備名称",
+					"pdfinfo": {
+						"type": "text_box",
+						"font": {
+							"file": "",
+							"size": "",
+							"style": "",
+							"color": ""
+						},
+						"box": {
+							"width": "33.8",
+							"height": "8.7",
+							"align": ":left",
+							"valign": ":center",
+							"overflow": ":shrink_to_fit"
+						},
+						"axis": {
+							"x": ["57.05"],
+							"y": [""]
+						}
+					}
+				},
+				"契約単価": {
+					"value": [""],
+					"fromtype": "sqls",
+					"fromid": "detail",
+					"fromio": "output",
+					"fromname": "契約単価",
+					"pdfinfo": {
+						"type": "text_box",
+						"font": {
+							"file": "",
+							"size": "",
+							"style": "",
+							"color": ""
+						},
+						"box": {
+							"width": "20.75",
+							"height": "8.7",
+							"align": ":right",
+							"valign": ":center",
+							"overflow": ":shrink_to_fit"
+						},
+						"axis": {
+							"x": ["91.85"],
+							"y": [""]
+						}
+					}
+				},
+				"標準業者名称": {
+					"value": [""],
+					"fromtype": "sqls",
+					"fromid": "detail",
+					"fromio": "output",
+					"fromname": "標準業者名称",
+					"pdfinfo": {
+						"type": "text_box",
+						"font": {
+							"file": "",
+							"size": "",
+							"style": "",
+							"color": ""
+						},
+						"box": {
+							"width": "33.8",
+							"height": "8.7",
+							"align": ":left",
+							"valign": ":center",
+							"overflow": ":shrink_to_fit"
+						},
+						"axis": {
+							"x": ["113.60"],
+							"y": [""]
+						}
+					}
+				},
+				"表示用作業区分": {
+					"value": [""],
+					"fromtype": "sqls",
+					"fromid": "detail",
+					"fromio": "output",
+					"fromname": "表示用作業区分",
+					"pdfinfo": {
+						"type": "text_box",
+						"font": {
+							"file": "",
+							"size": "",
+							"style": "",
+							"color": ""
+						},
+						"box": {
+							"width": "20.75",
+							"height": "8.7",
+							"align": ":left",
+							"valign": ":center",
+							"overflow": ":shrink_to_fit"
+						},
+						"axis": {
+							"x": ["148.40"],
+							"y": [""]
+						}
+					}
+				},
+				"作業区分摘要": {
+					"value": [""],
+					"fromtype": "sqls",
+					"fromid": "detail",
+					"fromio": "output",
+					"fromname": "作業区分摘要",
+					"pdfinfo": {
+						"type": "text_box",
+						"font": {
+							"file": "",
+							"size": "",
+							"style": "",
+							"color": ""
+						},
+						"box": {
+							"width": "33.8",
+							"height": "8.7",
+							"align": ":left",
+							"valign": ":center",
+							"overflow": ":shrink_to_fit"
+						},
+						"axis": {
+							"x": ["170.15"],
+							"y": [""]
+						}
+					}
+				},
+				"インターバル": {
+					"value": [""],
+					"fromtype": "sqls",
+					"fromid": "detail",
+					"fromio": "output",
+					"fromname": "インターバル",
+					"pdfinfo": {
+						"type": "text_box",
+						"font": {
+							"file": "",
+							"size": "",
+							"style": "",
+							"color": ""
+						},
+						"box": {
+							"width": "20.75",
+							"height": "8.7",
+							"align": ":center",
+							"valign": ":center",
+							"overflow": ":shrink_to_fit"
+						},
+						"axis": {
+							"x": ["204.95"],
+							"y": [""]
+						}
+					}
+				},
+				"諸掛行番": {
+					"value": [""],
+					"fromtype": "sqls",
+					"fromid": "detail",
+					"fromio": "output",
+					"fromname": "諸掛行番",
+					"pdfinfo": {
+						"type": "text_box",
+						"font": {
+							"file": "",
+							"size": "",
+							"style": "",
+							"color": ""
+						},
+						"box": {
+							"width": "12.05",
+							"height": "8.7",
+							"align": ":center",
+							"valign": ":center",
+							"overflow": ":shrink_to_fit"
+						},
+						"axis": {
+							"x": ["226.70"],
+							"y": [""]
+						}
+					}
+				},
+				"標準単価": {
+					"value": [""],
+					"fromtype": "sqls",
+					"fromid": "detail",
+					"fromio": "output",
+					"fromname": "標準単価",
+					"pdfinfo": {
+						"type": "text_box",
+						"font": {
+							"file": "",
+							"size": "",
+							"style": "",
+							"color": ""
+						},
+						"box": {
+							"width": "20.75",
+							"height": "8.7",
+							"align": ":right",
+							"valign": ":center",
+							"overflow": ":shrink_to_fit"
+						},
+						"axis": {
+							"x": ["239.75"],
+							"y": [""]
+						}
+					}
+				},
+				"標準数量": {
+					"value": [""],
+					"fromtype": "sqls",
+					"fromid": "detail",
+					"fromio": "output",
+					"fromname": "標準数量",
+					"pdfinfo": {
+						"type": "text_box",
+						"font": {
+							"file": "",
+							"size": "",
+							"style": "",
+							"color": ""
+						},
+						"box": {
+							"width": "20.75",
+							"height": "8.7",
+							"align": ":right",
+							"valign": ":center",
+							"overflow": ":shrink_to_fit"
+						},
+						"axis": {
+							"x": ["261.50"],
+							"y": [""]
+						}
+					}
+				},
+				"請求フラグ": {
+					"value": [""],
+					"fromtype": "sqls",
+					"fromid": "detail",
+					"fromio": "output",
+					"fromname": "請求フラグ",
+					"pdfinfo": {
+						"type": "text_box",
+						"font": {
+							"file": "",
+							"size": "",
+							"style": "",
+							"color": ""
+						},
+						"box": {
+							"width": "20.75",
+							"height": "8.7",
+							"align": ":center",
+							"valign": ":center",
+							"overflow": ":shrink_to_fit"
+						},
+						"axis": {
+							"x": ["283.25"],
+							"y": [""]
+						}
+					}
+				},
+				"摘要": {
+					"value": [""],
+					"fromtype": "sqls",
+					"fromid": "detail",
+					"fromio": "output",
+					"fromname": "摘要",
+					"pdfinfo": {
+						"type": "text_box",
+						"font": {
+							"file": "",
+							"size": "",
+							"style": "",
+							"color": ""
+						},
+						"box": {
+							"width": "42.5",
+							"height": "8.7",
+							"align": ":left",
+							"valign": ":center",
+							"overflow": ":shrink_to_fit"
+						},
+						"axis": {
+							"x": ["305.00"],
+							"y": [""]
+						}
+					}
+				}
+			}
+		}]
+	}
+}

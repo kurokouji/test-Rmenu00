@@ -1,0 +1,50 @@
+{
+	"request": {
+		"comment": "保守契約　一覧表　契約者台帳ＰＤＦ作成 Ｎｏ１　リクエストデータ",
+		"html": "Myapp00/Json/Apps/T_Sample_MasterList",
+		"mode": "print01",
+		"prog": "no",
+		"model": "yes",
+		"message": {
+			"status": "OK",
+			"msg": ""
+		},
+		"records": [{
+			"id": "header",
+			"before": "",
+			"after": "",
+			"multiline": "no",
+			"record": {
+				"検索顧客名称": {
+					"value": [""]
+				},
+				"検索設備タイプ名称": {
+					"value": [""]
+				},
+				"検索設備名称": {
+					"value": [""]
+				},
+				"検索作業区分": {
+					"value": [""]
+				},
+				"検索業者名称": {
+					"value": [""]
+				}
+			}
+		}]
+	},
+	"response": {
+		"comment": "保守契約　一覧表　契約者台帳ＰＤＦ作成 Ｎｏ１　レスポンスデータ",
+		"html": "Myapp00/Json/Apps/T_Sample_MasterList",
+		"mode": "print01",
+		"prog": "yes",
+		"message": {
+			"status": "OK",
+			"msg": "保守契約　一覧表　帳票作成　処理は正常に終了しました。"
+		},
+		"pdfinfo": {
+			"pdfname": "契約者台帳",
+			"pdffile": "MainteContractPrint.pdf"
+		}
+	}
+}

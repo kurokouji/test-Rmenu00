@@ -37,7 +37,9 @@
     // ----------------------------------------------------------------------------------------
    ,requestInfo: [
       ["select",    "on照会OfCheckRequestData",    "on照会OfEditResponseData",    "onErrorResponseData"]
-     // ここから追加処理
+    // ここから追加処理
+     ,["print01",      "onＰＤＦ作成OfCheckRequestData" ,       "onＰＤＦ作成OfEditResponseData" , "onErrorResponseData"] // 保守契約一覧表ＰＤＦ
+     ,["batchprint",   "onＰＤＦ作成バッチOfCheckRequestData" , "onＰＤＦ作成バッチOfEditResponseData", "onErrorResponseData"]
     ]
     // --------------------------------------------------
     // エンター・タブとPFキーのコールバック関数を定義する
@@ -81,6 +83,8 @@
      // ここから追加処理
      ,["#保守契約一覧",         "click", "on保守契約一覧"]
      ,["#保守サービス指示一覧", "click", "on保守サービス指示一覧"]
+     ,["#契約者台帳ＰＤＦ"    , "click", "on契約者台帳ＰＤＦ"    ]
+     ,["#契約者台帳ＰＤＦバッチ", "click", "on契約者台帳ＰＤＦバッチ"]
      ]
     // ----------------------------------------------------------------
     // 権限情報の設定（使用不可のロールを設定する）

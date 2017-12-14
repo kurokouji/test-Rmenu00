@@ -1,0 +1,193 @@
+{
+	"comment": "保守契約　一覧表　契約者台帳ＰＤＦ作成　Ｎｏ２",
+	"html": "Myapp00/Json/Apps/R_MainteContractListPrint",
+	"dbname": "setubi",
+	"mode": "print01",
+	"prog": "no",
+	"message": {
+		"status": "OK",
+		"msg": "保守契約　一覧表　契約者台帳ＰＤＦ作成　Ｎｏ２　処理は正常に終了しました。"
+	},
+	"sqls": [{
+		"comment": "ヘッダー情報を取得する",
+		"id": "header",
+		"before": "",
+		"after": "",
+		"sql": {
+			"type": "select",
+			"freesql": "",
+			"genesql": {
+				"dist": "yes",
+				"from":
+				[
+				  "保守契約                         AS A",
+				  "  LEFT OUTER JOIN 顧客 AS B",
+				  "    ON (A.ref_顧客ＩＤ     = B.顧客ＩＤ)"
+				],
+				"where": "契約ＮＯ = ?",
+				"order": "",
+				"limit": ""
+			}
+		},
+		"input": {
+			"multiline": "no",
+			"record": {
+				"契約ＮＯ": {
+					"value": [""],
+					"fromtype": "request",
+					"fromid": "printparam",
+					"fromio": "",
+					"fromname": "契約ＮＯ"
+				}
+			}
+		},
+		"output": {
+			"multiline": "yes",
+			"record": {
+				"契約ＮＯ": {
+					"value": [""],
+					"funct": "TO_CHAR(A.契約ＮＯ, 'FM999999999')"
+				},
+				"顧客名称": {
+					"value": [""],
+					"field": "名称",
+					"table": "B"
+				}
+			}
+		}
+	},
+	{
+		"comment": "明細行を取得する。",
+		"id": "detail",
+		"before": "",
+		"after": "",
+		"sql": {
+			"type": "select",
+			"freesql": "",
+			"genesql": {
+				"dist": "",
+				"from":
+				[
+				  "保守契約                         AS A",
+				  "LEFT OUTER JOIN 契約設備明細     AS B ON (A.契約ＮＯ         = B.ref_契約ＮＯ)",
+				  "LEFT OUTER JOIN 契約保守作業明細 AS C ON (B.ref_契約ＮＯ     = C.ref_契約ＮＯ AND B.設備行番号     = C.ref_設備行番号)",
+				  "LEFT OUTER JOIN 契約保守諸掛明細 AS D ON (C.ref_契約ＮＯ     = D.ref_契約ＮＯ AND C.ref_設備行番号 = D.ref_設備行番号 AND C.作業区分 = D.ref_作業区分)",
+				  "LEFT OUTER JOIN 顧客             AS E ON (A.ref_顧客ＩＤ     = E.顧客ＩＤ)",
+				  "LEFT OUTER JOIN 設備タイプ       AS F ON (B.ref_設備タイプ   = F.設備タイプ)",
+				  "LEFT OUTER JOIN 業者             AS G ON (B.ref_標準業者ＩＤ = G.業者ＩＤ)"
+				],
+				"where": "A.契約ＮＯ = ?",
+				"order": "B.設備行番号, C.作業区分, D.諸掛行番",
+				"limit": ""
+			}
+		},
+		"input": {
+			"multiline": "no",
+			"record": {
+				"契約ＮＯ": {
+					"value": [""],
+					"fromtype": "request",
+					"fromid": "printparam",
+					"fromio": "",
+					"fromname": "契約ＮＯ"
+				}
+			}
+		},
+		"output": {
+			"multiline": "yes",
+			"record": {
+				"契約ＮＯ": {
+					"value": [""],
+					"field": "契約ＮＯ",
+					"table": "A"
+				},
+				"設備行番": {
+					"value": [""],
+					"field": "設備行番号",
+					"table": "B"
+				},
+				"設備タイプ": {
+					"value": [""],
+					"field": "ref_設備タイプ",
+					"table": "B"
+				},
+				"作業区分": {
+					"value": [""],
+					"field": "作業区分",
+					"table": "C"
+				},
+				"表示用契約ＮＯ": {
+					"value": [""],
+					"field": "契約ＮＯ",
+					"table": "A"
+				},
+				"顧客名称": {
+					"value": [""],
+					"field": "名称",
+					"table": "E"
+				},
+				"表示用設備行番": {
+					"value": [""],
+					"field": "設備行番号",
+					"table": "B"
+				},
+				"設備タイプ名称": {
+					"value": [""],
+					"field": "名称",
+					"table": "F"
+				},
+				"設備名称": {
+					"value": [""],
+					"field": "設備名",
+					"table": "B"
+				},
+				"契約単価": {
+					"value": [""],
+					"funct": "TO_CHAR(B.契約単価, 'FM999,999,999')"
+				},
+				"標準業者名称": {
+					"value": [""],
+					"field": "名称",
+					"table": "G"
+				},
+				"表示用作業区分": {
+					"value": [""],
+					"field": "作業区分",
+					"table": "C"
+				},
+				"作業区分摘要": {
+					"value": [""],
+					"field": "摘要",
+					"table": "C"
+				},
+				"インターバル": {
+					"value": [""],
+					"field": "標準インターバル",
+					"table": "C"
+				},
+				"諸掛行番": {
+					"value": [""],
+					"field": "諸掛行番",
+					"table": "D"
+				},
+				"標準単価": {
+					"value": [""],
+					"funct": "TO_CHAR(D.標準単価, 'FM999,999,999')"
+				},
+				"標準数量": {
+					"value": [""],
+					"funct": "TO_CHAR(D.標準数量, 'FM999,999,999')"
+				},
+				"請求フラグ": {
+					"value": [""],
+					"funct": "CASE D.請求対象フラグ WHEN '1' THEN '請求する' WHEN '0' THEN '請求しない'ELSE '' END"
+				},
+				"摘要": {
+					"value": [""],
+					"field": "摘要",
+					"table": "D"
+				}
+			}
+		}
+	}]
+}

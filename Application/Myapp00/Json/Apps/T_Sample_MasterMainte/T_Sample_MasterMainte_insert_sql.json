@@ -122,6 +122,14 @@
           "fromid" : "header",
           "fromio" : "",
           "fromname" : "Ｔサンプル_マスタ表示順"
+        },
+        "削除フラグ": {
+          "value": [""],
+          "field": "削除フラグ",
+          "fromtype" : "request",
+          "fromid" : "header",
+          "fromio" : "",
+          "fromname" : "削除フラグ"
         }
       }
     }
@@ -236,6 +244,10 @@
         "Ｔサンプル_マスタ表示順": {
           "value": [""],
           "field": "Ｔサンプル_マスタ表示順"
+        },
+        "削除フラグ": {
+          "value": [""],
+          "field": "削除フラグ"
         }
       }
     }

@@ -73,7 +73,66 @@
 
       $R.log("Controller on保守サービス指示一覧 : end");
     }
+
+
+    ,on契約者台帳ＰＤＦ: function(event) {
+      $R.log("Controller on契約者台帳ＰＤＦ : start");
+
+      this.ajaxExecute("print01");
+
+      $R.log("Controller on契約者台帳ＰＤＦ : end");
+    }
+
+    ,on契約者台帳ＰＤＦバッチ: function(event) {
+      $R.log("Controller on契約者台帳ＰＤＦバッチ : start");
+
+      this.ajaxExecute("batchprint");
+
+      $R.log("Controller on契約者台帳ＰＤＦバッチ : end");
+    }
     
+    
+    // -------------------------------------
+    //  リクエストデータ　編集・チェック処理
+    // -------------------------------------
+   ,onＰＤＦ作成OfCheckRequestData: function(requestData, mode) {
+      $R.log("Controller onＰＤＦ作成OfCheckRequestData : start");
+
+      var status = this.checkRequestData(requestData);
+
+      $R.log("Controller onＰＤＦ作成OfCheckRequestData : end");
+      return status;
+    }
+    
+   ,onＰＤＦ作成バッチOfCheckRequestData: function(requestData, mode) {
+      $R.log("Controller onＰＤＦ作成バッチOfCheckRequestData : start");
+
+      var status = this.checkRequestData(requestData);
+
+      $R.log("Controller onＰＤＦ作成バッチOfCheckRequestData : end");
+      return status;
+    }
+
+    // -------------------------------
+    //  レスポンスデータ　編集処理
+    // -------------------------------
+    ,onＰＤＦ作成OfEditResponseData: function(responseData, mode) {
+      $R.log("Controller onＰＤＦ作成OfEditResponseData : start");
+
+      this.model.onＰＤＦ表示OfEditResponseData(responseData, mode);
+
+      $R.log("Controller onＰＤＦ作成OfEditResponseData : end");
+    }
+
+    ,onＰＤＦ作成バッチOfEditResponseData: function(responseData, mode) {
+      $R.log("Controller onＰＤＦ作成バッチOfEditResponseData : start");
+
+      this.model.onＰＤＦ作成バッチOfEditResponseData(responseData, mode);
+
+      $R.log("Controller onＰＤＦ作成バッチOfEditResponseData : end");
+    }
+
+
   });
 
 }(jQuery, Rmenu));

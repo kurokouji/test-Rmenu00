@@ -76,6 +76,12 @@
         "free"],
         "min": "1",
         "max": "200"
+      },
+      "削除フラグ": {
+        "validation": ["required",
+        "free"],
+        "min": "1",
+        "max": "10"
       }
     }
   }]

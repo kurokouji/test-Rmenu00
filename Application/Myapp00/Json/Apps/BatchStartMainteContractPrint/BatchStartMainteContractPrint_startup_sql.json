@@ -1,0 +1,100 @@
+{
+  "comment": "バッチ起動処理",
+  "html": "Myapp00/Json/Apps/BatchStartMainteContractPrint",
+  "dbname": "setubi",
+  "mode": "startup",
+  "prog": "yes",
+  "message": {
+    "status": "OK",
+    "msg": "設備台帳作成　バッチ処理を起動しました。"
+  },
+  "sqls": [{
+    "comment": "並列分散バッチ　キー情報",
+    "id": "parallelKey",
+    "before": "batch_paramkeyget('Myapp00', 'BatchStartMainteContractPrint', 'startup')",
+    "after": "",
+    "sql": {
+      "type": "nosql"
+    },
+    "input": {
+      "multiline": "no",
+      "record": {
+        "検索顧客名称": {
+          "value": [""]
+        },
+        "検索設備タイプ名称": {
+          "value": [""]
+        },
+        "検索設備名称": {
+          "value": [""]
+        },
+        "検索作業区分": {
+          "value": [""]
+        },
+        "検索業者名称": {
+          "value": [""]
+        }
+      }
+    }
+  },
+  {
+    "comment": "並列分散バッチ　パラメータ情報",
+    "id": "parallelParam",
+    "before": "",
+    "after": "",
+    "sql": {
+      "type": "nosql"
+    },
+    "input": {
+      "multiline": "no",
+      "record": {
+        "ユーザＩＤ": {
+          "value": [""]
+        }
+      }
+    }
+  },
+  {
+    "comment": "並列分散バッチ　起動情報",
+    "id": "parallelControll",
+    "dbname": "setubi",
+    "before": "",
+    "after": "",
+    "sql": {
+      "type": "nosql"
+    },
+    "input": {
+      "multiline": "no",
+      "record": {
+        "parallel_controll_id": {
+          "value": ["0"]
+        },
+        "process_name": {
+          "value": ["設備台帳　一覧表作成処理"]
+        },
+        "process_html": {
+          "value": ["Myapp00/Json/Apps/BatchProcMainteContractPrint"]
+        },
+        "process_mode": {
+          "value": ["print"]
+        },
+        "division_number": {
+          "value": ["1"]
+        },
+        "next_process": {
+          "value": [""]
+        },
+        "user_id": {
+          "value": [""],
+          "fromtype": "sqls",
+          "fromid": "parallelParam",
+          "fromio": "input",
+          "fromname": "ユーザＩＤ"
+        },
+        "division_end_number": {
+          "value": ["0"]
+        }
+      }
+    }
+  }]
+}
