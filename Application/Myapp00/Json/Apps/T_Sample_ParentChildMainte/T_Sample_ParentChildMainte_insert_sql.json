@@ -169,6 +169,125 @@
           "fromio" : "",
           "fromname" : "Ｔサンプル_明細項目０３"
         },
+        "Ｔサンプル_明細項目０４": {
+          "value": [""],
+          "fromtype" : "request",
+          "fromid" : "detail",
+          "fromio" : "",
+          "fromname" : "Ｔサンプル_明細項目０４"
+        },
+        "Ｔサンプル_明細項目０５": {
+          "value": [""],
+          "fromtype" : "request",
+          "fromid" : "detail",
+          "fromio" : "",
+          "fromname" : "Ｔサンプル_明細項目０５"
+        },
+        "Ｔサンプル_明細項目０６": {
+          "value": [""],
+          "fromtype" : "request",
+          "fromid" : "detail",
+          "fromio" : "",
+          "fromname" : "Ｔサンプル_明細項目０６"
+        },
+        "Ｔサンプル_明細項目０７": {
+          "value": [""],
+          "fromtype" : "request",
+          "fromid" : "detail",
+          "fromio" : "",
+          "fromname" : "Ｔサンプル_明細項目０７"
+        },
+        "Ｔサンプル_明細項目０８": {
+          "value": [""],
+          "fromtype" : "request",
+          "fromid" : "detail",
+          "fromio" : "",
+          "fromname" : "Ｔサンプル_明細項目０８"
+        },
+        "Ｔサンプル_明細項目０９": {
+          "value": [""],
+          "fromtype" : "request",
+          "fromid" : "detail",
+          "fromio" : "",
+          "fromname" : "Ｔサンプル_明細項目０９"
+        },
+        "Ｔサンプル_明細項目１０": {
+          "value": [""],
+          "fromtype" : "request",
+          "fromid" : "detail",
+          "fromio" : "",
+          "fromname" : "Ｔサンプル_明細項目１０"
+        },
+        "Ｔサンプル_明細項目１１": {
+          "value": [""],
+          "fromtype" : "request",
+          "fromid" : "detail",
+          "fromio" : "",
+          "fromname" : "Ｔサンプル_明細項目１１"
+        },
+        "Ｔサンプル_明細項目１２": {
+          "value": [""],
+          "fromtype" : "request",
+          "fromid" : "detail",
+          "fromio" : "",
+          "fromname" : "Ｔサンプル_明細項目１２"
+        },
+        "Ｔサンプル_明細項目１３": {
+          "value": [""],
+          "fromtype" : "request",
+          "fromid" : "detail",
+          "fromio" : "",
+          "fromname" : "Ｔサンプル_明細項目１３"
+        },
+        "Ｔサンプル_明細項目１４": {
+          "value": [""],
+          "fromtype" : "request",
+          "fromid" : "detail",
+          "fromio" : "",
+          "fromname" : "Ｔサンプル_明細項目１４"
+        },
+        "Ｔサンプル_明細項目１５": {
+          "value": [""],
+          "fromtype" : "request",
+          "fromid" : "detail",
+          "fromio" : "",
+          "fromname" : "Ｔサンプル_明細項目１５"
+        },
+        "Ｔサンプル_明細項目１６": {
+          "value": [""],
+          "fromtype" : "request",
+          "fromid" : "detail",
+          "fromio" : "",
+          "fromname" : "Ｔサンプル_明細項目１６"
+        },
+        "Ｔサンプル_明細項目１７": {
+          "value": [""],
+          "fromtype" : "request",
+          "fromid" : "detail",
+          "fromio" : "",
+          "fromname" : "Ｔサンプル_明細項目１７"
+        },
+        "Ｔサンプル_明細項目１８": {
+          "value": [""],
+          "fromtype" : "request",
+          "fromid" : "detail",
+          "fromio" : "",
+          "fromname" : "Ｔサンプル_明細項目１８"
+        },
+        "Ｔサンプル_明細項目１９": {
+          "value": [""],
+          "fromtype" : "request",
+          "fromid" : "detail",
+          "fromio" : "",
+          "fromname" : "Ｔサンプル_明細項目１９"
+        },
+        "Ｔサンプル_明細項目２０": {
+          "value": [""],
+          "fromtype" : "request",
+          "fromid" : "detail",
+          "fromio" : "",
+          "fromname" : "Ｔサンプル_明細項目２０"
+        },
         "Ｔサンプル_区分ＩＤ": {
           "value": [""],
           "field": "ref_Ｔサンプル_区分ＩＤ",
@@ -215,7 +334,7 @@
         "from": 
         [
           "Ｔサンプル_ヘッダ          AS A"
-         ,"LEFT OUTER JOIN サンプル AS B ON (A.ref_Ｔサンプル_マスタＩＤ = B.Ｔサンプル_マスタＩＤ)"
+         ,"LEFT OUTER JOIN Ｔサンプル_マスタ AS B ON (A.ref_Ｔサンプル_マスタＩＤ = B.Ｔサンプル_マスタＩＤ)"
         ],
         "where": "A.Ｔサンプル_ヘッダＩＤ = ?",
         "order": ""
@@ -309,15 +428,66 @@
         "Ｔサンプル_区分ＩＤ": {
           "value": [""],
           "field": "ref_Ｔサンプル_区分ＩＤ"
-        },
-        "Ｔサンプル_明細項目０１": {
-          "value": [""]
-        },
-        "Ｔサンプル_明細項目０２": {
-          "value": [""]
-        },
-        "Ｔサンプル_明細項目０３": {
-          "value": [""]
+      },
+      "Ｔサンプル_明細項目０１": {
+        "value": [""]
+      },
+      "Ｔサンプル_明細項目０２": {
+        "value": [""]
+      },
+      "Ｔサンプル_明細項目０３": {
+        "value": [""]
+      },
+      "Ｔサンプル_明細項目０４": {
+        "value": [""]
+      },
+      "Ｔサンプル_明細項目０５": {
+        "value": [""]
+      },
+      "Ｔサンプル_明細項目０６": {
+        "value": [""]
+      },
+      "Ｔサンプル_明細項目０７": {
+        "value": [""]
+      },
+      "Ｔサンプル_明細項目０８": {
+        "value": [""]
+      },
+      "Ｔサンプル_明細項目０９": {
+        "value": [""]
+      },
+      "Ｔサンプル_明細項目１０": {
+        "value": [""]
+      },
+      "Ｔサンプル_明細項目１１": {
+        "value": [""]
+      },
+      "Ｔサンプル_明細項目１２": {
+        "value": [""]
+      },
+      "Ｔサンプル_明細項目１３": {
+        "value": [""]
+      },
+      "Ｔサンプル_明細項目１４": {
+        "value": [""]
+      },
+      "Ｔサンプル_明細項目１５": {
+        "value": [""]
+      },
+      "Ｔサンプル_明細項目１６": {
+        "value": [""]
+      },
+      "Ｔサンプル_明細項目１７": {
+        "value": [""]
+      },
+      "Ｔサンプル_明細項目１８": {
+        "value": [""]
+      },
+      "Ｔサンプル_明細項目１９": {
+        "value": [""]
+      },
+      "Ｔサンプル_明細項目２０": {
+        "value": [""]
         }
       }
     }

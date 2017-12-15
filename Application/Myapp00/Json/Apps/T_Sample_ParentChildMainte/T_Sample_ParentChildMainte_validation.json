@@ -72,7 +72,7 @@
         "max": "13"
       },
       "Ｔサンプル_明細項目０１": {
-        "validation": ["required",
+        "validation": ["nonrequired",
         "free"],
         "min": "1",
         "max": "100"
@@ -84,6 +84,108 @@
         "max": "100"
       },
       "Ｔサンプル_明細項目０３": {
+        "validation": ["nonrequired",
+        "free"],
+        "min": "1",
+        "max": "100"
+      },
+      "Ｔサンプル_明細項目０４": {
+        "validation": ["nonrequired",
+        "free"],
+        "min": "1",
+        "max": "100"
+      },
+      "Ｔサンプル_明細項目０５": {
+        "validation": ["nonrequired",
+        "free"],
+        "min": "1",
+        "max": "100"
+      },
+      "Ｔサンプル_明細項目０６": {
+        "validation": ["nonrequired",
+        "free"],
+        "min": "1",
+        "max": "100"
+      },
+      "Ｔサンプル_明細項目０７": {
+        "validation": ["nonrequired",
+        "free"],
+        "min": "1",
+        "max": "100"
+      },
+      "Ｔサンプル_明細項目０８": {
+        "validation": ["nonrequired",
+        "free"],
+        "min": "1",
+        "max": "100"
+      },
+      "Ｔサンプル_明細項目０９": {
+        "validation": ["nonrequired",
+        "free"],
+        "min": "1",
+        "max": "100"
+      },
+      "Ｔサンプル_明細項目１０": {
+        "validation": ["nonrequired",
+        "free"],
+        "min": "1",
+        "max": "100"
+      },
+      "Ｔサンプル_明細項目１１": {
+        "validation": ["nonrequired",
+        "free"],
+        "min": "1",
+        "max": "100"
+      },
+      "Ｔサンプル_明細項目１２": {
+        "validation": ["nonrequired",
+        "free"],
+        "min": "1",
+        "max": "100"
+      },
+      "Ｔサンプル_明細項目１３": {
+        "validation": ["nonrequired",
+        "free"],
+        "min": "1",
+        "max": "100"
+      },
+      "Ｔサンプル_明細項目１４": {
+        "validation": ["nonrequired",
+        "free"],
+        "min": "1",
+        "max": "100"
+      },
+      "Ｔサンプル_明細項目１５": {
+        "validation": ["nonrequired",
+        "free"],
+        "min": "1",
+        "max": "100"
+      },
+      "Ｔサンプル_明細項目１６": {
+        "validation": ["nonrequired",
+        "free"],
+        "min": "1",
+        "max": "100"
+      },
+      "Ｔサンプル_明細項目１７": {
+        "validation": ["nonrequired",
+        "free"],
+        "min": "1",
+        "max": "100"
+      },
+      "Ｔサンプル_明細項目１８": {
+        "validation": ["nonrequired",
+        "free"],
+        "min": "1",
+        "max": "100"
+      },
+      "Ｔサンプル_明細項目１９": {
+        "validation": ["nonrequired",
+        "free"],
+        "min": "1",
+        "max": "100"
+      },
+      "Ｔサンプル_明細項目２０": {
         "validation": ["nonrequired",
         "free"],
         "min": "1",

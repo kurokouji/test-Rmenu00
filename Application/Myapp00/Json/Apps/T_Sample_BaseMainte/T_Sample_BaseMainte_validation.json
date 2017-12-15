@@ -41,6 +41,36 @@
         "min": "1",
         "max": "20"
       },
+      "Ｔサンプル_マスタ項目０６": {
+        "validation": ["nonrequired",
+        "free"],
+        "min": "1",
+        "max": "20"
+      },
+      "Ｔサンプル_マスタ項目０７": {
+        "validation": ["nonrequired",
+        "free"],
+        "min": "1",
+        "max": "20"
+      },
+      "Ｔサンプル_マスタ項目０８": {
+        "validation": ["nonrequired",
+        "free"],
+        "min": "1",
+        "max": "20"
+      },
+      "Ｔサンプル_マスタ項目０９": {
+        "validation": ["nonrequired",
+        "free"],
+        "min": "1",
+        "max": "20"
+      },
+      "Ｔサンプル_マスタ項目１０": {
+        "validation": ["nonrequired",
+        "free"],
+        "min": "1",
+        "max": "20"
+      },
       "Ｔサンプル_マスタ表示順": {
         "validation": ["required",
         "integerP"],
