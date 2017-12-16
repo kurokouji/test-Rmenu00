@@ -90,7 +90,7 @@
    ,selectorEvent: [
       [".削除",              "change", "onChange削除"]
     // ここから追加処理
-     ,[".Ｔサンプル_区分ＩＤ",  "change", "onChangeＴサンプル_区分ＩＤ"]
+     ,[".サンプル_区分ＩＤ",  "change", "onChangeサンプル_区分ＩＤ"]
     ]
     // ----------------------------------------------------------------------------------
     // カスタムイベント設定はイベント名・実行コンテキスト・コールバック関数の順に指定する
@@ -119,8 +119,8 @@
    ,sessionStorageHeaderKey: [
       {
          datasetid: "header"
-        ,dataname:  ["Ｔサンプル_ヘッダＩＤ"]
-        ,classname: ["Ｔサンプル_ヘッダＩＤ"]
+        ,dataname:  ["サンプル_ヘッダＩＤ"]
+        ,classname: ["サンプル_ヘッダＩＤ"]
         ,typename:  ["text"]
       }
     ]
@@ -135,7 +135,7 @@
    ,sessionStorageDetailKey: [
       {
          datasetid: "detail"
-        ,dataname:  ["Ｔサンプル_明細行番号"]
+        ,dataname:  ["サンプル_明細行番号"]
         ,typename:  ["dataset"]
       }
     ]
@@ -168,8 +168,8 @@
    ,beforeStorageData: [
       {
          datasetid: "header"
-        ,dataname:  ["Ｔサンプル_ヘッダＩＤ"]
-        ,classname: ["Ｔサンプル_ヘッダＩＤ"]
+        ,dataname:  ["サンプル_ヘッダＩＤ"]
+        ,classname: ["サンプル_ヘッダＩＤ"]
         ,typename:  ["dataset"]
       }
     ]
@@ -209,10 +209,10 @@
     // ----------------------------------------------------------------------------------
    ,selectbox: [
       {
-          selectorid: "Ｔサンプル_区分ＩＤ"
-         ,selectorname: "Ｔサンプル_区分ＩＤ"
-         ,init:     {initvalue: "", inithtml: "サンプル区分選択", datasetid: "選択サンプル区分", valuename: "選択Ｔサンプル_区分ＩＤ", htmlname: "選択Ｔサンプル_区分名称"}
-         ,change:   {datasetid: "detail", valuename: "Ｔサンプル_区分ＩＤ", htmlname: ""}
+          selectorid: "サンプル_区分ＩＤ"
+         ,selectorname: "サンプル_区分ＩＤ"
+         ,init:     {initvalue: "", inithtml: "サンプル_区分選択", datasetid: "選択サンプル_区分", valuename: "選択サンプル_区分ＩＤ", htmlname: "選択サンプル_区分名称"}
+         ,change:   {datasetid: "detail", valuename: "サンプル_区分ＩＤ", htmlname: ""}
       }
     ]
     // ----------------------------------------------------------------------------------

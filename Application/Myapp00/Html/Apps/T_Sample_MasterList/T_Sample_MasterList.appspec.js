@@ -142,8 +142,8 @@
    ,sessionStorageHeaderKey: [
       {
          datasetid: "header"
-        ,dataname:  ["検索Ｔサンプル_マスタ項目０１", "検索Ｔサンプル_マスタ項目０２", "検索Ｔサンプル_マスタ項目０３"]
-        ,classname: ["検索Ｔサンプル_マスタ項目０１", "検索Ｔサンプル_マスタ項目０２", "検索Ｔサンプル_マスタ項目０３"]
+        ,dataname:  ["検索サンプル_マスタ項目０１", "検索サンプル_マスタ項目０２", "検索サンプル_マスタ項目０３"]
+        ,classname: ["検索サンプル_マスタ項目０１", "検索サンプル_マスタ項目０２", "検索サンプル_マスタ項目０３"]
         ,typename:  ["text",                 "text",     "text"]
       }
     ]
@@ -158,7 +158,7 @@
    ,sessionStorageDetailKey: [
       {
          datasetid: "detail"
-        ,dataname:  ["Ｔサンプル_マスタＩＤ"]
+        ,dataname:  ["サンプル_マスタＩＤ"]
         ,typename:  ["dataset"]
       }
     ]
@@ -187,15 +187,15 @@
    ,nextStorageData: [
       {
          datasetid:   "header"
-        ,dataname:    ["検索Ｔサンプル_マスタ項目０１"]
+        ,dataname:    ["検索サンプル_マスタ項目０１"]
         ,validation:  ["nonrequired"]
-        ,titlename:   ["検索Ｔサンプル_マスタ項目０１"]
+        ,titlename:   ["検索サンプル_マスタ項目０１"]
       },
       {
          datasetid:   "detail"
-        ,dataname:    ["Ｔサンプル_マスタＩＤ"]
+        ,dataname:    ["サンプル_マスタＩＤ"]
         ,validation:  ["nonrequired"]
-        ,titlename:   ["Ｔサンプル_マスタＩＤ"]
+        ,titlename:   ["サンプル_マスタＩＤ"]
       }
     ]
     // ----------------------------------------------------------------------------------

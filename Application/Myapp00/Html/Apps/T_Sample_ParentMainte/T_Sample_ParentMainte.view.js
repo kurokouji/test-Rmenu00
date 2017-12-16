@@ -47,9 +47,9 @@
         }
       }
       
-      // Ｔサンプル_ヘッダＩＤが空の時、サンプル子メンテボタンをハイドにする
+      // サンプル_ヘッダＩＤが空の時、サンプル子メンテボタンをハイドにする
       var headerRecord = this.appspec.getJSONChunkByIdAtRecords(dataSet, "header")["record"];
-      if (headerRecord["Ｔサンプル_ヘッダＩＤ"]["value"][0] == "") {
+      if (headerRecord["サンプル_ヘッダＩＤ"]["value"][0] == "") {
         $("#サンプル子メンテ").hide();
       }
       else {

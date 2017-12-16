@@ -135,8 +135,8 @@
    ,sessionStorageHeaderKey: [
       {
          datasetid: "header"
-        ,dataname:  ["検索Ｔサンプル_ヘッダ項目０１", "検索Ｔサンプル_ヘッダ項目０２", "検索Ｔサンプル_マスタ項目０１"]
-        ,classname: ["検索Ｔサンプル_ヘッダ項目０１", "検索Ｔサンプル_ヘッダ項目０２", "検索Ｔサンプル_マスタ項目０１"]
+        ,dataname:  ["検索サンプル_ヘッダ項目０１", "検索サンプル_ヘッダ項目０２", "検索サンプル_マスタ項目０１"]
+        ,classname: ["検索サンプル_ヘッダ項目０１", "検索サンプル_ヘッダ項目０２", "検索サンプル_マスタ項目０１"]
         ,typename:  ["text",             "text",             "text"]
       }
     ]
@@ -151,7 +151,7 @@
    ,sessionStorageDetailKey: [
       {
          datasetid: "detail"
-        ,dataname:  ["Ｔサンプル_ヘッダＩＤ"]
+        ,dataname:  ["サンプル_ヘッダＩＤ"]
         ,typename:  ["dataset"]
       }
     ]
@@ -180,9 +180,9 @@
    ,nextStorageData: [
       {
          datasetid:   "detail"
-        ,dataname:    ["Ｔサンプル_ヘッダＩＤ"]
+        ,dataname:    ["サンプル_ヘッダＩＤ"]
         ,validation:  ["nonrequired"]
-        ,titlename:   ["Ｔサンプル_ヘッダＩＤ"]
+        ,titlename:   ["サンプル_ヘッダＩＤ"]
       }
     ]
     // ----------------------------------------------------------------------------------

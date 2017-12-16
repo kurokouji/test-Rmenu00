@@ -35,16 +35,16 @@
       var dataSet      = this.dataset.getData();
       var headerRecord = this.appspec.getJSONChunkByIdAtRecords(dataSet, "header")["record"];
       var detailRecord = this.appspec.getJSONChunkByIdAtRecords(dataSet, "detail")["record"];
-      if (headerRecord["検索Ｔサンプル_マスタ項目０１"]["value"][0] != "") {
+      if (headerRecord["検索サンプル_マスタ項目０１"]["value"][0] != "") {
         return false;
       }
 
-      // 保守契約一覧画面への引継ぎデータ（検索Ｔサンプル_マスタ項目０１）をセット
+      // 保守契約一覧画面への引継ぎデータ（検索サンプル_マスタ項目０１）をセット
       sessionStorage.setIdName(this.appspec.sysname + "." + this.appspec.name);
       var clickRow      = sessionStorage.loadItem("クリック行");
 
-      w_検索Ｔサンプル_マスタ項目０１ = detailRecord["Ｔサンプル_マスタ項目０１"]["value"][clickRow];
-      headerRecord["検索Ｔサンプル_マスタ項目０１"]["value"][0] = w_検索Ｔサンプル_マスタ項目０１;
+      w_検索サンプル_マスタ項目０１ = detailRecord["サンプル_マスタ項目０１"]["value"][clickRow];
+      headerRecord["検索サンプル_マスタ項目０１"]["value"][0] = w_検索サンプル_マスタ項目０１;
       
       $R.log("Controller on保守契約一覧前処理 : end");
       return true;
@@ -53,9 +53,9 @@
     ,on保守契約一覧後処理: function(event) {
       $R.log("Controller on保守契約一覧後処理 : start");
 
-      // セッションストレージ　検索Ｔサンプル_マスタ項目０１　クリア
+      // セッションストレージ　検索サンプル_マスタ項目０１　クリア
       sessionStorage.setIdName(this.appspec.sysname + "." + this.appspec.name);
-      sessionStorage.saveItem("検索Ｔサンプル_マスタ項目０１", "");
+      sessionStorage.saveItem("検索サンプル_マスタ項目０１", "");
 
     }
 

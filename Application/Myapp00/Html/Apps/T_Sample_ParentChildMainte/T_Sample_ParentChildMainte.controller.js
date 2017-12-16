@@ -103,13 +103,13 @@
     // ---------------------------------------
     // チェンジ イベント処理
     // ---------------------------------------
-   ,onChangeＴサンプル_区分ＩＤ: function(event, arg) {
-      $R.log("Controller onChangeＴサンプル_区分ＩＤ : start");
+   ,onChangeサンプル_区分ＩＤ: function(event, arg) {
+      $R.log("Controller onChangeサンプル_区分ＩＤ : start");
 
       var row = event.currentTarget.parentNode.parentNode.rowIndex;
       this.model.onChangeTableSelectBox(event, row, this.appspec.selectbox);
       
-      $R.log("Controller onChangeＴサンプル_区分ＩＤ : end");
+      $R.log("Controller onChangeサンプル_区分ＩＤ : end");
     }
     
     // -----------------------------------

@@ -154,8 +154,8 @@
    ,beforeStorageData: [
       {
          datasetid: "header"
-        ,dataname:  ["Ｔサンプル_マスタＩＤ"]
-        ,classname: ["Ｔサンプル_マスタＩＤ"]
+        ,dataname:  ["サンプル_マスタＩＤ"]
+        ,classname: ["サンプル_マスタＩＤ"]
         ,typename:  ["dataset"]
       }
     ]

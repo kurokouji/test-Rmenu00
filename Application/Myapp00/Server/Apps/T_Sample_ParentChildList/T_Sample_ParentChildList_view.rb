@@ -34,14 +34,14 @@ class T_Sample_ParentChildList_view
     responseRecord = getJsonChunkById(@response_data, "records", "detail",           "record")
     sqlRecord      = getJsonChunkById(@sql_data,      "sqls",    "detail", "output", "record")
 
-    maxSize = sqlRecord["Ｔサンプル_ヘッダＩＤ"]["value"].length - 1
-    w_Ｔサンプル_ヘッダＩＤ = ""
+    maxSize = sqlRecord["サンプル_ヘッダＩＤ"]["value"].length - 1
+    w_サンプル_ヘッダＩＤ = ""
     
     for i in 0..maxSize do
-      if w_Ｔサンプル_ヘッダＩＤ != sqlRecord["Ｔサンプル_ヘッダＩＤ"]["value"][i]
+      if w_サンプル_ヘッダＩＤ != sqlRecord["サンプル_ヘッダＩＤ"]["value"][i]
         editサンプル親子一覧リスト_親子(sqlRecord, responseRecord, i)
         
-        w_Ｔサンプル_ヘッダＩＤ = sqlRecord["Ｔサンプル_ヘッダＩＤ"]["value"][i]
+        w_サンプル_ヘッダＩＤ = sqlRecord["サンプル_ヘッダＩＤ"]["value"][i]
         next
       end
       
@@ -56,20 +56,20 @@ class T_Sample_ParentChildList_view
   def editサンプル親子一覧リスト_親子(sqlRecord, responseRecord, i)
     $Mlog.debug("T_Sample_ParentChildList_view") {"editサンプル親子一覧リスト_親子 start"}
 
-    responseRecord["Ｔサンプル_ヘッダＩＤ"]["value"][i]       = sqlRecord["Ｔサンプル_ヘッダＩＤ"]["value"][i]
+    responseRecord["サンプル_ヘッダＩＤ"]["value"][i]       = sqlRecord["サンプル_ヘッダＩＤ"]["value"][i]
 
-    responseRecord["表示Ｔサンプル_ヘッダＩＤ"]["value"][i] = sqlRecord["表示Ｔサンプル_ヘッダＩＤ"]["value"][i]
-    responseRecord["Ｔサンプル_ヘッダ項目０１"]["value"][i]   = sqlRecord["Ｔサンプル_ヘッダ項目０１"]["value"][i]
-    responseRecord["Ｔサンプル_ヘッダ項目０２"]["value"][i]   = sqlRecord["Ｔサンプル_ヘッダ項目０２"]["value"][i]
-    responseRecord["Ｔサンプル_ヘッダ項目０３"]["value"][i]   = sqlRecord["Ｔサンプル_ヘッダ項目０３"]["value"][i]
-    responseRecord["Ｔサンプル_ヘッダ項目０４"]["value"][i]   = sqlRecord["Ｔサンプル_ヘッダ項目０４"]["value"][i]
-    responseRecord["Ｔサンプル_ヘッダ項目０５"]["value"][i]   = sqlRecord["Ｔサンプル_ヘッダ項目０５"]["value"][i]
-    responseRecord["Ｔサンプル_マスタ項目０１"]["value"][i]          = sqlRecord["Ｔサンプル_マスタ項目０１"]["value"][i]
-    responseRecord["Ｔサンプル_明細行番号"]["value"][i]     = sqlRecord["Ｔサンプル_明細行番号"]["value"][i]
-    responseRecord["Ｔサンプル_明細項目０１"]["value"][i]     = sqlRecord["Ｔサンプル_明細項目０１"]["value"][i]
-    responseRecord["Ｔサンプル_明細項目０２"]["value"][i]     = sqlRecord["Ｔサンプル_明細項目０２"]["value"][i]
-    responseRecord["Ｔサンプル_明細項目０３"]["value"][i]     = sqlRecord["Ｔサンプル_明細項目０３"]["value"][i]
-    responseRecord["Ｔサンプル_区分名称"]["value"][i]        = sqlRecord["Ｔサンプル_区分名称"]["value"][i]
+    responseRecord["表示サンプル_ヘッダＩＤ"]["value"][i] = sqlRecord["表示サンプル_ヘッダＩＤ"]["value"][i]
+    responseRecord["サンプル_ヘッダ項目０１"]["value"][i]   = sqlRecord["サンプル_ヘッダ項目０１"]["value"][i]
+    responseRecord["サンプル_ヘッダ項目０２"]["value"][i]   = sqlRecord["サンプル_ヘッダ項目０２"]["value"][i]
+    responseRecord["サンプル_ヘッダ項目０３"]["value"][i]   = sqlRecord["サンプル_ヘッダ項目０３"]["value"][i]
+    responseRecord["サンプル_ヘッダ項目０４"]["value"][i]   = sqlRecord["サンプル_ヘッダ項目０４"]["value"][i]
+    responseRecord["サンプル_ヘッダ項目０５"]["value"][i]   = sqlRecord["サンプル_ヘッダ項目０５"]["value"][i]
+    responseRecord["サンプル_マスタ項目０１"]["value"][i]          = sqlRecord["サンプル_マスタ項目０１"]["value"][i]
+    responseRecord["サンプル_明細行番号"]["value"][i]     = sqlRecord["サンプル_明細行番号"]["value"][i]
+    responseRecord["サンプル_明細項目０１"]["value"][i]     = sqlRecord["サンプル_明細項目０１"]["value"][i]
+    responseRecord["サンプル_明細項目０２"]["value"][i]     = sqlRecord["サンプル_明細項目０２"]["value"][i]
+    responseRecord["サンプル_明細項目０３"]["value"][i]     = sqlRecord["サンプル_明細項目０３"]["value"][i]
+    responseRecord["サンプル_区分名称"]["value"][i]        = sqlRecord["サンプル_区分名称"]["value"][i]
 
     $Mlog.debug("T_Sample_ParentChildList_view") {"editサンプル親子一覧リスト_親子 end"}
     return "OK"
@@ -79,20 +79,20 @@ class T_Sample_ParentChildList_view
   def editサンプル親子一覧リスト_子(sqlRecord, responseRecord, i)
     $Mlog.debug("T_Sample_ParentChildList_view") {"editサンプル親子一覧リスト_子 start"}
 
-    responseRecord["Ｔサンプル_ヘッダＩＤ"]["value"][i]       = sqlRecord["Ｔサンプル_ヘッダＩＤ"]["value"][i]
+    responseRecord["サンプル_ヘッダＩＤ"]["value"][i]       = sqlRecord["サンプル_ヘッダＩＤ"]["value"][i]
 
-    responseRecord["表示Ｔサンプル_ヘッダＩＤ"]["value"][i] = ""
-    responseRecord["Ｔサンプル_ヘッダ項目０１"]["value"][i]   = ""
-    responseRecord["Ｔサンプル_ヘッダ項目０２"]["value"][i]   = ""
-    responseRecord["Ｔサンプル_ヘッダ項目０３"]["value"][i]   = ""
-    responseRecord["Ｔサンプル_ヘッダ項目０４"]["value"][i]   = ""
-    responseRecord["Ｔサンプル_ヘッダ項目０５"]["value"][i]   = ""
-    responseRecord["Ｔサンプル_マスタ項目０１"]["value"][i]          = ""
-    responseRecord["Ｔサンプル_明細行番号"]["value"][i]     = sqlRecord["Ｔサンプル_明細行番号"]["value"][i]
-    responseRecord["Ｔサンプル_明細項目０１"]["value"][i]     = sqlRecord["Ｔサンプル_明細項目０１"]["value"][i]
-    responseRecord["Ｔサンプル_明細項目０２"]["value"][i]     = sqlRecord["Ｔサンプル_明細項目０２"]["value"][i]
-    responseRecord["Ｔサンプル_明細項目０３"]["value"][i]     = sqlRecord["Ｔサンプル_明細項目０３"]["value"][i]
-    responseRecord["Ｔサンプル_区分名称"]["value"][i]        = sqlRecord["Ｔサンプル_区分名称"]["value"][i]
+    responseRecord["表示サンプル_ヘッダＩＤ"]["value"][i] = ""
+    responseRecord["サンプル_ヘッダ項目０１"]["value"][i]   = ""
+    responseRecord["サンプル_ヘッダ項目０２"]["value"][i]   = ""
+    responseRecord["サンプル_ヘッダ項目０３"]["value"][i]   = ""
+    responseRecord["サンプル_ヘッダ項目０４"]["value"][i]   = ""
+    responseRecord["サンプル_ヘッダ項目０５"]["value"][i]   = ""
+    responseRecord["サンプル_マスタ項目０１"]["value"][i]          = ""
+    responseRecord["サンプル_明細行番号"]["value"][i]     = sqlRecord["サンプル_明細行番号"]["value"][i]
+    responseRecord["サンプル_明細項目０１"]["value"][i]     = sqlRecord["サンプル_明細項目０１"]["value"][i]
+    responseRecord["サンプル_明細項目０２"]["value"][i]     = sqlRecord["サンプル_明細項目０２"]["value"][i]
+    responseRecord["サンプル_明細項目０３"]["value"][i]     = sqlRecord["サンプル_明細項目０３"]["value"][i]
+    responseRecord["サンプル_区分名称"]["value"][i]        = sqlRecord["サンプル_区分名称"]["value"][i]
 
     $Mlog.debug("T_Sample_ParentChildList_view") {"editサンプル親子一覧リスト_子 end"}
     return "OK"

@@ -31,11 +31,11 @@ class T_Sample_ChildMainte_model
     requestRecord = getJsonChunkById(@request_data, "records", "detail",                  "record")
     sqlRecord     = getJsonChunkById(@sql_data,     "sqls",    "detail_insert", "input",  "record")
 
-    maxSize = requestRecord["Ｔサンプル_明細項目０１"]["value"].length - 1
+    maxSize = requestRecord["サンプル_明細項目０１"]["value"].length - 1
     emptySW = "PASS"
     
     for i in 0..maxSize do
-      sqlRecord["Ｔサンプル_明細行番号"]["value"][i] = i + 1
+      sqlRecord["サンプル_明細行番号"]["value"][i] = i + 1
       
       emptySW = "OK"
     end

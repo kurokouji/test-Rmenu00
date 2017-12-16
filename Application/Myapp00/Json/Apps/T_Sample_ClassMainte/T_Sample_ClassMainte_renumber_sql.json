@@ -9,13 +9,13 @@
     "msg": "表示順再設定処理は正常に終了しました。"
   },
   "sqls": [{
-    "comment": "Ｔサンプル_区分表示順　再設定",
+    "comment": "サンプル_区分表示順　再設定",
     "id": "number_select",
     "before": "",
     "after": "",
     "sql": {
       "type": "select",
-      "freesql": "SELECT ROW_NUMBER() OVER(ORDER BY Ｔサンプル_区分表示順) * 10 AS Ｔサンプル_区分表示順, Ｔサンプル_区分ＩＤ FROM Ｔサンプル_区分 ORDER BY Ｔサンプル_区分表示順",
+      "freesql": "SELECT ROW_NUMBER() OVER(ORDER BY サンプル_区分表示順) * 10 AS サンプル_区分表示順, サンプル_区分ＩＤ FROM Ｔサンプル_区分 ORDER BY サンプル_区分表示順",
       "genesql": {
         "dist": "",
         "from": "",
@@ -26,17 +26,17 @@
     "output": {
       "multiline": "yes",
       "record": {
-        "Ｔサンプル_区分ＩＤ": {
+        "サンプル_区分ＩＤ": {
           "value": [""]
         },
-        "Ｔサンプル_区分表示順": {
+        "サンプル_区分表示順": {
           "value": [""]
         }
       }
     }
   },
   {
-    "comment": "Ｔサンプル_区分表示順　更新",
+    "comment": "サンプル_区分表示順　更新",
     "id": "number_update",
     "before": "",
     "after": "",
@@ -46,27 +46,27 @@
       "genesql": {
         "dist": "",
         "from": "Ｔサンプル_区分",
-        "where": "Ｔサンプル_区分ＩＤ = ?",
+        "where": "サンプル_区分ＩＤ = ?",
         "order": ""
       }
     },
     "input": {
       "multiline": "yes",
       "record": {
-        "Ｔサンプル_区分表示順": {
+        "サンプル_区分表示順": {
           "value": [""],
-          "field": "Ｔサンプル_区分表示順",
+          "field": "サンプル_区分表示順",
           "fromtype": "sqls",
           "fromid": "number_select",
           "fromio": "output",
-          "fromname": "Ｔサンプル_区分表示順"
+          "fromname": "サンプル_区分表示順"
         },
-        "Ｔサンプル_区分ＩＤ": {
+        "サンプル_区分ＩＤ": {
           "value": [""],
           "fromtype": "sqls",
           "fromid": "number_select",
           "fromio": "output",
-          "fromname": "Ｔサンプル_区分ＩＤ"
+          "fromname": "サンプル_区分ＩＤ"
         }
       }
     }
@@ -83,22 +83,22 @@
         "dist": "",
         "from": "Ｔサンプル_区分",
         "where": "",
-        "order": "Ｔサンプル_区分表示順"
+        "order": "サンプル_区分表示順"
       }
     },
     "output": {
       "multiline": "yes",
       "record": {
-        "Ｔサンプル_区分ＩＤ": {
+        "サンプル_区分ＩＤ": {
           "value": [""]
         },
-        "Ｔサンプル_区分名称": {
+        "サンプル_区分名称": {
           "value": [""]
         },
-        "Ｔサンプル_区分摘要": {
+        "サンプル_区分摘要": {
           "value": [""]
         },
-        "Ｔサンプル_区分表示順": {
+        "サンプル_区分表示順": {
           "value": [""]
         },
         "更新日時": {

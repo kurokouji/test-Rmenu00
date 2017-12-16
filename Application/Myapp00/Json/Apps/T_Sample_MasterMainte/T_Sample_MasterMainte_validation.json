@@ -5,73 +5,73 @@
     "id": "header",
     "multiline": "no",
     "record": {
-      "Ｔサンプル_マスタＩＤ": {
+      "サンプル_マスタＩＤ": {
         "validation": ["nonrequired",
         "integerP"],
         "min": "1",
         "max": "11"
       },
-      "Ｔサンプル_マスタ項目０１": {
+      "サンプル_マスタ項目０１": {
         "validation": ["required",
         "free"],
         "min": "1",
         "max": "100"
       },
-      "Ｔサンプル_マスタ項目０２": {
+      "サンプル_マスタ項目０２": {
         "validation": ["required",
         "free"],
         "min": "1",
         "max": "8"
       },
-      "Ｔサンプル_マスタ項目０３": {
+      "サンプル_マスタ項目０３": {
         "validation": ["required",
         "free"],
         "min": "1",
         "max": "200"
       },
-      "Ｔサンプル_マスタ項目０４": {
+      "サンプル_マスタ項目０４": {
         "validation": ["required",
         "free"],
         "min": "1",
         "max": "200"
       },
-      "Ｔサンプル_マスタ項目０５": {
+      "サンプル_マスタ項目０５": {
         "validation": ["required",
         "free"],
         "min": "1",
         "max": "200"
       },
-      "Ｔサンプル_マスタ項目０６": {
+      "サンプル_マスタ項目０６": {
         "validation": ["required",
         "free"],
         "min": "1",
         "max": "200"
       },
-      "Ｔサンプル_マスタ項目０７": {
+      "サンプル_マスタ項目０７": {
         "validation": ["required",
         "free"],
         "min": "1",
         "max": "200"
       },
-      "Ｔサンプル_マスタ項目０８": {
+      "サンプル_マスタ項目０８": {
         "validation": ["required",
         "free"],
         "min": "1",
         "max": "200"
       },
-      "Ｔサンプル_マスタ項目０９": {
+      "サンプル_マスタ項目０９": {
         "validation": ["required",
         "free"],
         "min": "1",
         "max": "200"
       },
-      "Ｔサンプル_マスタ項目１０": {
+      "サンプル_マスタ項目１０": {
         "validation": ["required",
         "free"],
         "min": "1",
         "max": "200"
       },
-      "Ｔサンプル_マスタ表示順": {
+      "サンプル_マスタ表示順": {
         "validation": ["required",
         "free"],
         "min": "1",

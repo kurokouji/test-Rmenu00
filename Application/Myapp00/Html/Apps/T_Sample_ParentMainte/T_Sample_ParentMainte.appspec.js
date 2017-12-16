@@ -120,8 +120,8 @@
    ,sessionStorageHeaderKey: [
       {
          datasetid: "header"
-        ,dataname:  ["Ｔサンプル_ヘッダＩＤ"]
-        ,classname: ["Ｔサンプル_ヘッダＩＤ"]
+        ,dataname:  ["サンプル_ヘッダＩＤ"]
+        ,classname: ["サンプル_ヘッダＩＤ"]
         ,typename:  ["text"]
       }
     ]
@@ -160,9 +160,9 @@
    ,nextStorageData: [
       {
          datasetid:   "header"
-        ,dataname:    ["Ｔサンプル_ヘッダＩＤ"]
+        ,dataname:    ["サンプル_ヘッダＩＤ"]
         ,validation:  ["nonrequired"]
-        ,titlename:   ["Ｔサンプル_ヘッダＩＤ"]
+        ,titlename:   ["サンプル_ヘッダＩＤ"]
       }
     ]
     // ----------------------------------------------------------------------------------
@@ -175,8 +175,8 @@
    ,beforeStorageData: [
       {
          datasetid: "header"
-        ,dataname:  ["Ｔサンプル_ヘッダＩＤ"]
-        ,classname: ["Ｔサンプル_ヘッダＩＤ"]
+        ,dataname:  ["サンプル_ヘッダＩＤ"]
+        ,classname: ["サンプル_ヘッダＩＤ"]
         ,typename:  ["dataset"]
       }
     ]
@@ -207,7 +207,7 @@
       {
          responsename: "T_Sample_ParentMainte"
         ,datasetid:    "header"
-        ,dataname:    ["Ｔサンプル_マスタＩＤ", "Ｔサンプル_マスタ項目０１"]
+        ,dataname:    ["サンプル_マスタＩＤ", "サンプル_マスタ項目０１"]
         ,value:       ["",             ""]
         ,afterfunction: ""
       }

@@ -3,7 +3,7 @@
 /* #mainForm高さ調整 */
 #mainForm {
   height: calc(100vh - 100px);
-  min-height: 750px
+  min-height: 900px
 }
 
 /* ヘッダテーブルの表示窓 */

@@ -26,102 +26,102 @@
     "input": {
       "multiline": "no",
       "record": {
-        "Ｔサンプル_マスタ項目０１": {
+        "サンプル_マスタ項目０１": {
           "value": [""],
           "fieldtype": "char",
-          "field": "Ｔサンプル_マスタ項目０１",
+          "field": "サンプル_マスタ項目０１",
           "fromtype" : "request",
           "fromid" : "header",
           "fromio" : "",
-          "fromname" : "Ｔサンプル_マスタ項目０１"
+          "fromname" : "サンプル_マスタ項目０１"
         },
-        "Ｔサンプル_マスタ項目０２": {
+        "サンプル_マスタ項目０２": {
           "value": [""],
           "fieldtype": "char",
           "fromtype" : "request",
           "fromid" : "header",
           "fromio" : "",
-          "fromname" : "Ｔサンプル_マスタ項目０２"
+          "fromname" : "サンプル_マスタ項目０２"
         },
-        "Ｔサンプル_マスタ項目０３": {
+        "サンプル_マスタ項目０３": {
           "value": [""],
           "fieldtype": "char",
-          "field": "Ｔサンプル_マスタ項目０３",
+          "field": "サンプル_マスタ項目０３",
           "fromtype" : "request",
           "fromid" : "header",
           "fromio" : "",
-          "fromname" : "Ｔサンプル_マスタ項目０３"
+          "fromname" : "サンプル_マスタ項目０３"
         },
-        "Ｔサンプル_マスタ項目０４": {
+        "サンプル_マスタ項目０４": {
           "value": [""],
           "fieldtype": "char",
-          "field": "Ｔサンプル_マスタ項目０４",
+          "field": "サンプル_マスタ項目０４",
           "fromtype" : "request",
           "fromid" : "header",
           "fromio" : "",
-          "fromname" : "Ｔサンプル_マスタ項目０４"
+          "fromname" : "サンプル_マスタ項目０４"
         },
-        "Ｔサンプル_マスタ項目０５": {
+        "サンプル_マスタ項目０５": {
           "value": [""],
           "fieldtype": "char",
-          "field": "Ｔサンプル_マスタ項目０５",
+          "field": "サンプル_マスタ項目０５",
           "fromtype" : "request",
           "fromid" : "header",
           "fromio" : "",
-          "fromname" : "Ｔサンプル_マスタ項目０５"
+          "fromname" : "サンプル_マスタ項目０５"
         },
-        "Ｔサンプル_マスタ項目０６": {
+        "サンプル_マスタ項目０６": {
           "value": [""],
           "fieldtype": "char",
-          "field": "Ｔサンプル_マスタ項目０６",
+          "field": "サンプル_マスタ項目０６",
           "fromtype" : "request",
           "fromid" : "header",
           "fromio" : "",
-          "fromname" : "Ｔサンプル_マスタ項目０６"
+          "fromname" : "サンプル_マスタ項目０６"
         },
-        "Ｔサンプル_マスタ項目０７": {
+        "サンプル_マスタ項目０７": {
           "value": [""],
           "fieldtype": "char",
-          "field": "Ｔサンプル_マスタ項目０７",
+          "field": "サンプル_マスタ項目０７",
           "fromtype" : "request",
           "fromid" : "header",
           "fromio" : "",
-          "fromname" : "Ｔサンプル_マスタ項目０７"
+          "fromname" : "サンプル_マスタ項目０７"
         },
-        "Ｔサンプル_マスタ項目０８": {
+        "サンプル_マスタ項目０８": {
           "value": [""],
           "fieldtype": "char",
-          "field": "Ｔサンプル_マスタ項目０８",
+          "field": "サンプル_マスタ項目０８",
           "fromtype" : "request",
           "fromid" : "header",
           "fromio" : "",
-          "fromname" : "Ｔサンプル_マスタ項目０８"
+          "fromname" : "サンプル_マスタ項目０８"
         },
-        "Ｔサンプル_マスタ項目０９": {
+        "サンプル_マスタ項目０９": {
           "value": [""],
           "fieldtype": "char",
-          "field": "Ｔサンプル_マスタ項目０９",
+          "field": "サンプル_マスタ項目０９",
           "fromtype" : "request",
           "fromid" : "header",
           "fromio" : "",
-          "fromname" : "Ｔサンプル_マスタ項目０９"
+          "fromname" : "サンプル_マスタ項目０９"
         },
-        "Ｔサンプル_マスタ項目１０": {
+        "サンプル_マスタ項目１０": {
           "value": [""],
           "fieldtype": "char",
-          "field": "Ｔサンプル_マスタ項目１０",
+          "field": "サンプル_マスタ項目１０",
           "fromtype" : "request",
           "fromid" : "header",
           "fromio" : "",
-          "fromname" : "Ｔサンプル_マスタ項目１０"
+          "fromname" : "サンプル_マスタ項目１０"
         },
-        "Ｔサンプル_マスタ表示順": {
+        "サンプル_マスタ表示順": {
           "value": [""],
-          "field": "Ｔサンプル_マスタ表示順",
+          "field": "サンプル_マスタ表示順",
           "fromtype" : "request",
           "fromid" : "header",
           "fromio" : "",
-          "fromname" : "Ｔサンプル_マスタ表示順"
+          "fromname" : "サンプル_マスタ表示順"
         },
         "削除フラグ": {
           "value": [""],
@@ -152,9 +152,9 @@
     "output" : {
       "multiline" : "no",
       "record" : {
-        "Ｔサンプル_マスタＩＤ" : {
+        "サンプル_マスタＩＤ" : {
           "value" : [""],
-          "funct" : "MAX(Ｔサンプル_マスタＩＤ)"
+          "funct" : "MAX(サンプル_マスタＩＤ)"
         }
       }
     }
@@ -173,77 +173,77 @@
         [
           "Ｔサンプル_マスタ"
         ],
-        "where": "Ｔサンプル_マスタＩＤ = ?",
+        "where": "サンプル_マスタＩＤ = ?",
         "order": ""
       }
     },
     "input": {
       "multiline": "no",
       "record": {
-        "Ｔサンプル_マスタＩＤ": {
+        "サンプル_マスタＩＤ": {
             "value" : [""],
             "fromtype" : "sqls",
             "fromid" : "header_key",
             "fromio" : "output",
-            "fromname" : "Ｔサンプル_マスタＩＤ"
+            "fromname" : "サンプル_マスタＩＤ"
         }
       }
     },
     "output": {
       "multiline": "no",
       "record": {
-        "Ｔサンプル_マスタＩＤ": {
+        "サンプル_マスタＩＤ": {
           "value": [""]
         },
-        "Ｔサンプル_マスタ項目０１": {
+        "サンプル_マスタ項目０１": {
           "value": [""],
-          "field": "Ｔサンプル_マスタ項目０１"
+          "field": "サンプル_マスタ項目０１"
         },
-        "Ｔサンプル_マスタ項目０２": {
+        "サンプル_マスタ項目０２": {
           "value": [""]
         },
-        "Ｔサンプル_マスタ項目０３": {
+        "サンプル_マスタ項目０３": {
           "value": [""],
-          "field": "Ｔサンプル_マスタ項目０３"
+          "field": "サンプル_マスタ項目０３"
         },
-        "Ｔサンプル_マスタ項目０４": {
+        "サンプル_マスタ項目０４": {
           "value": [""],
           "fieldtype": "char",
-          "field": "Ｔサンプル_マスタ項目０４"
+          "field": "サンプル_マスタ項目０４"
         },
-        "Ｔサンプル_マスタ項目０５": {
+        "サンプル_マスタ項目０５": {
           "value": [""],
           "fieldtype": "char",
-          "field": "Ｔサンプル_マスタ項目０５"
+          "field": "サンプル_マスタ項目０５"
         },
-        "Ｔサンプル_マスタ項目０６": {
+        "サンプル_マスタ項目０６": {
           "value": [""],
           "fieldtype": "char",
-          "field": "Ｔサンプル_マスタ項目０６"
+          "field": "サンプル_マスタ項目０６"
         },
-        "Ｔサンプル_マスタ項目０７": {
+        "サンプル_マスタ項目０７": {
           "value": [""],
           "fieldtype": "char",
-          "field": "Ｔサンプル_マスタ項目０７"
+          "field": "サンプル_マスタ項目０７"
         },
-        "Ｔサンプル_マスタ項目０８": {
+        "サンプル_マスタ項目０８": {
           "value": [""],
           "fieldtype": "char",
-          "field": "Ｔサンプル_マスタ項目０８"
+          "field": "サンプル_マスタ項目０８"
         },
-        "Ｔサンプル_マスタ項目０９": {
+        "サンプル_マスタ項目０９": {
           "value": [""],
           "fieldtype": "char",
-          "field": "Ｔサンプル_マスタ項目０９"
+          "field": "サンプル_マスタ項目０９"
         },
-        "Ｔサンプル_マスタ項目１０": {
+        "サンプル_マスタ項目１０": {
           "value": [""],
           "fieldtype": "char",
-          "field": "Ｔサンプル_マスタ項目１０"
+          "field": "サンプル_マスタ項目１０"
         },
-        "Ｔサンプル_マスタ表示順": {
+        "サンプル_マスタ表示順": {
           "value": [""],
-          "field": "Ｔサンプル_マスタ表示順"
+          "field": "サンプル_マスタ表示順"
         },
         "削除フラグ": {
           "value": [""],

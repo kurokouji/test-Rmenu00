@@ -30,26 +30,26 @@ class T_Sample_ParentChildList_model
     requestInfo          = getJsonChunkById(@request_data, "records", idname1)
     sqlInfo              = getJsonChunkById(@sql_data, "sqls", idname2)
 
-    w_検索Ｔサンプル_ヘッダ項目０１ = requestInfo["record"]["検索Ｔサンプル_ヘッダ項目０１"]["value"][0]
-    w_検索Ｔサンプル_ヘッダ項目０２ = requestInfo["record"]["検索Ｔサンプル_ヘッダ項目０２"]["value"][0]
-    w_検索Ｔサンプル_マスタ項目０１ = requestInfo["record"]["検索Ｔサンプル_マスタ項目０１"]["value"][0]
+    w_検索サンプル_ヘッダ項目０１ = requestInfo["record"]["検索サンプル_ヘッダ項目０１"]["value"][0]
+    w_検索サンプル_ヘッダ項目０２ = requestInfo["record"]["検索サンプル_ヘッダ項目０２"]["value"][0]
+    w_検索サンプル_マスタ項目０１ = requestInfo["record"]["検索サンプル_マスタ項目０１"]["value"][0]
 
 
     rep = ""
 
     # ヘッダ項目１
-    if w_検索Ｔサンプル_ヘッダ項目０１ != ""
-      rep = rep + " AND A.Ｔサンプル_ヘッダ項目０１ LIKE '%#{w_検索Ｔサンプル_ヘッダ項目０１}%'"
+    if w_検索サンプル_ヘッダ項目０１ != ""
+      rep = rep + " AND A.サンプル_ヘッダ項目０１ LIKE '%#{w_検索サンプル_ヘッダ項目０１}%'"
     end
 
     # ヘッダ項目２
-    if w_検索Ｔサンプル_ヘッダ項目０２ != ""
-      rep = rep + " AND A.Ｔサンプル_ヘッダ項目０２ LIKE '%#{w_検索Ｔサンプル_ヘッダ項目０２}%'"
+    if w_検索サンプル_ヘッダ項目０２ != ""
+      rep = rep + " AND A.サンプル_ヘッダ項目０２ LIKE '%#{w_検索サンプル_ヘッダ項目０２}%'"
     end
 
-    # Ｔサンプル_マスタ項目０１
-    if w_検索Ｔサンプル_マスタ項目０１ != ""
-      rep = rep + " AND C.Ｔサンプル_マスタ項目０１ LIKE '%#{w_検索Ｔサンプル_マスタ項目０１}%'"
+    # サンプル_マスタ項目０１
+    if w_検索サンプル_マスタ項目０１ != ""
+      rep = rep + " AND C.サンプル_マスタ項目０１ LIKE '%#{w_検索サンプル_マスタ項目０１}%'"
     end
 
 

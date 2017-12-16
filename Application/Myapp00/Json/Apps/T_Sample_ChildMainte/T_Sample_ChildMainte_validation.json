@@ -5,7 +5,7 @@
     "id": "header",
     "multiline": "no",
     "record": {
-      "Ｔサンプル_ヘッダＩＤ": {
+      "サンプル_ヘッダＩＤ": {
         "validation": ["required",
         "integerP"],
         "min": "1",
@@ -23,133 +23,133 @@
         "min": "1",
         "max": "2"
       },
-      "Ｔサンプル_明細行番号": {
+      "サンプル_明細行番号": {
         "validation": ["nonrequired",
         "integerP"],
         "min": "1",
         "max": "2"
       },
-      "Ｔサンプル_区分ＩＤ": {
+      "サンプル_区分ＩＤ": {
         "validation": ["nonrequired",
         "integerP"],
         "min": "1",
         "max": "13"
       },
-      "Ｔサンプル_明細項目０１": {
+      "サンプル_明細項目０１": {
         "validation": ["nonrequired",
         "free"],
         "min": "1",
         "max": "100"
       },
-      "Ｔサンプル_明細項目０２": {
+      "サンプル_明細項目０２": {
         "validation": ["nonrequired",
         "free"],
         "min": "1",
         "max": "100"
       },
-      "Ｔサンプル_明細項目０３": {
+      "サンプル_明細項目０３": {
         "validation": ["nonrequired",
         "free"],
         "min": "1",
         "max": "100"
       },
-      "Ｔサンプル_明細項目０４": {
+      "サンプル_明細項目０４": {
         "validation": ["nonrequired",
         "free"],
         "min": "1",
         "max": "100"
       },
-      "Ｔサンプル_明細項目０５": {
+      "サンプル_明細項目０５": {
         "validation": ["nonrequired",
         "free"],
         "min": "1",
         "max": "100"
       },
-      "Ｔサンプル_明細項目０６": {
+      "サンプル_明細項目０６": {
         "validation": ["nonrequired",
         "free"],
         "min": "1",
         "max": "100"
       },
-      "Ｔサンプル_明細項目０７": {
+      "サンプル_明細項目０７": {
         "validation": ["nonrequired",
         "free"],
         "min": "1",
         "max": "100"
       },
-      "Ｔサンプル_明細項目０８": {
+      "サンプル_明細項目０８": {
         "validation": ["nonrequired",
         "free"],
         "min": "1",
         "max": "100"
       },
-      "Ｔサンプル_明細項目０９": {
+      "サンプル_明細項目０９": {
         "validation": ["nonrequired",
         "free"],
         "min": "1",
         "max": "100"
       },
-      "Ｔサンプル_明細項目１０": {
+      "サンプル_明細項目１０": {
         "validation": ["nonrequired",
         "free"],
         "min": "1",
         "max": "100"
       },
-      "Ｔサンプル_明細項目１１": {
+      "サンプル_明細項目１１": {
         "validation": ["nonrequired",
         "free"],
         "min": "1",
         "max": "100"
       },
-      "Ｔサンプル_明細項目１２": {
+      "サンプル_明細項目１２": {
         "validation": ["nonrequired",
         "free"],
         "min": "1",
         "max": "100"
       },
-      "Ｔサンプル_明細項目１３": {
+      "サンプル_明細項目１３": {
         "validation": ["nonrequired",
         "free"],
         "min": "1",
         "max": "100"
       },
-      "Ｔサンプル_明細項目１４": {
+      "サンプル_明細項目１４": {
         "validation": ["nonrequired",
         "free"],
         "min": "1",
         "max": "100"
       },
-      "Ｔサンプル_明細項目１５": {
+      "サンプル_明細項目１５": {
         "validation": ["nonrequired",
         "free"],
         "min": "1",
         "max": "100"
       },
-      "Ｔサンプル_明細項目１６": {
+      "サンプル_明細項目１６": {
         "validation": ["nonrequired",
         "free"],
         "min": "1",
         "max": "100"
       },
-      "Ｔサンプル_明細項目１７": {
+      "サンプル_明細項目１７": {
         "validation": ["nonrequired",
         "free"],
         "min": "1",
         "max": "100"
       },
-      "Ｔサンプル_明細項目１８": {
+      "サンプル_明細項目１８": {
         "validation": ["nonrequired",
         "free"],
         "min": "1",
         "max": "100"
       },
-      "Ｔサンプル_明細項目１９": {
+      "サンプル_明細項目１９": {
         "validation": ["nonrequired",
         "free"],
         "min": "1",
         "max": "100"
       },
-      "Ｔサンプル_明細項目２０": {
+      "サンプル_明細項目２０": {
         "validation": ["nonrequired",
         "free"],
         "min": "1",

@@ -11,16 +11,16 @@
       "カレントページ": {
         "validation": ["required"]
       },
-      "検索Ｔサンプル_マスタ項目０１": {
+      "検索サンプル_マスタ項目０１": {
         "validation": ["nonrequired"]
       },
-      "検索Ｔサンプル_マスタ項目０２": {
+      "検索サンプル_マスタ項目０２": {
         "validation": ["nonrequired"]
       },
-      "検索Ｔサンプル_マスタ項目０３": {
+      "検索サンプル_マスタ項目０３": {
         "validation": ["nonrequired"]
       },
-      "検索Ｔサンプル_マスタ表示順": {
+      "検索サンプル_マスタ表示順": {
         "validation": ["nonrequired"]
       }
     }

@@ -5,25 +5,25 @@
     "id": "detail",
     "multiline": "yes",
     "record": {
-      "Ｔサンプル_区分ＩＤ": {
+      "サンプル_区分ＩＤ": {
         "validation": ["nonrequired",
         "integerP"],
         "min": "1",
         "max": "13"
       },
-      "Ｔサンプル_区分名称": {
+      "サンプル_区分名称": {
         "validation": ["required",
         "free"],
         "min": "1",
         "max": "20"
       },
-      "Ｔサンプル_区分摘要": {
+      "サンプル_区分摘要": {
         "validation": ["nonrequired",
         "free"],
         "min": "1",
         "max": "100"
       },
-      "Ｔサンプル_区分表示順": {
+      "サンプル_区分表示順": {
         "validation": ["required",
         "integerP"],
         "min": "1",

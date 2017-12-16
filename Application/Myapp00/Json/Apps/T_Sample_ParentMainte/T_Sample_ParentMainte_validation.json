@@ -5,193 +5,193 @@
     "id": "header",
     "multiline": "no",
     "record": {
-      "Ｔサンプル_ヘッダＩＤ": {
+      "サンプル_ヘッダＩＤ": {
         "validation": ["nonrequired",
         "integerP"],
         "min": "1",
         "max": "13"
       },
-      "Ｔサンプル_ヘッダ項目０１": {
+      "サンプル_ヘッダ項目０１": {
         "validation": ["required",
         "free"],
         "min": "1",
         "max": "200"
       },
-      "Ｔサンプル_ヘッダ項目０２": {
+      "サンプル_ヘッダ項目０２": {
         "validation": ["required",
         "free"],
         "min": "1",
         "max": "200"
       },
-      "Ｔサンプル_ヘッダ項目０３": {
+      "サンプル_ヘッダ項目０３": {
         "validation": ["required",
         "free"],
         "min": "1",
         "max": "200"
       },
-      "Ｔサンプル_ヘッダ項目０４": {
+      "サンプル_ヘッダ項目０４": {
         "validation": ["nonrequired",
         "free"],
         "min": "1",
         "max": "200"
       },
-      "Ｔサンプル_ヘッダ項目０５": {
+      "サンプル_ヘッダ項目０５": {
         "validation": ["nonrequired",
         "free"],
         "min": "1",
         "max": "200"
       },
-      "Ｔサンプル_ヘッダ項目０６": {
+      "サンプル_ヘッダ項目０６": {
         "validation": ["nonrequired",
         "free"],
         "min": "1",
         "max": "200"
       },
-      "Ｔサンプル_ヘッダ項目０７": {
+      "サンプル_ヘッダ項目０７": {
         "validation": ["nonrequired",
         "free"],
         "min": "1",
         "max": "200"
       },
-      "Ｔサンプル_ヘッダ項目０８": {
+      "サンプル_ヘッダ項目０８": {
         "validation": ["nonrequired",
         "free"],
         "min": "1",
         "max": "200"
       },
-      "Ｔサンプル_ヘッダ項目０９": {
+      "サンプル_ヘッダ項目０９": {
         "validation": ["nonrequired",
         "free"],
         "min": "1",
         "max": "200"
       },
-      "Ｔサンプル_ヘッダ項目１０": {
+      "サンプル_ヘッダ項目１０": {
         "validation": ["nonrequired",
         "free"],
         "min": "1",
         "max": "200"
       },
-      "Ｔサンプル_ヘッダ項目１１": {
+      "サンプル_ヘッダ項目１１": {
         "validation": ["nonrequired",
         "free"],
         "min": "1",
         "max": "200"
       },
-      "Ｔサンプル_ヘッダ項目１２": {
+      "サンプル_ヘッダ項目１２": {
         "validation": ["nonrequired",
         "free"],
         "min": "1",
         "max": "200"
       },
-      "Ｔサンプル_ヘッダ項目１３": {
+      "サンプル_ヘッダ項目１３": {
         "validation": ["nonrequired",
         "free"],
         "min": "1",
         "max": "200"
       },
-      "Ｔサンプル_ヘッダ項目１４": {
+      "サンプル_ヘッダ項目１４": {
         "validation": ["nonrequired",
         "free"],
         "min": "1",
         "max": "200"
       },
-      "Ｔサンプル_ヘッダ項目１５": {
+      "サンプル_ヘッダ項目１５": {
         "validation": ["nonrequired",
         "free"],
         "min": "1",
         "max": "200"
       },
-      "Ｔサンプル_ヘッダ項目１６": {
+      "サンプル_ヘッダ項目１６": {
         "validation": ["nonrequired",
         "free"],
         "min": "1",
         "max": "200"
       },
-      "Ｔサンプル_ヘッダ項目１７": {
+      "サンプル_ヘッダ項目１７": {
         "validation": ["nonrequired",
         "free"],
         "min": "1",
         "max": "200"
       },
-      "Ｔサンプル_ヘッダ項目１８": {
+      "サンプル_ヘッダ項目１８": {
         "validation": ["nonrequired",
         "free"],
         "min": "1",
         "max": "200"
       },
-      "Ｔサンプル_ヘッダ項目１９": {
+      "サンプル_ヘッダ項目１９": {
         "validation": ["nonrequired",
         "free"],
         "min": "1",
         "max": "200"
       },
-      "Ｔサンプル_ヘッダ項目２０": {
+      "サンプル_ヘッダ項目２０": {
         "validation": ["nonrequired",
         "free"],
         "min": "1",
         "max": "200"
       },
-      "Ｔサンプル_ヘッダ項目２１": {
+      "サンプル_ヘッダ項目２１": {
         "validation": ["nonrequired",
         "free"],
         "min": "1",
         "max": "200"
       },
-      "Ｔサンプル_ヘッダ項目２２": {
+      "サンプル_ヘッダ項目２２": {
         "validation": ["nonrequired",
         "free"],
         "min": "1",
         "max": "200"
       },
-      "Ｔサンプル_ヘッダ項目２３": {
+      "サンプル_ヘッダ項目２３": {
         "validation": ["nonrequired",
         "free"],
         "min": "1",
         "max": "200"
       },
-      "Ｔサンプル_ヘッダ項目２４": {
+      "サンプル_ヘッダ項目２４": {
         "validation": ["nonrequired",
         "free"],
         "min": "1",
         "max": "200"
       },
-      "Ｔサンプル_ヘッダ項目２５": {
+      "サンプル_ヘッダ項目２５": {
         "validation": ["nonrequired",
         "free"],
         "min": "1",
         "max": "200"
       },
-      "Ｔサンプル_ヘッダ項目２６": {
+      "サンプル_ヘッダ項目２６": {
         "validation": ["nonrequired",
         "free"],
         "min": "1",
         "max": "200"
       },
-      "Ｔサンプル_ヘッダ項目２７": {
+      "サンプル_ヘッダ項目２７": {
         "validation": ["nonrequired",
         "free"],
         "min": "1",
         "max": "200"
       },
-      "Ｔサンプル_ヘッダ項目２８": {
+      "サンプル_ヘッダ項目２８": {
         "validation": ["nonrequired",
         "free"],
         "min": "1",
         "max": "200"
       },
-      "Ｔサンプル_ヘッダ項目２９": {
+      "サンプル_ヘッダ項目２９": {
         "validation": ["nonrequired",
         "free"],
         "min": "1",
         "max": "200"
       },
-      "Ｔサンプル_ヘッダ項目３０": {
+      "サンプル_ヘッダ項目３０": {
         "validation": ["nonrequired",
         "free"],
         "min": "1",
         "max": "200"
       },
-      "Ｔサンプル_マスタＩＤ": {
+      "サンプル_マスタＩＤ": {
         "validation": ["required",
         "integerP"],
         "min": "1",

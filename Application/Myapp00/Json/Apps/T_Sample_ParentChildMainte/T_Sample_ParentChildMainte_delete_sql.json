@@ -19,19 +19,19 @@
       "genesql" : {
         "dist" : "",
         "from" : "Ｔサンプル_明細",
-        "where": "ref_Ｔサンプル_ヘッダＩＤ = ?",
+        "where": "ref_サンプル_ヘッダＩＤ = ?",
         "order" : ""
       }
     },
     "input" : {
       "multiline" : "no",
       "record" : {
-        "Ｔサンプル_ヘッダＩＤ": {
+        "サンプル_ヘッダＩＤ": {
           "value": [""],
           "fromtype" : "request",
           "fromid" : "header",
           "fromio" : "",
-          "fromname" : "Ｔサンプル_ヘッダＩＤ"
+          "fromname" : "サンプル_ヘッダＩＤ"
         }
       }
     }
@@ -47,19 +47,19 @@
       "genesql": {
         "dist": "",
         "from": "Ｔサンプル_ヘッダ",
-        "where": "Ｔサンプル_ヘッダＩＤ = ?",
+        "where": "サンプル_ヘッダＩＤ = ?",
         "order": ""
       }
     },
     "input": {
       "multiline": "no",
       "record": {
-        "Ｔサンプル_ヘッダＩＤ": {
+        "サンプル_ヘッダＩＤ": {
           "value": [""],
           "fromtype" : "request",
           "fromid" : "header",
           "fromio" : "",
-          "fromname" : "Ｔサンプル_ヘッダＩＤ"
+          "fromname" : "サンプル_ヘッダＩＤ"
         }
       }
     }
