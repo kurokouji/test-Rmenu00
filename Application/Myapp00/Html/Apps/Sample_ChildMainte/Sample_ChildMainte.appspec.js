@@ -213,7 +213,7 @@
       {
           selectorid: "サンプル_区分ＩＤ"
          ,selectorname: "サンプル_区分ＩＤ"
-         ,init:     {initvalue: "", inithtml: "サンプル区分選択", datasetid: "選択サンプル区分", valuename: "選択サンプル_区分ＩＤ", htmlname: "選択サンプル_区分名称"}
+         ,init:     {initvalue: "", inithtml: "サンプル_区分選択", datasetid: "選択サンプル_区分", valuename: "選択サンプル_区分ＩＤ", htmlname: "選択サンプル_区分名称"}
          ,change:   {datasetid: "detail", valuename: "サンプル_区分ＩＤ", htmlname: ""}
       }
     ]

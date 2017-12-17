@@ -1,12 +1,12 @@
 {
-  "comment": "サンプル子　メンテナンス　初期処理（サンプルヘッダ・サンプル区分照会）",
+  "comment": "サンプル子　メンテナンス　初期処理（サンプルヘッダ・サンプル_区分照会）",
   "html": "Myapp00/Json/Apps/A_Sample_ChildMainte",
   "dbname": "myapp00",
   "mode": "init",
   "prog": "no",
   "message": {
     "status": "OK",
-    "msg": "サンプル区分照会処理は正常に終了しました。"
+    "msg": "サンプル_区分照会処理は正常に終了しました。"
   },
   "sqls": [{
     "comment": "Ａサンプル_ヘッダ　照会処理",
@@ -74,8 +74,8 @@
     }
   },
   {
-    "comment": "サンプル区分照会処理",
-    "id": "選択サンプル区分",
+    "comment": "サンプル_区分照会処理",
+    "id": "選択サンプル_区分",
     "before": "",
     "after": "",
     "sql": {

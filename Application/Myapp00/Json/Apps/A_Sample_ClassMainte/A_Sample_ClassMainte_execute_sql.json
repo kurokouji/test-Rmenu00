@@ -9,7 +9,7 @@
     "msg": "サンプル　実行処理は正常に終了しました。"
   },
   "sqls": [{
-    "comment": "サンプル区分　削除処理",
+    "comment": "サンプル_区分　削除処理",
     "id": "delete",
     "before": "setDeleteDataOfMyapp00('detail', 'delete', 'Ａサンプル_区分ＩＤ')",
     "after": "",
@@ -34,7 +34,7 @@
     }
   },
   {
-    "comment": "サンプル区分　更新処理",
+    "comment": "サンプル_区分　更新処理",
     "id": "update",
     "before": "setUpdateDataOfMyapp00('detail', 'update', 'Ａサンプル_区分ＩＤ')",
     "after": "",
@@ -79,7 +79,7 @@
     }
   },
   {
-    "comment": "サンプル区分　新規処理",
+    "comment": "サンプル_区分　新規処理",
     "id": "insert",
     "before": "setInsertDataOfMyapp00('detail', 'insert', 'Ａサンプル_区分ＩＤ')",
     "after": "",
@@ -131,7 +131,7 @@
     }
   },
   {
-    "comment": "サンプル区分　照会処理",
+    "comment": "サンプル_区分　照会処理",
     "id": "detail",
     "before": "",
     "after": "",

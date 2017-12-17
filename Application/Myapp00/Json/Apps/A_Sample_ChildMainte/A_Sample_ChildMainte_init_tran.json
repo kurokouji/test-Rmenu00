@@ -1,6 +1,6 @@
 {
   "request": {
-    "comment": "サンプル子　メンテナンス　初期処理（サンプルヘッダ・サンプル区分照会）　リクエストデータ",
+    "comment": "サンプル子　メンテナンス　初期処理（サンプルヘッダ・サンプル_区分照会）　リクエストデータ",
     "html": "Myapp00/Json/Apps/A_Sample_ChildMainte",
     "mode": "init",
     "prog": "no",
@@ -22,13 +22,13 @@
     }]
   },
   "response": {
-    "comment": "サンプル子　メンテナンス　初期処理（サンプルヘッダ・サンプル区分照会）　レスポンスデータ",
+    "comment": "サンプル子　メンテナンス　初期処理（サンプルヘッダ・サンプル_区分照会）　レスポンスデータ",
     "html": "Myapp00/Json/Apps/A_Sample_ChildMainte",
     "mode": "init",
     "prog": "no",
     "message": {
       "status": "OK",
-      "msg": "サンプルヘッダ・サンプル区分照会照会処理は正常に終了しました。"
+      "msg": "サンプルヘッダ・サンプル_区分照会照会処理は正常に終了しました。"
     },
     "records": [{
       "id": "header",
@@ -63,7 +63,7 @@
       }
     },
     {
-      "id": "選択サンプル区分",
+      "id": "選択サンプル_区分",
       "before": "",
       "after": "",
       "multiline": "yes",
