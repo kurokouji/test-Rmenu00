@@ -83,7 +83,7 @@
       "freesql": "",
       "genesql": {
         "dist": "",
-        "from": "サンプル_区分",
+        "from": "Ｔサンプル_区分",
         "where": "",
         "order": "サンプル_区分表示順"
       }
