@@ -84,6 +84,14 @@
       
       $R.log("Controller onChangeサンプル_区分ＩＤ : end");
     }
+   ,onChangeサンプル_区分名称: function(event, arg) {
+      $R.log("Controller onChangeサンプル_区分名称 : start");
+
+      var row = event.currentTarget.parentNode.parentNode.rowIndex;
+      this.model.onChangeTableSelectBox(event, row, this.appspec.selectbox);
+      
+      $R.log("Controller onChangeサンプル_区分名称 : end");
+    }
     
     // -----------------------------------
     //  リクエストデータ　チェック処理
