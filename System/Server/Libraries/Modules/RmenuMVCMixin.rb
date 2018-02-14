@@ -77,4 +77,39 @@ module RmenuMVCMixin
     end
   end
 
+  # リクエストデータの特殊文字を変換する
+  def editRequestDataToSpecialChar(request_data)
+
+    request_data["records"].each do |request_record|
+      request_record["record"].each do |name, value|
+        idx = 0
+        value["value"].each do |var|
+          if var.is_a?(String)
+            str_var1 = var.gsub("\'", "’’")
+            str_var2 = str_var1.gsub("\"", "””")
+            str_var3 = str_var2.gsub("?", "？？")
+            str_var4 = str_var3.gsub("\\" ,"￥￥")
+            value["value"][idx] = str_var4
+          end
+          
+          idx        = idx + 1
+        end
+      end
+    end
+    
+    return request_data
+  end
+
+  # バインド変数置換後の文字列の特殊文字を元に戻す
+  def editSqlDataToNormalChar(before_string)
+  
+    after_string1 = before_string.gsub("’’" ,"''")
+    after_string2 = after_string1.gsub("””" ,"\"")
+    after_string3 = after_string2.gsub("？？" ,"?")
+    after_string4 = after_string3.gsub("￥￥" , "\\")
+    
+    return after_string4
+    
+  end
+
 end

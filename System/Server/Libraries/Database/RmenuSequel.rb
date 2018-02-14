@@ -2,10 +2,12 @@
 
 require 'rubygems'
 require 'sequel'
+require 'RmenuMVCMixin'                                                         # before after 動的メソッド実行Mixin
 require "RmenuSqlGenMixin"
 require 'json'
 
 class RmenuSequel
+  include RmenuMVCMixin
   include RmenuSqlGenMixin
 
   def initialize(db, dbname)
@@ -148,6 +150,10 @@ class RmenuSequel
       else
         after_sql = before_sql
       end
+      
+      # バインド変数置換後の文字列の特殊文字を元に戻す
+      after_sql = editSqlDataToNormalChar(after_sql)
+      
       $Dlog.debug("RmenuSequel") {"バインド変数、置換後のSQL : #{after_sql}"}
 
       # SQL文を実行する

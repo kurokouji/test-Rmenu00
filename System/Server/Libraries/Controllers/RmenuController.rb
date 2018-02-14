@@ -40,7 +40,7 @@ class RmenuController
       end
     end
   end
-	
+  
   # データチェック処理２
   # （リクエストレコードと同じIDをdatasetレコード配列から取り出す）
   def checkRecord(record_info, validation_data, temp_object)
@@ -82,6 +82,9 @@ class RmenuController
       temp_object = app_cache.getControllerObject(@request_data, validation_data)
       $Clog.debug("Controller") {"app_cache.getControllerObject normal end"}    # Logファイル Debug用
 
+      # リクエストデータの特殊文字を変換する
+      editRequestDataToSpecialChar(@request_data)
+      
       # リクエストデータをチェック
       $Clog.debug("Controller") {"checkRequestData start"}                      # Logファイル Debug用
       checkRequestData(validation_data, temp_object)
