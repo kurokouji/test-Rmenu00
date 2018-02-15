@@ -80,19 +80,21 @@ module RmenuMVCMixin
   # リクエストデータの特殊文字を変換する
   def editRequestDataToSpecialChar(request_data)
 
-    request_data["records"].each do |request_record|
-      request_record["record"].each do |name, value|
-        idx = 0
-        value["value"].each do |var|
-          if var.is_a?(String)
-            str_var1 = var.gsub("\'", "’’")
-            str_var2 = str_var1.gsub("\"", "””")
-            str_var3 = str_var2.gsub("?", "？？")
-            str_var4 = str_var3.gsub("\\" ,"￥￥")
-            value["value"][idx] = str_var4
-          end
+    if request_data.key?("records")
+      request_data["records"].each do |request_record|
+        request_record["record"].each do |name, value|
+          idx = 0
+          value["value"].each do |var|
+            if var.is_a?(String)
+              str_var1 = var.gsub("\'", "’’")
+              str_var2 = str_var1.gsub("\"", "””")
+              str_var3 = str_var2.gsub("?", "？？")
+              str_var4 = str_var3.gsub("\\" ,"￥￥")
+              value["value"][idx] = str_var4
+            end
           
-          idx        = idx + 1
+            idx        = idx + 1
+          end
         end
       end
     end
