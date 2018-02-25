@@ -9,8 +9,7 @@
       "status": "OK",
       "msg": ""
     },
-    "records": [{
-    }]
+    "records": []
   },
   "response": {
     "comment": "サンプル親子　メンテナンス　初期処理（サンプル区分照会）　レスポンスデータ",
