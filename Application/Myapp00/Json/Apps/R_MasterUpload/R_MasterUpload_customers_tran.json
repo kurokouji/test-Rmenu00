@@ -1,0 +1,45 @@
+{
+  "request":
+  {
+     "comment":    "得意先マスター作成処理"
+    ,"html":       "Myapp00/Json/Apps/R_MasterUpload"
+    ,"mode":       "customers"
+    ,"prog":       "no"
+    ,"model":      "yes"
+    
+    ,"message":
+    {
+      "status": "OK"
+      ,"msg":    ""
+    }
+
+    ,"records":
+    [
+      {
+         "comment": "マスターファイル名称"
+        ,"id":        "header"
+        ,"before":    ""
+        ,"after":     ""
+        ,"multiline": "no"
+        ,"record":
+        {
+           "マスターファイル名称": {"value": [""]}
+        }
+      }
+    ]
+  }
+
+  ,"response":
+  {
+     "comment":    "得意先マスター"
+    ,"html":       "Myapp00/Json/Apps/R_MasterUpload"
+    ,"mode":       "customers"
+    ,"prog":       "no"
+
+    ,"message":
+    {
+       "status": "OK"
+      ,"msg":    "得意先マスター作成処理は正常に終了しました。"
+    }
+  }
+}

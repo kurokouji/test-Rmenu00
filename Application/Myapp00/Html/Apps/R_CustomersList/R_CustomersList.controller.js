@@ -30,49 +30,62 @@
     // ---------------------------------------
     // ボタン・ファンクションキー イベント処理
     // ---------------------------------------
-     on保守契約一覧: function(event) {
-      $R.log("Controller on保守契約一覧 : start");
-      
-      // 保守契約一覧画面への引継ぎデータ（得意先名称）をセット
-      var status = this.model.on保守契約一覧前処理();
-      
 
-      // 次画面の処理モードを設定する
-      this.model.saveSessionStorageOfNextMode("R_MainteContractList", "select");
+     on帳票: function(event) {
+      $R.log("Controller on帳票 : start");
 
-      // 次画面に画面遷移する
-      this.model.on次画面表示("R_MainteContractList", "select");
-      
-      
-      if (status) {
-        // セッションストレージ　検索得意先名称　クリア
-        this.model.on保守契約一覧後処理();
-      }
+      this.ajaxExecute("print01");
 
-      $R.log("Controller on保守契約一覧 : end");
+      $R.log("Controller on帳票 : end");
+    }
+   ,onダウンロード: function(event) {
+      $R.log("Controller onダウンロード : start");
+
+      this.ajaxExecute("download");
+
+      $R.log("Controller onダウンロード : end");
     }
 
-    ,on保守サービス指示一覧: function(event) {
-      $R.log("Controller on保守サービス指示一覧 : start");
+    // -------------------------------------
+    //  リクエストデータ　編集・チェック処理
+    // -------------------------------------
+   ,onＰＤＦ作成OfCheckRequestData: function(requestData, mode) {
+      $R.log("Controller onＰＤＦ作成OfCheckRequestData : start");
 
-      // 保守サービス一覧画面への引継ぎデータ（得意先名称）をセット
-      var status = this.model.on保守契約一覧前処理();
-      
+      var status = this.checkRequestData(requestData);
 
-      // 次画面の処理モードを設定する
-      this.model.saveSessionStorageOfNextMode("R_MainteServiceList", "select");
-
-      // 次画面に画面遷移する
-      this.model.on次画面表示("R_MainteServiceList", "select");
-      
-
-      if (status) {
-        // セッションストレージ　検索得意先名称　クリア
-        this.model.on保守契約一覧後処理();
-      }
-
-      $R.log("Controller on保守サービス指示一覧 : end");
+      $R.log("Controller onＰＤＦ作成OfCheckRequestData : end");
+      return status;
     }
+   ,onダウンロードOfCheckRequestData: function(requestData, mode) {
+      $R.log("Controller onダウンロードOfCheckRequestData : start");
+
+      var status = this.checkRequestData(requestData);
+
+      $R.log("Controller onダウンロードOfCheckRequestData : end");
+      return status;
+    }
+    
+    // -------------------------------
+    //  レスポンスデータ　編集処理
+    // -------------------------------
+    ,onＰＤＦ作成OfEditResponseData: function(responseData, mode) {
+      $R.log("Controller onＰＤＦ作成OfEditResponseData : start");
+
+      this.model.onＰＤＦ表示OfEditResponseData(responseData, mode);
+
+      $R.log("Controller onＰＤＦ作成OfEditResponseData : end");
+    }
+   ,onダウンロードOfEditResponseData: function(responseData, mode) {
+      $R.log("Controller onダウンロードOfEditResponseData : start");
+
+//      this.editResponseData(responseData);
+      this.model.onダウンロードOfEditResponseData(responseData);
+
+      $R.log("Controller onダウンロードOfEditResponseData : end");
+    }
+
+
     
   });
 

@@ -1,8 +1,11 @@
 # coding: UTF-8
 
 require "date"
+require 'prawn'
+require 'prawn-svg'
 require 'RmenuJsonMixin' # ID名で該当レコードを取得する
 require 'Setubi/Server/Modules/SetubiOfPrintOfFormMixin'
+require 'victor'
 
 class R_MainteContractListPrint_form
   include RmenuJsonMixin
@@ -20,6 +23,9 @@ class R_MainteContractListPrint_form
 
       @controlPageCount = 0
       @controlPageKey   = ""
+
+      @pdfObject = @pdfcreate.getPdfObject()
+
 
       # initialize 終了ログを出力する
       $PDFC.debug("R_MainteContractListPrint_form") {"initialize normal end"}                     # Logファイル Debug用
@@ -46,6 +52,8 @@ class R_MainteContractListPrint_form
       responseRecord["処理時刻"]["value"][0] = formatDateTime(header_dateTime,'H時m分s秒'   )
 
       responseRecord["ページ"]["value"][0]     = @pdfcreate.getTotalPageCount()
+
+    $PDFC.debug("#{__FILE__}") {"#{__method__} Prawn::SVG::FontRegistry.font_path: #{Prawn::SVG::FontRegistry.font_path}"}       # Logファイル Debug用
 
       $PDFC.debug("R_MainteContractListPrint_form") {"page_header end"}                                 # Logファイル Debug用
       return "OK"

@@ -29,7 +29,7 @@ class R_MainteServiceList_view
   
   # 保守契約一覧表　編集処理
   def edit保守サービス指示一覧表OfR_MainteServiceListOfSetubi()
-    $Mlog.debug("R_MainteServiceList_view") {"edit保守サービス指示一覧表OfR_MainteServiceListOfSetubi start"}
+    $Vlog.debug("R_MainteServiceList_view") {"edit保守サービス指示一覧表OfR_MainteServiceListOfSetubi start"}
 
     responseRecord = getJsonChunkById(@response_data, "records", "detail",           "record")
     sqlRecord      = getJsonChunkById(@sql_data,      "sqls",    "detail", "output", "record")
@@ -59,13 +59,13 @@ class R_MainteServiceList_view
       edit保守サービス指示一覧表_諸掛行番(sqlRecord, responseRecord, i)
     end
 
-    $Mlog.debug("R_MainteServiceList_view") {"edit保守サービス指示一覧表OfR_MainteServiceListOfSetubi end"}
+    $Vlog.debug("R_MainteServiceList_view") {"edit保守サービス指示一覧表OfR_MainteServiceListOfSetubi end"}
     return "OK"
   end
 
   # 保守サービス指示一覧表　指示ＮＯ　編集処理
   def edit保守サービス指示一覧表_指示ＮＯ(sqlRecord, responseRecord, i)
-    $Mlog.debug("R_MainteServiceList_view") {"edit保守サービス指示一覧表_指示ＮＯ start"}
+    $Vlog.debug("R_MainteServiceList_view") {"edit保守サービス指示一覧表_指示ＮＯ start"}
 
     responseRecord["指示ＮＯ"]["value"][i]       = sqlRecord["指示ＮＯ"]["value"][i]
     responseRecord["作業区分"]["value"][i]       = sqlRecord["作業区分"]["value"][i]
@@ -90,13 +90,13 @@ class R_MainteServiceList_view
     responseRecord["請求額"]["value"][i]         = sqlRecord["請求額"]["value"][i]
     responseRecord["摘要"]["value"][i]           = sqlRecord["摘要"]["value"][i]
 
-    $Mlog.debug("R_MainteServiceList_view") {"edit保守サービス指示一覧表_指示ＮＯ end"}
+    $Vlog.debug("R_MainteServiceList_view") {"edit保守サービス指示一覧表_指示ＮＯ end"}
     return "OK"
   end
 
   # 保守サービス指示一覧表　作業区分　編集処理
   def edit保守サービス指示一覧表_作業区分(sqlRecord, responseRecord, i)
-    $Mlog.debug("R_MainteServiceList_view") {"edit保守サービス指示一覧表_作業区分 start"}
+    $Vlog.debug("R_MainteServiceList_view") {"edit保守サービス指示一覧表_作業区分 start"}
 
     responseRecord["指示ＮＯ"]["value"][i]       = sqlRecord["指示ＮＯ"]["value"][i]
     responseRecord["作業区分"]["value"][i]       = sqlRecord["作業区分"]["value"][i]
@@ -121,13 +121,13 @@ class R_MainteServiceList_view
     responseRecord["請求額"]["value"][i]         = sqlRecord["請求額"]["value"][i]
     responseRecord["摘要"]["value"][i]           = sqlRecord["摘要"]["value"][i]
 
-    $Mlog.debug("R_MainteServiceList_view") {"edit保守サービス指示一覧表_作業区分 end"}
+    $Vlog.debug("R_MainteServiceList_view") {"edit保守サービス指示一覧表_作業区分 end"}
     return "OK"
   end
 
   # 保守サービス指示一覧表　諸掛行番　編集処理
   def edit保守サービス指示一覧表_諸掛行番(sqlRecord, responseRecord, i)
-    $Mlog.debug("R_MainteServiceList_view") {"edit保守サービス指示一覧表_諸掛行番 start"}
+    $Vlog.debug("R_MainteServiceList_view") {"edit保守サービス指示一覧表_諸掛行番 start"}
 
     responseRecord["指示ＮＯ"]["value"][i]       = sqlRecord["指示ＮＯ"]["value"][i]
     responseRecord["作業区分"]["value"][i]       = sqlRecord["作業区分"]["value"][i]
@@ -152,7 +152,7 @@ class R_MainteServiceList_view
     responseRecord["請求額"]["value"][i]         = sqlRecord["請求額"]["value"][i]
     responseRecord["摘要"]["value"][i]           = sqlRecord["摘要"]["value"][i]
 
-    $Mlog.debug("R_MainteServiceList_view") {"edit保守サービス指示一覧表_諸掛行番 end"}
+    $Vlog.debug("R_MainteServiceList_view") {"edit保守サービス指示一覧表_諸掛行番 end"}
     return "OK"
   end
 

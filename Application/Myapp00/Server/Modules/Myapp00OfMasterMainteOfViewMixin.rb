@@ -25,4 +25,26 @@ module Myapp00OfMasterMainteOfViewMixin
     $Vlog.debug("Myapp00OfMasterMainteOfViewMixin") {"getMaxPageCountOfMyapp00 end"}                   # Logファイル Debug用
     return "OK"
   end
+
+  # ファイル名（パス情報含む）を使用してファイルを出力する
+  # Excel iPad　双方で文字化けしないようにbomを付けた
+  # 2015-07-21 SHIMOYAMA Yoshihiro 
+  def writeCodeFileWithBom(file_name, data, outcode)
+    $Vlog.debug("Myapp00OfMasterMainteOfViewMixin") {"writeCodeFileWithBom start"}                 # Logファイル Debug用
+    begin
+      file = File.open(file_name, "w:#{outcode}")
+
+      bom = '   '
+      bom.setbyte(0, 0xEF)
+      bom.setbyte(1, 0xBB)
+      bom.setbyte(2, 0xBF)
+
+      file.write(bom)
+      file.write(data)
+      file.close
+    rescue Exception
+      puts Exception.message
+    end
+    $Vlog.debug("Myapp00OfMasterMainteOfViewMixin") {"writeCodeFileWithBom end"}                   # Logファイル Debug用
+  end
 end

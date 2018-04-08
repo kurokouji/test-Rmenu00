@@ -1,7 +1,6 @@
 # coding: UTF-8
 
 require 'date'
-require 'json'
 
 module ValidationMixin
   # （リクエストレコードから項目を取りだし、チェックを行う）
@@ -336,6 +335,23 @@ module ValidationMixin
       return "OK"
     else
       return valid_error("#{name} :半角文字以外の文字が入力されています。")
+    end
+  end
+
+  # 全角 チェック
+  # 20180321 Okada
+  # 英数、空白         [ A-Za-z0-9]
+  # 英記号             [\x21-\x2F\x3A-\x40\x5B-\x60\x7B-\x7E]
+  # 半角カナ、カナ記号 [｡-ﾟ]
+  def rmenu_zenkaku(value, name)
+    if value == ""
+      return "OK"
+    end
+
+    if value =~ /[ A-Za-z0-9\x21-\x2F\x3A-\x40\x5B-\x60\x7B-\x7E｡-ﾟ]/
+      return valid_error("#{name} :全角文字以外の文字が入力されています。")
+    else
+      return "OK"
     end
   end
 

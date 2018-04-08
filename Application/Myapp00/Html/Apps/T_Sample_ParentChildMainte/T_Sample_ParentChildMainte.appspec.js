@@ -91,6 +91,7 @@
       [".削除",              "change", "onChange削除"]
     // ここから追加処理
      ,[".サンプル_区分ＩＤ",  "change", "onChangeサンプル_区分ＩＤ"]
+     ,[".サンプル_区分名称",  "change", "onChangeサンプル_区分名称"]
     ]
     // ----------------------------------------------------------------------------------
     // カスタムイベント設定はイベント名・実行コンテキスト・コールバック関数の順に指定する
@@ -233,6 +234,12 @@
          ,selectorname: "サンプル_区分ＩＤ"
          ,init:     {initvalue: "", inithtml: "サンプル_区分選択", datasetid: "選択サンプル_区分", valuename: "選択サンプル_区分ＩＤ", htmlname: "選択サンプル_区分名称"}
          ,change:   {datasetid: "detail", valuename: "サンプル_区分ＩＤ", htmlname: ""}
+      }
+     ,{
+          selectorid: "サンプル_区分名称"
+         ,selectorname: "サンプル_区分名称"
+         ,init:     {initvalue: "", inithtml: "サンプル_区分選択", datasetid: "選択サンプル_区分", valuename: "選択サンプル_区分名称", htmlname: "選択サンプル_区分名称"}
+         ,change:   {datasetid: "detail", valuename: "サンプル_区分名称", htmlname: ""}
       }
     ]
     // ----------------------------------------------------------------------------------

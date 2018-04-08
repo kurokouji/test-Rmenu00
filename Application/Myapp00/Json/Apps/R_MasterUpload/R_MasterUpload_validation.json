@@ -1,0 +1,15 @@
+{
+  "html": "Myapp00/Json/Apps/R_MasterUpload"
+
+  ,"records":
+  [
+    {
+      "id":        "header"
+      ,"multiline": "no"
+      ,"record":
+      {
+      }
+    }
+  ]
+}
+

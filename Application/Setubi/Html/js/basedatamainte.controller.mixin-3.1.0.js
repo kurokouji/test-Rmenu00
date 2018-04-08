@@ -31,7 +31,7 @@
       var arg = this.model.on初期処理();
       this.view.on初期処理(arg);
       
-      var status = this.model.on選択画面戻り();
+      var arg = this.model.on選択画面戻り();
       
       // 選択画面処理終り
       if (arg["status"] == "OK") {

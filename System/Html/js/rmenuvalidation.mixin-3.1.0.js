@@ -65,6 +65,17 @@
            return true;
          }
       ]
+      // 2017/04/24 ADD Okada
+     ,decimalS: [
+         "数を入力して下さい。"
+        ,"数字と小数点、符号以外の文字が入力されています。"
+        ,function (value) {
+           if (value == "") return true;
+
+           var stringvalue = String(value);
+           return stringvalue.match(/^[+-]?\d+(\.\d+)?$/);
+         }
+      ]
      ,alphabet: [
          "アルファベット（大文字・小文字）を入力して下さい。"
         ,"アルファベット（大文字・小文字）以外の文字が入力されています。"
@@ -161,6 +172,19 @@
         ,function (value) {
            if (value == "") return true;
            if (value.match(/[^ｱｲｳｴｵｧｨｩｪｫｶｷｸｹｺｻｼｽｾｿﾀﾁﾂｯﾃﾄﾅﾆﾇﾈﾉﾊﾋﾌﾍﾎﾏﾐﾑﾒﾓﾔﾕﾖｬｭｮﾗﾘﾙﾚﾛﾜｦﾝﾞﾟｰ･､｡ A-Za-z0-9!"#%&'\(\)=\|;:\+\*_,\.<>\/\?@\[\]\{\}\\\^\-｢｣\$]/g)) return false;
+           return true;
+         }
+      ]
+     ,zenkaku: [
+         // 20180321 Okada
+         // 英数、空白         [ A-Za-z0-9]
+         // 英記号             [\x21-\x2F\x3A-\x40\x5B-\x60\x7B-\x7E]
+         // 半角カナ、カナ記号 [｡-ﾟ]
+         "全角文字を入力して下さい。"
+        ,"全角文字以外の文字が入力されています。"
+        ,function (value) {
+           if (value == "") return true;
+           if (value.match(/[ A-Za-z0-9\x21-\x2F\x3A-\x40\x5B-\x60\x7B-\x7E｡-ﾟ]/)) return false;
            return true;
          }
       ]
@@ -513,7 +537,7 @@
               // 20170913 shimoji update
               //target       = this.dataset.getElementObject(name, j);
               if (multiline == "no") {
-                target = $($("#" + name))[0];
+                target = $($("#" + name));
               }
               else {
                 target = $($("." + name))[j];

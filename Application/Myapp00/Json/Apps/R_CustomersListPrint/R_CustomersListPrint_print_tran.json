@@ -1,0 +1,398 @@
+{
+   "request":
+   {
+     "comment":    "台帳一覧　一覧表作成 Ｎｏ１　リクエストデータ"
+    ,"html":       "Myapp00/Json/Apps/R_CustomersListPrint"
+    ,"mode":       "print"
+    ,"prog":       "no"
+    ,"model":      "yes"
+
+    ,"message":
+    {
+      "status": "OK"
+      ,"msg":    ""
+    }
+
+    ,"records":
+     [
+       {
+          "id":        "printparam"
+         ,"before":    ""
+         ,"after":     ""
+         ,"multiline": "no"
+         ,"record":
+         {
+         "検索得意先名称": {"value": [""], "idx": [""]}
+        ,"検索郵便番号":   {"value": [""], "idx": [""]}
+        ,"検索住所":       {"value": [""], "idx": [""]}
+         }
+       }
+     ]
+   }
+
+  ,"response":
+   {
+     "comment":    "用紙サイズＡ３　横：420mm X 297mm    印字領域：400mm X 275mm　マージン：10mm 12mm"
+    ,"html":       "Myapp00/Json/Apps/R_CustomersListPrint"
+    ,"mode":       "print"
+    ,"prog":       "no"
+    ,"pdfinfo":
+     {
+       "prog":           "yes"
+      ,"template":       ""
+      ,"imageTemplate": ""
+      ,"imageTemplateDpi": "200"
+      ,"svgTemplate": "a4_portrait.svg"
+      ,"_svgTemplate": "a4_portrait.svg"
+      ,"svgTemplateX": "-10"
+      ,"svgTemplateY": "287"
+      ,"svgTemplateWidth": "210"
+      ,"svgTemplateHeight": "297"
+      ,"pdffile":        "R_CustomersListPrint.pdf"
+      ,"pdfname": "得意先一覧.pdf"
+      ,"pagesize":       "A4"
+      ,"pagelayout":     ":portrait"
+      ,"leftmargin":     "10"
+      ,"rightmargin":    "10"
+      ,"topmargin":      "10"
+      ,"bottommargin":   "10"
+      ,"fontfile":       "ipamp.ttf"
+      ,"fontsize":       "12"
+      ,"fontstyle":      ":normal"
+      ,"fontcolor":      ""
+      ,"pointunit":      "mm"
+     }
+
+    ,"message":
+     {
+        "status": "OK"
+       ,"msg":    "プリント処理は正常に終了しました。"
+     }
+     
+    ,"records":
+     [
+      {
+         "comment":        "ヘッダー（基本情報）"
+        ,"id":             "page_header"
+        ,"before":         ""
+        ,"after":         ""
+        ,"multiline":      "no"
+        ,"pdfinfo":
+         {
+           "before":         ["background_pattern","page_header","background_grid(true)"]
+          ,"after":          ""
+          ,"pagecontrol":    "page_header"
+          ,"outputcontrol":  "all_page"
+          ,"templatepage":   "1"
+          ,"fontfile":       "ipagp.ttf"
+          ,"fontsize":       "10"
+          ,"fontstyle":      ""
+          ,"fontcolor":      ""
+          ,"pagelines":      ""
+          ,"yposition":      "190"
+          ,"movedown":       ""
+         }
+
+        ,"record":
+         {
+           "Title":
+           {
+             "value": ["得意先一覧 (全件,ＩＤ順)"]
+            ,"pdfinfo":
+             {
+               "type":   "text_box"
+              ,"font":   {"file": "", "size": "16", "style": "", "color": ""}
+              ,"box":    {"width":  "100.0", "height": "10", "align": ":left"}
+              ,"axis":   {"x": ["0.0"], "y": ["284.0"]}
+             }
+           }
+
+           ,"日付":
+           {
+             "value": [""]
+            ,"fromtype": "sqls", "fromid": "header", "fromname": "日付"
+            ,"pdfinfo":
+             {
+               "type":   "text_box"
+              ,"font":   {"file": "", "size": "8", "style": "", "color": ""}
+              ,"box":    {"width":  "80.0", "height": "5", "align": ":right"}
+              ,"axis":   {"x": ["110.0"], "y": ["284.0"]}
+             }
+           }
+
+           ,"ページ":
+           {
+             "value": [""]
+            ,"pdfinfo":
+             {
+               "type":   "text_box"
+              ,"font":   {"file": "", "size": "", "style": "", "color": ""}
+              ,"box":    {"width":  "20", "height": "5", "align": ":right"}
+              ,"axis":   {"x": ["148.0"], "y": ["-3.0"]}
+             }
+           }
+
+          ,"/":
+           {
+             "value": ["/"]
+            ,"pdfinfo":
+             {
+               "type":   "text_box"
+              ,"font":   {"file": "", "size": "", "style": "", "color": ""}
+              ,"box":    {"width":  "20", "height": "5", "align": ":center"}
+              ,"axis":   {"x": ["160.0"], "y": ["-3.0"]}
+             }
+           }
+
+           ,"総ページ数":
+           {
+             "value": [""]
+            ,"fromtype": "sqls", "fromid": "header", "fromname": "総ページ数"
+            ,"pdfinfo":
+             {
+               "type":   "text_box"
+              ,"font":   {"file": "", "size": "", "style": "", "color": ""}
+              ,"box":    {"width":  "20", "height": "5", "align": ":left"}
+              ,"axis":   {"x": ["172.0"], "y": ["-3.0"]}
+             }
+           }
+
+          ,"Page":
+           {
+             "value": ["ページ"]
+            ,"pdfinfo":
+             {
+               "type":   "text_box"
+              ,"font":   {"file": "", "size": "", "style": "", "color": ""}
+              ,"box":    {"width":  "20", "height": "5", "align": ":right"}
+              ,"axis":   {"x": ["170.0"], "y": ["-3.0"]}
+             }
+           }
+
+
+
+           ,"行番号":
+           {
+             "value": ["№"]
+            ,"pdfinfo":
+             {
+               "type":   "text_box"
+              ,"font":   {"file": "", "size": "10", "style": "", "color": ""}
+              ,"box":    {"width":  "30", "height": "7", "align": ":left"}
+              ,"axis":   {"x": ["-8.0"], "y": ["276.0"]}
+             }
+           }
+
+           ,"列名１":
+           {
+             "value": ["ＩＤ"]
+            ,"pdfinfo":
+             {
+               "type":   "text_box"
+              ,"font":   {"file": "", "size": "10", "style": "", "color": ""}
+              ,"box":    {"width":  "30", "height": "7", "align": ":center"}
+              ,"axis":   {"x": ["0.0"], "y": ["276.0"]}
+             }
+           }
+
+           ,"列名２":
+           {
+             "value": ["全国地方公共団体コード"]
+            ,"pdfinfo":
+             {
+               "type":   "text_box"
+              ,"font":   {"file": "", "size": "10", "style": "", "color": ""}
+              ,"box":    {"width":  "30", "height": "7", "align": ":center"}
+              ,"axis":   {"x": ["30.0"], "y": ["276.0"]}
+             }
+           }
+
+           ,"列名３":
+           {
+             "value": ["郵便番号"]
+            ,"pdfinfo":
+             {
+               "type":   "text_box"
+              ,"font":   {"file": "", "size": "10", "style": "", "color": ""}
+              ,"box":    {"width":  "30", "height": "7", "align": ":center"}
+              ,"axis":   {"x": ["60.0"], "y": ["276.0"]}
+             }
+           }
+
+           ,"列名４":
+           {
+             "value": ["都道府県名カナ"]
+            ,"pdfinfo":
+             {
+               "type":   "text_box"
+              ,"font":   {"file": "", "size": "10", "style": "", "color": ""}
+              ,"box":    {"width":  "30", "height": "7", "align": ":center"}
+              ,"axis":   {"x": ["90.0"], "y": ["276.0"]}
+             }
+           }
+
+           ,"列名５":
+           {
+             "value": ["市区町村名カナ"]
+            ,"pdfinfo":
+             {
+               "type":   "text_box"
+              ,"font":   {"file": "", "size": "10", "style": "", "color": ""}
+              ,"box":    {"width":  "30", "height": "7", "align": ":center"}
+              ,"axis":   {"x": ["120.0"], "y": ["276.0"]}
+             }
+           }
+
+           ,"列名６":
+           {
+             "value": ["町域名カナ"]
+            ,"pdfinfo":
+             {
+               "type":   "text_box"
+              ,"font":   {"file": "", "size": "10", "style": "", "color": ""}
+              ,"box":    {"width":  "30", "height": "7", "align": ":center"}
+              ,"axis":   {"x": ["150.0"], "y": ["276.0"]}
+             }
+           }
+
+           ,"列名７":
+           {
+             "value": ["更新カウンタ"]
+            ,"pdfinfo":
+             {
+               "type":   "text_box"
+              ,"font":   {"file": "", "size": "10", "style": "", "color": ""}
+              ,"box":    {"width":  "10", "height": "7", "align": ":right"}
+              ,"axis":   {"x": ["180.0"], "y": ["276.0"]}
+             }
+           }
+
+        }
+      }
+
+     ,{
+         "comment":        "必須オプション（明細）"
+        ,"id":             "detail"
+        ,"before":         ""
+        ,"after":          ""
+        ,"multiline":      "yes"
+        ,"pdfinfo":
+         {
+           "before":         "page_detail"
+          ,"after":          ""
+          ,"pagecontrol":    "detail"
+          ,"outputcontrol":  "all_page"
+          ,"templatepage":   "1"
+          ,"fontfile":       "ipagp.ttf"
+          ,"fontsize":       "10"
+          ,"fontstyle":      ""
+          ,"fontcolor":      ""
+          ,"pagelines":      "50"
+          ,"yposition":      "270.00"
+          ,"movedown":       "5.3"
+         }
+
+        ,"record":
+         {
+           "印刷行数":
+           {
+             "value": [""]
+            ,"pdfinfo":
+             {
+               "type":   "text_box"
+              ,"font":   {"file": "", "size": "7", "style": "", "color": ""}
+              ,"box":    {"width":  "10", "height": "7", "align": ":right"}
+              ,"axis":   {"x": ["-13.0"], "y": [""]}
+             }
+           }
+
+         ,"項目１":
+           {
+             "value": [""]
+            ,"pdfinfo":
+             {
+               "type":   "text_box"
+              ,"font":   {"file": "", "size": "", "style": "", "color": ""}
+              ,"box":    {"width":  "30", "height": "7", "align": ":left"}
+              ,"axis":   {"x": ["0.0"], "y": [""]}
+             }
+           }
+
+         ,"項目２":
+           {
+             "value": [""]
+            ,"pdfinfo":
+             {
+               "type":   "text_box"
+              ,"font":   {"file": "", "size": "", "style": "", "color": ""}
+              ,"box":    {"width":  "30", "height": "7", "align": ":left"}
+              ,"axis":   {"x": ["30.0"], "y": [""]}
+             }
+           }
+
+           ,"項目３":
+           {
+             "value": [""]
+            ,"pdfinfo":
+             {
+               "type":   "text_box"
+              ,"font":   {"file": "", "size": "", "style": "", "color": ""}
+              ,"box":    {"width":  "30", "height": "7", "align": ":left"}
+              ,"axis":   {"x": ["60.0"], "y": [""]}
+             }
+           }
+
+           ,"項目４":
+           {
+             "value": [""]
+            ,"pdfinfo":
+             {
+               "type":   "text_box"
+              ,"font":   {"file": "", "size": "", "style": "", "color": ""}
+              ,"box":    {"width":  "30", "height": "7", "align": ":left"}
+              ,"axis":   {"x": ["90.0"], "y": [""]}
+             }
+           }
+
+           ,"項目５":
+           {
+             "value": [""]
+            ,"pdfinfo":
+             {
+               "type":   "text_box"
+              ,"font":   {"file": "", "size": "", "style": "", "color": ""}
+              ,"box":    {"width":  "30", "height": "7", "align": ":left"}
+              ,"axis":   {"x": ["120.0"], "y": [""]}
+             }
+           }
+
+           ,"項目６":
+           {
+             "value": [""]
+            ,"pdfinfo":
+             {
+               "type":   "text_box"
+              ,"font":   {"file": "", "size": "", "style": "", "color": ""}
+              ,"box":    {"width":  "30", "height": "7", "align": ":left"}
+              ,"axis":   {"x": ["150.0"], "y": [""]}
+             }
+           }
+
+           ,"項目７":
+           {
+             "value": [""]
+            ,"pdfinfo":
+             {
+               "type":   "text_box"
+              ,"font":   {"file": "", "size": "", "style": "", "color": ""}
+              ,"box":    {"width":  "10", "height": "7", "align": ":right"}
+              ,"axis":   {"x": ["180.0"], "y": [""]}
+             }
+           }
+
+        }
+      }
+
+    ]
+  }
+}

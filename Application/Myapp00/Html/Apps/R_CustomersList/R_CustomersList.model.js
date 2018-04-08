@@ -59,6 +59,57 @@
 
     }
 
+    // ---------------------------------------
+    // ボタン・ファンクションキー イベント処理
+    // ---------------------------------------
+    ,onＰＤＦ表示OfEditResponseData: function(responseData, mode) {
+      $R.log("Model onＰＤＦ表示OfEditResponseData : start");
+
+      var date = new Date();
+      var year = date.getFullYear()
+      var mon  = date.getMonth()+1; //１を足すこと
+      var day  = date.getDate();
+      var hour = date.getHours();
+      var min  = date.getMinutes();
+      var sec  = date.getSeconds();
+
+      var pdfname = responseData["pdfinfo"]["pdfname"]
+      var tpdfname = pdfname.split(/.pdf$/)
+
+      var argHash  = new Object();
+      argHash["file"]   = responseData["pdfinfo"]["pdffile"];
+      argHash["download"] = tpdfname[0]
+          + "_"
+          + ( '0000' + year ).slice( -4 )
+          + ( '0000' + mon  ).slice( -2 )
+          + ( '0000' + day  ).slice( -2 )
+          + "_"
+          + ( '0000' + hour  ).slice( -2 )
+          + ( '0000' + min  ).slice( -2 )
+          + ( '0000' + sec  ).slice( -2 )
+          + ".pdf"
+      ;
+      argHash["type"]   = "pdf";
+      argHash["delete"] = "yes";
+      this.postDownloadRack(argHash);
+
+      $R.log("Model onＰＤＦ表示OfEditResponseData : end");
+    }
+
+   ,onダウンロードOfEditResponseData: function(responseData) {
+      $R.log("Model onダウンロードOfEditResponseData : start");
+
+      var argHash  = new Object();
+      argHash["file"] = responseData["records"][0]["record"]["downloadfile"]["value"][0];
+      argHash["type"] = "csv";
+      this.postDownloadRack(argHash);
+
+      $R.log("Model onダウンロードOfEditResponseData : end");
+    }
+
+
+
+
   });
 
 }(jQuery, Rmenu));

@@ -52,7 +52,9 @@
         format: function(value) {
           if (value == "") return value;
           var formatvalue = String(value);
-          return formatvalue.replace(/(\d)(?=(\d\d\d)+$)/g, "$1,");
+          // 20180307 符号付小数点の3桁カンマ編集対応 Okada
+          return formatvalue.replace(/^([+-]?\d+)(?=\.|$)/, function(s){ return s.replace(/(\d+?)(?=(?:\d{3})+$)/g, '$1,');});
+        //return formatvalue.replace(/(\d)(?=(\d\d\d)+$)/g, "$1,");
         //for(i = 0; i < formatvalue.length/3; i++){
         //  return formatvalue.replace(/^([+-]?\d+)(\d\d\d)/,"$1,$2");
         //}
@@ -66,7 +68,9 @@
         format: function(value) {
           if (value == "") return value;
           var formatvalue = String(value);
-          return formatvalue.replace(/(\d)(?=(\d\d\d)+$)/g, "$1,");
+          // 20180307 符号付小数点の3桁カンマ編集対応 Okada
+          return formatvalue.replace(/^([+-]?\d+)(?=\.|$)/, function(s){ return s.replace(/(\d+?)(?=(?:\d{3})+$)/g, '$1,');});
+        //return formatvalue.replace(/(\d)(?=(\d\d\d)+$)/g, "$1,");
         //for(i = 0; i < formatvalue.length/3; i++){
         //  return formatvalue.replace(/^([+-]?\d+)(\d\d\d)/,"$1,$2");
         //}
@@ -80,7 +84,9 @@
         format: function(value) {
           if (value == "") return value;
           var formatvalue = String(value);
-          return formatvalue.replace(/(\d)(?=(\d\d\d)+$)/g, "$1,");
+          // 20180307 符号付小数点の3桁カンマ編集対応 Okada
+          return formatvalue.replace(/^([+-]?\d+)(?=\.|$)/, function(s){ return s.replace(/(\d+?)(?=(?:\d{3})+$)/g, '$1,');});
+        //return formatvalue.replace(/(\d)(?=(\d\d\d)+$)/g, "$1,");
         //for(i = 0; i < formatvalue.length/3; i++){
         //  return formatvalue.replace(/^([+-]?\d+)(\d\d\d)/,"$1,$2");
         //}
@@ -440,7 +446,7 @@
       }
       // 2013.01.23 光保 ボタンの文字列を設定できるようにしました
       this.setDialogButtonLabels($("#confirmFooter"), arg);
-      $("#confirmDialog").modal("show")
+      $("#confirmDialog").modal("show");
 
       $R.log("ViewMixin onConfirmDialog : end");
     }
@@ -494,7 +500,7 @@
       }
       // 2013.01.23 光保 ボタンの文字列を設定できるようにしました
       this.setDialogButtonLabels($("#executeFooter"), arg);
-      $("#executeDialog").modal("show")
+      $("#executeDialog").modal("show");
 
       $R.log("ViewMixin onExecuteDialog : end");
     }
@@ -548,7 +554,7 @@
       }
       // 2013.01.23 光保 ボタンの文字列を設定できるようにしました
       this.setDialogButtonLabels($("#serverFooter"), arg);
-      $("#serverDialog").modal("show")
+      $("#serverDialog").modal("show");
 
       $R.log("ViewMixin onServerDialog : end");
     }
@@ -924,29 +930,28 @@
     //  画面ヘッダ　キー項目　表示＆クリア処理
     // -------------------------------------------------------
    ,setFromDatasetToViewWithSessionStorageOfHeader: function(dataSet) {
-      $R.log("View setFromDatasetToViewWithSessionStorageOfHeader : start");
+      $R.log("ViewMixin setFromDatasetToViewWithSessionStorageOfHeader : start");
       
       this.setFromDatasetToViewWithKeyInfo(dataSet, this.appspec.sessionStorageHeaderKey);
 
-      $R.log("View setFromDatasetToViewWithSessionStorageOfHeader : end");
+      $R.log("ViewMixin setFromDatasetToViewWithSessionStorageOfHeader : end");
     }
     
     // -------------------------------------------------------
     //  前画面からの引き継ぎデータを表示する
     // -------------------------------------------------------
    ,setFromDatasetToViewWithBeforeStorageData: function(dataSet) {
-      $R.log("View setFromDatasetToViewWithBeforeStorageData : start");
+      $R.log("ViewMixin setFromDatasetToViewWithBeforeStorageData : start");
       
       this.setFromDatasetToViewWithKeyInfo(dataSet, this.appspec.beforeStorageData);
 
-      $R.log("View setFromDatasetToViewWithBeforeStorageData : end");
+      $R.log("ViewMixin setFromDatasetToViewWithBeforeStorageData : end");
     }
     
     // -------------------------------------------------------
     //  画面キー情報＆前画面からの引き継ぎデータを表示する
     // -------------------------------------------------------
    ,setFromDatasetToViewWithKeyInfo: function(dataSet, keyInfo) {
-      
       // 検索項目をクリアする
       var maxSize1      = keyInfo.length;
       for (var i = 0; i < maxSize1; i++) {

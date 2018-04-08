@@ -30,6 +30,11 @@ class RmenuPdfCreate
       @app_cache          = RmenuAppCache.new("form.rb")                                            # フォームAPPのキャッシュ
       @app_cache.createCache()
 
+      # prawn-svg に FontRegistry.font_path を設定する
+      if  Prawn::SVG::FontRegistry.font_path.length == 0 then
+        Prawn::SVG::FontRegistry.font_path << $Rconfig['libs_path'] + "/Main"
+      end
+
       pdfTempDir        = $Rconfig['apps_path'] + "/" + response_data["html"].gsub(/\/Json\//, '/PdfTemplate/')
       @pdfTemplate        = ""
       if response_data["pdfinfo"]["template"] != ""
@@ -130,6 +135,11 @@ class RmenuPdfCreate
 
       # ヘッダー・フッターのマルチライン用に使用する（2014.04.02 shimoji　追加）
       @curYPositionOther  = 0.0
+
+
+      if  Prawn::SVG::FontRegistry.font_path.length == 0 then
+        Prawn::SVG::FontRegistry.font_path << $Rconfig['libs_path'] + "/Main"
+      end
 
       $PDFC.debug("RmenuPdfCreate") {"initialize normal end"}                                       # Logファイル Debug用
     rescue

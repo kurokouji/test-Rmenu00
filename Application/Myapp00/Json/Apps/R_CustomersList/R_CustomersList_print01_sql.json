@@ -1,0 +1,53 @@
+{
+   "comment":    "台帳一覧　一覧表作成 Ｎｏ１"
+  ,"html":       "Myapp00/Json/Apps/R_CustomersList"
+  ,"dbname":     "myapp00"
+  ,"mode":       "print01"
+  ,"prog":       "no"
+  
+  ,"message":
+   {
+     "status": "OK"
+    ,"msg":    "台帳一覧　一覧表作成 Ｎｏ１ 処理は正常に終了しました。"
+   }
+  
+  ,"sqls":
+  [
+
+   {
+      "comment":  "プリントパラメータ（KEYVALUE）を設定する"
+      ,"id":      "printparam"
+      ,"html":    "Myapp00/Json/Apps/R_CustomersListPrint"
+      ,"mode":    "print"
+      ,"before":  ""
+      ,"after":   ""
+      ,"sql":
+      {
+         "type":  "nosql"
+      }
+      ,"input":
+      {
+         "multiline": "no"
+        ,"record":
+        {
+          "検索得意先名称":
+          {
+            "value": [""]
+           ,"fromtype": "request", "fromid": "header", "fromio": "", "fromname": "検索得意先名称"
+          }
+         ,"検索郵便番号":
+          {
+            "value": [""]
+           ,"fromtype": "request", "fromid": "header", "fromio": "", "fromname": "検索郵便番号"
+          }
+         ,"検索住所":
+          {
+            "value": [""]
+           ,"fromtype": "request", "fromid": "header", "fromio": "", "fromname": "検索住所"
+          }
+        }
+      }
+    }
+  ]
+}
+

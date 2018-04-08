@@ -3,6 +3,7 @@
 /* #mainForm高さ調整 */
 #mainForm {
   height: calc(100vh - 100px);
+  min-height: calc(260px + 150px + 17px);
 }
 
 /* ヘッダテーブルの表示窓 */
@@ -33,6 +34,7 @@
   overflow-y: scroll;      /* 垂直スクロールバー auto:自動表示 hidden:非表示 */
   width: calc(568px + 17px);
   height: calc(100vh - 260px);
+  min-height: 260px;
 }
 
 /* タブレット用のCSS定義 */

@@ -330,6 +330,13 @@
           "fromio" : "",
           "fromname" : "サンプル_区分ＩＤ"
         },
+        "サンプル_区分名称": {
+          "value": [""],
+          "fromtype" : "request",
+          "fromid" : "detail",
+          "fromio" : "",
+          "fromname" : "サンプル_区分名称"
+        },
         "登録日時": {
           "value": [""],
           "funct": "CURRENT_TIMESTAMP"
@@ -480,6 +487,9 @@
         "サンプル_区分ＩＤ": {
           "value": [""],
           "field": "ref_サンプル_区分ＩＤ"
+        },
+        "サンプル_区分名称": {
+          "value": [""]
       },
       "サンプル_明細項目０１": {
         "value": [""]

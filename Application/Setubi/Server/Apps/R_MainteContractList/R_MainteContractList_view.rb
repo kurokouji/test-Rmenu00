@@ -29,7 +29,7 @@ class R_MainteContractList_view
   
   # 保守契約一覧表　編集処理
   def edit保守契約一覧表OfR_MainteContractListOfSetubi()
-    $Mlog.debug("R_MainteContractList_view") {"edit保守契約一覧表OfR_MainteContractListOfSetubi start"}
+    $Vlog.debug("R_MainteContractList_view") {"edit保守契約一覧表OfR_MainteContractListOfSetubi start"}
 
     responseRecord = getJsonChunkById(@response_data, "records", "detail",           "record")
     sqlRecord      = getJsonChunkById(@sql_data,      "sqls",    "detail", "output", "record")
@@ -70,13 +70,13 @@ class R_MainteContractList_view
       edit保守契約一覧表_諸掛行番(sqlRecord, responseRecord, i)
     end
 
-    $Mlog.debug("R_MainteContractList_view") {"edit保守契約一覧表OfR_MainteContractListOfSetubi end"}
+    $Vlog.debug("R_MainteContractList_view") {"edit保守契約一覧表OfR_MainteContractListOfSetubi end"}
     return "OK"
   end
 
   # 保守契約一覧表　契約ＮＯ　編集処理
   def edit保守契約一覧表_契約ＮＯ(sqlRecord, responseRecord, i)
-    $Mlog.debug("R_MainteContractList_view") {"edit保守契約一覧表_契約ＮＯ start"}
+    $Vlog.debug("R_MainteContractList_view") {"edit保守契約一覧表_契約ＮＯ start"}
 
     responseRecord["契約ＮＯ"]["value"][i]       = sqlRecord["契約ＮＯ"]["value"][i]
     responseRecord["設備行番"]["value"][i]       = sqlRecord["設備行番"]["value"][i]
@@ -99,13 +99,13 @@ class R_MainteContractList_view
     responseRecord["請求フラグ"]["value"][i]     = sqlRecord["請求フラグ"]["value"][i]
     responseRecord["摘要"]["value"][i]           = sqlRecord["摘要"]["value"][i]
 
-    $Mlog.debug("R_MainteContractList_view") {"edit保守契約一覧表_契約ＮＯ end"}
+    $Vlog.debug("R_MainteContractList_view") {"edit保守契約一覧表_契約ＮＯ end"}
     return "OK"
   end
 
   # 保守契約一覧表　設備行番　編集処理
   def edit保守契約一覧表_設備行番(sqlRecord, responseRecord, i)
-    $Mlog.debug("R_MainteContractList_view") {"edit保守契約一覧表_設備行番 start"}
+    $Vlog.debug("R_MainteContractList_view") {"edit保守契約一覧表_設備行番 start"}
 
     responseRecord["契約ＮＯ"]["value"][i]       = sqlRecord["契約ＮＯ"]["value"][i]
     responseRecord["設備行番"]["value"][i]       = sqlRecord["設備行番"]["value"][i]
@@ -128,13 +128,13 @@ class R_MainteContractList_view
     responseRecord["請求フラグ"]["value"][i]     = sqlRecord["請求フラグ"]["value"][i]
     responseRecord["摘要"]["value"][i]           = sqlRecord["摘要"]["value"][i]
 
-    $Mlog.debug("R_MainteContractList_view") {"edit保守契約一覧表_設備行番 end"}
+    $Vlog.debug("R_MainteContractList_view") {"edit保守契約一覧表_設備行番 end"}
     return "OK"
   end
 
   # 保守契約一覧表　作業区分　編集処理
   def edit保守契約一覧表_作業区分(sqlRecord, responseRecord, i)
-    $Mlog.debug("R_MainteContractList_view") {"edit保守契約一覧表_作業区分 start"}
+    $Vlog.debug("R_MainteContractList_view") {"edit保守契約一覧表_作業区分 start"}
 
     responseRecord["契約ＮＯ"]["value"][i]       = sqlRecord["契約ＮＯ"]["value"][i]
     responseRecord["設備行番"]["value"][i]       = sqlRecord["設備行番"]["value"][i]
@@ -157,13 +157,13 @@ class R_MainteContractList_view
     responseRecord["請求フラグ"]["value"][i]     = sqlRecord["請求フラグ"]["value"][i]
     responseRecord["摘要"]["value"][i]           = sqlRecord["摘要"]["value"][i]
 
-    $Mlog.debug("R_MainteContractList_view") {"edit保守契約一覧表_作業区分 end"}
+    $Vlog.debug("R_MainteContractList_view") {"edit保守契約一覧表_作業区分 end"}
     return "OK"
   end
 
   # 保守契約一覧表　諸掛行番　編集処理
   def edit保守契約一覧表_諸掛行番(sqlRecord, responseRecord, i)
-    $Mlog.debug("R_MainteContractList_view") {"edit保守契約一覧表_諸掛行番 start"}
+    $Vlog.debug("R_MainteContractList_view") {"edit保守契約一覧表_諸掛行番 start"}
 
     responseRecord["契約ＮＯ"]["value"][i]       = sqlRecord["契約ＮＯ"]["value"][i]
     responseRecord["設備行番"]["value"][i]       = sqlRecord["設備行番"]["value"][i]
@@ -186,7 +186,7 @@ class R_MainteContractList_view
     responseRecord["請求フラグ"]["value"][i]     = sqlRecord["請求フラグ"]["value"][i]
     responseRecord["摘要"]["value"][i]           = sqlRecord["摘要"]["value"][i]
 
-    $Mlog.debug("R_MainteContractList_view") {"edit保守契約一覧表_諸掛行番 end"}
+    $Vlog.debug("R_MainteContractList_view") {"edit保守契約一覧表_諸掛行番 end"}
     return "OK"
   end
 

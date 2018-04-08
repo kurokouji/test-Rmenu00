@@ -1,0 +1,61 @@
+{
+  "request":
+  {
+     "comment":    "全国郵便番号　ＣＳＶファイル作成"
+    ,"html":       "Myapp00/Json/Apps/R_CustomersList"
+    ,"mode":       "download"
+    ,"prog":       "no"
+    ,"model":      "yes"
+    
+    ,"message":
+    {
+      "status": "OK"
+      ,"msg":    ""
+    }
+
+    ,"records":
+    [
+      {
+         "comment": "リクエストデータ無し"
+        ,"id":        "header"
+        ,"before":    ""
+        ,"after":     ""
+        ,"multiline": "no"
+        ,"record":
+        {
+           "検索得意先名称": {"value": [""]}
+          ,"検索郵便番号":   {"value": [""]}
+          ,"検索住所":       {"value": [""]}
+        }
+      }
+    ]
+  }
+
+  ,"response":
+  {
+     "comment":    "全国郵便番号　ＣＳＶファイル作成"
+    ,"html":       "Myapp00/Json/Apps/R_CustomersList"
+    ,"mode":       "download"
+    ,"prog":       "yes"
+
+    ,"message":
+    {
+       "status": "OK"
+      ,"msg":    "全国郵便番号　ＣＳＶファイル作成処理は正常に終了しました。"
+    }
+    ,"records":
+    [
+      {
+         "comment": "CSVファイル情報"
+        ,"id":        "csvCreate"
+        ,"before":    ""
+        ,"after":     "createCSVFile"
+        ,"multiline": "no"
+        ,"record":
+        {
+           "downloadfile": {"value": [""]}
+        }
+      }
+    ]
+  }
+}

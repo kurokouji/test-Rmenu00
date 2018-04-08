@@ -36,8 +36,10 @@
     // トランザクション・リクエストチェック・レスポンス編集・エラーのコールバック関数を定義する
     // ----------------------------------------------------------------------------------------
    ,requestInfo: [
-      ["select",    "on照会OfCheckRequestData",    "on照会OfEditResponseData",    "onErrorResponseData"]
+      ["select",    "on照会OfCheckRequestData",        "on照会OfEditResponseData",         "onErrorResponseData"]
      // ここから追加処理
+     ,["print01",   "onＰＤＦ作成OfCheckRequestData" , "onＰＤＦ作成OfEditResponseData" ,  "onErrorResponseData"] // 得意先台帳PDF
+     ,["download",  "onダウンロードOfCheckRequestData","onダウンロードOfEditResponseData", "onErrorResponseData"] // ダウンロードCSV
     ]
     // --------------------------------------------------
     // エンター・タブとPFキーのコールバック関数を定義する
@@ -50,8 +52,8 @@
      ,F3:"on訂正"
      ,F4:"on削除"
      ,F5:"on照会"
-     ,F6:null
-     ,F7:null
+     ,F6:"on帳票"
+     ,F7:"onダウンロード"
      ,F8:null
      ,F9:"on最初のページ"
      ,F10:"on前のページ"
@@ -79,8 +81,8 @@
      ,["#クリア",           "click", "onクリア"]
      ,["#mainTable td",     "click", "onテーブル行クリック"]
      // ここから追加処理
-     ,["#保守契約一覧",         "click", "on保守契約一覧"]
-     ,["#保守サービス指示一覧", "click", "on保守サービス指示一覧"]
+     ,["#帳票"          ,   "click", "on帳票"]
+     ,["#ダウンロード"  ,   "click", "onダウンロード"]
      ]
     // ----------------------------------------------------------------
     // 権限情報の設定（使用不可のロールを設定する）

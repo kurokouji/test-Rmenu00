@@ -1,0 +1,36 @@
+{
+   "comment":    "得意先マスター作成処理"
+  ,"html":       "Myapp00/Json/Apps/R_MasterUpload"
+  ,"dbname":     "myapp00"
+  ,"mode":       "customers"
+  ,"prog":       "yes"
+  
+  ,"message":
+   {
+     "status": "OK"
+    ,"msg":    "得意先マスター作成処理は正常に終了しました。"
+   }
+  
+  ,"sqls":
+  [
+   {
+      "comment": "得意先マスター　CSVファイル登録処理"
+      ,"id":     "header"
+      ,"dbname": ""
+      ,"before":
+       [
+         "dropMyapp00Index('Ｍ得意先_idx1')"
+        ,"clearMyapp00Table('Ｍ得意先')"
+        ,"copyMyapp00Table('Ｍ得意先')"
+       ]
+      ,"after": ""
+      ,"sql":
+      {
+         "type":    "doRun"
+        ,"freesql": "CREATE INDEX Ｍ得意先_idx1 ON Ｍ得意先 (得意先名称)"
+        ,"genesql": ""
+      }
+    }
+
+  ]
+}

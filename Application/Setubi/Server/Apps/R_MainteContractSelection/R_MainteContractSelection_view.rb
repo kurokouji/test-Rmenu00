@@ -30,7 +30,7 @@ class R_MainteContractSelection_view
   
   # 保守契約選択　編集処理
   def edit保守契約選択OfR_MainteContractSelectionOfSetubi()
-    $Mlog.debug("R_MainteContractSelection_view") {"edit保守契約選択OfR_MainteContractSelectionOfSetubi start"}
+    $Vlog.debug("R_MainteContractSelection_view") {"edit保守契約選択OfR_MainteContractSelectionOfSetubi start"}
 
     responseRecord = getJsonChunkById(@response_data, "records", "detail",           "record")
     sqlRecord      = getJsonChunkById(@sql_data,      "sqls",    "detail", "output", "record")
@@ -60,13 +60,13 @@ class R_MainteContractSelection_view
       edit保守契約選択_作業区分(sqlRecord, responseRecord, i)
     end
 
-    $Mlog.debug("R_MainteContractSelection_view") {"edit保守契約選択OfR_MainteContractSelectionOfSetubi end"}
+    $Vlog.debug("R_MainteContractSelection_view") {"edit保守契約選択OfR_MainteContractSelectionOfSetubi end"}
     return "OK"
   end
 
   # 保守契約選択　契約ＮＯ　編集処理
   def edit保守契約選択_契約ＮＯ(sqlRecord, responseRecord, i)
-    $Mlog.debug("R_MainteContractSelection_view") {"edit保守契約選択_契約ＮＯ start"}
+    $Vlog.debug("R_MainteContractSelection_view") {"edit保守契約選択_契約ＮＯ start"}
 
     responseRecord["契約ＮＯ"]["value"][i]       = sqlRecord["契約ＮＯ"]["value"][i]
     responseRecord["設備行番"]["value"][i]       = sqlRecord["設備行番"]["value"][i]
@@ -85,13 +85,13 @@ class R_MainteContractSelection_view
     responseRecord["作業区分摘要"]["value"][i]   = sqlRecord["作業区分摘要"]["value"][i]
     responseRecord["インターバル"]["value"][i]   = sqlRecord["インターバル"]["value"][i]
 
-    $Mlog.debug("R_MainteContractSelection_view") {"edit保守契約選択_契約ＮＯ end"}
+    $Vlog.debug("R_MainteContractSelection_view") {"edit保守契約選択_契約ＮＯ end"}
     return "OK"
   end
 
   # 保守契約選択　設備行番　編集処理
   def edit保守契約選択_設備行番(sqlRecord, responseRecord, i)
-    $Mlog.debug("R_MainteContractSelection_view") {"edit保守契約選択_設備行番 start"}
+    $Vlog.debug("R_MainteContractSelection_view") {"edit保守契約選択_設備行番 start"}
 
     responseRecord["契約ＮＯ"]["value"][i]       = sqlRecord["契約ＮＯ"]["value"][i]
     responseRecord["設備行番"]["value"][i]       = sqlRecord["設備行番"]["value"][i]
@@ -110,13 +110,13 @@ class R_MainteContractSelection_view
     responseRecord["作業区分摘要"]["value"][i]   = sqlRecord["作業区分摘要"]["value"][i]
     responseRecord["インターバル"]["value"][i]   = sqlRecord["インターバル"]["value"][i]
 
-    $Mlog.debug("R_MainteContractSelection_view") {"edit保守契約選択_設備行番 end"}
+    $Vlog.debug("R_MainteContractSelection_view") {"edit保守契約選択_設備行番 end"}
     return "OK"
   end
 
   # 保守契約選択　作業区分　編集処理
   def edit保守契約選択_作業区分(sqlRecord, responseRecord, i)
-    $Mlog.debug("R_MainteContractSelection_view") {"edit保守契約選択_作業区分 start"}
+    $Vlog.debug("R_MainteContractSelection_view") {"edit保守契約選択_作業区分 start"}
 
     responseRecord["契約ＮＯ"]["value"][i]       = sqlRecord["契約ＮＯ"]["value"][i]
     responseRecord["設備行番"]["value"][i]       = sqlRecord["設備行番"]["value"][i]
@@ -135,7 +135,7 @@ class R_MainteContractSelection_view
     responseRecord["作業区分摘要"]["value"][i]   = sqlRecord["作業区分摘要"]["value"][i]
     responseRecord["インターバル"]["value"][i]   = sqlRecord["インターバル"]["value"][i]
 
-    $Mlog.debug("R_MainteContractSelection_view") {"edit保守契約選択_作業区分 end"}
+    $Vlog.debug("R_MainteContractSelection_view") {"edit保守契約選択_作業区分 end"}
     return "OK"
   end
 

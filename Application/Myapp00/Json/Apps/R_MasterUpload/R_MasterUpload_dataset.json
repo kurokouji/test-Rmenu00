@@ -1,0 +1,25 @@
+{
+   "comment": "マスターＣＳＶ　アップロード dataset"
+  ,"html": "Myapp00/Json/Apps/R_MasterUpload"
+  ,"message":
+  {
+     "status": "OK"
+    ,"msg":    "データを入力して、実行ボタンを押下して下さい。"
+  }
+
+  ,"records":
+  [
+    {
+       "comment": "マスターファイル名称"
+      ,"id":          "header"
+      ,"multiline":   "no"
+      ,"defaultline": "0"
+      ,"record":
+      {
+         "マスターファイル名称":
+           {"value": [""], "idx": [""]}
+      }
+    }
+    
+  ]
+}

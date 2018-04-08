@@ -1,5 +1,10 @@
 @charset "UTF-8";
 
+/* #mainForm高さ調整 */
+#mainForm {
+  min-height: calc(100vh - 100px);
+}
+
 /* 検索キー */
 #searchkey-Table {
   width: 1220px;

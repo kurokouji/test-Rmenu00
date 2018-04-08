@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<title>マスター　登録</title> 
+<link href="../../../../../Application/Myapp00/Html/css/1pxdeep-b5e2f9.css?var=201610141255" rel="stylesheet"/>
+<link href="../../../../../Application/Myapp00/Html/css/style.css?var=201610141255" rel="stylesheet"/>
+<link href="../../../../../Application/Myapp00/Html/css/style1.css?var=201610141255" rel="stylesheet"/>
+
+<script type="text/javascript" src="../../../../../System/Html/js/jquery-2.1.1.min.js?var=201610141255"></script>
+<script type="text/javascript" src="../../../../../System/Html/js/bootstrap-3.2.0/js/bootstrap.min.js?var=201610141255"></script>
+<script type="text/javascript" src="../../../../../System/Html/js/template/jquery.loadTemplate-1.4.5.min.js?var=201610141255"></script>
+<script type="text/javascript" src="../../../../../System/Html/js/jquery.upload.js?var=201707031724"></script>
+<script type="text/javascript" src="../../../../../System/Html/js/rmenumvc-2.1.1.js?var=201610141255"></script>
+<script type="text/javascript" src="../../../../../System/Html/js/rmenumodel.mixin-2.1.1.js?var=201610141255"></script>
+<script type="text/javascript" src="../../../../../System/Html/js/rmenuview.mixin-2.1.1.js?var=201610141255"></script>
+<script type="text/javascript" src="../../../../../System/Html/js/rmenucontroller.mixin-2.1.1.js?var=201610141255"></script>
+<script type="text/javascript" src="../../../../../System/Html/js/rmenuentertabpfkey.mixin-2.1.1.js?var=201610141255"></script>
+<script type="text/javascript" src="../../../../../System/Html/js/rmenuvalidation.mixin-2.1.1.js?var=201610141255"></script>
+<script type="text/javascript" src="../../../../../System/Html/js/rmenuappspec.mixin-2.1.1.js?var=201610141255"></script>
+<script type="text/JavaScript" src="../../../../../System/Html/js/webstorage.js?var=201610141255"></script>
+
+<script type="text/javascript" src="../../../../../Application/Myapp00/Html/js/mastermaintelist.view.mixin-2.1.1.js?var=201610141254"></script>
+<script type="text/javascript" src="../../../../../Application/Myapp00/Html/js/mastermaintelist.model.mixin-2.1.1.js?var=201610141254"></script>
+<script type="text/javascript" src="../../../../../Application/Myapp00/Html/js/mastermaintelist.controller.mixin-2.1.1.js?var=201610141254"></script>
+
+
+<script type="text/javascript" src="../../../../../Application/Myapp00/Html/Apps/R_MasterUpload/masterupload.appspec.js?var=201707031724"></script>
+<script type="text/javascript" src="../../../../../Application/Myapp00/Html/Apps/R_MasterUpload/masterupload.model.js?var=201707031724"></script>
+<script type="text/javascript" src="../../../../../Application/Myapp00/Html/Apps/R_MasterUpload/masterupload.view.js?var=201707031724"></script>
+<script type="text/javascript" src="../../../../../Application/Myapp00/Html/Apps/R_MasterUpload/masterupload.controller.js?var=201707031724"></script>
+<script type="text/javascript" src="../../../../../Application/Myapp00/Html/Apps/R_MasterUpload/masterupload.main.js?var=201707031724"></script>
+
+</head>
+
+<!-- =================================================================== -->
+<body>                                            <!-- ▼body部 スタート -->
+<!-- =================================================================== -->
+
+<!-- =================================================================== -->
+<div class="container">                        <!-- ▼container スタート -->
+<!-- =================================================================== -->
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Myapp00　メニュー</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li>
+          <button id="戻る" name="戻る" type="button" class="btn navbar-btn color4 btn-sm">戻る：Esc</button>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+          <label id="ログイン和暦"></label>
+          <label>　　　　　</label>
+        </li>
+        <li>
+          <label>ログイン日時：</label>
+          <label id="ログイン日時"></label>
+          <br>
+          <label>　ユーザ氏名：　　</label>
+          <label id="ユーザ氏名"></label>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+<form id="mainForm" class="form-horizontal"> <!-- ▼form スタート -->
+
+<div class="row">
+  <div class="col-sm-12">
+    <br>
+  </div>
+</div>
+
+<div class="row">
+            <div class="col-sm-10 col-sm-offset-1 text-center">
+
+  <div class="col-sm-12">
+
+    <div class="form-group">
+      <div class="col-sm-3">
+         <p class="text-right"><strong>得意先マスタ</strong></p>
+      </div>
+      <div class="col-sm-2">
+        <button id="得意先登録" name="得意先登録" class="btn color4 btn-sm" type="button">得意先登録</button>
+      </div>
+      <div class="col-sm-2">
+         <div class="input-group">
+           <input type="file" id="得意先選択" name="得意先選択" enctype="multipart/form-data">
+         </div>
+      </div>
+    </div>
+
+
+</div>
+</div>
+
+<div class="row">
+  <div class="col-sm-12">
+    <br>
+  </div>
+</div>
+<!-- =================================================================== -->
+</form>                                               <!-- ▼form エンド -->
+<!-- =================================================================== -->
+<div id="rmenu-pagefooter">
+</div>
+<!-- =================================================================== -->
+</div>                                      <!-- ▼main container エンド -->
+<!-- =================================================================== -->
+<!-- =================================================================== -->
+</body>                                             <!-- ▲body部 エンド --> 
+<!-- =================================================================== -->
+</html>

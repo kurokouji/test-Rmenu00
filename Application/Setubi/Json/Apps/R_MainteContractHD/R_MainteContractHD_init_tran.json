@@ -9,7 +9,8 @@
       "status": "OK",
       "msg": ""
     },
-    "records": []
+    "records": [
+    ]
   },
   "response": {
     "comment": "契約保守　メンテナンス　初期処理（設備タイプ照会）　レスポンスデータ",

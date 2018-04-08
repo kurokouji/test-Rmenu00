@@ -101,6 +101,12 @@
         "min": "1",
         "max": "13"
       },
+      "サンプル_区分名称": {
+        "validation": ["nonrequired",
+        "free"],
+        "min": "1",
+        "max": "100"
+      },
       "サンプル_明細項目０１": {
         "validation": ["nonrequired",
         "free"],

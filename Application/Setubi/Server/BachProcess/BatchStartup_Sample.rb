@@ -6,7 +6,7 @@ osn    = RbConfig::CONFIG["target_os"].downcase
 osname = osn =~ /mswin(?!ce)|mingw|cygwin|bccwin/ ? "win" : (osn =~ /linux/ ? "linux" : "other")
 
 if osname == "win"
-  $LOAD_PATH.push("C:/RmenuGithub/test-Rmenu00/System/Server/Libraries/Main/")
+  $LOAD_PATH.push("C:/RmenuSVN3/Rmenu/System/Server/Libraries/Main/")
 else
   $LOAD_PATH.push("/home/rmenu_user/Rmenu/System/Server/Libraries/Main/")
 end

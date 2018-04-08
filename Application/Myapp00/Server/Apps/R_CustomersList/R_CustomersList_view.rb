@@ -28,4 +28,58 @@ class R_CustomersList_view
     end
   end
 
+  # CSVファイル作成
+  def createCSVFile
+    $Vlog.debug("R_CustomersList_model") {"createCSVFile start"}                  # Logファイル Debug用
+
+    sqlInfo   = getJsonChunkById(@sql_data, "sqls", "csvCreate")
+    sqlRecord = sqlInfo["output"]["record"]
+
+    # 見出し出力
+    data = ""
+    max  = 0
+    i    = 0
+    sqlRecord.each do |name, value|
+      if i == 0
+        max = value["value"].length - 1
+      else
+        data << ","
+      end
+      data << name
+      i += 1
+    end
+    data << "\n"
+ 
+    # データ出力
+    for i in 0..max
+      j = 0
+      sqlRecord.each do |name, value|
+        if j != 0
+          data << ","
+        end
+        data << value["value"][i]
+        j += 1
+      end
+      data << "\n"
+    end
+
+    # ファイル出力
+    tempTime   = Time.now
+    tempNow    = tempTime.strftime("%Y%m%d%H%M%S")
+    csvDir     = $Rconfig['apps_path'] + "/" + @response_data["html"].gsub(/\/Json\//, '/DownLoad/')
+    csvNewFile = csvDir + "/" + "data" + "#{tempNow}.csv"
+
+    writeCodeFileWithBom(csvNewFile, data, "UTF-8")
+
+    # ファイル情報設定
+    csvPath       = @response_data["html"].gsub(/\/Json\//, '/DownLoad/')
+    filename = "data" + "#{tempNow}.csv"
+
+    responseInfo  = getJsonChunkById(@response_data, "records", "csvCreate")
+    responseInfo["record"]["downloadfile"]["value"][0] = csvPath + "/" + filename
+
+    $Vlog.debug("R_CustomersList_model") {"createCSVFile end"}                    # Logファイル Debug用
+    return "OK"
+  end
+
 end

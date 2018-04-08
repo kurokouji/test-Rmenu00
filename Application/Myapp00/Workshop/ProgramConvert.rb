@@ -190,9 +190,9 @@ end
 
 # 変換テーブルの定義
 convertTable = {}
-convertTable["projectName"]  = ["Myapp00",  "Myapp00"]
-convertTable["programName"]  = ["T_Sample_ClassMainte",   "R_UnitMainte"]
-convertTable["databaseName"] = ["myapp00",    "myapp00"]
+convertTable["projectName"]  = ["Sesubi",  "Myapp00"]
+convertTable["programName"]  = ["MasterUpload",   "R_MasterUpload"]
+convertTable["databaseName"] = ["setubi",    "myapp00"]
 
 # プログラムの起動
 program = ProgramConvert.new(convertTable)

@@ -1,0 +1,108 @@
+{
+   "comment":    "テーブル０１　一覧表作成 Ｎｏ１"
+  ,"html":       "Myapp00/Json/Apps/R_CustomersListPrint"
+  ,"dbname":     "myapp00"
+  ,"mode":       "print"
+  ,"prog":       "yes"
+  
+  ,"message":
+   {
+     "status": "OK"
+    ,"msg":    "台帳一覧　一覧表作成 Ｎｏ１ 処理は正常に終了しました。"
+   }
+  
+  ,"sqls":
+  [
+    {
+      "comment": "ヘッダ情報"
+     ,"id"     : "header"
+     ,"before" :
+       [
+			"setSql('printparam', 'header', 'freesql')"
+       ]
+     ,"after"  : ""
+     ,"sql"    :
+      {
+         "type"    : "select"
+        ,"freesql" : [
+                     "select",
+                     "ceil(count(*)::float / 50)::int AS 総ページ数,",
+                     "'印刷日時:' || to_char(current_timestamp,'yyyy-mm-dd hh24:MI:ss') AS 日付 from Ｍ得意先",
+                     " where &&"
+                     ]
+        ,"genesql" :
+         {
+          "dist"  : ""
+         ,"from"  : ""
+             ,"where": ""
+         ,"order" : ""
+         }
+      }
+
+     ,"input" :
+      {
+        "multiline" : "no"
+       ,"record"    :
+        {
+        }
+      }
+
+     ,"output" :
+      {
+         "multiline" : "no"
+        ,"record"    :
+         {
+          "総ページ数"            : {"value": [""]}
+               ,"日付"            : {"value": [""]}
+         }
+      }
+    }
+
+    ,{   "comment": "テーブル０１基本　照会処理"
+       ,"id":     "detail"
+       ,"before" :
+       [
+			"setSql('printparam', 'detail', 'genesql')"
+       ]
+       ,"after":  ""
+       ,"sql":
+        {
+           "type":    "select"
+          ,"freesql": ""
+          ,"genesql":
+           {
+              "dist":  ""
+             ,"from":  "Ｍ得意先"
+             ,"limit":  "1000"
+             ,"where": "&&"
+             ,"order": "得意先ＩＤ"
+
+           }
+        }
+
+       ,"input":
+        {
+           "multiline": "no"
+          ,"record":
+           {
+           }
+        }
+
+       ,"output":
+        {
+           "multiline": "yes"
+          ,"record":
+           {
+           "項目１"            : {"value": [""], "field": "得意先ＩＤ"}
+          ,"項目２"            : {"value": [""], "field": "得意先名称"}
+          ,"項目３"            : {"value": [""], "field": "郵便番号"}
+          ,"項目４"            : {"value": [""], "field": "所在地"}
+          ,"項目５"            : {"value": [""], "field": "ref_営業担当者ＩＤ"}
+          ,"項目６"            : {"value": [""], "field": "表示順"}
+         }
+        }
+      }
+
+  ]
+}
+

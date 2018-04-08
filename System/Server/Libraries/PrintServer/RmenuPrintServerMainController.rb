@@ -83,6 +83,9 @@ class RmenuPrintServerMainController
         # ビューが作成したレスポンスをログ出力する
         $PRClog.debug("PrintServerMainController") {"ビューが作成したレスポンスデータ : #{JSON.dump(response_data)}"}
 
+        # PDF コントローラ　スタート
+        $PRClog.debug("PrintServerMainController") {"PDF コントローラ　スタート"}
+				
         if num == 1
           pdfController = RmenuPdfController.new("pdfcontroller")
           pdfController.start(response_data, sql_data, request_data)
@@ -95,6 +98,9 @@ class RmenuPrintServerMainController
           pdfController.printFooter(response_data, sql_data, request_data)
           response_data = pdfController.terminate(response_data, sql_data, request_data)            # 新しくレスポンスデータを作成
         end
+				
+        # PDF コントローラ　エンド
+        $PRClog.debug("PrintServerMainController") {"PDF コントローラ　エンド"}
       end
 
       # メイン処理 終了ログを出力する
