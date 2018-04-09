@@ -1,0 +1,53 @@
+{
+   "comment":    "全国郵便番号　ＣＳＶファイル作成"
+  ,"html":       "Myapp00/Json/Apps/R_CustomersList"
+  ,"dbname":     "myapp00"
+  ,"mode":       "workbook"
+  ,"prog":       "yes"
+  
+  ,"message":
+   {
+     "status": "OK"
+    ,"msg":    "全国郵便番号　ＣＳＶファイル作成処理は正常に終了しました。"
+   }
+  
+  ,"sqls":
+  [
+   {
+      "comment": "全国郵便番号のＩＤキーを全件取得する"
+      ,"id":     "csvCreate"
+      ,"dbname": ""
+      ,"before": "setSql_R_CustomersListOfMyapp00('header', 'csvCreate', 'genesql')"
+      ,"after":  ""
+      ,"sql":
+      {
+         "type":    "select"
+        ,"freesql": ""
+        ,"genesql":
+        {
+           "dist":  ""
+          ,"from":  "Ｍ得意先"
+          ,"where": "&&"
+          ,"order": "得意先ＩＤ"
+          ,"limit": ""
+        }
+      }
+
+      ,"output":
+      {
+         "multiline": "yes"
+        ,"record":
+        {
+
+                 "得意先ＩＤ":     {"value": [""], "field": "得意先ＩＤ", "funct": "to_char(得意先ＩＤ, 'FM999999')"}
+                ,"得意先名称":     {"value": [""], "field": "得意先名称", "fieldtype": "char"}
+                ,"郵便番号":       {"value": [""], "field": "郵便番号", "fieldtype": "char"}
+                ,"所在地":         {"value": [""], "field": "所在地", "fieldtype": "char"}
+                ,"営業担当者ＩＤ": {"value": [""], "field": "ref_営業担当者ＩＤ", "funct": "to_char(ref_営業担当者ＩＤ, 'FM999999')"}
+                ,"表示順":         {"value": [""], "field": "表示順"}
+
+        }
+      }
+    }
+  ]
+}

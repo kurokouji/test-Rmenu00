@@ -107,6 +107,28 @@
       $R.log("Model onダウンロードOfEditResponseData : end");
     }
 
+   ,onエクセルOfEditResponseData: function(responseData) {
+      $R.log("Model onエクセルOfEditResponseData : start");
+
+      var date     = new Date();
+      var datetime = date.getFullYear()    + "年"
+                   + (date.getMonth() + 1) + "月"
+                   + date.getDate()        + "日"
+                   + date.getHours()       + "時"
+                   + date.getMinutes()     + "分";
+
+      var headerRecord  = this.appspec.getJSONChunkByIdAtRecords(responseData, "header");
+      var downloadfile  = headerRecord["record"]["downloadfile"]["value"][0];
+      
+      var argHash  = new Object();
+      argHash["file"]     = downloadfile;
+      argHash["type"]     = "xlsx";
+      argHash["download"] = "得意先一覧表(" + datetime + ").xlsx";
+      this.postDownloadRack(argHash);
+
+      $R.log("Model onエクセルOfEditResponseData : end");
+    }
+
 
 
 

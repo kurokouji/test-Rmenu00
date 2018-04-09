@@ -40,6 +40,7 @@
      // ここから追加処理
      ,["print01",   "onＰＤＦ作成OfCheckRequestData" , "onＰＤＦ作成OfEditResponseData" ,  "onErrorResponseData"] // 得意先台帳PDF
      ,["download",  "onダウンロードOfCheckRequestData","onダウンロードOfEditResponseData", "onErrorResponseData"] // ダウンロードCSV
+     ,["workbook",  "onエクセルOfCheckRequestData","onエクセルOfEditResponseData", "onErrorResponseData"] // ダウンロードXLSX
     ]
     // --------------------------------------------------
     // エンター・タブとPFキーのコールバック関数を定義する
@@ -54,7 +55,7 @@
      ,F5:"on照会"
      ,F6:"on帳票"
      ,F7:"onダウンロード"
-     ,F8:null
+     ,F8:"onエクセル"
      ,F9:"on最初のページ"
      ,F10:"on前のページ"
      ,F11:"on次のページ"
@@ -83,6 +84,7 @@
      // ここから追加処理
      ,["#帳票"          ,   "click", "on帳票"]
      ,["#ダウンロード"  ,   "click", "onダウンロード"]
+     ,["#エクセル"  ,       "click", "onエクセル"]
      ]
     // ----------------------------------------------------------------
     // 権限情報の設定（使用不可のロールを設定する）

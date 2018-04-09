@@ -45,6 +45,13 @@
 
       $R.log("Controller onダウンロード : end");
     }
+   ,onエクセル: function(event) {
+      $R.log("Controller onエクセル : start");
+
+      this.ajaxExecute("workbook");
+
+      $R.log("Controller onエクセル : end");
+    }
 
     // -------------------------------------
     //  リクエストデータ　編集・チェック処理
@@ -65,6 +72,14 @@
       $R.log("Controller onダウンロードOfCheckRequestData : end");
       return status;
     }
+   ,onエクセルOfCheckRequestData: function(requestData, mode) {
+      $R.log("Controller onエクセルOfCheckRequestData : start");
+
+      var status = this.checkRequestData(requestData);
+
+      $R.log("Controller onエクセルOfCheckRequestData : end");
+      return status;
+    }
     
     // -------------------------------
     //  レスポンスデータ　編集処理
@@ -79,10 +94,16 @@
    ,onダウンロードOfEditResponseData: function(responseData, mode) {
       $R.log("Controller onダウンロードOfEditResponseData : start");
 
-//      this.editResponseData(responseData);
       this.model.onダウンロードOfEditResponseData(responseData);
 
       $R.log("Controller onダウンロードOfEditResponseData : end");
+    }
+   ,onエクセルOfEditResponseData: function(responseData, mode) {
+      $R.log("Controller onエクセルOfEditResponseData : start");
+
+      this.model.onエクセルOfEditResponseData(responseData);
+
+      $R.log("Controller onエクセルOfEditResponseData : end");
     }
 
 

@@ -3,7 +3,7 @@
   {
      "comment":    "全国郵便番号　ＣＳＶファイル作成"
     ,"html":       "Myapp00/Json/Apps/R_CustomersList"
-    ,"mode":       "download"
+    ,"mode":       "workbook"
     ,"prog":       "no"
     ,"model":      "yes"
     
@@ -35,7 +35,7 @@
   {
      "comment":    "全国郵便番号　ＣＳＶファイル作成"
     ,"html":       "Myapp00/Json/Apps/R_CustomersList"
-    ,"mode":       "download"
+    ,"mode":       "workbook"
     ,"prog":       "yes"
 
     ,"message":
@@ -47,9 +47,9 @@
     [
       {
          "comment": "CSVファイル情報"
-        ,"id":        "csvCreate"
+        ,"id":        "header"
         ,"before":    ""
-        ,"after":     ["createCSVFile"]
+        ,"after":     ["createExcel"]
         ,"multiline": "no"
         ,"record":
         {
