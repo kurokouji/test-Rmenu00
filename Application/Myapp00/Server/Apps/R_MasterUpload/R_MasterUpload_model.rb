@@ -25,7 +25,7 @@ class R_MasterUpload_model
 
   # テーブル　クリア
   def clearMyapp00Table(tablename)
-    $Mlog.debug("R_MasterUpload_model") {"clearMyapp00Table start"}                  # Logファイル Debug用
+      $Mlog.debug("R_MasterUpload_model") {"clearMyapp00Table start"}                  # Logファイル Debug用
 
     str_sql    = "TRUNCATE TABLE "
     str_sql   += tablename
@@ -33,21 +33,21 @@ class R_MasterUpload_model
     $Mlog.debug("R_MasterUpload_model") {"clearMyapp00Table doSQL : #{str_sql}"}     # Logファイル Debug用
     @rmenu_db["default"].doRun(str_sql)
 
-    $Mlog.debug("R_MasterUpload_model") {"clearMyapp00Table end"}                    # Logファイル Debug用
+      $Mlog.debug("R_MasterUpload_model") {"clearMyapp00Table end"}                    # Logファイル Debug用
     return "OK"
   end
 
   # テーブル　クリア
   def copyMyapp00Table(tablename)
-    $Mlog.debug("R_MasterUpload_model") {"copyMyapp00Table start"}                  # Logファイル Debug用
+      $Mlog.debug("R_MasterUpload_model") {"copyMyapp00Table start"}                  # Logファイル Debug用
 
     request_record  = @request_data["records"][0]["record"]
     csvfilename     = request_record["マスターファイル名称"]["value"][0]
 
     filebasename = File.basename(csvfilename)
 
-    $Mlog.debug("R_MasterUpload_model") {"csvfilename : #{csvfilename}"}     # Logファイル Debug用
-    $Mlog.debug("R_MasterUpload_model") {"filebasename : #{filebasename}"}     # Logファイル Debug用
+      $Mlog.debug("R_MasterUpload_model") {"csvfilename : #{csvfilename}"}     # Logファイル Debug用
+      $Mlog.debug("R_MasterUpload_model") {"filebasename : #{filebasename}"}     # Logファイル Debug用
 
 
     osn = RbConfig::CONFIG["target_os"].downcase
@@ -71,12 +71,12 @@ class R_MasterUpload_model
       src  = [
         src_path + filebasename
       ]
-    $Mlog.debug("R_MasterUpload_model") {"src : #{src}"}     # Logファイル Debug用
+      $Mlog.debug("R_MasterUpload_model") {"src : #{src}"}     # Logファイル Debug用
 
       dest = "/usr/share/rmenu/"
       FileUtils.cp(src, dest)
 
-    $Mlog.debug("R_MasterUpload_model") {"csvfilename : #{csvfilename}"}     # Logファイル Debug用
+      $Mlog.debug("R_MasterUpload_model") {"csvfilename : #{csvfilename}"}     # Logファイル Debug用
 
       str_sql    = "COPY "
       str_sql   += tablename
@@ -87,25 +87,25 @@ class R_MasterUpload_model
       str_sql   += "  WITH encoding \'SJIS\' CSV"
     end
 
-    $Mlog.debug("R_MasterUpload_model") {"copyMyapp00Table doSQL : #{str_sql}"}     # Logファイル Debug用
+      $Mlog.debug("R_MasterUpload_model") {"copyMyapp00Table doSQL : #{str_sql}"}     # Logファイル Debug用
     @rmenu_db["default"].doRun(str_sql)
 
-    $Mlog.debug("R_MasterUpload_model") {"copyMyapp00Table end"}                    # Logファイル Debug用
+      $Mlog.debug("R_MasterUpload_model") {"copyMyapp00Table end"}                    # Logファイル Debug用
     return "OK"
   end
 
   # インデックスを削除
   def dropMyapp00Index(indexname)
-    $Mlog.debug("R_MasterUpload_model") {"dropMyapp00Index start"}                  # Logファイル Debug用
+      $Mlog.debug("R_MasterUpload_model") {"dropMyapp00Index start"}                  # Logファイル Debug用
 
     str_sql    = "DROP INDEX "
     str_sql   += indexname
     str_sql   += " CASCADE"
 
-    $Mlog.debug("R_MasterUpload_model") {"dropMyapp00Index doSQL : #{str_sql}"}     # Logファイル Debug用
+      $Mlog.debug("R_MasterUpload_model") {"dropMyapp00Index doSQL : #{str_sql}"}     # Logファイル Debug用
     @rmenu_db["default"].doRun(str_sql)
 
-    $Mlog.debug("R_MasterUpload_model") {"dropMyapp00Index end"}                    # Logファイル Debug用
+      $Mlog.debug("R_MasterUpload_model") {"dropMyapp00Index end"}                    # Logファイル Debug用
     return "OK"
   end
 
