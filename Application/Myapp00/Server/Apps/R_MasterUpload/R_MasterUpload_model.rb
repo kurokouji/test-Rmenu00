@@ -51,9 +51,9 @@ class R_MasterUpload_model
 
 
     osn = RbConfig::CONFIG["target_os"].downcase
-    @@os = osn =~ /mswin(?!ce)|mingw|cygwin|bccwin/ ? "win" : (osn =~ /linux/ ? "linux" : "other")
+    osname = osn =~ /mswin(?!ce)|mingw|cygwin|bccwin/ ? "win" : (osn =~ /linux/ ? "linux" : "other")
 
-    if @@os == "win"
+    if osname == "win"
       str_sql    = "COPY "
       str_sql   += tablename
       str_sql   += " FROM "

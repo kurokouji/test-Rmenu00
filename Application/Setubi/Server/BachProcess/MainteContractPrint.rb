@@ -8,7 +8,7 @@ osname = osn =~ /mswin(?!ce)|mingw|cygwin|bccwin/ ? "win" : (osn =~ /linux/ ? "l
 if osname == "win"
   $LOAD_PATH.push("C:/RmenuSVN3/Rmenu/System/Server/Libraries/Main/")
 else
-  $LOAD_PATH.push("/home/rmenu/Rmenu/System/Server/Libraries/Main/")
+  $LOAD_PATH.push("/home/rmenu_user/Rmenu/System/Server/Libraries/Main/")
 end
 
 require 'RmenuConfig'                                       # 設定情報を読みこむ
