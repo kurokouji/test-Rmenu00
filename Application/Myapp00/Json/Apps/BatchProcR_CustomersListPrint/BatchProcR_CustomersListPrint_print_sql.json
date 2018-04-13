@@ -1,0 +1,103 @@
+{
+  "comment": "保守契約　一覧表　契約者台帳ＰＤＦ作成 Ｎｏ１",
+  "html": "Myapp00/Json/Apps/BatchProcR_CustomersListPrint",
+  "dbname": "myapp00",
+  "mode": "print",
+  "prog": "yes",
+  "message": {
+    "status": "OK",
+    "msg": "設備台帳一覧表　作成処理は正常に終了しました。"
+  },
+  "sqls": [{
+    "comment": "抽出対象キーを取得する",
+    "id": "getkeyvalue",
+    "before": ["setSql_BatchProcR_CustomersListPrintOfMyapp00('parallelKey', 'getkeyvalue', 'genesql')"],
+    "after": "",
+    "sql": {
+      "type": "select",
+      "freesql": "",
+      "genesql": {
+        "dist": "yes",
+        "from": ["Ｍ得意先"],
+        "where": "true &&",
+        "order": "得意先ＩＤ",
+        "limit": ""
+      }
+    },
+    "input": {
+      "multiline": "no",
+      "record": {
+        "検索得意先名称": {
+          "value": [""],
+          "fromtype": "request",
+          "fromid": "parallelKey",
+          "fromio": "",
+          "fromname": "検索得意先名称",
+          "fieldtype": "char"
+        },
+        "検索郵便番号": {
+          "value": [""],
+          "fromtype": "request",
+          "fromid": "parallelKey",
+          "fromio": "",
+          "fromname": "検索郵便番号",
+          "fieldtype": "char"
+        },
+        "検索所在地": {
+          "value": [""],
+          "fromtype": "request",
+          "fromid": "parallelKey",
+          "fromio": "",
+          "fromname": "検索所在地",
+          "fieldtype": "char"
+        }
+      }
+    },
+    "output": {
+      "multiline": "yes",
+      "record": {
+        "得意先ＩＤ": {
+          "value": [""],
+          "field": "得意先ＩＤ"
+        }
+      }
+    }
+  },
+  {
+    "comment": "プリントパラメータ（KEYVALUE）を設定する",
+    "id": "printparam",
+    "html": "Myapp00/Json/Apps/R_CustomersListPrint",
+    "mode": "print",
+    "before": "",
+    "after": "",
+    "sql": {
+      "type": "nosql"
+    },
+    "input": {
+      "multiline": "yes",
+      "record": {
+       "得意先ＩＤ": {
+          "value": [""],
+          "fromtype": "sqls",
+          "fromid": "getkeyvalue",
+          "fromio": "output",
+          "fromname": "得意先ＩＤ"
+        },
+        "郵便番号": {
+          "value": [""],
+          "fromtype": "sqls",
+          "fromid": "getkeyvalue",
+          "fromio": "output",
+          "fromname": "郵便番号"
+        },
+        "所在地": {
+          "value": [""],
+          "fromtype": "sqls",
+          "fromid": "getkeyvalue",
+          "fromio": "output",
+          "fromname": "所在地"
+        }
+      }
+    }
+  }]
+}

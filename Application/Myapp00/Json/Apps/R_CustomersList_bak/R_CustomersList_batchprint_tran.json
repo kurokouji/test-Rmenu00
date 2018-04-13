@@ -1,0 +1,34 @@
+{
+  "request": {
+    "comment": "保守契約　一覧表　契約者台帳ＰＤＦ作成 Ｎｏ１　リクエストデータ",
+    "html": "Myapp00/Json/Apps/R_CustomersList",
+    "mode": "batchprint",
+    "prog": "no",
+    "model": "yes",
+    "message": {
+      "status": "OK",
+      "msg": ""
+    },
+    "records": [{
+      "id": "header",
+      "before": "",
+      "after": "",
+      "multiline": "no",
+      "record": {
+         "検索得意先名称": {"value": [""], "idx": [""]}
+        ,"検索郵便番号":   {"value": [""], "idx": [""]}
+        ,"検索住所":       {"value": [""], "idx": [""]}
+      }
+    }]
+  },
+  "response": {
+    "comment": "保守契約　一覧表　契約者台帳ＰＤＦ作成 Ｎｏ１　レスポンスデータ",
+    "html": "Myapp00/Json/Apps/R_CustomersList",
+    "mode": "batchprint",
+    "prog": "yes",
+    "message": {
+      "status": "OK",
+      "msg": "保守契約　一覧表　帳票作成　バッチ処理は正常に終了しました。"
+    }
+  }
+}

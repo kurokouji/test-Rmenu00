@@ -1,7 +1,7 @@
 {
 	"comment": "保守契約　一覧表　契約者台帳ＰＤＦ作成　Ｎｏ２",
 	"html": "Myapp00/Json/Apps/R_MainteContractListPrint",
-	"dbname": "setubi",
+	"dbname": "myapp00",
 	"mode": "print01",
 	"prog": "no",
 	"message": {

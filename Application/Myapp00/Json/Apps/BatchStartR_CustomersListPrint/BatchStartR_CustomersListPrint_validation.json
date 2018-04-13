@@ -1,0 +1,10 @@
+{
+  "comment": "バッチ起動用 validation",
+  "html": "Myapp00/Json/Apps/BatchStartR_CustomersListPrint",
+  "records": [{
+    "id": "header",
+    "multiline": "no",
+    "record": {
+    }
+  }]
+}

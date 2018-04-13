@@ -30,6 +30,7 @@
     // ---------------------------------------
     // ボタン・ファンクションキー イベント処理
     // ---------------------------------------
+
      on帳票: function(event) {
       $R.log("Controller on帳票 : start");
 
@@ -113,6 +114,7 @@
 
       $R.log("Controller onＰＤＦ作成バッチOfEditResponseData : end");
     }
+
    ,onダウンロードOfEditResponseData: function(responseData, mode) {
       $R.log("Controller onダウンロードOfEditResponseData : start");
 
@@ -129,6 +131,7 @@
     }
 
 
+    
   });
 
 }(jQuery, Rmenu));

@@ -22,7 +22,7 @@
         [
           "Ｍ得意先"
         ],
-        "where": "true &&",
+        "where": "&&",
         "order": ""
       }
     },
@@ -56,7 +56,7 @@
       "genesql": {
         "dist": "",
         "from": "Ｍ得意先",
-        "where": "true &&",
+        "where": "&&",
         "order": "得意先ＩＤ",
         "limit": "? OFFSET ?"
       }
@@ -89,7 +89,7 @@
         "郵便番号": {
           "value": [""]
         },
-        "所在地": {
+        "住所": {
           "value": [""],
           "field": "所在地"
         }

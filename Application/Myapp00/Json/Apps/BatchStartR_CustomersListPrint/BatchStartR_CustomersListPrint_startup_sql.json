@@ -1,17 +1,17 @@
 {
   "comment": "バッチ起動処理",
-  "html": "Myapp00/Json/Apps/BatchStartMainteContractPrint",
+  "html": "Myapp00/Json/Apps/BatchStartR_CustomersListPrint",
   "dbname": "myapp00",
   "mode": "startup",
   "prog": "yes",
   "message": {
     "status": "OK",
-    "msg": "設備台帳作成　バッチ処理を起動しました。"
+    "msg": "得意先名称台帳作成　バッチ処理を起動しました。"
   },
   "sqls": [{
     "comment": "並列分散バッチ　キー情報",
     "id": "parallelKey",
-    "before": "batch_paramkeyget('Myapp00', 'BatchStartMainteContractPrint', 'startup')",
+    "before": "batch_paramkeyget('Myapp00', 'BatchStartR_CustomersListPrint', 'startup')",
     "after": "",
     "sql": {
       "type": "nosql"
@@ -19,19 +19,13 @@
     "input": {
       "multiline": "no",
       "record": {
-        "検索顧客名称": {
+        "検索得意先名称": {
           "value": [""]
         },
-        "検索設備タイプ名称": {
+        "検索郵便番号": {
           "value": [""]
         },
-        "検索設備名称": {
-          "value": [""]
-        },
-        "検索作業区分": {
-          "value": [""]
-        },
-        "検索業者名称": {
+        "検索所在地": {
           "value": [""]
         }
       }
@@ -70,10 +64,10 @@
           "value": ["0"]
         },
         "process_name": {
-          "value": ["設備台帳　一覧表作成処理"]
+          "value": ["得意先名称台帳　一覧表作成処理"]
         },
         "process_html": {
-          "value": ["Myapp00/Json/Apps/BatchProcMainteContractPrint"]
+          "value": ["Myapp00/Json/Apps/BatchProcR_CustomersListPrint"]
         },
         "process_mode": {
           "value": ["print"]

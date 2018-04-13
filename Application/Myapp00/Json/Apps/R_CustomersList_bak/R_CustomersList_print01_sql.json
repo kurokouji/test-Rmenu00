@@ -40,10 +40,10 @@
             "value": [""]
            ,"fromtype": "request", "fromid": "header", "fromio": "", "fromname": "検索郵便番号"
           }
-         ,"検索所在地":
+         ,"検索住所":
           {
             "value": [""]
-           ,"fromtype": "request", "fromid": "header", "fromio": "", "fromname": "検索所在地"
+           ,"fromtype": "request", "fromid": "header", "fromio": "", "fromname": "検索住所"
           }
         }
       }

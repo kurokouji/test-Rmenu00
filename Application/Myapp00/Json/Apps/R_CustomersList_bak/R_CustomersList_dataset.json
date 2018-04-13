@@ -1,5 +1,5 @@
 {
-  "comment": "保守契約　一覧表 dataset",
+  "comment": ">顧客　一覧表 dataset",
   "html": "Myapp00/Json/Apps/R_CustomersList",
   "message": {
     "status": "OK",
@@ -29,7 +29,7 @@
       "検索郵便番号": {
         "value": [""]
       },
-      "検索所在地": {
+      "検索住所": {
         "value": [""]
       }
     }
@@ -49,7 +49,7 @@
       "郵便番号": {
         "value": [""]
       },
-      "所在地": {
+      "住所": {
         "value": [""]
       }
     }

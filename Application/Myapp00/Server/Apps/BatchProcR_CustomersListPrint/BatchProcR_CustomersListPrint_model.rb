@@ -3,45 +3,41 @@
 require 'Myapp00/Server/Modules/Myapp00OfMasterMainteOfModelMixin'
 require 'Myapp00/Server/Modules/Myapp00OfBatchStartUpOfModelMixin'
 
-class R_CustomersList_model
+class BatchProcR_CustomersListPrint_model
   include Myapp00OfMasterMainteOfModelMixin
   include Myapp00OfBatchStartUpOfModelMixin
 
   def initialize(rmenu_dbi, sql_data, request_data)
     begin
       # initialize 開始ログを出力する
-      $Mlog.debug("R_CustomersList_model") {"initialize start"}                   # Logファイル Debug用
+      $Mlog.debug("BatchProcR_CustomersListPrint_model") {"initialize start"}                   # Logファイル Debug用
 
       @rmenu_db       = rmenu_dbi
       @sql_data       = sql_data
       @request_data   = request_data
-#    $Mlog.debug("R_CustomersList_model") {"@rmenu_db: #{@rmenu_db}"}
 
       # initialize 終了ログを出力する
-      $Mlog.debug("R_CustomersList_model") {"initialize normal end"}              # Logファイル Debug用
+      $Mlog.debug("BatchProcR_CustomersListPrint_model") {"initialize normal end"}              # Logファイル Debug用
     rescue Exception
       # エラーログを出力する
-      $Mlog.error("R_CustomersList_model") {"initialize exception: #{$!}"}        # Logファイル Debug用
+      $Mlog.error("BatchProcR_CustomersListPrint_model") {"initialize exception: #{$!}"}        # Logファイル Debug用
       raise
     end
   end
 
   # SQL文の検索条件を変更する（検索データ項目名無し）
-  def setSql_R_CustomersListOfMyapp00(idname1, idname2 ,genesql_freesql)
-    $Mlog.debug("R_CustomersList_model") {"setSql_R_CustomersListOfMyapp00 start"}                  # Logファイル Debug用
+  def setSql_BatchProcR_CustomersListPrintOfMyapp00(idname1, idname2 ,genesql_freesql)
+    $Mlog.debug("R_CustomersList_model") {"setSql_BatchProcR_CustomersListPrintOfMyapp00 start"}                  # Logファイル Debug用
 
     requestInfo          = getJsonChunkById(@request_data, "records", idname1)
     sqlInfo              = getJsonChunkById(@sql_data, "sqls", idname2)
 
-#    $Mlog.debug("R_CustomersList_model") {"requestInfo: #{requestInfo}"}
-#    $Mlog.debug("R_CustomersList_model") {"sqlInfo: #{sqlInfo}"}
-
-    w_検索得意先名称  = requestInfo["record"]["検索得意先名称"]["value"][0]
-    w_検索郵便番号  = requestInfo["record"]["検索郵便番号"]["value"][0]
-    w_検索所在地      = requestInfo["record"]["検索所在地"]["value"][0]
+    w_検索得意先名称     = requestInfo["record"]["検索得意先名称"]["value"][0]
+    w_検索郵便番号       = requestInfo["record"]["検索郵便番号"]["value"][0]
+    w_検索所在地         = requestInfo["record"]["検索所在地"]["value"][0]
 
 
-     rep = ""
+    rep = ""
 
     # 検索得意先名称
     if w_検索得意先名称 != ""
@@ -71,7 +67,7 @@ class R_CustomersList_model
       end
     end
 
-    $Mlog.debug("R_CustomersList_model") {"setSql_R_CustomersListOfMyapp00 end"}                    # Logファイル Debug用
+    $Mlog.debug("R_CustomersList_model") {"setSql_BatchProcR_CustomersListPrintOfMyapp00 end"}                    # Logファイル Debug用
     return "OK"
   end
 

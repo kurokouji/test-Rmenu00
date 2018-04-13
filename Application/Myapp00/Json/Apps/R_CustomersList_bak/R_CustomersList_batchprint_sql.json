@@ -1,0 +1,57 @@
+{
+  "comment": "保守契約　一覧表　契約者台帳ＰＤＦ作成 バッチ処理",
+  "html": "Myapp00/Json/Apps/R_CustomersList",
+  "dbname": "myapp00",
+  "mode": "batchprint",
+  "prog": "yes",
+  "message": {
+    "status": "OK",
+    "msg": "保守契約　一覧表　契約者台帳ＰＤＦ作成 バッチ処理は正常に終了しました。"
+  },
+  "sqls": [{
+    "comment": "バッチキーを設定する",
+    "id": "batchKey",
+    "before": "",
+    "after": "",
+    "sql": {
+      "type": "nosql"
+    },
+    "input": {
+      "multiline": "yes",
+      "record": {
+          "検索得意先名称":
+          {
+            "value": [""]
+           ,"fromtype": "request", "fromid": "header", "fromio": "", "fromname": "検索得意先名称"
+          }
+         ,"検索郵便番号":
+          {
+            "value": [""]
+           ,"fromtype": "request", "fromid": "header", "fromio": "", "fromname": "検索郵便番号"
+          }
+         ,"検索住所":
+          {
+            "value": [""]
+           ,"fromtype": "request", "fromid": "header", "fromio": "", "fromname": "検索住所"
+          }
+      }
+    }
+  },
+  {
+    "comment": "バッチパラメータを設定する",
+    "id": "batchParam",
+    "before": "",
+    "after": "batch_startup('Myapp00', 'BatchStartR_CustomersListPrint', 'startup', 'R_CustomersList')",
+    "sql": {
+      "type": "nosql"
+    },
+    "input": {
+      "multiline": "no",
+      "record": {
+        "ユーザＩＤ": {
+          "value": ["111111"]
+        }
+      }
+    }
+  }]
+}
