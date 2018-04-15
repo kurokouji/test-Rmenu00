@@ -27,7 +27,7 @@
         {
            "dist":  ""
           ,"from":  "Ｍ得意先"
-          ,"where": "&&"
+          ,"where": "true &&"
           ,"order": "得意先ＩＤ"
           ,"limit": ""
         }
